@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Getting R help | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 4 Getting R help | Quantitative skills for biology" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Getting R help | Quantitative skills for biology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 4 Getting R help | Quantitative skills for biology" />
+  <meta name="github-repo" content="ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Getting R help | Quantitative skills for biology" />
+  
+  <meta name="twitter:description" content="Chapter 4 Getting R help | Quantitative skills for biology" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="finding-your-way-around-rstudio.html"/>
+<link rel="next" href="data-and-metadata.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Quantitative skills for biology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="how-to-install-r-and-r-studio.html"><a href="how-to-install-r-and-r-studio.html"><i class="fa fa-check"></i><b>2</b> How to install R and R Studio</a></li>
+<li class="chapter" data-level="3" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a><ul>
+<li class="chapter" data-level="3.1" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.1</b> Source pane</a></li>
+<li class="chapter" data-level="3.2" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.2</b> Console pane</a></li>
+<li class="chapter" data-level="3.3" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#enviornmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Enviornment/History pane</a><ul>
+<li class="chapter" data-level="" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
+<li class="chapter" data-level="" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#fileplotspackageshelp-pane"><i class="fa fa-check"></i><b>3.4</b> File/Plots/Packages/Help pane</a><ul>
+<li class="chapter" data-level="" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#files-tab"><i class="fa fa-check"></i>Files tab</a></li>
+<li class="chapter" data-level="" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#plots-tab"><i class="fa fa-check"></i>Plots tab</a></li>
+<li class="chapter" data-level="" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#packages-tab"><i class="fa fa-check"></i>Packages tab</a></li>
+<li class="chapter" data-level="" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#help-tab"><i class="fa fa-check"></i>Help tab</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>4</b> Getting R help</a><ul>
+<li class="chapter" data-level="4.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>4.1</b> Using R help</a></li>
+<li class="chapter" data-level="4.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>4.2</b> R “Cheatsheets”</a></li>
+<li class="chapter" data-level="4.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>4.3</b> R books</a></li>
+<li class="chapter" data-level="4.4" data-path="help.html"><a href="help.html#how-to-interpret-r-help-files"><i class="fa fa-check"></i><b>4.4</b> How to interpret R help files</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-and-metadata.html"><a href="data-and-metadata.html"><i class="fa fa-check"></i><b>5</b> Data and metadata</a></li>
+<li class="chapter" data-level="6" data-path="entering-data.html"><a href="entering-data.html"><i class="fa fa-check"></i><b>6</b> Entering data</a></li>
+<li class="chapter" data-level="7" data-path="making-graphs-with-r.html"><a href="making-graphs-with-r.html"><i class="fa fa-check"></i><b>7</b> Making graphs with R</a></li>
+<li class="chapter" data-level="8" data-path="writing-hypotheses-as-equations.html"><a href="writing-hypotheses-as-equations.html"><i class="fa fa-check"></i><b>8</b> Writing hypotheses as equations</a></li>
+<li class="chapter" data-level="9" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html"><i class="fa fa-check"></i><b>9</b> BIOL 1001: LABORATORY 2</a><ul>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#biological-data-with-computers"><i class="fa fa-check"></i>BIOLOGICAL DATA WITH COMPUTERS</a></li>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#exercise-1.-intro-of-rstudio"><i class="fa fa-check"></i>EXERCISE 1. Intro of RStudio</a></li>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#exercise-2.-entering-data"><i class="fa fa-check"></i>EXERCISE 2. Entering data</a><ul>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#question"><i class="fa fa-check"></i>Question</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#exercise-3.-discrete-independent-variable"><i class="fa fa-check"></i>EXERCISE 3. Discrete independent variable</a><ul>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#make-a-graph"><i class="fa fa-check"></i>Make a graph</a></li>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#write-the-hypothesis-as-an-equation"><i class="fa fa-check"></i>Write the hypothesis as an equation</a></li>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#question-1"><i class="fa fa-check"></i>Question</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#exercise-4.-continuous-independent-variable"><i class="fa fa-check"></i>EXERCISE 4. Continuous independent variable</a><ul>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#make-a-graph-1"><i class="fa fa-check"></i>Make a graph</a></li>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#write-the-hypothesis-as-an-equation-1"><i class="fa fa-check"></i>Write the hypothesis as an equation</a></li>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#question-2"><i class="fa fa-check"></i>Question</a></li>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#question-3"><i class="fa fa-check"></i>Question</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="biol-1001-laboratory-2.html"><a href="biol-1001-laboratory-2.html#questions"><i class="fa fa-check"></i>Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Quantitative skills for biology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="help" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Getting R help</h1>
+<p>The first place most people go for R help is the “Help” tabe in the “Files/Plots/Packages/Help” pane on thue console (described in Chapter 4). Here you can do a search by topic/term using the search window at the top right. You can also click the “house” icon to go to the home menu for the help files and use the table of contents there to navigate to what you are looking for.</p>
+<div id="using-r-help" class="section level2">
+<h2><span class="header-section-number">4.1</span> Using R help</h2>
+<p>The hardest part about R help files is that at first they don’t seem that helpful, and to new R users, they seem to be written in code. However, all of the help pages are structured the same way, so once you learn how to de-code them, you’ll be well on your way. Below is an example of how to interpret R help files</p>
+</div>
+<div id="r-cheatsheets" class="section level2">
+<h2><span class="header-section-number">4.2</span> R “Cheatsheets”</h2>
+<p>Because R is open source software, there is also a culture of open access help. Several R programmers have made helpful “cheatSheets” that are worth printing off and hanging by your desk. Try <a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">this one</a> by Tom Short for starters.</p>
+</div>
+<div id="r-books" class="section level2">
+<h2><span class="header-section-number">4.3</span> R books</h2>
+<p>As with the cheatsheets, there are open access books out there (as well as expensive ones to buy). For beginners, “The Pirates Gude to R” by Nathaniel D. Phillips is <strong>HIGHLY</strong> recommended. You can access it <a href="https://bookdown.org/ndphillips/YaRrr/">here</a></p>
+</div>
+<div id="how-to-interpret-r-help-files" class="section level2">
+<h2><span class="header-section-number">4.4</span> How to interpret R help files</h2>
+<p>R documentation follows the following format. As an example, we’ll use the screenshot below for a really simple statistical command (the t-test) to walk you through the R documentation. Numbers below correspond to the labels on the screenshot.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>header</strong> This simply gives the command for the thing you are trying to do, in R language</p></li>
+<li><p><strong>Title</strong> This is a title of the function/command/tool in more plain language</p></li>
+<li><p><strong>Description</strong> This section provides a short description of what the command does, written in reaonably plain language</p></li>
+<li><p><strong>Usage</strong> This is where you see an example of R code that you use to execute the command (<strong>TIP</strong> you can tell what text in the help file is R code and what is other information by the font. Example code is in Courier font). Any example prefaced teh two hashtags (“##”) is a comment that adds additonal descitpion or provides different options for the comment. For example, for the t-test here, the first exampe is for the default method, where you are doing a t-test for a difference between two numeric vectors of data values (“x” and “y”). The second example is where you are applying the t-test to a formula instead of two numeric vectors. Until you start doing more advanced statistics, the default method will usually be what you use.</p></li>
+<li><p><strong>Arguments</strong> This section breaks down every element in the R code under “Usage” above it and describes what the input is that you need to provide. It also gives you details about the options as well as what the defaults are. For example, for the t-test documentation here, it tells you that “x” is “a (non-empty) numeric vector of data values”. It also tells you that this is what “y” is but not that it tells you that “y” is optional (i.e., you can do a t-test on just one vector of data values). This fact is also shown in the example code where it says “y = NULL”).</p></li>
+</ol>
+<p>Note that you often do not have to input ALL the arguments. If you are happy with the defaults you don’t have to type in the code. For example, the description of the argument “alternative” tells you that you can specify whether the alternative hypothesis is two-sided (i.e., two-tailed), or one-tailed, in which case you have to say whether the alternative hypothesis is that the second set of data (e.g., the treatment) are greater or less than the first (e.g., the control). The default is that you are assuming the alternative hypothesis is two-sided. If this is what you want, then your code only needs to look like this</p>
+<p><code>t.test(x, y)</code></p>
+<p>However, if you want a one-sided test, and your alternate hypothesis is that the treatment (y) is greater than the control (x), then you need to type a bit more code, like this:</p>
+<p><code>t.test(x, y, alternative = c(&quot;greater&quot;))</code></p>
+<ol start="6" style="list-style-type: decimal">
+<li><p><strong>Details</strong> This sectin gives you a little more detail (written a bit more like a stats text) about what the function is doing. For more advanced functions, there may be details on the types of inputs allowed and other caveats. <em>This section is really helpful to read closely!</em></p></li>
+<li><p><strong>Value</strong> This section lists the objects (output) created when you execute the command. The relevance of this list will become more clear once you start using R.</p></li>
+<li><p><strong>See Also</strong> This section is usually just links to similar commands to the one you are reading up on, or related to it somewhow. These can be useful to explore when doing more complex statistical tests, or if you are not sure which test you should be using. Clicking the link will just take you to the Documentation page for that command, which will be set up exactly the same way as this one.</p></li>
+</ol>
+<p>9 <strong>Examples</strong> This gives sample code and output. If you have installed the necessary package(s) to run this code, you can just try the code out yourself by typing the code <em>exactly</em> as shown in the example in the Console window of RStudio. It will call data that comes built in with the package when you installed it and can be a helpful way for you to understand how the command is working before you try it with your own data.</p>
+<p><img src="figures/HelpDoc_partA.jpg" width="95%" style="display: block; margin: auto;" /></p>
+<p><img src="figures/HelpDoc_partB.jpg" width="95%" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="finding-your-way-around-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-and-metadata.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-getting-R-help.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["quant-guide.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

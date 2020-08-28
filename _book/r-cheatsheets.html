@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 12 R “Cheatsheets” | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 12 R “Cheatsheets” | Quantitative skills for biology" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 12 R “Cheatsheets” | Quantitative skills for biology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 12 R “Cheatsheets” | Quantitative skills for biology" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 12 R “Cheatsheets” | Quantitative skills for biology" />
+  
+  <meta name="twitter:description" content="Chapter 12 R “Cheatsheets” | Quantitative skills for biology" />
+  
+
+<meta name="author" content="Yolanda Wiersma, Amy Hurford, Joany Marino" />
+
+
+<meta name="date" content="2020-01-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="using-r-help.html"/>
+<link rel="next" href="r-books.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Quantitative skills for biology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="entering-data.html"><a href="entering-data.html"><i class="fa fa-check"></i><b>2</b> Entering data</a></li>
+<li class="chapter" data-level="3" data-path="submitting-your-data-to-a-repository.html"><a href="submitting-your-data-to-a-repository.html"><i class="fa fa-check"></i><b>3</b> Submitting your data to a repository</a></li>
+<li class="chapter" data-level="4" data-path="data-submission.html"><a href="data-submission.html"><i class="fa fa-check"></i><b>4</b> Data submission</a></li>
+<li class="chapter" data-level="5" data-path="how-to-install-r-and-r-studio.html"><a href="how-to-install-r-and-r-studio.html"><i class="fa fa-check"></i><b>5</b> How to install R and R Studio</a><ul>
+<li class="chapter" data-level="5.1" data-path="how-to-install-r-and-r-studio.html"><a href="how-to-install-r-and-r-studio.html#why-r"><i class="fa fa-check"></i><b>5.1</b> Why R</a></li>
+<li class="chapter" data-level="5.2" data-path="how-to-install-r-and-r-studio.html"><a href="how-to-install-r-and-r-studio.html#r"><i class="fa fa-check"></i><b>5.2</b> R</a></li>
+<li class="chapter" data-level="5.3" data-path="how-to-install-r-and-r-studio.html"><a href="how-to-install-r-and-r-studio.html#rstudio"><i class="fa fa-check"></i><b>5.3</b> RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html"><i class="fa fa-check"></i><b>6</b> Finding your way around RStudio</a><ul>
+<li class="chapter" data-level="6.1" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#source-pane"><i class="fa fa-check"></i><b>6.1</b> Source pane</a></li>
+<li class="chapter" data-level="6.2" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#console-pane"><i class="fa fa-check"></i><b>6.2</b> Console pane</a></li>
+<li class="chapter" data-level="6.3" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#enviornmenthistory-pane"><i class="fa fa-check"></i><b>6.3</b> Enviornment/History pane</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#environment-tab"><i class="fa fa-check"></i><b>6.3.1</b> Environment tab</a></li>
+<li class="chapter" data-level="6.3.2" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#history-tab"><i class="fa fa-check"></i><b>6.3.2</b> History tab</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#fileplotspackageshelp-pane"><i class="fa fa-check"></i><b>6.4</b> File/Plots/Packages/Help pane</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#files-tab"><i class="fa fa-check"></i><b>6.4.1</b> Files tab</a></li>
+<li class="chapter" data-level="6.4.2" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#plots-tab"><i class="fa fa-check"></i><b>6.4.2</b> Plots tab</a></li>
+<li class="chapter" data-level="6.4.3" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#packages-tab"><i class="fa fa-check"></i><b>6.4.3</b> Packages tab</a></li>
+<li class="chapter" data-level="6.4.4" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#help-tab"><i class="fa fa-check"></i><b>6.4.4</b> Help tab</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="installing-a-package.html"><a href="installing-a-package.html"><i class="fa fa-check"></i><b>7</b> Installing a package</a></li>
+<li class="chapter" data-level="8" data-path="a-simple-approach-for-loading-data-into-rstudio.html"><a href="a-simple-approach-for-loading-data-into-rstudio.html"><i class="fa fa-check"></i><b>8</b> A simple approach for loading data into RStudio</a></li>
+<li class="chapter" data-level="9" data-path="making-a-graph-with-ggplot-in-rstudio.html"><a href="making-a-graph-with-ggplot-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Making a graph with ggplot in RStudio</a></li>
+<li class="chapter" data-level="10" data-path="getting-r-help.html"><a href="getting-r-help.html"><i class="fa fa-check"></i><b>10</b> Getting R help</a></li>
+<li class="chapter" data-level="11" data-path="using-r-help.html"><a href="using-r-help.html"><i class="fa fa-check"></i><b>11</b> Using R help</a></li>
+<li class="chapter" data-level="12" data-path="r-cheatsheets.html"><a href="r-cheatsheets.html"><i class="fa fa-check"></i><b>12</b> R “Cheatsheets”</a></li>
+<li class="chapter" data-level="13" data-path="r-books.html"><a href="r-books.html"><i class="fa fa-check"></i><b>13</b> R books</a></li>
+<li class="chapter" data-level="14" data-path="how-to-interpret-r-help-files.html"><a href="how-to-interpret-r-help-files.html"><i class="fa fa-check"></i><b>14</b> How to interpret R help files</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Quantitative skills for biology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="r-cheatsheets" class="section level1">
+<h1><span class="header-section-number">Chapter 12</span> R “Cheatsheets”</h1>
+<p>Because R is open source software, there is also a culture of open access help. Several R programmers have made helpful “cheatSheets” that are worth printing off and hanging by your desk. Try <a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">this one</a> by Tom Short for starters.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="using-r-help.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="r-books.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-getting-R-help.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": ["quant-guide.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 Getting R help | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 10 Getting R help | Quantitative skills for biology" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 Getting R help | Quantitative skills for biology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 10 Getting R help | Quantitative skills for biology" />
+  <meta name="github-repo" content="ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Getting R help | Quantitative skills for biology" />
+  
+  <meta name="twitter:description" content="Chapter 10 Getting R help | Quantitative skills for biology" />
+  
+
+<meta name="author" content="Yolanda Wiersma, Amy Hurford, Joany Mariño" />
+
+
+<meta name="date" content="2020-01-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="making-a-graph-with-ggplot-in-rstudio.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Quantitative skills for biology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="entering-data.html"><a href="entering-data.html"><i class="fa fa-check"></i><b>2</b> Entering data</a></li>
+<li class="chapter" data-level="3" data-path="submitting-your-data-to-a-repository.html"><a href="submitting-your-data-to-a-repository.html"><i class="fa fa-check"></i><b>3</b> Submitting your data to a repository</a></li>
+<li class="chapter" data-level="4" data-path="data-submission.html"><a href="data-submission.html"><i class="fa fa-check"></i><b>4</b> Data submission</a></li>
+<li class="chapter" data-level="5" data-path="how-to-install-r-and-r-studio.html"><a href="how-to-install-r-and-r-studio.html"><i class="fa fa-check"></i><b>5</b> How to install R and R Studio</a><ul>
+<li class="chapter" data-level="5.1" data-path="how-to-install-r-and-r-studio.html"><a href="how-to-install-r-and-r-studio.html#why-r"><i class="fa fa-check"></i><b>5.1</b> Why R</a></li>
+<li class="chapter" data-level="5.2" data-path="how-to-install-r-and-r-studio.html"><a href="how-to-install-r-and-r-studio.html#r"><i class="fa fa-check"></i><b>5.2</b> R</a></li>
+<li class="chapter" data-level="5.3" data-path="how-to-install-r-and-r-studio.html"><a href="how-to-install-r-and-r-studio.html#rstudio"><i class="fa fa-check"></i><b>5.3</b> RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html"><i class="fa fa-check"></i><b>6</b> Finding your way around RStudio</a><ul>
+<li class="chapter" data-level="6.1" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#source-pane"><i class="fa fa-check"></i><b>6.1</b> Source pane</a></li>
+<li class="chapter" data-level="6.2" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#console-pane"><i class="fa fa-check"></i><b>6.2</b> Console pane</a></li>
+<li class="chapter" data-level="6.3" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#enviornmenthistory-pane"><i class="fa fa-check"></i><b>6.3</b> Enviornment/History pane</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#environment-tab"><i class="fa fa-check"></i><b>6.3.1</b> Environment tab</a></li>
+<li class="chapter" data-level="6.3.2" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#history-tab"><i class="fa fa-check"></i><b>6.3.2</b> History tab</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#fileplotspackageshelp-pane"><i class="fa fa-check"></i><b>6.4</b> File/Plots/Packages/Help pane</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#files-tab"><i class="fa fa-check"></i><b>6.4.1</b> Files tab</a></li>
+<li class="chapter" data-level="6.4.2" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#plots-tab"><i class="fa fa-check"></i><b>6.4.2</b> Plots tab</a></li>
+<li class="chapter" data-level="6.4.3" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#packages-tab"><i class="fa fa-check"></i><b>6.4.3</b> Packages tab</a></li>
+<li class="chapter" data-level="6.4.4" data-path="finding-your-way-around-rstudio.html"><a href="finding-your-way-around-rstudio.html#help-tab"><i class="fa fa-check"></i><b>6.4.4</b> Help tab</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="installing-a-package.html"><a href="installing-a-package.html"><i class="fa fa-check"></i><b>7</b> Installing a package</a></li>
+<li class="chapter" data-level="8" data-path="load-data.html"><a href="load-data.html"><i class="fa fa-check"></i><b>8</b> A simple approach for loading data into RStudio</a></li>
+<li class="chapter" data-level="9" data-path="making-a-graph-with-ggplot-in-rstudio.html"><a href="making-a-graph-with-ggplot-in-rstudio.html"><i class="fa fa-check"></i><b>9</b> Making a graph with ggplot in RStudio</a></li>
+<li class="chapter" data-level="10" data-path="getting-r-help.html"><a href="getting-r-help.html"><i class="fa fa-check"></i><b>10</b> Getting R help</a><ul>
+<li class="chapter" data-level="10.1" data-path="getting-r-help.html"><a href="getting-r-help.html#using-r-help"><i class="fa fa-check"></i><b>10.1</b> Using R help</a></li>
+<li class="chapter" data-level="10.2" data-path="getting-r-help.html"><a href="getting-r-help.html#r-cheatsheets"><i class="fa fa-check"></i><b>10.2</b> R “Cheatsheets”</a></li>
+<li class="chapter" data-level="10.3" data-path="getting-r-help.html"><a href="getting-r-help.html#r-books"><i class="fa fa-check"></i><b>10.3</b> R books</a></li>
+<li class="chapter" data-level="10.4" data-path="getting-r-help.html"><a href="getting-r-help.html#how-to-interpret-r-help-files"><i class="fa fa-check"></i><b>10.4</b> How to interpret R help files</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Quantitative skills for biology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="getting-r-help" class="section level1">
+<h1><span class="header-section-number">Chapter 10</span> Getting R help</h1>
+<p>The first place most people go for R help is the “Help” tabe in the “Files/Plots/Packages/Help” pane on thue console (described in Chapter 4). Here you can do a search by topic/term using the search window at the top right. You can also click the “house” icon to go to the home menu for the help files and use the table of contents there to navigate to what you are looking for.</p>
+<div id="using-r-help" class="section level2">
+<h2><span class="header-section-number">10.1</span> Using R help</h2>
+<p>The hardest part about R help files is that at first they don’t seem that helpful, and to new R users, they seem to be written in code. However, all of the help pages are structured the same way, so once you learn how to de-code them, you’ll be well on your way. Below is an example of how to interpret R help files</p>
+</div>
+<div id="r-cheatsheets" class="section level2">
+<h2><span class="header-section-number">10.2</span> R “Cheatsheets”</h2>
+<p>Because R is open source software, there is also a culture of open access help. Several R programmers have made helpful “cheatSheets” that are worth printing off and hanging by your desk. Try <a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">this one</a> by Tom Short for starters.</p>
+</div>
+<div id="r-books" class="section level2">
+<h2><span class="header-section-number">10.3</span> R books</h2>
+<p>As with the cheatsheets, there are open access books out there (as well as expensive ones to buy). For beginners, “The Pirates Gude to R” by Nathaniel D. Phillips is <strong>HIGHLY</strong> recommended. You can access it <a href="https://bookdown.org/ndphillips/YaRrr/">here</a></p>
+</div>
+<div id="how-to-interpret-r-help-files" class="section level2">
+<h2><span class="header-section-number">10.4</span> How to interpret R help files</h2>
+<p>R documentation follows the following format. As an example, we’ll use the screenshot below for a really simple statistical command (the t-test) to walk you through the R documentation. Numbers below correspond to the labels on the screenshot.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>header</strong> This simply gives the command for the thing you are trying to do, in R language</p></li>
+<li><p><strong>Title</strong> This is a title of the function/command/tool in more plain language</p></li>
+<li><p><strong>Description</strong> This section provides a short description of what the command does, written in reaonably plain language</p></li>
+<li><p><strong>Usage</strong> This is where you see an example of R code that you use to execute the command (<strong>TIP</strong> you can tell what text in the help file is R code and what is other information by the font. Example code is in Courier font). Any example prefaced teh two hashtags (“##”) is a comment that adds additonal descitpion or provides different options for the comment. For example, for the t-test here, the first exampe is for the default method, where you are doing a t-test for a difference between two numeric vectors of data values (“x” and “y”). The second example is where you are applying the t-test to a formula instead of two numeric vectors. Until you start doing more advanced statistics, the default method will usually be what you use.</p></li>
+<li><p><strong>Arguments</strong> This section breaks down every element in the R code under “Usage” above it and describes what the input is that you need to provide. It also gives you details about the options as well as what the defaults are. For example, for the t-test documentation here, it tells you that “x” is “a (non-empty) numeric vector of data values”. It also tells you that this is what “y” is but not that it tells you that “y” is optional (i.e., you can do a t-test on just one vector of data values). This fact is also shown in the example code where it says “y = NULL”).</p></li>
+</ol>
+<p>Note that you often do not have to input ALL the arguments. If you are happy with the defaults you don’t have to type in the code. For example, the description of the argument “alternative” tells you that you can specify whether the alternative hypothesis is two-sided (i.e., two-tailed), or one-tailed, in which case you have to say whether the alternative hypothesis is that the second set of data (e.g., the treatment) are greater or less than the first (e.g., the control). The default is that you are assuming the alternative hypothesis is two-sided. If this is what you want, then your code only needs to look like this</p>
+<p><code>t.test(x, y)</code></p>
+<p>However, if you want a one-sided test, and your alternate hypothesis is that the treatment (y) is greater than the control (x), then you need to type a bit more code, like this:</p>
+<p><code>t.test(x, y, alternative = c(&quot;greater&quot;))</code></p>
+<ol start="6" style="list-style-type: decimal">
+<li><p><strong>Details</strong> This sectin gives you a little more detail (written a bit more like a stats text) about what the function is doing. For more advanced functions, there may be details on the types of inputs allowed and other caveats. <em>This section is really helpful to read closely!</em></p></li>
+<li><p><strong>Value</strong> This section lists the objects (output) created when you execute the command. The relevance of this list will become more clear once you start using R.</p></li>
+<li><p><strong>See Also</strong> This section is usually just links to similar commands to the one you are reading up on, or related to it somewhow. These can be useful to explore when doing more complex statistical tests, or if you are not sure which test you should be using. Clicking the link will just take you to the Documentation page for that command, which will be set up exactly the same way as this one.</p></li>
+</ol>
+<p>9 <strong>Examples</strong> This gives sample code and output. If you have installed the necessary package(s) to run this code, you can just try the code out yourself by typing the code <em>exactly</em> as shown in the example in the Console window of RStudio. It will call data that comes built in with the package when you installed it and can be a helpful way for you to understand how the command is working before you try it with your own data.</p>
+<p><img src="figures/HelpDoc_partA.jpg" width="95%" style="display: block; margin: auto;" /></p>
+<p><img src="figures/HelpDoc_partB.jpg" width="95%" style="display: block; margin: auto;" /></p>
+
+
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="making-a-graph-with-ggplot-in-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-getting-R-help.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["quant-guide.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 12 BIOL 1001: QUANTIATIVE SKILLS LABORATORY PART 2 | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 12 BIOL 1001: QUANTIATIVE SKILLS LABORATORY PART 2 | Quantitative skills for biology" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 12 BIOL 1001: QUANTIATIVE SKILLS LABORATORY PART 2 | Quantitative skills for biology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 12 BIOL 1001: QUANTIATIVE SKILLS LABORATORY PART 2 | Quantitative skills for biology" />
+  <meta name="github-repo" content="ahurford/quantitative-training-guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 12 BIOL 1001: QUANTIATIVE SKILLS LABORATORY PART 2 | Quantitative skills for biology" />
+  
+  <meta name="twitter:description" content="Chapter 12 BIOL 1001: QUANTIATIVE SKILLS LABORATORY PART 2 | Quantitative skills for biology" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="hypothesis.html"/>
+<link rel="next" href="coding-club-at-mun.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Quantitative skills for biology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a><ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rcloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a><ul>
+<li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
+<li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
+<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#enviornmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Enviornment/History pane</a><ul>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a><ul>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#files-tab"><i class="fa fa-check"></i>Files tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#plots-tab"><i class="fa fa-check"></i>Plots tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#packages-tab"><i class="fa fa-check"></i>Packages tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#help-tab"><i class="fa fa-check"></i>Help tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#viewer-tab"><i class="fa fa-check"></i>Viewer tab</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a><ul>
+<li class="chapter" data-level="4.1" data-path="rintro.html"><a href="rintro.html#workflow"><i class="fa fa-check"></i><b>4.1</b> Workflow</a></li>
+<li class="chapter" data-level="4.2" data-path="rintro.html"><a href="rintro.html#working-directory"><i class="fa fa-check"></i><b>4.2</b> Working directory</a></li>
+<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="rintro.html"><a href="rintro.html#shortcuts"><i class="fa fa-check"></i><b>4.3.1</b> Shortcuts</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="rintro.html"><a href="rintro.html#using-variables"><i class="fa fa-check"></i><b>4.4</b> Using variables</a></li>
+<li class="chapter" data-level="4.5" data-path="rintro.html"><a href="rintro.html#comments"><i class="fa fa-check"></i><b>4.5</b> Comments</a></li>
+<li class="chapter" data-level="4.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>4.6</b> Precedence</a></li>
+<li class="chapter" data-level="4.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>4.7</b> Mathematical functions</a></li>
+<li class="chapter" data-level="4.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>4.8</b> Data types</a></li>
+<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a><ul>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#lists"><i class="fa fa-check"></i>Lists</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#data-frames"><i class="fa fa-check"></i>Data frames</a></li>
+</ul></li>
+<li class="chapter" data-level="4.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>4.10</b> R Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a><ul>
+<li class="chapter" data-level="5.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>5.1</b> Using R help</a></li>
+<li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R “Cheatsheets”</a></li>
+<li class="chapter" data-level="5.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>5.3</b> R books</a></li>
+<li class="chapter" data-level="5.4" data-path="help.html"><a href="help.html#how-to-interpret-r-help-files"><i class="fa fa-check"></i><b>5.4</b> How to interpret R help files</a></li>
+<li class="chapter" data-level="5.5" data-path="help.html"><a href="help.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="howtoask.html"><a href="howtoask.html"><i class="fa fa-check"></i><b>6</b> How to ask for help</a></li>
+<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a><ul>
+<li class="chapter" data-level="7.1" data-path="style.html"><a href="style.html#file-organization"><i class="fa fa-check"></i><b>7.1</b> File organization</a></li>
+<li class="chapter" data-level="7.2" data-path="style.html"><a href="style.html#comments-1"><i class="fa fa-check"></i><b>7.2</b> Comments</a></li>
+<li class="chapter" data-level="7.3" data-path="style.html"><a href="style.html#spacing"><i class="fa fa-check"></i><b>7.3</b> Spacing</a></li>
+<li class="chapter" data-level="7.4" data-path="style.html"><a href="style.html#names"><i class="fa fa-check"></i><b>7.4</b> Names</a></li>
+<li class="chapter" data-level="7.5" data-path="style.html"><a href="style.html#template"><i class="fa fa-check"></i><b>7.5</b> Template</a></li>
+<li class="chapter" data-level="7.6" data-path="style.html"><a href="style.html#checklist"><i class="fa fa-check"></i><b>7.6</b> Checklist</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a><ul>
+<li class="chapter" data-level="8.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>8.1</b> Entering data</a></li>
+<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
+<li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>9</b> Making graphs in R</a><ul>
+<li class="chapter" data-level="9.1" data-path="graph.html"><a href="graph.html#making-graphs-in-r"><i class="fa fa-check"></i><b>9.1</b> Making graphs in R</a></li>
+<li class="chapter" data-level="9.2" data-path="graph.html"><a href="graph.html#scatter-plots-with-plotxy"><i class="fa fa-check"></i><b>9.2</b> Scatter plots with <code>plot(x,y)</code></a></li>
+<li class="chapter" data-level="9.3" data-path="graph.html"><a href="graph.html#adding-axes-labels-and-changing-symbols"><i class="fa fa-check"></i><b>9.3</b> Adding axes labels and changing symbols</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>9.3.1</b> Getting a bit more sophisticated</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>9.4</b> Line graphs</a></li>
+<li class="chapter" data-level="9.5" data-path="graph.html"><a href="graph.html#other-useful-plot-functions"><i class="fa fa-check"></i><b>9.5</b> Other useful plot functions</a></li>
+<li class="chapter" data-level="9.6" data-path="graph.html"><a href="graph.html#exporting-your-graphs"><i class="fa fa-check"></i><b>9.6</b> Exporting your graphs</a></li>
+<li class="chapter" data-level="9.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>9.7</b> pch cheatsheet</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>10</b> Data and metadata</a><ul>
+<li class="chapter" data-level="10.1" data-path="data.html"><a href="data.html#data"><i class="fa fa-check"></i><b>10.1</b> Data</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>10.1.1</b> Data guidelines</a></li>
+<li class="chapter" data-level="10.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>10.1.2</b> Database structure guidelines</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>10.2</b> Metadata</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>10.2.1</b> Metadata guidelines</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>10.3</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>11</b> Hypothesis, predictions and equations</a><ul>
+<li class="chapter" data-level="11.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>11.1</b> Discrete and continuous variables</a></li>
+<li class="chapter" data-level="11.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>11.2</b> Hypothesis testing</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>11.2.1</b> Null hypotheses</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-1"><i class="fa fa-check"></i><b>11.3</b> Further reading</a></li>
+<li class="chapter" data-level="11.4" data-path="hypothesis.html"><a href="hypothesis.html#status"><i class="fa fa-check"></i><b>11.4</b> Status</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>12</b> BIOL 1001: QUANTIATIVE SKILLS LABORATORY PART 2</a><ul>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#biological-data-with-computers"><i class="fa fa-check"></i>BIOLOGICAL DATA WITH COMPUTERS</a></li>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable"><i class="fa fa-check"></i>EXERCISE 1. Data entry and graphing with a continuous independent variable</a><ul>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#make-a-graph"><i class="fa fa-check"></i>Make a graph</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-2.-barplots-and-boxplots-with-discrete-independent-variables"><i class="fa fa-check"></i>EXERCISE 2. Barplots and boxplots with discrete independent variables</a><ul>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#questions"><i class="fa fa-check"></i>Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-2b.-making-a-barplot"><i class="fa fa-check"></i>EXERCISE 2b. Making a barplot</a><ul>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#questions-1"><i class="fa fa-check"></i>Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>13</b> Coding club at MUN</a></li>
+<li class="chapter" data-level="14" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>14</b> Contributions</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a><ul>
+<li class="chapter" data-level="A.1" data-path="faq.html"><a href="faq.html#download-and-installation-issues"><i class="fa fa-check"></i><b>A.1</b> Download and Installation Issues</a></li>
+<li class="chapter" data-level="A.2" data-path="faq.html"><a href="faq.html#computer-issues"><i class="fa fa-check"></i><b>A.2</b> Computer Issues</a></li>
+<li class="chapter" data-level="A.3" data-path="faq.html"><a href="faq.html#rstudio-error-messages"><i class="fa fa-check"></i><b>A.3</b> RStudio Error Messages</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>B</b> Glossary</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Quantitative skills for biology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lab2" class="section level1">
+<h1><span class="header-section-number">Chapter 12</span> BIOL 1001: QUANTIATIVE SKILLS LABORATORY PART 2</h1>
+<p>This lab is worth 5% of your final mark. Before completing this lab, you should re-familiarize yourself with Chapters <a href="index.html#intro">1</a>, <a href="graph.html#graph">9</a>,<a href="data.html#data">10</a> and <a href="hypothesis.html#hypothesis">11</a>. If you need to consult the help files, use Chapter <a href="help.html#help">5</a> to help guide you through the <code>R</code> help.</p>
+<div id="biological-data-with-computers" class="section level2 unnumbered">
+<h2>BIOLOGICAL DATA WITH COMPUTERS</h2>
+<hr />
+<p>PURPOSE</p>
+<ol style="list-style-type: decimal">
+<li>To learn how to record data in electronic format</li>
+<li>To learn how to write hypotheses as equations</li>
+<li>To learn how to choose the appropriate visualizations</li>
+<li>To learn how to make graphs using R Studio</li>
+</ol>
+<hr />
+<p>Before coming to the laboratory:</p>
+<ol style="list-style-type: decimal">
+<li><p>Install <code>R</code> and <code>RStudio</code>. For instructions see Chapter <a href="install.html#install">2</a>.</p></li>
+<li><p>Before coming to the laboratory read:</p></li>
+</ol>
+<p>In the quant guide:</p>
+<ul>
+<li>Chapter <a href="index.html#intro">1</a></li>
+<li>Chapter <a href="graph.html#graph">9</a></li>
+<li>Chapter <a href="data.html#data">10</a></li>
+<li>Chapter <a href="hypothesis.html#hypothesis">11</a></li>
+</ul>
+</div>
+<div id="exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable" class="section level2 unnumbered">
+<h2>EXERCISE 1. Data entry and graphing with a continuous independent variable</h2>
+<p>The increase of carbon dioxide in the atmosphere is expected to reduce the concentrations of carbonate ions in the surface of the ocean. This process, in general called ocean acidification, affects the biology and survival of a wide range of marine species because it prevents the formation of shells and plates of calcium carbonate. A long term study on coral reefs showed how the net community calcification rate (G, measured in mmol CaCO<sub>3</sub>m<sup>-2</sup>d<sup>-1</sup>) is related to the concentration of carbonate (CO<sub>3</sub><sup>2-</sup>, measured in <span class="math inline">\(\mu\)</span>mol<span class="math inline">\(\cdot\)</span>kg<sup>-1</sup>) <span class="citation">(Langdon et al. 2000)</span>. We will use the data from the research paper (which is summarized in pg. 60 of the textbook) to understand this relationship. The results of this experiment are as follows:</p>
+<table>
+<caption><span id="tab:langdon-data">Table 12.1: </span>Raw data from Langdon and collaborators (2000).</caption>
+<thead>
+<tr class="header">
+<th align="right">CO3</th>
+<th align="right">G</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">230.77</td>
+<td align="right">2.99</td>
+</tr>
+<tr class="even">
+<td align="right">230.09</td>
+<td align="right">4.07</td>
+</tr>
+<tr class="odd">
+<td align="right">233.79</td>
+<td align="right">6.25</td>
+</tr>
+<tr class="even">
+<td align="right">235.86</td>
+<td align="right">7.34</td>
+</tr>
+<tr class="odd">
+<td align="right">241.84</td>
+<td align="right">8.62</td>
+</tr>
+<tr class="even">
+<td align="right">248.27</td>
+<td align="right">9.36</td>
+</tr>
+<tr class="odd">
+<td align="right">254.96</td>
+<td align="right">12.45</td>
+</tr>
+<tr class="even">
+<td align="right">259.80</td>
+<td align="right">14.45</td>
+</tr>
+<tr class="odd">
+<td align="right">265.79</td>
+<td align="right">17.36</td>
+</tr>
+<tr class="even">
+<td align="right">271.09</td>
+<td align="right">19.54</td>
+</tr>
+<tr class="odd">
+<td align="right">273.88</td>
+<td align="right">22.61</td>
+</tr>
+<tr class="even">
+<td align="right">### Enter</td>
+<td align="right">the data {-}</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: decimal">
+<li>We provide this data as a .csv called <code>LangdonDataset.csv</code>. Download this file from Brightspace into the folder where your R files are. <strong>NOTE</strong> that in the <code>read.csv</code> command that what is inside the quote marks <code>&quot;</code> MUST match the file name in your folder exactly. You also have to include the quotation marks. Then follow the instructions in Chapter <a href="data-entry.html#data-entry">8</a> and import the data. Note that this is just a subset of the data from the full paper. Include a copy of the code you used in your lab report.</li>
+</ol>
+<div id="make-a-graph" class="section level3 unnumbered">
+<h3>Make a graph</h3>
+<ol style="list-style-type: decimal">
+<li>Follow the instructions in Chapter <a href="graph.html#graph">9</a> to make a scatterplot for these data and replicate the figure from the Campbell textbook (see Figure 10.1 below). Include both the code you wrote and the final figure in your lab report. NOTE: Don’t worry about figuring out how to write superscripts and subscripts in R for the axis-labels. You can use the “^” symbol to indicate a superscript, and the “-” to indicate a subscript.</li>
+</ol>
+<p><strong>HINT</strong> Think about what you are specifying as <code>x</code> and <code>y</code> in the <code>plot</code> function. Use the tools you learned about in Chapter <a href="rintro.html#rintro">4</a> to explore the dataframe.</p>
+<p><strong>NEW TIP</strong> instead of entering the data as a vector the way you learned in Chapter <a href="graph.html#graph">9</a>, you can use the code below to create an x vector from a data frame (here I titled my data frame “langdon_data”; your name may be different, and I created a vector of data called “CO3”). The <code>$</code> sign tells R to look in the data frame specified before the <code>$</code> sign (in the example below the data frame is “langdon_data” and then read the column that comes after the <code>$</code> sign (in the example here, it’s CO3. The column header you specify after the $ sign MUST match the way it is shown in the dataframe EXACTLY. Use the commands you learned in Chapter <a href="rintro.html#rintro">4</a> to confirm what the column header is.</p>
+<p>You can use this to create the vector of data that you need to plot on the x-axis, and then write you own code to create the vector of data for the y-axis.</p>
+<div class="figure" style="text-align: center"><span id="fig:langdon"></span>
+<img src="figures/Landgon_scatterplot.jpeg" alt="Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 60" width="70%" />
+<p class="caption">
+Figure 12.1: Scatterplot from Langdon et al. study on calcification rate in seawater as a function of carbonate concentration. This figure is found in your textbook on pg. 60
+</p>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">langdon_data &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;LangdonDataset.csv&quot;</span>)
+CO3 &lt;-<span class="st"> </span>langdon_data$CO3</code></pre></div>
+<p>Use the examples in Chapter <a href="graph.html#graph">9</a> to create a fully labelled scatter plot. Export this and paste it into your document that you will hand in for this lab. Include both the code you wrote and the final figure in your lab report.</p>
+<p><strong>HINT</strong> if you want to add a line of best fit based on linear regression, use the function <code>abline</code> using a linear regression model (the function <code>lm</code>). Your code will look something like this: <code>abline(lm(y~x))</code> Refer to the help files for assistance. The two terms on each side of the tilde (“~” symbol) tell R what the equation for the regression <code>y~x</code> is. In your case substitute in what YOU defined as <code>x</code> and <code>y</code> in R. <strong>NOTE</strong> for the lab assignment, this step is optional.</p>
+<ol style="list-style-type: decimal">
+<li>Follow the instructions in Chapter <a href="graph.html#graph">9</a> to make a second graph - a line graph for these data. Export your line graph insert it into your lab report. Write a figure caption. Include both the code you wrote and the final figure in your lab report.</li>
+</ol>
+</div>
+</div>
+<div id="exercise-2.-barplots-and-boxplots-with-discrete-independent-variables" class="section level2 unnumbered">
+<h2>EXERCISE 2. Barplots and boxplots with discrete independent variables</h2>
+<p>We will use data from a research paper that investigated whether plants were able to respond to stress cues emitted from their drought-stressed neighbours <span class="citation">(Falik et al. 2011)</span>. This research project is also discussed in your textbook. The research team used <em>Pisum sativum</em> plants in an experimental setup that allowed them to connect the plants’ root systems. One plant in the central position of a row was subjected to osmotic stress, while neighbouring plants remained unstressed on both sides. Plants on one side of the stressed plant shared roots with others in the group but did not share roots with the stressed plant; these were the control group. On the other side, the stressed plant shared its roots with its nearest unstressed neighbour, and all the other plants shared their roots with their nearest neighbour (See Figure <a href="lab2.html#fig:setup">12.2</a>).</p>
+<div class="figure" style="text-align: center"><span id="fig:setup"></span>
+<img src="figures/Falik_et-al_2011_setup.jpg" alt="Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 10.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011)." width="70%" />
+<p class="caption">
+Figure 12.2: Experimental set up for testing stress cues. Circles represent plants and connector lines represent the plants with connected roots. The numbers of the plants correspond to those of Table 10.2. Osmotic stress was induced in plant 6 (Modified from Falik et al., 2011).
+</p>
+</div>
+<p>Stress was quantified fifteen minutes after the induction of drought by measuring the width of the stomatal openings on the leaves of the plants. The results of this experiment are as follows:</p>
+<table>
+<caption><span id="tab:raw-data">Table 12.2: </span>Raw data from Falik and collaborators (2011).</caption>
+<thead>
+<tr class="header">
+<th align="left">type</th>
+<th align="right">plant</th>
+<th align="right">width</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">control</td>
+<td align="right">1</td>
+<td align="right">12.109661</td>
+</tr>
+<tr class="even">
+<td align="left">15min</td>
+<td align="right">1</td>
+<td align="right">11.577023</td>
+</tr>
+<tr class="odd">
+<td align="left">control</td>
+<td align="right">2</td>
+<td align="right">11.608355</td>
+</tr>
+<tr class="even">
+<td align="left">15min</td>
+<td align="right">2</td>
+<td align="right">10.903394</td>
+</tr>
+<tr class="odd">
+<td align="left">control</td>
+<td align="right">3</td>
+<td align="right">9.446475</td>
+</tr>
+<tr class="even">
+<td align="left">15min</td>
+<td align="right">3</td>
+<td align="right">12.093995</td>
+</tr>
+<tr class="odd">
+<td align="left">control</td>
+<td align="right">4</td>
+<td align="right">9.697128</td>
+</tr>
+<tr class="even">
+<td align="left">15min</td>
+<td align="right">4</td>
+<td align="right">11.013055</td>
+</tr>
+<tr class="odd">
+<td align="left">control</td>
+<td align="right">5</td>
+<td align="right">10.840731</td>
+</tr>
+<tr class="even">
+<td align="left">15min</td>
+<td align="right">5</td>
+<td align="right">11.483029</td>
+</tr>
+<tr class="odd">
+<td align="left">control</td>
+<td align="right">6</td>
+<td align="right">10.746736</td>
+</tr>
+<tr class="even">
+<td align="left">15min</td>
+<td align="right">6</td>
+<td align="right">7.221932</td>
+</tr>
+<tr class="odd">
+<td align="left">control</td>
+<td align="right">7</td>
+<td align="right">10.605744</td>
+</tr>
+<tr class="even">
+<td align="left">15min</td>
+<td align="right">7</td>
+<td align="right">7.973890</td>
+</tr>
+<tr class="odd">
+<td align="left">control</td>
+<td align="right">8</td>
+<td align="right">11.780679</td>
+</tr>
+<tr class="even">
+<td align="left">15min</td>
+<td align="right">8</td>
+<td align="right">7.080940</td>
+</tr>
+<tr class="odd">
+<td align="left">control</td>
+<td align="right">9</td>
+<td align="right">11.608355</td>
+</tr>
+<tr class="even">
+<td align="left">15min</td>
+<td align="right">9</td>
+<td align="right">8.772846</td>
+</tr>
+<tr class="odd">
+<td align="left">control</td>
+<td align="right">10</td>
+<td align="right">11.686684</td>
+</tr>
+<tr class="even">
+<td align="left">15min</td>
+<td align="right">10</td>
+<td align="right">9.838120</td>
+</tr>
+<tr class="odd">
+<td align="left">control</td>
+<td align="right">11</td>
+<td align="right">11.874674</td>
+</tr>
+<tr class="even">
+<td align="left">15min</td>
+<td align="right">11</td>
+<td align="right">11.639687</td>
+</tr>
+</tbody>
+</table>
+<div id="questions" class="section level3 unnumbered">
+<h3>Questions</h3>
+<ol style="list-style-type: decimal">
+<li><p>Follow the instructions in Chapter <a href="data-entry.html#data-entry">8</a> to load the data file FalikDataset.csv using the command line (<code>read.csv</code>) option. <strong>Note</strong> that the data in the CSV file are ordered differently than in the list above (to verify this you can open the CSV file in Excel to see the full set).</p></li>
+<li><p>Looking at the dataset, can you tell how many treatments were applied in the experiment? How many plants were used for each treatment?</p></li>
+<li><p>What is the smallest stomatal width measured? What is the largest?</p></li>
+</ol>
+</div>
+</div>
+<div id="exercise-2b.-making-a-barplot" class="section level2 unnumbered">
+<h2>EXERCISE 2b. Making a barplot</h2>
+<div id="questions-1" class="section level3 unnumbered">
+<h3>Questions</h3>
+<ol style="list-style-type: decimal">
+<li>Follow the instructions below to replicate the figure from the Campbell textbook (bar plot; see Figure 10.3 below). Export your bar graph insert it into your lab report. Add a caption to your bar plot and hand it in with your lab report. Include the code you wrote to generate the figure.</li>
+</ol>
+<div class="figure" style="text-align: center"><span id="fig:falik"></span>
+<img src="figures/Falik_barplot.jpeg" alt="Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910" width="70%" />
+<p class="caption">
+Figure 12.3: Barplot from Falik et al. study on plant stress and plant communication. This figure is found in your textbook on pg. 910
+</p>
+</div>
+<p>To make a barplot, use the code below as a starting point, and then use the resources in this guide to add appropriate x and y axis labels.Don’t worry about figuring out how to write the symbol “mu” in R; you can just write “um” or “micrometres” for now. However, if you want to try writing Greek symbols in R, look at the code below for the boxplot example, and see if you can apply it to your barplot.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">width &lt;-<span class="st"> </span>falik_data$width <span class="co">#This creates a vector of data of the plant stomatal widths</span>
+plant &lt;-<span class="st"> </span>falik_data$plant <span class="co">#The creates a vector of data of the plant ID numbers</span>
+
+
+<span class="kw">barplot</span>(width, <span class="dt">names =</span> plant, <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;blue&quot;</span>, <span class="st">&quot;red&quot;</span>))</code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li><p>In the barplot, what can you tell about the stomatal openings of the treatment plant vs. the control plants? Is it consistent across all the individual plants?</p></li>
+<li><p>Follow the instructions below to re-plot the data from EXERCISE 2b as a boxplot that compares control versus treatment. Export your boxplot and insert it into your lab report. Add a caption to your boxplot. NOTE: If you describe what the symbols/colours mean in the caption, then you do not need to include a legend. If you want to try adding a legend (adding one is optional) then look up “legend” in the help window.</p></li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">control &lt;-<span class="st"> </span><span class="kw">subset</span>(falik_data, type ==<span class="st"> &quot;control&quot;</span>) <span class="co">#This subset command is a handy function to break the data into subsets. Here, we&#39;re creating a data frame with just the values from the control.</span>
+treatment &lt;-<span class="st"> </span><span class="kw">subset</span>(falik_data, type ==<span class="st"> &quot;15min&quot;</span>) <span class="co">#Here we are subsetting the data to contain only the data from the treatment</span>
+
+<span class="kw">boxplot</span>(control$width, treatment$width, <span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;control&quot;</span>, <span class="st">&quot;treatment&quot;</span>), <span class="dt">ylab =</span> <span class="kw">expression</span>(<span class="kw">paste</span>(<span class="st">&quot;stomatal opening ( &quot;</span>, mu, <span class="st">&quot;)&quot;</span>)))</code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Label the following on the boxplot: median, 25% and 75% quantiles, 95% confidence limits. <strong>HINT</strong> you can insert the exported graph into a blank PowerPoint slide and use lines/text boxes to draw the labels. Then save the slide as an image file (e.g., JPEG) and insert it in your lab report.</p></li>
+<li><p>What does the boxplot tell you about the differences between the treatment plants (plants 6-11) vs. the control plants that the bar chart does not?</p></li>
+<li><p>Why do you think a scientist might choose to represent these data one way over another?</p></li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="hypothesis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="coding-club-at-mun.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/27-BIOL-1001-lab-2.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["quant-guide.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

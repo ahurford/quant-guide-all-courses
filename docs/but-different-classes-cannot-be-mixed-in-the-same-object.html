@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 But different classes cannot be mixed in the same object | Quantitative skills for biology</title>
+  <meta name="description" content="Chapter 9 But different classes cannot be mixed in the same object | Quantitative skills for biology" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 But different classes cannot be mixed in the same object | Quantitative skills for biology" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 9 But different classes cannot be mixed in the same object | Quantitative skills for biology" />
+  <meta name="github-repo" content="ahurford/quantitative-training-resources/tree/master/Quantitative training guides/quant-guide" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 But different classes cannot be mixed in the same object | Quantitative skills for biology" />
+  
+  <meta name="twitter:description" content="Chapter 9 But different classes cannot be mixed in the same object | Quantitative skills for biology" />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="vectors-can-also-be-used-as-arguments-to-functions.html"/>
+<link rel="next" href="data-entry.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Quantitative skills for biology</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> How to install R and R Studio</a></li>
+<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a><ul>
+<li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
+<li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
+<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#enviornmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Enviornment/History pane</a><ul>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a><ul>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#files-tab"><i class="fa fa-check"></i>Files tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#plots-tab"><i class="fa fa-check"></i>Plots tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#packages-tab"><i class="fa fa-check"></i>Packages tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#help-tab"><i class="fa fa-check"></i>Help tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#viewer-tab"><i class="fa fa-check"></i>Viewer tab</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>4</b> Getting R help</a><ul>
+<li class="chapter" data-level="4.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>4.1</b> Using R help</a></li>
+<li class="chapter" data-level="4.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>4.2</b> R “Cheatsheets”</a></li>
+<li class="chapter" data-level="4.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>4.3</b> R books</a></li>
+<li class="chapter" data-level="4.4" data-path="help.html"><a href="help.html#how-to-interpret-r-help-files"><i class="fa fa-check"></i><b>4.4</b> How to interpret R help files</a></li>
+<li class="chapter" data-level="4.5" data-path="help.html"><a href="help.html#debugging"><i class="fa fa-check"></i><b>4.5</b> Debugging</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>5</b> Data and metadata</a></li>
+<li class="chapter" data-level="6" data-path="introduction-to-r.html"><a href="introduction-to-r.html"><i class="fa fa-check"></i><b>6</b> Introduction to R</a><ul>
+<li class="chapter" data-level="6.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#workflow"><i class="fa fa-check"></i><b>6.1</b> Workflow</a></li>
+<li class="chapter" data-level="6.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#working-directory"><i class="fa fa-check"></i><b>6.2</b> Working directory</a></li>
+<li class="chapter" data-level="6.3" data-path="introduction-to-r.html"><a href="introduction-to-r.html#variables-and-assignment"><i class="fa fa-check"></i><b>6.3</b> Variables and assignment</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#shortcuts"><i class="fa fa-check"></i><b>6.3.1</b> Shortcuts</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="introduction-to-r.html"><a href="introduction-to-r.html#using-variables"><i class="fa fa-check"></i><b>6.4</b> Using variables</a></li>
+<li class="chapter" data-level="6.5" data-path="introduction-to-r.html"><a href="introduction-to-r.html#comments"><i class="fa fa-check"></i><b>6.5</b> Comments</a></li>
+<li class="chapter" data-level="6.6" data-path="introduction-to-r.html"><a href="introduction-to-r.html#precedence"><i class="fa fa-check"></i><b>6.6</b> Precedence</a></li>
+<li class="chapter" data-level="6.7" data-path="introduction-to-r.html"><a href="introduction-to-r.html#mathematical-functions"><i class="fa fa-check"></i><b>6.7</b> Mathematical functions</a></li>
+<li class="chapter" data-level="6.8" data-path="introduction-to-r.html"><a href="introduction-to-r.html#vectorization"><i class="fa fa-check"></i><b>6.8</b> Vectorization</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="check-the-type-of-data.html"><a href="check-the-type-of-data.html"><i class="fa fa-check"></i><b>7</b> check the type of data</a></li>
+<li class="chapter" data-level="8" data-path="vectors-can-also-be-used-as-arguments-to-functions.html"><a href="vectors-can-also-be-used-as-arguments-to-functions.html"><i class="fa fa-check"></i><b>8</b> Vectors can also be used as arguments to functions</a></li>
+<li class="chapter" data-level="9" data-path="but-different-classes-cannot-be-mixed-in-the-same-object.html"><a href="but-different-classes-cannot-be-mixed-in-the-same-object.html"><i class="fa fa-check"></i><b>9</b> But different classes cannot be mixed in the same object</a><ul>
+<li class="chapter" data-level="9.1" data-path="but-different-classes-cannot-be-mixed-in-the-same-object.html"><a href="but-different-classes-cannot-be-mixed-in-the-same-object.html#r-packages"><i class="fa fa-check"></i><b>9.1</b> R Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>10</b> Entering and loading data</a><ul>
+<li class="chapter" data-level="10.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>10.1</b> Entering data</a></li>
+<li class="chapter" data-level="10.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>10.2</b> Loading or importing data</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>10.2.1</b> The programmatic way</a></li>
+<li class="chapter" data-level="10.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way"><i class="fa fa-check"></i><b>10.2.2</b> The RStudio way</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>10.3</b> Inspecting the data</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>11</b> Making graphs in R</a><ul>
+<li class="chapter" data-level="11.1" data-path="graph.html"><a href="graph.html#scatter-and-line-plots-with-plotxy"><i class="fa fa-check"></i><b>11.1</b> Scatter and line plots with <code>plot(x,y)</code></a><ul>
+<li class="chapter" data-level="11.1.1" data-path="graph.html"><a href="graph.html#adding-axes-labels-and-changing-symbols"><i class="fa fa-check"></i><b>11.1.1</b> Adding axes labels and changing symbols</a></li>
+<li class="chapter" data-level="11.1.2" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>11.1.2</b> Line graphs</a></li>
+<li class="chapter" data-level="11.1.3" data-path="graph.html"><a href="graph.html#exporting-your-graphs"><i class="fa fa-check"></i><b>11.1.3</b> Exporting your graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="graph.html"><a href="graph.html#other-useful-plot-functions"><i class="fa fa-check"></i><b>11.2</b> Other useful plot functions</a></li>
+<li class="chapter" data-level="11.3" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>11.3</b> Getting a bit more sophisticated</a></li>
+<li class="chapter" data-level="11.4" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>11.4</b> pch cheatsheet</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>12</b> Hypothesis, predictions and equations</a><ul>
+<li class="chapter" data-level="12.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>12.1</b> Discrete and continuous variables</a></li>
+<li class="chapter" data-level="12.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>12.2</b> Hypothesis testing</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>12.2.1</b> Null hypotheses</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading"><i class="fa fa-check"></i><b>12.3</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="lab2.html"><a href="lab2.html"><i class="fa fa-check"></i><b>13</b> BIOL 1001: LABORATORY 2</a><ul>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#biological-data-with-computers"><i class="fa fa-check"></i>BIOLOGICAL DATA WITH COMPUTERS</a></li>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-1.-intro-to-rstudio"><i class="fa fa-check"></i>EXERCISE 1. Intro to RStudio</a></li>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-2.-entering-data"><i class="fa fa-check"></i>EXERCISE 2. Entering data</a><ul>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#questions"><i class="fa fa-check"></i>Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-3.-discrete-independent-variable"><i class="fa fa-check"></i>EXERCISE 3. Discrete independent variable</a><ul>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#questions-1"><i class="fa fa-check"></i>Questions</a></li>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#write-the-hypothesis-as-an-equation"><i class="fa fa-check"></i>Write the hypothesis as an equation</a></li>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#questions-2"><i class="fa fa-check"></i>Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#exercise-4.-continuous-independent-variable"><i class="fa fa-check"></i>EXERCISE 4. Continuous independent variable</a><ul>
+<li class="chapter" data-level="" data-path="lab2.html"><a href="lab2.html#make-a-graph"><i class="fa fa-check"></i>Make a graph</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>14</b> Coding club at MUN</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Quantitative skills for biology</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="but-different-classes-cannot-be-mixed-in-the-same-object" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> But different classes cannot be mixed in the same object</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">semiprimes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">9</span>, <span class="st">&quot;ten&quot;</span>)
+<span class="kw">class</span>(semiprimes)</code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>The core idea behind vectorization is that operations can be applied at once to an entire set of values</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y *<span class="st"> </span><span class="dv">3</span></code></pre></div>
+<pre><code>## [1]  9 12 15 18 21</code></pre>
+<p><strong>TRY IT!</strong> Create a vector with a sequence of numbers using the function <code>seq</code>. Hint: try <code>?seq</code>.</p>
+<div id="r-packages" class="section level2">
+<h2><span class="header-section-number">9.1</span> R Packages</h2>
+<p>Functions can be added to R with packages, which are stored on <a href="https://cran.r-project.org/web/packages/index.html">CRAN</a> (the Comprehensive R Archive Network).</p>
+<p>To install a package you use the function <code>install.packages(&quot;packagename&quot;)</code>, where <code>packagename</code> is the name of the package you want to install. To see what packages are installed by type <code>installed.packages()</code>.</p>
+<p>Packages are loaded with the <code>library(&quot;packagename&quot;)</code> function.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="vectors-can-also-be-used-as-arguments-to-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-entry.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-R-intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["quant-guide.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
