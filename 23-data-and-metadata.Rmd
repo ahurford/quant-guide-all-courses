@@ -1,0 +1,86 @@
+# Data and metadata {#data}
+
+## Data
+
+Data are information collected through research. Manipulation and analysis of these data (which involves testing the hypothesis) will yield the results of your research. A crucial step during this research process is ensuring the reproducibility of your results; this means that your results (either experimental or theoretical) must be repeatable by yourself and others within the scientific community. Therefore, sharing your scientific data becomes fundamental. Proper data sharing has the added benefit of allowing the data to be reused in other projects that you may not have been initially intended (e.g., meta-analyses); hence, other scientists can build directly on this to generate further knowledge 
+[@hampton2015tao; @white2013nine].
+In this sense, planning an experiment involves more than thinking through the physical manipulations required, but also requires thinking about how to store and share the data and metadata that will enable others to reuse that information effectively
+[@hampton2015tao].
+
+### Data guidelines
+
+Data organization is the basis of the data-related work for your project. Messy data makes it harder for you and others to work with the data, so you should be mindful of your data organization when entering the data. You’ll want to organize your data in a way that allows computers and people (including you) to understand and use the data easily. For instance, when returning to your own data for further analysis months or years after you originally collected or analyzed it [@white2013nine].
+
+Keep in mind the following [@hart2016ten; @white2013nine]:
+
+* Anticipate how your data will be used
+* Be consistent
+* Use standard data formats (properly formatted data are easier to use, e.g. .csv)
+* Keep raw data raw
+* Data should be structured for analysis (see below)
+* Link to relevant metadata (well documented data are easier to understand). See section below for more details on metadata
+* Store and share data (data that are shared in established repositories with open licenses is easier for others to find and use)
+
+Following these recommendations makes it easier for anyone to reuse your data, including yourself!
+
+### Database structure guidelines
+
+It’s essential to set up well-formatted tables from the outset before you even start collecting data to analyze. 
+This will ensure that you spend less time wrangling data from one representation to another, allowing you to analyze data in much more effective and faster ways and spend more time on the analytic questions at hand.
+
+We recommend [@hart2016ten; @white2013nine]:
+
+* Be consistent
+* Order of entries doesn’t matter
+* One row for each data point
+* One column per type of information
+* Every cell contains one value
+* Don’t use colors, fonts, or anything purely visual as data
+* Use good null values (e.g. NAs)
+* Store dates as YYY-MM-DD
+* Save data in plain text files (e.g. .csv)
+* Use good names
+* Avoid including special characters in your data file
+* Don’t put units or comments in cells
+* Don't do calculations in the raw data files
+* Minimize redundancy using multiple tables
+* Don’t use multiple tables in one sheet, or multiple tabs in a file.
+* Make backups
+
+## Metadata
+
+Another critical point when using data is to understand it. Metadata is information about the data. Metadata can include how the data was collected, what the units of measurement are, or descriptions of how to best use the data. Clear metadata makes it easier to figure out if a dataset is appropriate for a project. It also makes data easier to use by both the original investigators and by other scientists by making it easy to figure out how to work with the data. Without clear metadata, datasets can be overlooked or go unused due to the difficulty of understanding the data. Undocumented data also becomes less useful over time as information about the data is gradually lost [@white2013nine]. 
+
+### Metadata guidelines
+
+Metadata can take several forms, including descripttive file and column names, a written description of the data, images (i.e., maps, photographs), and specially structured information that can be read by computers (either as separate files or part of the data files) [@white2013nine]. The aim is to make the link between metadata and data as clear as possible [@hart2016ten]. 
+Good metadata should provide the following:
+[@white2013nine]:
+
+* Include as many details as you can for future users of the data (i.e. the what, when, where, and how of data collection).
+* Explain how to find and access the data.
+* Give suggestions on the suitability of the data for answering specific questions.
+* Provide warnings about known problems or inconsistencies in the data (e.g., general descriptions of data limitations or a column in a table to indicate the quality of individual data points).
+* Give information to check that the data are properly imported (e.g., the number of rows and columns in the dataset and the total sum of numerical columns).
+
+## Further reading
+
+* [List of metadata standards](http://www.dcc.ac.uk/resources/metadata-standards/list)
+
+* Browse http://sciencebase.gov and http://data.usgs.gov for both good and bad examples fo these standards in use (as well as examples from before)  http://Data.gov will have more examples too.
+
+* The metadata section of this paper is really great for a quick run down of what metadata is: https://ojs.library.queensu.ca/index.php/IEE/article/view/4608
+
+* [GenBank](http://www.ncbi.nlm.nih.gov/ genbank/) 
+
+* [Dryad](http://datadryad.org/)
+
+* [Data Citation Principles of Force11](https://www.force11.org/datacitationprinciples)
+
+* [Dataspice](https://github.com/ropenscilabs/dataspice): an R package to create basic, lightweight and concise metadata files.
+
+* https://aslopubs.onlinelibrary.wiley.com/hub/journal/23782242/about/author-guidelines#data
+
+* https://www.usgs.gov/products/data-and-tools/data-management/metadata-creation
+
+

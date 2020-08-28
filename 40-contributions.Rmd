@@ -1,0 +1,7 @@
+# Contributions
+
+This training manual is written in `R` using the `bookdown` package. Each chapter in the book is an `R markdown` file, so alternatively you might just edit a specific `.Rmd`. If you would like to contribute to the development of this training manual the source code is here: https://github.com/ahurford/quantitative-training-guide
+
+If you have a Github account you can fork the repository, make your changes and submit a pull request for us to review your suggestions. See here: https://www.youtube.com/watch?v=2VC9pCMuvfU. If you are suggesting a lot of changes, you may want to meet and discuss these prior to implementing them.
+
+Alternatively, if Github isn't working for you, please email ahurford-at-mun.ca.

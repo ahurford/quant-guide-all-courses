@@ -1,0 +1,19 @@
+# Coding club at MUN
+
+Starting in Fall 2020, we hope to begin a weekly coding club aimed at undergraduates in Biology (or related disciplines) that would like to improve their coding skills.
+
+During the coding club you might like to:
+
+- Re-read this manual and make sure you are able to complete the exercises.
+
+- Work on software carpentary modules: https://software-carpentry.org/lessons/
+
+- Work on coding club modules: https://ourcodingclub.github.io/
+
+- Work on University of Toronto coders modules: https://uoftcoders.github.io/studyGroup/lessons/
+
+- Work on the Tidy Tuesday problem: https://github.com/rfordatascience/tidytuesday
+
+- ADVANCED: Help us with the development of this manual. Specifically, if you can learn how to use `Github` and `bookdown` you can easily incorporate your suggestions. The repository for this training manual is here: https://github.com/ahurford/quantitative-training-guide
+
+- ADVANCED: Help others with `R`. Gradaute students are also welcome to attend coding club.

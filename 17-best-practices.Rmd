@@ -1,0 +1,72 @@
+# Best practices {#style}
+
+We write code to be read by a computer and other humans (including your future self!).
+
+## File organization
+
+To organize your data and scripts for each course/project, you can start by creating a new folder in your computer where you can store all the relevant files. We recommend that you create this new folder in the Desktop, so it is easy to find from R/RStudio.
+
+## Comments
+
+These are sections that are ignored by the computer but are helpful for the humans reading the code. You can use comments to explain what a specific line of code does or to visually separate parts of code from each other. Comments in R are written with a `#` (pound) sign. Whenever R encounters a `#` sign, it will ignore all the code after the `#` sign on that line. 
+
+We recommended starting your script with a description of what the code does when it runs. Describing the intended purpose of the code in a comment will save you and others time when trying to understand what a particular script does. It is also a good idea to keep track of who wrote the code. 
+
+
+## Spacing
+
+Using spaces and line breaks also improve the readability of the code. You should include spaces between operators (e.g. <-, ==), arithmetic operators (e.g. =, + and -) and after commas. 
+
+If you have long lines, split them into multiple lines. For example, use one line each for the function name, arguments, and the closing ). Breaking lines makes the code easier to read and to change later.
+
+## Names
+
+When coding you get to choose the names of the variables and functions you define. Variable and function names should use lowercase letters and numbers. You can use `_` (underscores, called snake case) to separate words within a name. Generally, variable names should be nouns and function names should be verbs. Try to have names that are concise and meaningful.
+
+## Template
+
+Here is an example of a short script that follows good programming and style practices. Try to make your scripts look like this!
+
+```{r, eval = FALSE}
+# Title: My R script for lab 1
+# Author: Maria Skłodowska
+# Date: 26-04-2020
+
+# Load libraries needed ---------------------------
+library(vegan)
+
+# Set working directory ---------------------------
+setwd("/Users/me/Desktop/R-intro/")
+
+# Load data ---------------------------
+dataset <- read.csv("example_dataset1.csv")
+
+# Analyze data ---------------------------
+temp <- dataset$temp
+fish_1 <- dataset$fishA
+
+fish_mean <- mean(fish_1, na.rm = TRUE)
+
+# Plot data ---------------------------
+plot(x = temp, y = fish_1, 
+     pch = 17, type = "l", 
+     xlab = "temperature (degrees C)", 
+     ylab = "opercular beats (bpm)"
+     )
+```
+
+## Checklist
+
+1. Keep all of your files for a project/course in the same directory
+
+1. Start each script with a description of what it does.
+
+1. Load all required packages.
+
+1. Consider changing the working directory you are in (especially if you have to load data).
+
+1. Use comments to mark off sections of code.
+
+1. Name and style code consistently.
+
+1. Keep your code in chunks. Start a new script for each lab. If a single script gets too long, consider breaking it into smaller pieces.

@@ -1,0 +1,39 @@
+# How to ask for help {#howtoask}
+
+A good way to ask for coding help is to provide a reproducible example, which will allow someone else to reproduce your problem by copying and pasting your code. Four things make an example reproducible: a description of your R environment, required packages, code, and data. 
+
+1. Do your homework before asking. This step varies depending on where your problem is: 
+    1. If you have installation issues, double-check that you followed the instructions on Section \@ref(install) and have downloaded and installed the correct versions of R and RStudio. 
+    1. If you have trouble with coding, first, locate the lines of code where the problem occurs. Copy your code from the beginning up to where the issue occurs. Then, start a new RStudio session, paste and run the code. Starting fresh will help you see if the same issue arises or if it was solved by removing unused elements. 
+    1. If the problem is caused by a function/command not running or not giving the expected output, follow Chapter \@ref(help) and read the help for the relevant functions/commands and how to use them. 
+    1. If you receive an error message or a warning, search the web by copying and pasting the output of R. It is likely that your R question has already been answered in websites like [Stack Overflow](https://stackoverflow.com/). You can even search Twitter using '#rstats'.
+  <br/>
+  
+1. Write down your problem, succinctly. Try to simplify your problem as much as possible. You can often answer your question by thinking clearly and going through the simplification process. Remember that you need to report the facts, so please do not write 'R crashed' or 'function xyz doesn't work'. Write exactly what happened, including any error messages R prompted.
+
+1. Provide a short, reproducible example. First, try to locate which lines exactly result in the error. By doing this, you will often find out what the problem is by yourself. Please, do not copy and paste a whole function/chunk of code that gives an error. What is most useful is an accurate description of what commands you type until the problem happens. Do your best to remove everything that is not related to the problem. The shorter your code is, the easier it is to understand.
+
+1. Check that you have made a reproducible example by starting up a new RStudio session, pasting your code from the step above and running it. In this way, you are sure that you made a piece of code that we can run to see the problem. Anyone should be able to copy and paste your code and data and get the same issue.
+
+1. Example of a good question:
+
+Subject: transform matrix to dataframe of specific dimensions.
+
+```{r, eval = FALSE}
+# If I have a matrix x as follows:
+x <- matrix(1:8, nrow=4, ncol=2,
+       dimnames=list(c("A","B","C","D"), c("x","y")))
+x
+```
+How can I turn it into a dataframe with eight rows, and three
+  columns named 'row', 'col', and 'value', which have the
+  dimension names as the values of 'row' and 'col'? 
+```{r, eval = FALSE}
+# example of desired output
+# x_transformed
+#     row col value 
+#       A   x     1
+#       B   x     2
+#       C   x     3
+#       ...
+```

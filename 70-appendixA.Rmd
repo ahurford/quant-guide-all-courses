@@ -1,0 +1,37 @@
+# (APPENDIX) Appendix {-}
+
+# FAQ {#faq}
+
+Below is a list of Frequently Asked Questions (FAQ) compiled from previous iterations of the course.
+
+## Download and Installation Issues
+
+1. Q. I'm having issues opening the download file/I'm working on an old computer, and R/RStudio does not seem to start. What can I do?  
+   A. Make sure that you downloaded the versions of R/RStudio that match your operating system. They may be older versions, that is fine. Then, check that you first installed R and then RStudio because RStudio needs to be added on top of R. If you already have the right versions and did the installation in order, but you still cannot start the software, try the following: 
+    1. Use RStudio on the web through RStudio cloud. See Section \@ref(rcloud) for instructions on how to get started.  
+    1. You can get in touch with us by posting to the online discussion forum. Please make sure that you give us enough details about your issue. See Section \@ref(howtoask) for a list of useful information that you should provide to help us answer your question.
+
+
+## Computer Issues
+
+1. Q.  I prefer not to install new software on my computer. Do I have any alternative for completing these labs?  
+    A. Yes! You can use RStudio on any web browser through RStudio cloud. See Section \@ref(rcloud) for instructions on how to get started.  
+  <br/>
+  
+1. Q. I'm using an Apple computer and it froze/slows down when I tried installing R/RStudio. What can I do?  
+    A. Here are a few options that you can try. First, to see which software is slowing down the laptop, you can use the Activity Monitor: 
+
+    1. Click the "Finder" on your dock to open a Finder window.
+    1. Click "Applications" on the sidebar of the Finder window to see your Mac applications. In this folder, double-click the "Utilities" folder.
+    1. Double-click the "Activity Monitor" icon to access the application.
+    1. Click the "Memory" tab. There you should see which software is consuming most of your RAM. 
+    1. If you see RStudio there, you can stop it by selecting it and then clicking on the button with an "x" (located at the top-left corner). But, it is also likely that the software at the top of the list is a web browser (e.g. Safari, Chrome). Since you don't want to close the browser, you could try to close tabs that are not in use and quit other software also not used at the moment (e.g. Microsoft Office, Adobe Acrobat). Quitting some apps should improve the speed of the laptop.
+
+    If, after quitting/deleting the apps, your computer is still not working as before, you can use Apple Diagnostics to try to find out more about the issues. Here are the instructions to follow: https://support.apple.com/en-ca/guide/mac-help/mh35727/mac. If this utility finds any problems, you can get in touch with us by posting to the online discussion forum or reach out to the IT department at MUN with the information Apple Diagnostics provided. Please see Section \@ref(howtoask) for a list of useful information that you should give to help us answer your question. If you prefer to delete the R and RStudio apps altogether, then an alternative is to use RStudio Cloud. See Section \@ref(rcloud) for instructions on how to get started. 
+
+
+## RStudio Error Messages
+
+1. Q. R Studio: "Error: Unable to establish connection with R session"  
+    A. The antivirus could trigger a connection error. Check the antivirus software for a message related to RStudio. If you don't see anything in the main window of the antivirus, check the log for anything related to R/RStudio. If there is a warning, you have to deactivate the antivirus or allow permission to execute R/RStudio. If you are still having issues, you can get in touch with us by posting to the online discussion forum. Please make sure that you give us enough details about your issue. See Section \@ref(howtoask) for a list of useful information that you should provide to help us answer your question.
+In case nothing else seems to work, you can also try RStudio Cloud. See Section \@ref(rcloud) for instructions on how to get started. 

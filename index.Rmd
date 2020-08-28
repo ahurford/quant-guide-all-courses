@@ -1,0 +1,33 @@
+--- 
+title: "Quantitative skills for biology"
+site: bookdown::bookdown_site
+output: bookdown::gitbook #bookdown::html_document2
+documentclass: book
+bibliography: [references.bib]
+biblio-style: apalike
+link-citations: false 
+github-repo: ahurford/quantitative-training-guide
+description: "Quantitative skills for biology"
+---
+
+# Introduction {#intro}
+
+Many biology-relevant skills are now performed using computers: statistical analyses, mathematical modelling, managing and reformatting data, visualizing data, identifying genes from DNA sequences, constructing 3D models of proteins, and making phylogenies. Quantitative skills and best practices in data science are now being incorporated throughout the biology major.
+
+Teaching quantitative skills is necessary since a survey reported that more than 90% of ecologists found that, in retrospect, their training in statistics and mathematics, during their undergraduate biology major, was too low [@barraquand2014lack]. This same study found that practicing ecologists recommended that 30% of coursework during a biology major be dedicated to quantitative training.
+
+Today's biologists use various software, particularly Microsoft Office, R, Python, and ArcGIS. In graduate research, many biologists use quantitative tools to do things like developing mathematical models to predict disease spread or population growth, apply bioinformatics analyses to genetics data to look at genetic relatedness between individuals, or use computer programming to model the structure of protein molecules.
+
+Much of this quantitative training manual teaches data manipulation and visualization in R. Our choice of R is for the following reasons:
+
+1. A valued skill: As of March 2019, R is the [fifth ranked software](http://r4stats.com/articles/popularity/) listed in job advertisements for Data Scientists. Python is the number one ranked software, but R is a popular statistical software and is widespread in biology due to the need to analyze the results of experiments using statistics.
+
+1. Reproducibility: R is a scripting software, so unlike _point and click_ softwares, the steps to produce a data analysis or figure are fully reproducible.
+
+1. Accessibility: R is free, unlike many statistical software packages that are quite expensive. This means that researchers or organizations, such as environmental NGOs, can still do sophisticated analysis with limited budgets. 
+
+1. No limits: R has a large user community, and contributed packages allow you to do almost anything. R packages range from [serious](https://rviews.rstudio.com/2017/10/09/population-modeling-in-r/) to [fun](https://www.r-bloggers.com/useless-but-fun-r-packages/)).
+
+1. Popularity: A survey of studies from 30 ecology journals found that in 2017, 58% of articles used R as the primary tool to generate their results [@lai2019evaluating].
+
+
