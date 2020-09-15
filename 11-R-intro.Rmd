@@ -28,7 +28,7 @@ the left. Variable names can be made up of letters, numbers, underscores and per
 x <- 10
 ```
 
-Notice that assigning a variable does not print its value, 
+Here, the variable `x` has been assigned the value `10`. Notice that assigning a variable does not print its value, 
 but if you look at the `Environment` panel, you will see the new variable there.
 You can also check that it is stored by calling the variable:
 
@@ -63,7 +63,7 @@ x
 
 In R, the `#` sign is a special character that indicates a comment. Anything that is written directly to the right of a `#` sign will be ignored by R. Comment your scripts often! You can use a whole line o `####` symbols to create blocks or headings to make your script easier to read.
 
-**HAND IN** Write a couple of sentences to explain each of the commands we have used so far. You may also want to annotate your script you've been developing with the commands to save for future reference. Remember to use the `#` feature to comment. 
+**HAND IN** What does the assignment operator do? What is the command for the assignment operator? How do you write a comment in your code?
 
 ## Precedence
 
