@@ -42,12 +42,6 @@ x
 
 ### Shortcuts
 
-In RStudio, the assignment operator is written in a keystroke by hitting `Alt`+`-`.
-
-A practical way of running code from a script by using a keyboard shortcut. In GNU/Linux and Windows, you can hit `Ctrl`+`Return`, on macOS the equivalent is `⌘ Command`+`Return`. This shortcut also allows running a selected block of code. 
-
-You can alternate between the script and console panels with the `Ctrl`+`1` and `Ctrl`+`2` shortcuts.
-
 From the console, you can go back to the previous command by hitting the `up` arrow. If you press the `up` arrow multiple times you will walk back through the history. You can navigate the history by pressing the `down` arrow as well. You can edit any command from there by using the `left` arrow or `delete` keys.
 
 ## Using variables
