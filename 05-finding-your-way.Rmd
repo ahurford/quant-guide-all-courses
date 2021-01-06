@@ -164,3 +164,4 @@ See Chapter \@ref(help) "Getting R help" for more details on reading the help fi
 ### Viewer tab {-}
 
 This tab is similar to the Plots tab, but it is used to view local web content. For example, to display generated web content or applications that you are developing. This is a more advanced feature and we will not cover it in this guide.
+

@@ -1,7 +1,5 @@
 # R and R Studio {#install}
 
-# R and R Studio {#install}
-
 R is a programming language for statistical computation and graphics. A user-friendly way to use R is through RStudio. RStudio is a Graphical User Interface (GUI) that facilitates R coding by providing buttons and menus for commonly used commands. 
 
 A simple way of understanding the difference between R and RStudio is thinking of R like a car's engine while RStudio is like a car's dashboard, as depicted in Figure \@ref(fig:R-vs-RStudio-1). In the same way as having access to instrumentation, gauges, controls, and a navigation system makes driving more comfortable, using RStudio's interface makes using R easier [@ismay2019statistical]. Similarly, R can be used without RStudio, but RStudio cannot be used without R. 
@@ -44,3 +42,4 @@ Now that you have installed R and RStudio on your computer, you will see that yo
 ```{r R-vs-RStudio-2, echo=FALSE, fig.align="center", fig.cap="Icons of R and RStudio on your computer [@ismay2019statistical]. Remember to always click on RStudio!", out.width="90%", purl=FALSE}
 knitr::include_graphics("figures/R_vs_RStudio.png")
 ```
+
