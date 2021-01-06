@@ -1,8 +1,8 @@
 # Finding your way around RStudio {#rstudio}
 
-R studio has 4 windows (also known as "panes") that are inter-linked. The default layout is shown in Figure \@ref(fig:panes). The first time you open `RStudio` you may not see the top left pane (the Source pane, labelled 2 in the figure below). To make it visible, use your mouse to select `File -> New File -> R Script`. You can move the layout of the panes and change their size and shape by clicking and dragging with your mouse along the window pane borders. The details of what happens in each pane are detailed below.
+RStudio has 4 windows (also known as "panes") that are inter-linked. The default layout is shown in Figure \@ref(fig:panes). The first time you open `RStudio` you may not see the top left pane (the Source pane, labelled 2 in the figure below). To make it visible, use your mouse to select `File -> New File -> R Script`. You can move the layout of the panes and change their size and shape by clicking and dragging with your mouse along the windowpane borders. The details of what happens in each pane are detailed below.
 
-```{r panes, fig.cap="Panes in RStudio. 1. Source pane, to work with R scripts (code won't be evaluated until you send it to the console). 2. Console pane, where code is executed by R. 3. Environment/History pane, to view objects in the working space and command history, respectively. 4. Files/Plots/Packages/Help pane, to see the file directories, plots, installed packages and access R help, respectively.", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+```{r panes, fig.cap="Panes in RStudio. 1. Console pane, where code is executed by R. 2. Source pane, to work with R scripts (code won't be evaluated until you send it to the console). 3. Environment/History pane, to view objects in the working space and command history, respectively. 4. Files/Plots/Packages/Help pane, to see the file directories, plots, installed packages and access R help, respectively.", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/Fig_5_1.jpg')
 ```
 
@@ -85,7 +85,7 @@ x
 
 It is important to note that saving commands in a script in your `Source` window does not evaluate the commands in your `Console`. To execute the commands, with your script displayed in the `Source` pane, you need to click the `Source` button (righthand side of the source pane, equivalently select `Code > Source` from the top menu bar; note, if you have a small `Source` pane the `Source` button may not appear and you may need to make it bigger or use the menu bar).
 
-`Source` your script and then evalate `x` in your `Console`. If you have done this task correctly the value of `x` should be `6` and it will appear as `[1] 6` in your `Console`.
+`Source` your script and then evaluate `x` in your `Console`. If you have done this task correctly the value of `x` should be `6` and it will appear as `[1] 6` in your `Console`.
 
 What happened to `x <- 2`? When `Source` is called the commands are executed in the `Console` from top to bottom as they appear in the script. Therefore, `x <- 2` was only the current value of `x` for a very short time before it was overwritten with the command `x <- 6`. 
 
@@ -102,7 +102,7 @@ x <- 6
 z <- x + 1
 ```
 
-`Source` the script and then query the values of `y` and `z` in your `Console`.
+`Source` the script and then query the values of `y` and `z` in your `Console`. What are the values returned for `y` and `z`? Explain how these values were returned.
 
 ```
 > y
@@ -113,22 +113,22 @@ Explain why the values of `y` and `z` are `5` and `7` respectively.
 
 ---
 
-If you would like to run one line or several lines of your script only (not all the lines), then place your cursor on the line you want to execute and click the `Run` button (equivalenty `Code > Run Selected Line(s)`, or press `Ctrl`+`enter` or `Cmmd`+`return` for a shortcut).
+If you would like to run one line or several lines of your script only (not all the lines), then place your cursor on the line you want to execute and click the `Run` button (equivalently `Code > Run Selected Line(s)`, or press `Ctrl`+`enter` or `Cmmd`+`return` for a shortcut).
 
-## Enviornment/History pane
+## Environment/History pane
 
 This pane has several tabs, we'll discuss each in turn. 
 
 ### Environment tab {-}
 
-This shows you the names of all data objects (e.g., vectors, matrices, dataframes) that you've defined in the current R session, along with information about the size of data objects. 
+This shows you the names of all data objects (e.g., vectors, matrices, data frames) that you've defined in the current R session, along with information about the size of data objects. 
 
-There are also clickable actions, like `Import data set`, which we'll refer to in Chapter \@ref(data-entry). 
+There are also clickable actions, like `Import dataset`, which we'll refer to in Chapter \@ref(data-entry). 
 
 ### History tab {-}
 
 This shows you a history of all the code you've previously run in the console. From here you can 
-re-run this commands by selecting them and clicking `To Console` or include them in your script by clicking `To Source`.
+re-run these commands by selecting them and clicking `To Console` or include them in your script by clicking `To Source`.
 
 **TRY IT!** Select one of the commands and click `To Console`. You'll see the command is executed and the output is given. Now, try to include another command in the script that you have been working with during this session. 
 
@@ -148,9 +148,9 @@ This tab lets you see all the plots (graphs) that you create. You can also uset 
 
 ### Packages tab {-}
 
-This tab shows a list of all the R packages installed on your computer (see Chapter X for more on packages). It also indicates which packages are loaded with a check mark. You can browse through the installed packages by typing the name in the blank search field.
+This tab shows a list of all the R packages installed on your computer (see Chapter \@ref(rintro) for more on packages). It also indicates which packages are loaded with a check mark. You can browse through the installed packages by typing the name in the blank search field.
 
-Packages are add-on functions and datasets that you can add to your `R` installation. To install a package you can click on `Install`, this feature will open a window with a blank field where you can type the name of the package. When you are ready click on `Install` to proceed with the installation. Alternatively, you can install with the command `install.packages("name")`, where “name” is the name of the package. When you install a packege in either way, you will see in the console that R displays some information about where the package is being downloaded from and a progress bar. 
+Packages are add-on functions and datasets that you can add to your `R` installation. To install a package, you can click on `Install`, this feature will open a window with a blank field where you can type the name of the package. When you are ready click on `Install` to proceed with the installation. Alternatively, you can install with the command `install.packages("name")`, where “name” is the name of the package. When you install a packege using either method, you will see in the console that R displays some information about where the package is being downloaded from and a progress bar. 
 
 **TRY IT!** One package that we will use later on is called `ggplot2`, install it by either using the `install.packages` command or the `Install` feature. 
 
@@ -164,4 +164,3 @@ See Chapter \@ref(help) "Getting R help" for more details on reading the help fi
 ### Viewer tab {-}
 
 This tab is similar to the Plots tab, but it is used to view local web content. For example, to display generated web content or applications that you are developing. This is a more advanced feature and we will not cover it in this guide.
-

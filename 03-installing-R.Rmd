@@ -1,5 +1,7 @@
 # R and R Studio {#install}
 
+# R and R Studio {#install}
+
 R is a programming language for statistical computation and graphics. A user-friendly way to use R is through RStudio. RStudio is a Graphical User Interface (GUI) that facilitates R coding by providing buttons and menus for commonly used commands. 
 
 A simple way of understanding the difference between R and RStudio is thinking of R like a car's engine while RStudio is like a car's dashboard, as depicted in Figure \@ref(fig:R-vs-RStudio-1). In the same way as having access to instrumentation, gauges, controls, and a navigation system makes driving more comfortable, using RStudio's interface makes using R easier [@ismay2019statistical]. Similarly, R can be used without RStudio, but RStudio cannot be used without R. 
@@ -18,7 +20,7 @@ Since RStudio is an add-on to R, you must first download and install R and then 
     + If you are a Windows user: Click on "Download R for Windows", then click on "base", then click on the link "Download R X.X.X for Windows". 
     + If you are macOS user: Click on "Download R for (Mac) OS X", then look for "Latest release:" and click on the link to the left of the first paragraph "R-X.X.X.pkg", 
     + If you are a Linux user: Click on "Download R for Linux", choose your distribution and then your Linux version to find the installer for your setup.
-    + **The X's in the links above stand for the version number, which may be different for you depending on the date when you download the files.**
+    + **NOTE: The X's in the links above stand for the version number, which may be different for you depending on the date when you download the files.**
 
 2. Download and install RStudio from <https://rstudio.com/products/rstudio/download/#download>.
     + Under "All Installers" find your computer's operating system (OS).
@@ -42,4 +44,3 @@ Now that you have installed R and RStudio on your computer, you will see that yo
 ```{r R-vs-RStudio-2, echo=FALSE, fig.align="center", fig.cap="Icons of R and RStudio on your computer [@ismay2019statistical]. Remember to always click on RStudio!", out.width="90%", purl=FALSE}
 knitr::include_graphics("figures/R_vs_RStudio.png")
 ```
-
