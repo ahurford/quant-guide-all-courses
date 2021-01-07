@@ -30,4 +30,8 @@ Much of this quantitative training manual teaches data manipulation and visualiz
 
 1. Popularity: A survey of studies from 30 ecology journals found that in 2017, 58% of articles used R as the primary tool to generate their results [@lai2019evaluating].
 
+## Course links
 
+[BIOL 1001](https://ahurford.github.io/BIOL-1001/index.html)
+
+[BIOL 3295](https://ahurford.github.io/BIOL-3295-Fall-2020/)
