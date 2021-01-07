@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 Contributions | Quantitative skills for biology</title>
-  <meta name="description" content="12 Contributions | Quantitative skills for biology" />
+  <title>C Hypothesis, predictions and equations | Quantitative skills for biology</title>
+  <meta name="description" content="C Hypothesis, predictions and equations | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 Contributions | Quantitative skills for biology" />
+  <meta property="og:title" content="C Hypothesis, predictions and equations | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="12 Contributions | Quantitative skills for biology" />
+  <meta property="og:description" content="C Hypothesis, predictions and equations | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 Contributions | Quantitative skills for biology" />
+  <meta name="twitter:title" content="C Hypothesis, predictions and equations | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="12 Contributions | Quantitative skills for biology" />
+  <meta name="twitter:description" content="C Hypothesis, predictions and equations | Quantitative skills for biology" />
   
 
 
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="coding-club-at-mun.html"/>
-<link rel="next" href="faq.html"/>
+<link rel="prev" href="references.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -225,23 +225,155 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="contributions" class="section level1">
-<h1><span class="header-section-number">12</span> Contributions</h1>
-<p>This training manual is written in <code>R</code> using the <code>bookdown</code> package. Each chapter in the book is an <code>R markdown</code> file, so alternatively you might just edit a specific <code>.Rmd</code>. If you would like to contribute to the development of this training manual the source code is here: <a href="https://github.com/ahurford/quantitative-training-guide" class="uri">https://github.com/ahurford/quantitative-training-guide</a></p>
-<p>If you have a Github account you can fork the repository, make your changes and submit a pull request for us to review your suggestions. See here: <a href="https://www.youtube.com/watch?v=2VC9pCMuvfU" class="uri">https://www.youtube.com/watch?v=2VC9pCMuvfU</a>. If you are suggesting a lot of changes, you may want to meet and discuss these prior to implementing them.</p>
-<p>Alternatively, if Github isn't working for you, please email ahurford-at-mun.ca.</p>
-
+<div id="hypothesis" class="section level1">
+<h1><span class="header-section-number">C</span> Hypothesis, predictions and equations</h1>
+<p>The proposed answer to a question is termed a <strong>hypothesis</strong>. Hypotheses are formulated on the basis of some preliminary observations and/or prior knowledge.</p>
+<p>How does the presence of a concentration gradient affect the diffusion of water? There are three possible answers to this question. Indeed, many questions may generate multiple alternative hypotheses.</p>
+(<strong>we are considering changing these examples to be about moose to make them more fun</strong>)
+<div class="alert alert-info">
+<p><strong>Hypotheses</strong></p>
+<p><strong>H1</strong>. Water diffuses from a hypertonic solution into a hypotonic solution.</p>
+<p><strong>H2</strong>. Water diffuses from a hypotonic solution into a hypertonic solution.</p>
+<p><strong>H3</strong>. Water diffuses equally in both directions along the osmotic gradient.</p>
 </div>
+<p>All three meet the basic requirement of a hypothesis, namely, they are predictive, are clearly expressed and are an answer to the problem; however, #2 is the most likely hypothesis given background reading on osmosis.</p>
+<p><strong>Predictions</strong> are generated from the hypothesis and framed in terms of a specific experiment or analysis. Let's define a specific experiment:</p>
+<hr />
+<p>EXPERIMENT 1</p>
+<p>An osmometer containing a 30% glucose and dye solution is placed in a beaker containing distilled water.</p>
+<hr />
+<p>If hypothesis #2 holds, then true water will diffuse from the hypotonic solution (the water in the beaker) into the hypertonic solution (the 30% glucose and dye solution in the osmometer) and the water will rise in the pipette. Note how this prediction was generated using the if ... then ... format.</p>
+<p>i.e. <em>if</em> the hypothesis holds true, <em>then</em> a specific event will occur (prediction).</p>
+<div class="alert alert-info">
+<p>The <strong>prediction</strong> corresponding to H2 for Experiment 1 is: <br></p>
+<p><em>if</em> water diffuses from a hypotonic solution into a hypertonic solution (hypothesis), <br> <em>then</em> water will diffuse from the beaker into the osmometer causing the water in the pipette to rise.</p>
+</div>
+<p>Although hypotheses and predictions are similar, two basic differences exist: hypotheses are <strong>general</strong>, predictions are <strong>specific</strong>; hypotheses are written in the present tense, predictions in the future tense.</p>
+<p><strong>Equations</strong> write the predictions in mathematical notation so that statistical tests can be applied to determine if the hypothesis is supported. The equation corresponding to the prediction in the box above is:</p>
+<div class="alert alert-info">
+<p>The <strong>equation</strong> corresponding to the prediction above is:</p>
+<p><span class="math inline">\(v_F &gt; v_0\)</span> <br></p>
+<p>where <span class="math inline">\(v_F\)</span> is the final volume of the glucose-dye solution in the osmometer (units: mL), and <br> <span class="math inline">\(v_0\)</span> is the initial volume of glucose-dye solution in the osmometer (units: mL).</p>
+</div>
+<ul>
+<li><p>When writing your prediction as an equation <em>you</em> get to choose the notation: you might have instead decided that <em>y</em> is the final volume of the glucose-dye solution; this choice is also correct if you correctly explain what variable is represented by what you have chosen to call <em>y</em>. You many choose any lower or upper case Arabic (i.e., <em>a,b,c</em>…) or greek (i.e., α, β, γ, …) letters for your variables and you may also choose to use subscripts.</p></li>
+<li><p>Choose symbols that are one letter long. For example, <span class="math inline">\(vF\)</span> (two symbols long) is a less preferred symbol choice because this could be confused with <span class="math inline">\(v\)</span> multiplied by <span class="math inline">\(F\)</span>.</p></li>
+<li><p>It is usual to choose symbols that are intuitive (i.e. here, <span class="math inline">\(v\)</span> helps us think of volume and <span class="math inline">\(F\)</span> helps us think of ‘final’). Commonly, μ or bar notation, i.e., <span class="math inline">\(\bar{\nu}\)</span> represents the mean of multiple observations. It is a good idea to avoid “O” which can be confused with zero, and e, i, π and Σ, which have specific definitions in mathematics, however, these considerations are preferred, an answer that does not use these conventions is not necessarily wrong. The necessary element of your answer is that you provide a description of the notation you define.</p></li>
+<li><p>You must provide the units for the quantities you define.</p></li>
+<li><p>The dependent variable (see below for a defintion) is to appear on the lefthand side of the equals or inequality.</p></li>
+</ul>
+<p>You will not perform statistical tests in BIOL 1001 or 1002. However, learning how to write your predictions as an equation will help you to understand how your hypothesis and predictions connect to statistical tests that help determine whether a hypothesis is supported or refuted.</p>
+<div id="discrete-and-continuous-variables" class="section level2">
+<h2><span class="header-section-number">C.1</span> Discrete and continuous variables</h2>
+<p>Generally, a hypothesis describes the effect of one factor on another, for example, the effect of a concentration gradient on the direction of osmosis. These factors are called <strong>variables</strong> and are of two types: the variable that is changed (varied) by the experimenter is called the <strong>independent variable</strong>, and the variable that changes as a consequence of the changes to the independent variable is called the <strong>dependent variable</strong>. In our example:</p>
+<ul>
+<li><p>The glucose concentration in the osmometer is the <strong>independent variable</strong> because it is created by the experimenter, and</p></li>
+<li><p>The volume of water in the pipette is the <strong>dependent variable</strong> because it is affected directly by the concentrations inside and outside the osmometer, and is the measured response.</p></li>
+</ul>
+<hr />
+<p>EXPERIMENT 2</p>
+<p>This experiment will test how concentrations of 30, 60, and 90% glucose in an osmometer will influence the flow of water molecules across two solutions.</p>
+<hr />
+<p>For Experiment 2, we might have the following as our hypothesis, prediction and equation:</p>
+<div class="alert alert-info">
+<p><strong>Hypothesis:</strong> When a solution is more hypertonic, more water will diffuse into it from a hypotonic solution.</p>
+<p><strong>Prediction:</strong> The volume of water in the osmometer will be largest for the 90% glucose solution, and smallest for the 30% glucose solution.</p>
+<p><strong>Equation:</strong></p>
+<p><span class="math inline">\(v_F = bg + v_0\)</span>,</p>
+<p>where <span class="math inline">\(v_F\)</span> is the final volume of liquid in the osmometer (mL), <span class="math inline">\(b\)</span> is the change in final volume per unit glucose concentration (mL per %), g is the glucose concentration (%), and <span class="math inline">\(v_0\)</span> is the final volume when the glucose concentration is zero (mL).</p>
+</div>
+<p>Note that in Experiment 2, the independent variable, glucose concentration, takes three different values, (30, 60 and 90%) and these values are taken from options along a continuum. As such, in the above equation we have treated glucose concentration as a CONTINUOUS variable. This changes our hypothesis and predictions. Let’s examine the new equation more closely.</p>
+<ul>
+<li><p>We predicted an increasing relationship between glucose concentration and the final volume of water in the osmometer. In writing our equation, we, more specifically, assumed a linear, or “straight-line”, relationship. An increasing relationship does not have to be a linear relationship, however, without a good reason to assume otherwise, we should assume that a prediction stating an increasing or decreasing relationship between two variables corresponds to a linear (or “straight-line”) relationship with where an increasing relationship has a positive slope and a decreasing relationship has a negative slope.</p></li>
+<li>Recall that the equation for a straight-line is: <span class="math inline">\(y = m x + b\)</span>, where <span class="math inline">\(y\)</span> corresponds to the vertical axis of a graph, <span class="math inline">\(x\)</span> corresponds to the horizontal axis, <span class="math inline">\(m\)</span> is the slope of the line and <span class="math inline">\(b\)</span> is the y-axis intercept (corresponding to <span class="math inline">\(x = 0\)</span>). Note that the <em>equation</em> above is simply the equation for a straight-line written in the notation of our experiment:
+<ul>
+<li><span class="math inline">\(v_F\)</span>, the dependent variable, is <span class="math inline">\(y\)</span>,</li>
+<li><span class="math inline">\(b\)</span>, the effect of <span class="math inline">\(g\)</span> on <span class="math inline">\(v_F\)</span>, is <span class="math inline">\(m\)</span>, the slope,</li>
+<li><span class="math inline">\(g\)</span>, the independent variable, is <span class="math inline">\(x\)</span>,</li>
+<li><span class="math inline">\(v_0\)</span>, the final volume when <span class="math inline">\(g = 0\)</span>, is <span class="math inline">\(b\)</span>.</li>
+</ul></li>
+<li>Note that the units for each term are equal:
+<ul>
+<li><span class="math inline">\(v_F\)</span> has units mL</li>
+<li><span class="math inline">\(bg\)</span> has units <span class="math inline">\(\frac{mL}{\%} \cdot \% =\)</span> mL</li>
+<li><span class="math inline">\(v_0\)</span> has units mL Finally, lets consider a third experiment where the independent variable is <em>discrete</em>.</li>
+</ul></li>
+</ul>
+<hr />
+<p>EXPERIMENT 3</p>
+<p>The Glycemic Index Foundation of South Africa designates Beverages as “Low”, “Intermediate” or “High” Glycemic Index (GI) values. In this experiment, 3 beverages from each group: Low, Intermediate, and High, are used in place of the glucose solution in the osmometer, and for each of these 9 experiments the solution in the beaker is distilled water.</p>
+<hr />
+<p>In Experiment 3, the independent variable is <strong>discrete</strong> because each beverage belongs to a group. The hypothesis, prediction, and equation for Experiment 3 might be:</p>
+<div class="alert alert-info">
+<p><strong>Hypothesis:</strong> When a solution is more hypertonic, more water will diffuse into it from a hypotonic solution.</p>
+<p><strong>Prediction:</strong> The volume of water in the osmometer will be largest for the three beverages from the “High” GI group, and smallest for the 3 beverages from the “Low” GI group.</p>
+<p><strong>Equation:</strong></p>
+<p><span class="math inline">\(μ_H &gt; μ_I &gt; μ_L\)</span>,</p>
+<p>where <span class="math inline">\(μ_H\)</span> is the mean volume of liquid in the osmometer for the three “High” GI beverages (mL), <span class="math inline">\(μ_I\)</span> is the mean volume of liquid in the osmometer for the three “Intermediate” GI beverages (mL), and <span class="math inline">\(μ_L\)</span> is the mean volume of liquid in the osmometer for the three “Low” GI beverages (mL).</p>
+</div>
+<ul>
+<li>The equation for Experiment 3 is similar to the equation for Experiment 1. For Experiment 3, there were three beverages in each group, so we defined a measure of the central tendency, in this case the mean, so that we could compare between the groups.</li>
+</ul>
+</div>
+<div id="hypothesis-testing" class="section level2">
+<h2><span class="header-section-number">C.2</span> Hypothesis testing</h2>
+<div id="null-hypotheses" class="section level3">
+<h3><span class="header-section-number">C.2.1</span> Null hypotheses</h3>
+<p>Null means nothing or zero and null hypotheses usually describe outcomes where the independent variables have no effect. Null hypotheses are usually paired with alternative hypotheses whereby the independent variable does have an effect. As such, H3 is a potential null hypothesis, since this hypothesis describes the concentration gradient having no effect on the direction of difussion, and could be paired with the alternative hypothesis, H2. When written as an equation, frequently null hypotheses are expressed as a given parameter set equal to zero.</p>
+<div class="alert alert-info">
+<p><strong>Null Hypothesis:</strong> Water diffuses equally in both directions along the osmotic gradient.</p>
+<p><strong>Alternative Hypothesis</strong>. Water diffuses from a hypotonic solution into a hypertonic solution.</p>
+<p><strong>Prediction under the null hypothesiss:</strong> The volume of water in the osmometer will not change.</p>
+<p><strong>Equation under the null hypothesis:</strong></p>
+<p><span class="math inline">\(v_F = v_0\)</span>,</p>
+<p>where <span class="math inline">\(v_F\)</span> is the final volume of the glucose-dye solution in the osmometer (units: mL), and <br> <span class="math inline">\(v_0\)</span> is the initial volume of glucose-dye solution in the osmometer (units: mL).</p>
+</div>
+<p>Historically, many statistical analyses have been performed in the null hypothesis testing framework. More recently, information theoretic approaches that assess the relative support for each of multiple working hypotheses have gained popularity (Burnham and Anderson 2003); that approach may be introduced in upper year courses.</p>
+</div>
+</div>
+<div id="further-reading" class="section level2">
+<h2><span class="header-section-number">C.3</span> Further reading</h2>
+<p>Cite sections of Whitlock and Schluter here.</p>
+</div>
+<div id="status" class="section level2">
+<h2><span class="header-section-number">C.4</span> Status</h2>
+<p>We have substantial edits from a colleague to revise this chapter. Would also like to consult with Stats.</p>
 
-
-
+<div id="refs" class="references">
+<div>
+<p>Abedin, Jaynal, and Hrishi V Mittal. 2014. <em>R Graphs Cookbook Second Edition</em>. Packt Publishing Ltd.</p>
+</div>
+<div>
+<p>Barraquand, Frédéric, Thomas HG Ezard, Peter S Jørgensen, Naupaka Zimmerman, Scott Chamberlain, Roberto Salguero-Gomez, Timothy J Curran, and Timothée Poisot. 2014. “Lack of Quantitative Training Among Early-Career Ecologists: A Survey of the Problem and Potential Solutions.” <em>PeerJ</em> 2. PeerJ Inc.: e285.</p>
+</div>
+<div>
+<p>Hampton, Stephanie E, Sean S Anderson, Sarah C Bagby, Corinna Gries, Xueying Han, Edmund M Hart, Matthew B Jones, et al. 2015. “The Tao of Open Science for Ecology.” <em>Ecosphere</em> 6 (7). Wiley Online Library: 1–13.</p>
+</div>
+<div>
+<p>Hart, Edmund M, Pauline Barmby, David LeBauer, François Michonneau, Sarah Mount, Patrick Mulrooney, Timothée Poisot, Kara H Woo, Naupaka B Zimmerman, and Jeffrey W Hollister. 2016. “Ten Simple Rules for Digital Data Storage.” <em>PLoS Computational Biology</em> 12 (10). Public Library of Science.</p>
+</div>
+<div>
+<p>Ismay, Chester, and Albert Y Kim. 2019. <em>Statistical Inference via Data Science: A Moderndive into R and the Tidyverse</em>. CRC Press.</p>
+</div>
+<div>
+<p>Lai, Jiangshan, Christopher J Lortie, Robert A Muenchen, Jian Yang, and Keping Ma. 2019. “Evaluating the Popularity of R in Ecology.” <em>Ecosphere</em> 10 (1). Wiley Online Library: e02567.</p>
+</div>
+<div>
+<p>Murrell, P. 2018. <em>R Graphics</em>. Chapman &amp; Hall/Crc the R Series. CRC Press. <a href="https://books.google.ca/books?id=ol3RBQAAQBAJ" class="uri">https://books.google.ca/books?id=ol3RBQAAQBAJ</a>.</p>
+</div>
+<div>
+<p>White, Ethan P, Elita Baldridge, Zachary T Brym, Kenneth J Locey, Daniel J McGlinn, and Sarah R Supp. 2013. “Nine Simple Ways to Make It Easier to (Re) Use Your Data.” <em>Ideas in Ecology and Evolution</em> 6 (2).</p>
+</div>
+</div>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="coding-club-at-mun.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="faq.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="references.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

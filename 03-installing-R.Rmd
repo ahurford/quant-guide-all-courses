@@ -42,4 +42,3 @@ Now that you have installed R and RStudio on your computer, you will see that yo
 ```{r R-vs-RStudio-2, echo=FALSE, fig.align="center", fig.cap="Icons of R and RStudio on your computer [@ismay2019statistical]. Remember to always click on RStudio!", out.width="90%", purl=FALSE}
 knitr::include_graphics("figures/R_vs_RStudio.png")
 ```
-
