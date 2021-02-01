@@ -39,6 +39,7 @@ You can overwrite the value of objects The current value of your object is the l
 ```{r}
 x <- 2
 ```
+
 Press `enter/return`. Now type:
 
 ```{r}
@@ -59,23 +60,20 @@ x
 
 to query the current value of `x`.
 
-----
+------------------------------------------------------------------------
 
 EXCERCISE
 
 Can you write the code, and execute the commands in the correct order so that `x + 1 = 6`?
 
-----
+------------------------------------------------------------------------
 
 ## Source pane
 
-The Source pane (labelled 2 in Figure \@ref(fig:panes)) is where you create, save, and edit `R` scripts. `R` scripts are blocks of code that perform a task that you want to save (e.g.., are the answer to the EXERCISE above, or import and clean data to make a figure) and when saved have a `.R` extension. When you've written and saved a script, you can re-use it for future projects. 
-Try it now: open and save a new `.R` file to save your work in. In the top menu select `File > New File > R Script`, then `File > Save As`. Paste the following `R` code into your script and save it:
+The Source pane (labelled 2 in Figure \@ref(fig:panes)) is where you create, save, and edit `R` scripts. `R` scripts are blocks of code that perform a task that you want to save (e.g.., are the answer to the EXERCISE above, or import and clean data to make a figure) and when saved have a `.R` extension. When you've written and saved a script, you can re-use it for future projects. Try it now: open and save a new `.R` file to save your work in. In the top menu select `File > New File > R Script`, then `File > Save As`. Paste the following `R` code into your script and save it:
 
-```
-x <- 4
-x <- 6
-```
+    x <- 4
+    x <- 6
 
 Now, you have saved this code, but has it been evaluated? To answer this question type `x` in your `Console` and press ENTER:
 
@@ -87,81 +85,74 @@ It is important to note that saving commands in a script in your `Source` window
 
 `Source` your script and then evaluate `x` in your `Console`. If you have done this task correctly the value of `x` should be `6` and it will appear as `[1] 6` in your `Console`.
 
-What happened to `x <- 2`? When `Source` is called the commands are executed in the `Console` from top to bottom as they appear in the script. Therefore, `x <- 2` was only the current value of `x` for a very short time before it was overwritten with the command `x <- 6`. 
+What happened to `x <- 2`? When `Source` is called the commands are executed in the `Console` from top to bottom as they appear in the script. Therefore, `x <- 2` was only the current value of `x` for a very short time before it was overwritten with the command `x <- 6`.
 
----
+------------------------------------------------------------------------
 
 EXERCISE
 
 Edit your script so that now it reads:
 
-```
-x <- 4
-y <- x + 1
-x <- 6
-z <- x + 1
-```
+    x <- 4
+    y <- x + 1
+    x <- 6
+    z <- x + 1
 
 `Source` the script and then query the values of `y` and `z` in your `Console`. What are the values returned for `y` and `z`? Explain how these values were returned.
 
-```
-> y
-> z
-```
+    > y
+    > z
 
 Explain why the values of `y` and `z` are `5` and `7` respectively.
 
----
+------------------------------------------------------------------------
 
 If you would like to run one line or several lines of your script only (not all the lines), then place your cursor on the line you want to execute and click the `Run` button (equivalently `Code > Run Selected Line(s)`, or press `Ctrl`+`enter` or `Cmmd`+`return` for a shortcut).
 
 ## Environment/History pane
 
-This pane has several tabs, we'll discuss each in turn. 
+This pane has several tabs, we'll discuss each in turn.
 
-### Environment tab {-}
+### Environment tab {.unnumbered}
 
-This shows you the names of all data objects (e.g., vectors, matrices, data frames) that you've defined in the current R session, along with information about the size of data objects. 
+This shows you the names of all data objects (e.g., vectors, matrices, data frames) that you've defined in the current R session, along with information about the size of data objects.
 
-There are also clickable actions, like `Import dataset`, which we'll refer to in Chapter \@ref(data-entry). 
+There are also clickable actions, like `Import dataset`, which we'll refer to in Chapter \@ref(data-entry).
 
-### History tab {-}
+### History tab {.unnumbered}
 
-This shows you a history of all the code you've previously run in the console. From here you can 
-re-run these commands by selecting them and clicking `To Console` or include them in your script by clicking `To Source`.
+This shows you a history of all the code you've previously run in the console. From here you can re-run these commands by selecting them and clicking `To Console` or include them in your script by clicking `To Source`.
 
-**TRY IT!** Select one of the commands and click `To Console`. You'll see the command is executed and the output is given. Now, try to include another command in the script that you have been working with during this session. 
+**TRY IT!** Select one of the commands and click `To Console`. You'll see the command is executed and the output is given. Now, try to include another command in the script that you have been working with during this session.
 
 ## Files/Plots/Packages/Help/Viewer pane
 
 This pane also has a few tabs. We'll go through each one in detail.
 
-### Files tab {-}
+### Files tab {.unnumbered}
 
-This tab gives you access to the file directory on your own computer. It's a useful spot to set your working directory. For this, you have to navigate to the folder whence you want to read and save files, then click `More` and select `Set As Working Directory` (see Chapter \@ref(data-entry) for more details). 
+This tab gives you access to the file directory on your own computer. It's a useful spot to set your working directory. For this, you have to navigate to the folder whence you want to read and save files, then click `More` and select `Set As Working Directory` (see Chapter \@ref(data-entry) for more details).
 
 **TRY IT!** Navigate through the file tree and find the folder that you want to work with, alternatively, create a new one by clicking `New Folder`. Now, open the folder and make it your working directory. You'll see that in the console R runs the command for changing the working directory.
 
-### Plots tab {-}
+### Plots tab {.unnumbered}
 
-This tab lets you see all the plots (graphs) that you create. You can also uset the buttons at the top to zoom, and to export the graph as a PDF or jpeg file. If you make multiple plots, you can navigate through them by clicking on the left and right arrows. We will come back to this tab in Chapter \@ref(graph).
+This tab lets you see all the plots (graphs) that you create. You can also use the buttons at the top to zoom or export the graph as a PDF or jpeg file. If you make multiple plots, you can navigate through them by clicking on the left and right arrows. We will come back to this tab in Chapter \@ref(graph).
 
-### Packages tab {-}
+### Packages tab {.unnumbered}
 
-This tab shows a list of all the R packages installed on your computer (see Chapter \@ref(rintro) for more on packages). It also indicates which packages are loaded with a check mark. You can browse through the installed packages by typing the name in the blank search field.
+This tab shows a list of all the R packages installed on your computer (see Chapter \@ref(rintro) for more on packages). It also indicates which packages are currently loaded via a check mark. You can browse through the installed packages by typing the name in the blank search field. Packages are add-on functions and data sets that you can add to your `R` installation.
 
-Packages are add-on functions and datasets that you can add to your `R` installation. To install a package, you can click on `Install`, this feature will open a window with a blank field where you can type the name of the package. When you are ready click on `Install` to proceed with the installation. Alternatively, you can install with the command `install.packages("name")`, where “name” is the name of the package. When you install a packege using either method, you will see in the console that R displays some information about where the package is being downloaded from and a progress bar. 
+More information about on Packages can be found in section 4.10 R Package.
 
-**TRY IT!** One package that we will use later on is called `ggplot2`, install it by either using the `install.packages` command or the `Install` feature. 
+**TRY IT!** One package that we will use later on is called `ggplot2`, install it either using the `install.packages` command or the `Install` feature.
 
-### Help tab {-}
+### Help tab {.unnumbered}
 
-Here you can get help with R functions. You can type the name of the function in the search field (blank bar with the magnifying glass beside it) to see the related help page. Equivalently, you can use code to perform the search by typing `?` followed by the function name. 
-See Chapter \@ref(help) "Getting R help" for more details on reading the help files.
+Here you can get help with R functions. You can type the name of the function in the search field (blank bar with the magnifying glass beside it) to see the related help page. Equivalently, you can use code to perform the search by typing `?` followed by the function name. See Chapter \@ref(help) "Getting R help" for more details on reading the help files.
 
-**TRY IT!** Find the help page for the `plot` function, either by typing the function name in the search field or directly into the console. We will use this function in Chapter \@ref(graph).
+**TRY IT!** Find the help page for the `plot` function, either by typing the function name in the search field or directly into the console. You can type it directly into the console via `?plot` command. We will use this function in Chapter \@ref(graph).
 
-### Viewer tab {-}
+### Viewer tab {.unnumbered}
 
 This tab is similar to the Plots tab, but it is used to view local web content. For example, to display generated web content or applications that you are developing. This is a more advanced feature and we will not cover it in this guide.
-

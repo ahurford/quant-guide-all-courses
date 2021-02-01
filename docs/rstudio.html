@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Finding your way around RStudio | Quantitative skills for biology</title>
   <meta name="description" content="3 Finding your way around RStudio | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Finding your way around RStudio | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -31,6 +31,7 @@
   
 <link rel="prev" href="install.html"/>
 <link rel="next" href="rintro.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -48,44 +49,71 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -104,23 +132,29 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./">Quantitative skills for biology</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-links"><i class="fa fa-check"></i><b>1.1</b> Course links</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a><ul>
-<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a><ul>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a>
+<ul>
 <li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rcloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a><ul>
+<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
-<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a><ul>
+<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a><ul>
+<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#files-tab"><i class="fa fa-check"></i>Files tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#plots-tab"><i class="fa fa-check"></i>Plots tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#packages-tab"><i class="fa fa-check"></i>Packages tab</a></li>
@@ -128,10 +162,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#viewer-tab"><i class="fa fa-check"></i>Viewer tab</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a><ul>
+<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="rintro.html"><a href="rintro.html#workflow"><i class="fa fa-check"></i><b>4.1</b> Workflow</a></li>
 <li class="chapter" data-level="4.2" data-path="rintro.html"><a href="rintro.html#working-directory"><i class="fa fa-check"></i><b>4.2</b> Working directory</a></li>
-<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a><ul>
+<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a>
+<ul>
 <li class="chapter" data-level="4.3.1" data-path="rintro.html"><a href="rintro.html#shortcuts"><i class="fa fa-check"></i><b>4.3.1</b> Shortcuts</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="rintro.html"><a href="rintro.html#using-variables"><i class="fa fa-check"></i><b>4.4</b> Using variables</a></li>
@@ -139,7 +175,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>4.6</b> Precedence</a></li>
 <li class="chapter" data-level="4.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>4.7</b> Mathematical functions</a></li>
 <li class="chapter" data-level="4.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>4.8</b> Data types</a></li>
-<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a><ul>
+<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a>
+<ul>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#lists"><i class="fa fa-check"></i>Lists</a></li>
@@ -147,34 +184,40 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>4.10</b> R Packages</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a><ul>
+<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>5.1</b> Using R help</a></li>
-<li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R &quot;Cheatsheets&quot;</a></li>
+<li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R “Cheatsheets”</a></li>
 <li class="chapter" data-level="5.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>5.3</b> R books</a></li>
 <li class="chapter" data-level="5.4" data-path="help.html"><a href="help.html#how-to-interpret-r-help-files"><i class="fa fa-check"></i><b>5.4</b> How to interpret R help files</a></li>
 <li class="chapter" data-level="5.5" data-path="help.html"><a href="help.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="howtoask.html"><a href="howtoask.html"><i class="fa fa-check"></i><b>6</b> How to ask for help</a></li>
-<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a><ul>
+<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="style.html"><a href="style.html#file-organization"><i class="fa fa-check"></i><b>7.1</b> File organization</a></li>
-<li class="chapter" data-level="7.2" data-path="rintro.html"><a href="rintro.html#comments"><i class="fa fa-check"></i><b>7.2</b> Comments</a></li>
+<li class="chapter" data-level="7.2" data-path="style.html"><a href="style.html#comments-1"><i class="fa fa-check"></i><b>7.2</b> Comments</a></li>
 <li class="chapter" data-level="7.3" data-path="style.html"><a href="style.html#spacing"><i class="fa fa-check"></i><b>7.3</b> Spacing</a></li>
 <li class="chapter" data-level="7.4" data-path="style.html"><a href="style.html#names"><i class="fa fa-check"></i><b>7.4</b> Names</a></li>
 <li class="chapter" data-level="7.5" data-path="style.html"><a href="style.html#template"><i class="fa fa-check"></i><b>7.5</b> Template</a></li>
 <li class="chapter" data-level="7.6" data-path="style.html"><a href="style.html#checklist"><i class="fa fa-check"></i><b>7.6</b> Checklist</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a><ul>
+<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>8.1</b> Entering data</a></li>
-<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a><ul>
+<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
-<li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the &quot;import&quot; feature)</a></li>
+<li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>9</b> Making graphs in R</a><ul>
+<li class="chapter" data-level="9" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>9</b> Making graphs in R</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="graph.html"><a href="graph.html#making-graphs-in-r"><i class="fa fa-check"></i><b>9.1</b> Making graphs in R</a></li>
 <li class="chapter" data-level="9.2" data-path="graph.html"><a href="graph.html#scatter-plots-with-plotxy"><i class="fa fa-check"></i><b>9.2</b> Scatter plots with <code>plot(x,y)</code></a></li>
-<li class="chapter" data-level="9.3" data-path="graph.html"><a href="graph.html#adding-axes-labels-and-changing-symbols"><i class="fa fa-check"></i><b>9.3</b> Adding axes labels and changing symbols</a><ul>
+<li class="chapter" data-level="9.3" data-path="graph.html"><a href="graph.html#adding-axes-labels-and-changing-symbols"><i class="fa fa-check"></i><b>9.3</b> Adding axes labels and changing symbols</a>
+<ul>
 <li class="chapter" data-level="9.3.1" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>9.3.1</b> Getting a bit more sophisticated</a></li>
 </ul></li>
 <li class="chapter" data-level="9.4" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>9.4</b> Line graphs</a></li>
@@ -182,12 +225,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="9.6" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>9.6</b> Exporting your graphs</a></li>
 <li class="chapter" data-level="9.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>9.7</b> pch cheatsheet</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>10</b> Data and metadata</a><ul>
-<li class="chapter" data-level="10.1" data-path="data.html"><a href="data.html#data"><i class="fa fa-check"></i><b>10.1</b> Data</a><ul>
+<li class="chapter" data-level="10" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>10</b> Data and metadata</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>10.1</b> Data</a>
+<ul>
 <li class="chapter" data-level="10.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>10.1.1</b> Data guidelines</a></li>
 <li class="chapter" data-level="10.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>10.1.2</b> Database structure guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>10.2</b> Metadata</a><ul>
+<li class="chapter" data-level="10.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>10.2</b> Metadata</a>
+<ul>
 <li class="chapter" data-level="10.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>10.2.1</b> Metadata guidelines</a></li>
 </ul></li>
 <li class="chapter" data-level="10.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>10.3</b> Further reading</a></li>
@@ -195,19 +241,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="11" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>11</b> Coding club at MUN</a></li>
 <li class="chapter" data-level="12" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>12</b> Contributions</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a><ul>
+<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a>
+<ul>
 <li class="chapter" data-level="A.1" data-path="faq.html"><a href="faq.html#download-and-installation-issues"><i class="fa fa-check"></i><b>A.1</b> Download and Installation Issues</a></li>
 <li class="chapter" data-level="A.2" data-path="faq.html"><a href="faq.html#computer-issues"><i class="fa fa-check"></i><b>A.2</b> Computer Issues</a></li>
 <li class="chapter" data-level="A.3" data-path="faq.html"><a href="faq.html#rstudio-error-messages"><i class="fa fa-check"></i><b>A.3</b> RStudio Error Messages</a></li>
 </ul></li>
 <li class="chapter" data-level="B" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>B</b> Glossary</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a><ul>
+<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a>
+<ul>
 <li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables</a></li>
-<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a><ul>
+<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
+<ul>
 <li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses</a></li>
 </ul></li>
-<li class="chapter" data-level="C.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>C.3</b> Further reading</a></li>
+<li class="chapter" data-level="C.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-1"><i class="fa fa-check"></i><b>C.3</b> Further reading</a></li>
 <li class="chapter" data-level="C.4" data-path="hypothesis.html"><a href="hypothesis.html#status"><i class="fa fa-check"></i><b>C.4</b> Status</a></li>
 </ul></li>
 </ul>
@@ -227,38 +276,38 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="rstudio" class="section level1">
+<div id="rstudio" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Finding your way around RStudio</h1>
-<p>RStudio has 4 windows (also known as &quot;panes&quot;) that are inter-linked. The default layout is shown in Figure <a href="rstudio.html#fig:panes">3.1</a>. The first time you open <code>RStudio</code> you may not see the top left pane (the Source pane, labelled 2 in the figure below). To make it visible, use your mouse to select <code>File -&gt; New File -&gt; R Script</code>. You can move the layout of the panes and change their size and shape by clicking and dragging with your mouse along the windowpane borders. The details of what happens in each pane are detailed below.</p>
+<p>RStudio has 4 windows (also known as “panes”) that are inter-linked. The default layout is shown in Figure <a href="rstudio.html#fig:panes">3.1</a>. The first time you open <code>RStudio</code> you may not see the top left pane (the Source pane, labelled 2 in the figure below). To make it visible, use your mouse to select <code>File -&gt; New File -&gt; R Script</code>. You can move the layout of the panes and change their size and shape by clicking and dragging with your mouse along the windowpane borders. The details of what happens in each pane are detailed below.</p>
 <div class="figure" style="text-align: center"><span id="fig:panes"></span>
 <img src="figures/Fig_5_1.jpg" alt="Panes in RStudio. 1. Console pane, where code is executed by R. 2. Source pane, to work with R scripts (code won't be evaluated until you send it to the console). 3. Environment/History pane, to view objects in the working space and command history, respectively. 4. Files/Plots/Packages/Help pane, to see the file directories, plots, installed packages and access R help, respectively." width="70%" />
 <p class="caption">
-Figure 3.1: Panes in RStudio. 1. Console pane, where code is executed by R. 2. Source pane, to work with R scripts (code won't be evaluated until you send it to the console). 3. Environment/History pane, to view objects in the working space and command history, respectively. 4. Files/Plots/Packages/Help pane, to see the file directories, plots, installed packages and access R help, respectively.
+Figure 3.1: Panes in RStudio. 1. Console pane, where code is executed by R. 2. Source pane, to work with R scripts (code won’t be evaluated until you send it to the console). 3. Environment/History pane, to view objects in the working space and command history, respectively. 4. Files/Plots/Packages/Help pane, to see the file directories, plots, installed packages and access R help, respectively.
 </p>
 </div>
-<div id="console-pane" class="section level2">
+<div id="console-pane" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Console pane</h2>
 <p>The Console pane (labelled 1 in Figure <a href="rstudio.html#fig:panes">3.1</a>) is where code is evaluated (also referred to as executed). The Console pane has a prompt (the <code>&gt;</code> symbol), which tell you that R is ready to receive input. You can type code here to evaluate it and get an output.</p>
-<p><strong>TRY IT!</strong> Type 5 + 5 in the console at the prompt and press <code>enter</code> or <code>return</code>. You'll see that R gives the correct output (Don't worry about the [1] for now, we'll discuss what this means later.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">5</span> +<span class="st"> </span><span class="dv">5</span></code></pre></div>
+<p><strong>TRY IT!</strong> Type 5 + 5 in the console at the prompt and press <code>enter</code> or <code>return</code>. You’ll see that R gives the correct output (Don’t worry about the [1] for now, we’ll discuss what this means later.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rstudio.html#cb1-1"></a><span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">5</span></span></code></pre></div>
 <pre><code>## [1] 10</code></pre>
 <p>Use the console to test and query code, or do a quick analysis that you do not want to save. Press the up arrow to scroll through past commands, from most to least recent.</p>
 <p>To do more interesting things, we need to assign values to objects. For this, we create an object by specifying a name followed by the assignment operator <code>&lt;-</code> and the value we want to give it. For example:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">5</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="rstudio.html#cb3-1"></a>x &lt;-<span class="st"> </span><span class="dv">5</span></span></code></pre></div>
 <p>When you run this code by pressing <code>enter/return</code> you will not see an output as you did before. But, you can ask R for the value by typing the object name and pressing <code>enter/return</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x </code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rstudio.html#cb4-1"></a>x </span></code></pre></div>
 <pre><code>## [1] 5</code></pre>
 <p>Now that we have saved the value of <code>x</code>, we can do arithmetic operations with it. For example, instead of adding two numbers, we can assign those values to objects and then add them.</p>
 <p><strong>TRY IT!</strong> Add 3 and 8 by assigning the values to objects. First assign 3 to <code>x</code> and 8 to <code>y</code>. Then add <code>x+y</code>.</p>
 <p>You can overwrite the value of objects The current value of your object is the last value you gave it. In the console type:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">2</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="rstudio.html#cb6-1"></a>x &lt;-<span class="st"> </span><span class="dv">2</span></span></code></pre></div>
 <p>Press <code>enter/return</code>. Now type:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">1</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="rstudio.html#cb7-1"></a>x &lt;-<span class="st"> </span><span class="dv">1</span></span></code></pre></div>
 <p>Press <code>enter/return</code>. What is the value of</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x +<span class="st"> </span><span class="dv">1</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rstudio.html#cb8-1"></a>x <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span></code></pre></div>
 <pre><code>## [1] 2</code></pre>
 <p>Type:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rstudio.html#cb10-1"></a>x</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>to query the current value of <code>x</code>.</p>
 <hr />
@@ -266,13 +315,13 @@ Figure 3.1: Panes in RStudio. 1. Console pane, where code is executed by R. 2. S
 <p>Can you write the code, and execute the commands in the correct order so that <code>x + 1 = 6</code>?</p>
 <hr />
 </div>
-<div id="source-pane" class="section level2">
+<div id="source-pane" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Source pane</h2>
-<p>The Source pane (labelled 2 in Figure <a href="rstudio.html#fig:panes">3.1</a>) is where you create, save, and edit <code>R</code> scripts. <code>R</code> scripts are blocks of code that perform a task that you want to save (e.g.., are the answer to the EXERCISE above, or import and clean data to make a figure) and when saved have a <code>.R</code> extension. When you've written and saved a script, you can re-use it for future projects. Try it now: open and save a new <code>.R</code> file to save your work in. In the top menu select <code>File &gt; New File &gt; R Script</code>, then <code>File &gt; Save As</code>. Paste the following <code>R</code> code into your script and save it:</p>
+<p>The Source pane (labelled 2 in Figure <a href="rstudio.html#fig:panes">3.1</a>) is where you create, save, and edit <code>R</code> scripts. <code>R</code> scripts are blocks of code that perform a task that you want to save (e.g.., are the answer to the EXERCISE above, or import and clean data to make a figure) and when saved have a <code>.R</code> extension. When you’ve written and saved a script, you can re-use it for future projects. Try it now: open and save a new <code>.R</code> file to save your work in. In the top menu select <code>File &gt; New File &gt; R Script</code>, then <code>File &gt; Save As</code>. Paste the following <code>R</code> code into your script and save it:</p>
 <pre><code>x &lt;- 4
 x &lt;- 6</code></pre>
 <p>Now, you have saved this code, but has it been evaluated? To answer this question type <code>x</code> in your <code>Console</code> and press ENTER:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="rstudio.html#cb13-1"></a>x</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>It is important to note that saving commands in a script in your <code>Source</code> window does not evaluate the commands in your <code>Console</code>. To execute the commands, with your script displayed in the <code>Source</code> pane, you need to click the <code>Source</code> button (righthand side of the source pane, equivalently select <code>Code &gt; Source</code> from the top menu bar; note, if you have a small <code>Source</code> pane the <code>Source</code> button may not appear and you may need to make it bigger or use the menu bar).</p>
 <p><code>Source</code> your script and then evaluate <code>x</code> in your <code>Console</code>. If you have done this task correctly the value of <code>x</code> should be <code>6</code> and it will appear as <code>[1] 6</code> in your <code>Console</code>.</p>
@@ -291,44 +340,44 @@ z &lt;- x + 1</code></pre>
 <hr />
 <p>If you would like to run one line or several lines of your script only (not all the lines), then place your cursor on the line you want to execute and click the <code>Run</code> button (equivalently <code>Code &gt; Run Selected Line(s)</code>, or press <code>Ctrl</code>+<code>enter</code> or <code>Cmmd</code>+<code>return</code> for a shortcut).</p>
 </div>
-<div id="environmenthistory-pane" class="section level2">
+<div id="environmenthistory-pane" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Environment/History pane</h2>
-<p>This pane has several tabs, we'll discuss each in turn.</p>
-<div id="environment-tab" class="section level3 unnumbered">
+<p>This pane has several tabs, we’ll discuss each in turn.</p>
+<div id="environment-tab" class="section level3 unnumbered" number="">
 <h3>Environment tab</h3>
-<p>This shows you the names of all data objects (e.g., vectors, matrices, data frames) that you've defined in the current R session, along with information about the size of data objects.</p>
-<p>There are also clickable actions, like <code>Import dataset</code>, which we'll refer to in Chapter <a href="data-entry.html#data-entry">8</a>.</p>
+<p>This shows you the names of all data objects (e.g., vectors, matrices, data frames) that you’ve defined in the current R session, along with information about the size of data objects.</p>
+<p>There are also clickable actions, like <code>Import dataset</code>, which we’ll refer to in Chapter <a href="data-entry.html#data-entry">8</a>.</p>
 </div>
-<div id="history-tab" class="section level3 unnumbered">
+<div id="history-tab" class="section level3 unnumbered" number="">
 <h3>History tab</h3>
-<p>This shows you a history of all the code you've previously run in the console. From here you can re-run these commands by selecting them and clicking <code>To Console</code> or include them in your script by clicking <code>To Source</code>.</p>
-<p><strong>TRY IT!</strong> Select one of the commands and click <code>To Console</code>. You'll see the command is executed and the output is given. Now, try to include another command in the script that you have been working with during this session.</p>
+<p>This shows you a history of all the code you’ve previously run in the console. From here you can re-run these commands by selecting them and clicking <code>To Console</code> or include them in your script by clicking <code>To Source</code>.</p>
+<p><strong>TRY IT!</strong> Select one of the commands and click <code>To Console</code>. You’ll see the command is executed and the output is given. Now, try to include another command in the script that you have been working with during this session.</p>
 </div>
 </div>
-<div id="filesplotspackageshelpviewer-pane" class="section level2">
+<div id="filesplotspackageshelpviewer-pane" class="section level2" number="3.4">
 <h2><span class="header-section-number">3.4</span> Files/Plots/Packages/Help/Viewer pane</h2>
-<p>This pane also has a few tabs. We'll go through each one in detail.</p>
-<div id="files-tab" class="section level3 unnumbered">
+<p>This pane also has a few tabs. We’ll go through each one in detail.</p>
+<div id="files-tab" class="section level3 unnumbered" number="">
 <h3>Files tab</h3>
-<p>This tab gives you access to the file directory on your own computer. It's a useful spot to set your working directory. For this, you have to navigate to the folder whence you want to read and save files, then click <code>More</code> and select <code>Set As Working Directory</code> (see Chapter <a href="data-entry.html#data-entry">8</a> for more details).</p>
-<p><strong>TRY IT!</strong> Navigate through the file tree and find the folder that you want to work with, alternatively, create a new one by clicking <code>New Folder</code>. Now, open the folder and make it your working directory. You'll see that in the console R runs the command for changing the working directory.</p>
+<p>This tab gives you access to the file directory on your own computer. It’s a useful spot to set your working directory. For this, you have to navigate to the folder whence you want to read and save files, then click <code>More</code> and select <code>Set As Working Directory</code> (see Chapter <a href="data-entry.html#data-entry">8</a> for more details).</p>
+<p><strong>TRY IT!</strong> Navigate through the file tree and find the folder that you want to work with, alternatively, create a new one by clicking <code>New Folder</code>. Now, open the folder and make it your working directory. You’ll see that in the console R runs the command for changing the working directory.</p>
 </div>
-<div id="plots-tab" class="section level3 unnumbered">
+<div id="plots-tab" class="section level3 unnumbered" number="">
 <h3>Plots tab</h3>
-<p>This tab lets you see all the plots (graphs) that you create. You can also uset the buttons at the top to zoom, and to export the graph as a PDF or jpeg file. If you make multiple plots, you can navigate through them by clicking on the left and right arrows. We will come back to this tab in Chapter <a href="graph.html#graph">9</a>.</p>
+<p>This tab lets you see all the plots (graphs) that you create. You can also use the buttons at the top to zoom or export the graph as a PDF or jpeg file. If you make multiple plots, you can navigate through them by clicking on the left and right arrows. We will come back to this tab in Chapter <a href="graph.html#graph">9</a>.</p>
 </div>
-<div id="packages-tab" class="section level3 unnumbered">
+<div id="packages-tab" class="section level3 unnumbered" number="">
 <h3>Packages tab</h3>
-<p>This tab shows a list of all the R packages installed on your computer (see Chapter <a href="rintro.html#rintro">4</a> for more on packages). It also indicates which packages are loaded with a check mark. You can browse through the installed packages by typing the name in the blank search field.</p>
-<p>Packages are add-on functions and datasets that you can add to your <code>R</code> installation. To install a package, you can click on <code>Install</code>, this feature will open a window with a blank field where you can type the name of the package. When you are ready click on <code>Install</code> to proceed with the installation. Alternatively, you can install with the command <code>install.packages(&quot;name&quot;)</code>, where “name” is the name of the package. When you install a packege using either method, you will see in the console that R displays some information about where the package is being downloaded from and a progress bar.</p>
-<p><strong>TRY IT!</strong> One package that we will use later on is called <code>ggplot2</code>, install it by either using the <code>install.packages</code> command or the <code>Install</code> feature.</p>
+<p>This tab shows a list of all the R packages installed on your computer (see Chapter <a href="rintro.html#rintro">4</a> for more on packages). It also indicates which packages are currently loaded via a check mark. You can browse through the installed packages by typing the name in the blank search field. Packages are add-on functions and data sets that you can add to your <code>R</code> installation.</p>
+<p>More information about on Packages can be found in section 4.10 R Package.</p>
+<p><strong>TRY IT!</strong> One package that we will use later on is called <code>ggplot2</code>, install it either using the <code>install.packages</code> command or the <code>Install</code> feature.</p>
 </div>
-<div id="help-tab" class="section level3 unnumbered">
+<div id="help-tab" class="section level3 unnumbered" number="">
 <h3>Help tab</h3>
-<p>Here you can get help with R functions. You can type the name of the function in the search field (blank bar with the magnifying glass beside it) to see the related help page. Equivalently, you can use code to perform the search by typing <code>?</code> followed by the function name. See Chapter <a href="help.html#help">5</a> &quot;Getting R help&quot; for more details on reading the help files.</p>
-<p><strong>TRY IT!</strong> Find the help page for the <code>plot</code> function, either by typing the function name in the search field or directly into the console. We will use this function in Chapter <a href="graph.html#graph">9</a>.</p>
+<p>Here you can get help with R functions. You can type the name of the function in the search field (blank bar with the magnifying glass beside it) to see the related help page. Equivalently, you can use code to perform the search by typing <code>?</code> followed by the function name. See Chapter <a href="help.html#help">5</a> “Getting R help” for more details on reading the help files.</p>
+<p><strong>TRY IT!</strong> Find the help page for the <code>plot</code> function, either by typing the function name in the search field or directly into the console. You can type it directly into the console via <code>?plot</code> command. We will use this function in Chapter <a href="graph.html#graph">9</a>.</p>
 </div>
-<div id="viewer-tab" class="section level3 unnumbered">
+<div id="viewer-tab" class="section level3 unnumbered" number="">
 <h3>Viewer tab</h3>
 <p>This tab is similar to the Plots tab, but it is used to view local web content. For example, to display generated web content or applications that you are developing. This is a more advanced feature and we will not cover it in this guide.</p>
 
@@ -396,7 +445,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))

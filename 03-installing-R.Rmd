@@ -1,10 +1,10 @@
 # R and R Studio {#install}
 
-R is a programming language for statistical computation and graphics. A user-friendly way to use R is through RStudio. RStudio is a Graphical User Interface (GUI) that facilitates R coding by providing buttons and menus for commonly used commands. 
+R is a programming language for statistical computation and graphics. A user-friendly way to use R is through RStudio. RStudio is a Graphical User Interface (GUI) that facilitates R coding by providing buttons and menus for commonly used commands.
 
-A simple way of understanding the difference between R and RStudio is thinking of R like a car's engine while RStudio is like a car's dashboard, as depicted in Figure \@ref(fig:R-vs-RStudio-1). In the same way as having access to instrumentation, gauges, controls, and a navigation system makes driving more comfortable, using RStudio's interface makes using R easier [@ismay2019statistical]. Similarly, R can be used without RStudio, but RStudio cannot be used without R. 
+A simple way of understanding the difference between R and RStudio is thinking of R like a car's engine while RStudio is like a car's dashboard, as depicted in Figure \@ref(fig:R-vs-RStudio-1). In the same way as having access to instrumentation, gauges, controls, and a navigation system makes driving more comfortable, using RStudio's interface makes using R easier [@ismay2019statistical]. Similarly, R can be used without RStudio, but RStudio cannot be used without R.
 
-**In this guide, we recommend and assume that you are using R via RStudio.** 
+**In this guide, we recommend and assume that you are using R via RStudio.**
 
 ```{r R-vs-RStudio-1, echo=FALSE, fig.align="center", fig.cap="Analogy of the difference between R and RStudio [@ismay2019statistical].", out.width="95%", purl=FALSE}
 knitr::include_graphics("figures/R_vs_RStudio_1.png")
@@ -14,30 +14,31 @@ knitr::include_graphics("figures/R_vs_RStudio_1.png")
 
 Since RStudio is an add-on to R, you must first download and install R and then download and install RStudio. Follow these instructions in order:
 
-1. Download and install R from <https://cloud.r-project.org/>:
-    + If you are a Windows user: Click on "Download R for Windows", then click on "base", then click on the link "Download R X.X.X for Windows". 
-    + If you are macOS user: Click on "Download R for (Mac) OS X", then look for "Latest release:" and click on the link to the left of the first paragraph "R-X.X.X.pkg", 
-    + If you are a Linux user: Click on "Download R for Linux", choose your distribution and then your Linux version to find the installer for your setup.
-    + **NOTE: The X's in the links above stand for the version number, which may be different for you depending on the date when you download the files.**
+1.  Download and install R from <https://cloud.r-project.org/>:
 
-2. Download and install RStudio from <https://rstudio.com/products/rstudio/download/#download>.
-    + Under "All Installers" find your computer's operating system (OS).
-    + Click on the corresponding download link. 
+    -   If you are a Windows user: Click on "Download R for Windows", then click on "base", then click on the link "Download R X.X.X for Windows".
+    -   If you are macOS user: Click on "Download R for (Mac) OS X", then look for "Latest release:" and click on the link to the left of the first paragraph "R-X.X.X.pkg",
+    -   If you are a Linux user: Click on "Download R for Linux", choose your distribution and then your Linux version to find the installer for your setup.
+    -   **NOTE: The X's in the links above stand for the version number, which may be different for you depending on the date when you download the files.**
 
+2.  Download and install RStudio from <https://rstudio.com/products/rstudio/download/#download>.
+
+    -   Under "All Installers" find your computer's operating system (OS).
+    -   Click on the corresponding download link.
 
 ### RStudio Cloud {#rcloud}
 
-If you prefer not installing additional software on your computer or are experiencing issues during the installation, we recommend using RStudio Cloud as an alternative. These are the steps that you have to follow: 
+If you prefer not installing additional software on your computer or are experiencing issues during the installation, we recommend using RStudio Cloud as an alternative. These are the steps that you have to follow:
 
-+ In a web browser, go to <https://rstudio.cloud/plans/free>.
-+ Sign up for the "Cloud Free" plan, then log in.
-+ You will be directed to a virtual dashboard called "Your Workspace". Here, click on "New Project" to start working on a blank project.
-+ After a few seconds, you will see the RStudio console load in your browser. You can use this interface as you would use RStudio on your computer. 
-+ Keep in mind that this is a web-based app; therefore, it may take a few minutes to load, and it could also slow down the browser's speed. Both are normal; try to be patient. We are not doing intense calculations for the labs, so it will not take that long. 
+-   In a web browser, go to <https://rstudio.cloud/plans/free>.
+-   Sign up for the "Cloud Free" plan, then log in.
+-   You will be directed to a virtual dashboard called "Your Workspace". Here, click on "New Project" to start working on a blank project.
+-   After a few seconds, you will see the RStudio console load in your browser. You can use this interface as you would use RStudio on your computer.
+-   Keep in mind that this is a web-based app; therefore, it may take a few minutes to load, and it could also slow down the browser's speed. Both are normal; try to be patient. We are not doing intense calculations for the labs, so it will not take that long.
 
 ## Using R via RStudio
 
-Now that you have installed R and RStudio on your computer, you will see that you have both new programs. We will always work in RStudio and not in the R application, as shown in Figure \@ref(fig:R-vs-RStudio-2). 
+Now that you have installed R and RStudio on your computer, you will see that you have both new programs. We will always work in RStudio and not in the R application, as shown in Figure \@ref(fig:R-vs-RStudio-2).
 
 ```{r R-vs-RStudio-2, echo=FALSE, fig.align="center", fig.cap="Icons of R and RStudio on your computer [@ismay2019statistical]. Remember to always click on RStudio!", out.width="90%", purl=FALSE}
 knitr::include_graphics("figures/R_vs_RStudio.png")

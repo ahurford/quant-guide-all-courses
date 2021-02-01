@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 R and R Studio | Quantitative skills for biology</title>
   <meta name="description" content="2 R and R Studio | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 R and R Studio | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -31,6 +31,7 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="rstudio.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -48,44 +49,71 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -104,23 +132,29 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./">Quantitative skills for biology</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-links"><i class="fa fa-check"></i><b>1.1</b> Course links</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a><ul>
-<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a><ul>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a>
+<ul>
 <li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rcloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a><ul>
+<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
-<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a><ul>
+<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a><ul>
+<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#files-tab"><i class="fa fa-check"></i>Files tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#plots-tab"><i class="fa fa-check"></i>Plots tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#packages-tab"><i class="fa fa-check"></i>Packages tab</a></li>
@@ -128,10 +162,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#viewer-tab"><i class="fa fa-check"></i>Viewer tab</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a><ul>
+<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="rintro.html"><a href="rintro.html#workflow"><i class="fa fa-check"></i><b>4.1</b> Workflow</a></li>
 <li class="chapter" data-level="4.2" data-path="rintro.html"><a href="rintro.html#working-directory"><i class="fa fa-check"></i><b>4.2</b> Working directory</a></li>
-<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a><ul>
+<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a>
+<ul>
 <li class="chapter" data-level="4.3.1" data-path="rintro.html"><a href="rintro.html#shortcuts"><i class="fa fa-check"></i><b>4.3.1</b> Shortcuts</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="rintro.html"><a href="rintro.html#using-variables"><i class="fa fa-check"></i><b>4.4</b> Using variables</a></li>
@@ -139,7 +175,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>4.6</b> Precedence</a></li>
 <li class="chapter" data-level="4.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>4.7</b> Mathematical functions</a></li>
 <li class="chapter" data-level="4.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>4.8</b> Data types</a></li>
-<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a><ul>
+<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a>
+<ul>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#lists"><i class="fa fa-check"></i>Lists</a></li>
@@ -147,34 +184,40 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="4.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>4.10</b> R Packages</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a><ul>
+<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>5.1</b> Using R help</a></li>
-<li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R &quot;Cheatsheets&quot;</a></li>
+<li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R “Cheatsheets”</a></li>
 <li class="chapter" data-level="5.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>5.3</b> R books</a></li>
 <li class="chapter" data-level="5.4" data-path="help.html"><a href="help.html#how-to-interpret-r-help-files"><i class="fa fa-check"></i><b>5.4</b> How to interpret R help files</a></li>
 <li class="chapter" data-level="5.5" data-path="help.html"><a href="help.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="howtoask.html"><a href="howtoask.html"><i class="fa fa-check"></i><b>6</b> How to ask for help</a></li>
-<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a><ul>
+<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="style.html"><a href="style.html#file-organization"><i class="fa fa-check"></i><b>7.1</b> File organization</a></li>
-<li class="chapter" data-level="7.2" data-path="rintro.html"><a href="rintro.html#comments"><i class="fa fa-check"></i><b>7.2</b> Comments</a></li>
+<li class="chapter" data-level="7.2" data-path="style.html"><a href="style.html#comments-1"><i class="fa fa-check"></i><b>7.2</b> Comments</a></li>
 <li class="chapter" data-level="7.3" data-path="style.html"><a href="style.html#spacing"><i class="fa fa-check"></i><b>7.3</b> Spacing</a></li>
 <li class="chapter" data-level="7.4" data-path="style.html"><a href="style.html#names"><i class="fa fa-check"></i><b>7.4</b> Names</a></li>
 <li class="chapter" data-level="7.5" data-path="style.html"><a href="style.html#template"><i class="fa fa-check"></i><b>7.5</b> Template</a></li>
 <li class="chapter" data-level="7.6" data-path="style.html"><a href="style.html#checklist"><i class="fa fa-check"></i><b>7.6</b> Checklist</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a><ul>
+<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>8.1</b> Entering data</a></li>
-<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a><ul>
+<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
-<li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the &quot;import&quot; feature)</a></li>
+<li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>9</b> Making graphs in R</a><ul>
+<li class="chapter" data-level="9" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>9</b> Making graphs in R</a>
+<ul>
 <li class="chapter" data-level="9.1" data-path="graph.html"><a href="graph.html#making-graphs-in-r"><i class="fa fa-check"></i><b>9.1</b> Making graphs in R</a></li>
 <li class="chapter" data-level="9.2" data-path="graph.html"><a href="graph.html#scatter-plots-with-plotxy"><i class="fa fa-check"></i><b>9.2</b> Scatter plots with <code>plot(x,y)</code></a></li>
-<li class="chapter" data-level="9.3" data-path="graph.html"><a href="graph.html#adding-axes-labels-and-changing-symbols"><i class="fa fa-check"></i><b>9.3</b> Adding axes labels and changing symbols</a><ul>
+<li class="chapter" data-level="9.3" data-path="graph.html"><a href="graph.html#adding-axes-labels-and-changing-symbols"><i class="fa fa-check"></i><b>9.3</b> Adding axes labels and changing symbols</a>
+<ul>
 <li class="chapter" data-level="9.3.1" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>9.3.1</b> Getting a bit more sophisticated</a></li>
 </ul></li>
 <li class="chapter" data-level="9.4" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>9.4</b> Line graphs</a></li>
@@ -182,12 +225,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="9.6" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>9.6</b> Exporting your graphs</a></li>
 <li class="chapter" data-level="9.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>9.7</b> pch cheatsheet</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>10</b> Data and metadata</a><ul>
-<li class="chapter" data-level="10.1" data-path="data.html"><a href="data.html#data"><i class="fa fa-check"></i><b>10.1</b> Data</a><ul>
+<li class="chapter" data-level="10" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>10</b> Data and metadata</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>10.1</b> Data</a>
+<ul>
 <li class="chapter" data-level="10.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>10.1.1</b> Data guidelines</a></li>
 <li class="chapter" data-level="10.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>10.1.2</b> Database structure guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>10.2</b> Metadata</a><ul>
+<li class="chapter" data-level="10.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>10.2</b> Metadata</a>
+<ul>
 <li class="chapter" data-level="10.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>10.2.1</b> Metadata guidelines</a></li>
 </ul></li>
 <li class="chapter" data-level="10.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>10.3</b> Further reading</a></li>
@@ -195,19 +241,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="11" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>11</b> Coding club at MUN</a></li>
 <li class="chapter" data-level="12" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>12</b> Contributions</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a><ul>
+<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a>
+<ul>
 <li class="chapter" data-level="A.1" data-path="faq.html"><a href="faq.html#download-and-installation-issues"><i class="fa fa-check"></i><b>A.1</b> Download and Installation Issues</a></li>
 <li class="chapter" data-level="A.2" data-path="faq.html"><a href="faq.html#computer-issues"><i class="fa fa-check"></i><b>A.2</b> Computer Issues</a></li>
 <li class="chapter" data-level="A.3" data-path="faq.html"><a href="faq.html#rstudio-error-messages"><i class="fa fa-check"></i><b>A.3</b> RStudio Error Messages</a></li>
 </ul></li>
 <li class="chapter" data-level="B" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>B</b> Glossary</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a><ul>
+<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a>
+<ul>
 <li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables</a></li>
-<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a><ul>
+<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
+<ul>
 <li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses</a></li>
 </ul></li>
-<li class="chapter" data-level="C.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>C.3</b> Further reading</a></li>
+<li class="chapter" data-level="C.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-1"><i class="fa fa-check"></i><b>C.3</b> Further reading</a></li>
 <li class="chapter" data-level="C.4" data-path="hypothesis.html"><a href="hypothesis.html#status"><i class="fa fa-check"></i><b>C.4</b> Status</a></li>
 </ul></li>
 </ul>
@@ -227,10 +276,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="install" class="section level1">
+<div id="install" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> R and R Studio</h1>
 <p>R is a programming language for statistical computation and graphics. A user-friendly way to use R is through RStudio. RStudio is a Graphical User Interface (GUI) that facilitates R coding by providing buttons and menus for commonly used commands.</p>
-<p>A simple way of understanding the difference between R and RStudio is thinking of R like a car's engine while RStudio is like a car's dashboard, as depicted in Figure <a href="install.html#fig:R-vs-RStudio-1">2.1</a>. In the same way as having access to instrumentation, gauges, controls, and a navigation system makes driving more comfortable, using RStudio's interface makes using R easier <span class="citation">(Ismay and Kim 2019)</span>. Similarly, R can be used without RStudio, but RStudio cannot be used without R.</p>
+<p>A simple way of understanding the difference between R and RStudio is thinking of R like a car’s engine while RStudio is like a car’s dashboard, as depicted in Figure <a href="install.html#fig:R-vs-RStudio-1">2.1</a>. In the same way as having access to instrumentation, gauges, controls, and a navigation system makes driving more comfortable, using RStudio’s interface makes using R easier <span class="citation">(Ismay and Kim 2019)</span>. Similarly, R can be used without RStudio, but RStudio cannot be used without R.</p>
 <p><strong>In this guide, we recommend and assume that you are using R via RStudio.</strong></p>
 <div class="figure" style="text-align: center"><span id="fig:R-vs-RStudio-1"></span>
 <img src="figures/R_vs_RStudio_1.png" alt="Analogy of the difference between R and RStudio [@ismay2019statistical]." width="95%" />
@@ -238,36 +287,36 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 Figure 2.1: Analogy of the difference between R and RStudio <span class="citation">(Ismay and Kim 2019)</span>.
 </p>
 </div>
-<div id="installing" class="section level2">
+<div id="installing" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Installing R and RStudio</h2>
 <p>Since RStudio is an add-on to R, you must first download and install R and then download and install RStudio. Follow these instructions in order:</p>
 <ol style="list-style-type: decimal">
-<li>Download and install R from <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a>:
+<li><p>Download and install R from <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a>:</p>
 <ul>
-<li>If you are a Windows user: Click on &quot;Download R for Windows&quot;, then click on &quot;base&quot;, then click on the link &quot;Download R X.X.X for Windows&quot;.</li>
-<li>If you are macOS user: Click on &quot;Download R for (Mac) OS X&quot;, then look for &quot;Latest release:&quot; and click on the link to the left of the first paragraph &quot;R-X.X.X.pkg&quot;,</li>
-<li>If you are a Linux user: Click on &quot;Download R for Linux&quot;, choose your distribution and then your Linux version to find the installer for your setup.</li>
-<li><strong>NOTE: The X's in the links above stand for the version number, which may be different for you depending on the date when you download the files.</strong></li>
+<li>If you are a Windows user: Click on “Download R for Windows”, then click on “base”, then click on the link “Download R X.X.X for Windows”.</li>
+<li>If you are macOS user: Click on “Download R for (Mac) OS X”, then look for “Latest release:” and click on the link to the left of the first paragraph “R-X.X.X.pkg”,</li>
+<li>If you are a Linux user: Click on “Download R for Linux”, choose your distribution and then your Linux version to find the installer for your setup.</li>
+<li><strong>NOTE: The X’s in the links above stand for the version number, which may be different for you depending on the date when you download the files.</strong></li>
 </ul></li>
-<li>Download and install RStudio from <a href="https://rstudio.com/products/rstudio/download/#download" class="uri">https://rstudio.com/products/rstudio/download/#download</a>.
+<li><p>Download and install RStudio from <a href="https://rstudio.com/products/rstudio/download/#download" class="uri">https://rstudio.com/products/rstudio/download/#download</a>.</p>
 <ul>
-<li>Under &quot;All Installers&quot; find your computer's operating system (OS).</li>
+<li>Under “All Installers” find your computer’s operating system (OS).</li>
 <li>Click on the corresponding download link.</li>
 </ul></li>
 </ol>
-<div id="rcloud" class="section level3">
+<div id="rcloud" class="section level3" number="2.1.1">
 <h3><span class="header-section-number">2.1.1</span> RStudio Cloud</h3>
 <p>If you prefer not installing additional software on your computer or are experiencing issues during the installation, we recommend using RStudio Cloud as an alternative. These are the steps that you have to follow:</p>
 <ul>
 <li>In a web browser, go to <a href="https://rstudio.cloud/plans/free" class="uri">https://rstudio.cloud/plans/free</a>.</li>
-<li>Sign up for the &quot;Cloud Free&quot; plan, then log in.</li>
-<li>You will be directed to a virtual dashboard called &quot;Your Workspace&quot;. Here, click on &quot;New Project&quot; to start working on a blank project.</li>
+<li>Sign up for the “Cloud Free” plan, then log in.</li>
+<li>You will be directed to a virtual dashboard called “Your Workspace”. Here, click on “New Project” to start working on a blank project.</li>
 <li>After a few seconds, you will see the RStudio console load in your browser. You can use this interface as you would use RStudio on your computer.</li>
-<li>Keep in mind that this is a web-based app; therefore, it may take a few minutes to load, and it could also slow down the browser's speed. Both are normal; try to be patient. We are not doing intense calculations for the labs, so it will not take that long.</li>
+<li>Keep in mind that this is a web-based app; therefore, it may take a few minutes to load, and it could also slow down the browser’s speed. Both are normal; try to be patient. We are not doing intense calculations for the labs, so it will not take that long.</li>
 </ul>
 </div>
 </div>
-<div id="using-r-via-rstudio" class="section level2">
+<div id="using-r-via-rstudio" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Using R via RStudio</h2>
 <p>Now that you have installed R and RStudio on your computer, you will see that you have both new programs. We will always work in RStudio and not in the R application, as shown in Figure <a href="install.html#fig:R-vs-RStudio-2">2.2</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:R-vs-RStudio-2"></span>
@@ -340,7 +389,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
