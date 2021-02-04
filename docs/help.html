@@ -285,11 +285,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="r-cheatsheets" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> R “Cheatsheets”</h2>
-<p>Because R is open source software, there is also a culture of open access help. Several R programmers have made helpful “cheatSheets” that are worth printing off and hanging by your desk. Try <a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">this one</a> by Tom Short for starters.</p>
+<p>Because R is open source software, there is also a culture of open access help. Several R programmers have made helpful “Cheatsheets” that are worth printing off and hanging by your desk. Try <a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">this one</a> by Tom Short for starters.</p>
 </div>
 <div id="r-books" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> R books</h2>
-<p>As with the cheatsheets, there are open access books out there (as well as expensive ones to buy). For beginners, “The Pirates Gude to R” by Nathaniel D. Phillips is <strong>HIGHLY</strong> recommended. You can access it <a href="https://bookdown.org/ndphillips/YaRrr/">here</a></p>
+<p>As with the cheatsheets, there are open access books out there (as well as expensive ones to buy). For beginners, “The Pirates Guide to R” by Nathaniel D. Phillips is <strong>HIGHLY</strong> recommended. You can access it <a href="https://bookdown.org/ndphillips/YaRrr/">here</a></p>
 </div>
 <div id="how-to-interpret-r-help-files" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> How to interpret R help files</h2>
@@ -297,7 +297,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li><p><strong>header</strong> This simply gives the command for the thing you are trying to do, in R language</p></li>
 <li><p><strong>Title</strong> This is a title of the function/command/tool in more plain language</p></li>
-<li><p><strong>Description</strong> This section provides a short description of what the command does, written in reaonably plain language</p></li>
+<li><p><strong>Description</strong> This section provides a short description of what the command does, written in reasonably plain language</p></li>
 <li><p><strong>Usage</strong> This is where you see an example of R code that you use to execute the command (<strong>TIP</strong> you can tell what text in the help file is R code and what is other information by the font. Example code is in courier font). Any example prefaced with two hashtags (“##”) is a comment that adds additional description or provides different options for the comment. For example, for the t-test here, the first example is for the default method, where you are doing a t-test for a difference between two numeric vectors of data values (“x” and “y”). The second example is where you are applying the t-test to a formula instead of two numeric vectors. Until you start doing more advanced statistics, the default method will usually be what you use.</p></li>
 <li><p><strong>Arguments</strong> This section breaks down every element in the R code under “Usage” above it and describes what the input is that you need to provide. It also gives you details about the options as well as what the defaults are. For example, for the t-test documentation here, it tells you that “x” is “a (non-empty) numeric vector of data values”. It also tells you that this is what “y” is but note that it tells you that “y” is optional (i.e., you can do a t-test on just one vector of data values). This fact is also shown in the example code where it says “y = NULL”.</p></li>
 </ol>
@@ -318,7 +318,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">5.5</span> Debugging</h2>
 <p>You are inevitably going to get error messages! Don’t panic when you do! Debugging is part of using any coding language. Here are a few tips for debugging</p>
 <ol style="list-style-type: decimal">
-<li>As a first step, check for spelling mistakes and typos. If you accidentally mis-spelled the name of the variable, vector or object you were specifying when you defined it (e.g., <code>leaf.legnth &lt;- c(2,4,6,8)</code>) then if you spell it the way you MEANT to spell it when you apply a function to it. For example lets say I want to convert the leaf length vector into milimetres by multiplying it by 10 like this: <code>leaf.length.mm &lt;- leaf.length*10</code> then I will get an error message because <code>R</code> is looking for something called <code>leaf.length</code> but I accidentally spelled it <code>leaf.legnth</code>.</li>
+<li>As a first step, check for spelling mistakes and typos. If you accidentally mis-spelled the name of the variable, vector or object you were specifying when you defined it (e.g., <code>leaf.legnth &lt;- c(2,4,6,8)</code>) then if you spell it the way you MEANT to spell it when you apply a function to it. For example lets say I want to convert the leaf length vector into millimeters by multiplying it by 10 like this: <code>leaf.length.mm &lt;- leaf.length*10</code> then I will get an error message because <code>R</code> is looking for something called <code>leaf.length</code> but I accidentally spelled it <code>leaf.legnth</code>.</li>
 </ol>
 <ul>
 <li><p>You will know you have a spelling issue when you get an error that says <code>Error: object 'XXXX' not found</code> where xxxx is the name of the thing you mis-spelled.</p></li>
@@ -331,7 +331,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>leaf.length &lt;- c(2.0, 2.1, 2.4, 2.2, 2.1)
 leaf.type &lt;- c(&quot;simple&quot;, &quot;compound&quot;, &quot;lobed&quot;, &quot;toothed&quot;, &quot;palmate&quot;)
 t.test(leaf.length, leaf.type)</code></pre>
-<p>This will give an error message. <strong>TRY IT:</strong> type the code above in the console and see what the error message is.</p>
+<p>This will give an error message.</p>
+<p><strong>TRY IT:</strong> type the code above in the console and see what the error message is.</p>
 <p><code>Error in if (stderr &lt; 10 * .Machine$double.eps * max(abs(mx), abs(my))) stop("data are essentially constant") :    missing value where TRUE/FALSE needed In addition: Warning messages: 1: In mean.default(y) : argument is not numeric or logical: returning NA 2: In var(y) : NAs introduced by coercion</code></p>
 <p><em>More tips</em></p>
 <p>Learning to de-bug takes practice! If your error isn’t due to one of the two reasons above, then the next step is to try running the code line-by-line to figure out where the error is.</p>

@@ -278,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="rstudio" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> Finding your way around RStudio</h1>
-<p>RStudio has 4 windows (also known as “panes”) that are inter-linked. The default layout is shown in Figure <a href="rstudio.html#fig:panes">3.1</a>. The first time you open <code>RStudio</code> you may not see the top left pane (the Source pane, labelled 2 in the figure below). To make it visible, use your mouse to select <code>File -&gt; New File -&gt; R Script</code>. You can move the layout of the panes and change their size and shape by clicking and dragging with your mouse along the windowpane borders. The details of what happens in each pane are detailed below.</p>
+<p>RStudio has 4 windows (also known as “panes”) that are inter-linked. The default layout is shown in Figure <a href="rstudio.html#fig:panes">3.1</a>. The first time you open <code>RStudio</code> you may not see the top left pane (the Source pane, labeled 2 in the figure below). To make it visible, use your mouse to select <code>File -&gt; New File -&gt; R Script</code>. You can move the layout of the panes and change their size and shape by clicking and dragging with your mouse along the windowpane borders. The details of what happens in each pane are detailed below.</p>
 <div class="figure" style="text-align: center"><span id="fig:panes"></span>
 <img src="figures/Fig_5_1.jpg" alt="Panes in RStudio. 1. Console pane, where code is executed by R. 2. Source pane, to work with R scripts (code won't be evaluated until you send it to the console). 3. Environment/History pane, to view objects in the working space and command history, respectively. 4. Files/Plots/Packages/Help pane, to see the file directories, plots, installed packages and access R help, respectively." width="70%" />
 <p class="caption">
@@ -287,7 +287,7 @@ Figure 3.1: Panes in RStudio. 1. Console pane, where code is executed by R. 2. S
 </div>
 <div id="console-pane" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Console pane</h2>
-<p>The Console pane (labelled 1 in Figure <a href="rstudio.html#fig:panes">3.1</a>) is where code is evaluated (also referred to as executed). The Console pane has a prompt (the <code>&gt;</code> symbol), which tell you that R is ready to receive input. You can type code here to evaluate it and get an output.</p>
+<p>The Console pane (labeled 1 in Figure <a href="rstudio.html#fig:panes">3.1</a>) is where code is evaluated (also referred to as executed). The Console pane has a prompt (the <code>&gt;</code> symbol), which tell you that R is ready to receive input. You can type code here to evaluate it and get an output.</p>
 <p><strong>TRY IT!</strong> Type 5 + 5 in the console at the prompt and press <code>enter</code> or <code>return</code>. You’ll see that R gives the correct output (Don’t worry about the [1] for now, we’ll discuss what this means later.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rstudio.html#cb1-1"></a><span class="dv">5</span> <span class="op">+</span><span class="st"> </span><span class="dv">5</span></span></code></pre></div>
 <pre><code>## [1] 10</code></pre>
@@ -317,7 +317,7 @@ Figure 3.1: Panes in RStudio. 1. Console pane, where code is executed by R. 2. S
 </div>
 <div id="source-pane" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Source pane</h2>
-<p>The Source pane (labelled 2 in Figure <a href="rstudio.html#fig:panes">3.1</a>) is where you create, save, and edit <code>R</code> scripts. <code>R</code> scripts are blocks of code that perform a task that you want to save (e.g.., are the answer to the EXERCISE above, or import and clean data to make a figure) and when saved have a <code>.R</code> extension. When you’ve written and saved a script, you can re-use it for future projects. Try it now: open and save a new <code>.R</code> file to save your work in. In the top menu select <code>File &gt; New File &gt; R Script</code>, then <code>File &gt; Save As</code>. Paste the following <code>R</code> code into your script and save it:</p>
+<p>The Source pane (labeled 2 in Figure <a href="rstudio.html#fig:panes">3.1</a>) is where you create, save, and edit <code>R</code> scripts. <code>R</code> scripts are blocks of code that perform a task that you want to save (e.g.., are the answer to the EXERCISE above, or import and clean data to make a figure) and when saved have a <code>.R</code> extension. When you’ve written and saved a script, you can re-use it for future projects. Try it now: open and save a new <code>.R</code> file to save your work in. In the top menu select <code>File &gt; New File &gt; R Script</code>, then <code>File &gt; Save As</code>. Paste the following <code>R</code> code into your script and save it:</p>
 <pre><code>x &lt;- 4
 x &lt;- 6</code></pre>
 <p>Now, you have saved this code, but has it been evaluated? To answer this question type <code>x</code> in your <code>Console</code> and press ENTER:</p>

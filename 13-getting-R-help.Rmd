@@ -8,11 +8,11 @@ The hardest part about R help files is that at first they don't seem that helpfu
 
 ## R "Cheatsheets"
 
-Because R is open source software, there is also a culture of open access help. Several R programmers have made helpful "cheatSheets" that are worth printing off and hanging by your desk. Try [this one](https://cran.r-project.org/doc/contrib/Short-refcard.pdf) by Tom Short for starters.
+Because R is open source software, there is also a culture of open access help. Several R programmers have made helpful "Cheatsheets" that are worth printing off and hanging by your desk. Try [this one](https://cran.r-project.org/doc/contrib/Short-refcard.pdf) by Tom Short for starters.
 
 ## R books
 
-As with the cheatsheets, there are open access books out there (as well as expensive ones to buy). For beginners, "The Pirates Gude to R" by Nathaniel D. Phillips is **HIGHLY** recommended. You can access it [here](https://bookdown.org/ndphillips/YaRrr/)
+As with the cheatsheets, there are open access books out there (as well as expensive ones to buy). For beginners, "The Pirates Guide to R" by Nathaniel D. Phillips is **HIGHLY** recommended. You can access it [here](https://bookdown.org/ndphillips/YaRrr/)
 
 ## How to interpret R help files
 
@@ -22,7 +22,7 @@ R documentation follows the following format. As an example, we'll use the scree
 
 2.  **Title** This is a title of the function/command/tool in more plain language
 
-3.  **Description** This section provides a short description of what the command does, written in reaonably plain language
+3.  **Description** This section provides a short description of what the command does, written in reasonably plain language
 
 4.  **Usage** This is where you see an example of R code that you use to execute the command (**TIP** you can tell what text in the help file is R code and what is other information by the font. Example code is in courier font). Any example prefaced with two hashtags ("\#\#") is a comment that adds additional description or provides different options for the comment. For example, for the t-test here, the first example is for the default method, where you are doing a t-test for a difference between two numeric vectors of data values ("x" and "y"). The second example is where you are applying the t-test to a formula instead of two numeric vectors. Until you start doing more advanced statistics, the default method will usually be what you use.
 
@@ -56,7 +56,7 @@ knitr::include_graphics("./figures/HelpDoc_partB.jpg")
 
 You are inevitably going to get error messages! Don't panic when you do! Debugging is part of using any coding language. Here are a few tips for debugging
 
-1.  As a first step, check for spelling mistakes and typos. If you accidentally mis-spelled the name of the variable, vector or object you were specifying when you defined it (e.g., `leaf.legnth <- c(2,4,6,8)`) then if you spell it the way you MEANT to spell it when you apply a function to it. For example lets say I want to convert the leaf length vector into milimetres by multiplying it by 10 like this: `leaf.length.mm <- leaf.length*10` then I will get an error message because `R` is looking for something called `leaf.length` but I accidentally spelled it `leaf.legnth`.
+1.  As a first step, check for spelling mistakes and typos. If you accidentally mis-spelled the name of the variable, vector or object you were specifying when you defined it (e.g., `leaf.legnth <- c(2,4,6,8)`) then if you spell it the way you MEANT to spell it when you apply a function to it. For example lets say I want to convert the leaf length vector into millimeters by multiplying it by 10 like this: `leaf.length.mm <- leaf.length*10` then I will get an error message because `R` is looking for something called `leaf.length` but I accidentally spelled it `leaf.legnth`.
 
 -   You will know you have a spelling issue when you get an error that says `Error: object 'XXXX' not found` where xxxx is the name of the thing you mis-spelled.
 
@@ -64,14 +64,15 @@ You are inevitably going to get error messages! Don't panic when you do! Debuggi
 
 2.  A second common error is input the wrong data type to a function. For example, if I create a vector of character data for leaf type, and a vector of leaf lengths (spelling correctly this time!), and then apply a t-test, I will get an error message because I cannot do a t-test with character data. However, the error message will not clearly state that. See code snippet below.
 
-```{=html}
 <!-- -->
-```
+
     leaf.length <- c(2.0, 2.1, 2.4, 2.2, 2.1)
     leaf.type <- c("simple", "compound", "lobed", "toothed", "palmate")
     t.test(leaf.length, leaf.type)
 
-This will give an error message. **TRY IT:** type the code above in the console and see what the error message is.
+This will give an error message.
+
+**TRY IT:** type the code above in the console and see what the error message is.
 
 `Error in if (stderr < 10 * .Machine$double.eps * max(abs(mx), abs(my))) stop("data are essentially constant") :    missing value where TRUE/FALSE needed In addition: Warning messages: 1: In mean.default(y) : argument is not numeric or logical: returning NA 2: In var(y) : NAs introduced by coercion`
 

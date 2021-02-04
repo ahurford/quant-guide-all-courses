@@ -65,7 +65,7 @@ In R, the `#` sign is a special character that indicates a comment. Anything tha
 
 The order of operations follows the standard precedence (from highest to lowest):
 
--   Parentheses `(` `)`
+-   Parentheses `()`
 -   Exponents or roots: `^`
 -   Multiplication or division: `*`, `/`
 -   Addition or subtraction: `+`, `-`
