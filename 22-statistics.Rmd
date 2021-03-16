@@ -1,0 +1,79 @@
+# Statistics in R {#statistics}
+
+Statistics is an important part of using R, and in various situations when you are using data, you might find useful to know certain functions or certain ways to test your data. The following section is to show some useful functions you might need to test your data added to some previous information regarding statistics in general
+
+## Hypothesis Testing
+  Testing data begins by considering two hypothesis, which are called `null hypothesis` $H_0$ and `alternative hypothesis` $H_1$. And they contain statements about the population/data under study
+  Suppose we are interested in testing if the mean of a population `x` compares to the mean of a population `y`. Our `null hypothesis` and `alternative hypothesis` would look like this:
+  
+  $H_0: \mu_x = \mu_y$
+  
+  $H_1: \mu_x \neq \mu_y$
+  
+## Types of testing
+  Depending on what you want to test and what you want to prove there are differente names for different types of testing. One of them being :
+  Two-sided tests:  
+  $H_0: \mu_x = \mu_y$
+  
+  $H_1: \mu_x \neq \mu_y$
+  
+  And One-sided tests:
+    Lower-tailed test/less:
+    
+  $H_0: \mu_x \ge \mu_y$
+  
+  $H_1: \mu_x < \mu_y$
+    
+  Upper-tailed tests/greater:
+    
+  $H_0: \mu_x \leq \mu_y$
+  
+  $H_1: \mu_x > \mu_y$
+  
+## Significance level
+  In statistics tests will give you a p-value that you will want to compare to a significance. This significance level will determine the probability of us rejecting our `null hypothesis` when is actually true. The level of significance is denoted by $\alpha$(alpha).And in most settings a significance level of `0.05` or `0.01` is used, which means there is only `5%` or `1%` probability of rejecting the null hypothesis when it is in fact true.
+
+## P-value
+  The p-value is a measure of probability that an observed difference could have occurred just by random chance. The smaller the p-value is, the greater the statistical significance of the observed difference.
+
+## t.test
+Sometimes with the data we want to test the mean of our population. The t-test will help us compare them and giving us an answer. An example of using the t-test would be:
+
+
+```{r}
+x <- rnorm(10)
+x
+```
+Now with an $\alpha = 0.1$ we want to test that the mean of `x` is equal to `0`:
+
+$H_0: \mu = 0$
+
+$H_1: \mu \neq 0$
+
+```{r}
+t.test(x)
+```
+
+Running this code gives us a nice way to look at the analysis of our data(s), and looking at the `p-value` we can compare it to our significance level and getting a `p-value > 0.1` we do not have enough evidence to reject the `null hypothesis`.
+
+  The `t.test` function can be modified by filling arguments or changing arguments as required:
+```
+t.test(x, y = NULL,
+       alternative = c("two.sided", "less", "greater"),
+       mu = 0, paired = FALSE, var.equal = FALSE,
+       conf.level = 0.95, ...)
+       
+       x(required) : data to be analized
+       y(optional) : data to be compared to. The default value is NULL
+       
+       alternative (optional) : this refers to what you want to test: ("two.sided","less","greater").
+          By default this value will be "two.sided"
+       mu (optional) : indicates the true value of the mean. Default value = 0
+       
+       paired (optional) :indicates whether you want a paired t-test. Default value = FALSE
+       
+       var.equal (optional) : indicates if the variances are equal. Default value = FALSE
+       
+       conf.level (optional) : confidence level of interval. Default value = 0.95
+       
+```  

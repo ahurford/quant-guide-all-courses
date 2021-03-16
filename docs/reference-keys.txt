@@ -48,6 +48,7 @@ loading-or-importing-data
 programmatic
 the-rstudio-way-the-import-feature
 inspecting-the-data
+handling-the-data
 graph
 making-graphs-in-r
 scatter-plots-with-plotxy
@@ -57,6 +58,12 @@ line-graphs
 other-useful-plot-functions
 export
 pch
+statistics
+hypothesis-testing
+types-of-testing
+significance-level
+p-value
+t.test
 data
 data-1
 data-guidelines
@@ -73,7 +80,7 @@ rstudio-error-messages
 glossary
 hypothesis
 discrete-and-continuous-variables
-hypothesis-testing
+hypothesis-testing-1
 null-hypotheses
 further-reading-1
 status

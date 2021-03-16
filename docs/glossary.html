@@ -31,7 +31,7 @@
   
 <link rel="prev" href="faq.html"/>
 <link rel="next" href="references.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,13 +49,13 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -211,6 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
+<li class="chapter" data-level="8.4" data-path="data-entry.html"><a href="data-entry.html#handling-the-data"><i class="fa fa-check"></i><b>8.4</b> Handling the data</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>9</b> Making graphs in R</a>
 <ul>
@@ -225,21 +226,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.6" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>9.6</b> Exporting your graphs</a></li>
 <li class="chapter" data-level="9.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>9.7</b> pch cheatsheet</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>10</b> Data and metadata</a>
+<li class="chapter" data-level="10" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>10</b> Statistics in R</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>10.1</b> Data</a>
+<li class="chapter" data-level="10.1" data-path="statistics.html"><a href="statistics.html#hypothesis-testing"><i class="fa fa-check"></i><b>10.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="10.2" data-path="statistics.html"><a href="statistics.html#types-of-testing"><i class="fa fa-check"></i><b>10.2</b> Types of testing</a></li>
+<li class="chapter" data-level="10.3" data-path="statistics.html"><a href="statistics.html#significance-level"><i class="fa fa-check"></i><b>10.3</b> Significance level</a></li>
+<li class="chapter" data-level="10.4" data-path="statistics.html"><a href="statistics.html#p-value"><i class="fa fa-check"></i><b>10.4</b> P-value</a></li>
+<li class="chapter" data-level="10.5" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>10.5</b> t.test</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>11</b> Data and metadata</a>
 <ul>
-<li class="chapter" data-level="10.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>10.1.1</b> Data guidelines</a></li>
-<li class="chapter" data-level="10.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>10.1.2</b> Database structure guidelines</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>10.2</b> Metadata</a>
+<li class="chapter" data-level="11.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>11.1</b> Data</a>
 <ul>
-<li class="chapter" data-level="10.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>10.2.1</b> Metadata guidelines</a></li>
+<li class="chapter" data-level="11.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>11.1.1</b> Data guidelines</a></li>
+<li class="chapter" data-level="11.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>11.1.2</b> Database structure guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>10.3</b> Further reading</a></li>
+<li class="chapter" data-level="11.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>11.2</b> Metadata</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>11.2.1</b> Metadata guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>11</b> Coding club at MUN</a></li>
-<li class="chapter" data-level="12" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>12</b> Contributions</a></li>
+<li class="chapter" data-level="11.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>11.3</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>12</b> Coding club at MUN</a></li>
+<li class="chapter" data-level="13" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>13</b> Contributions</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a>
 <ul>
@@ -252,7 +261,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a>
 <ul>
 <li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables</a></li>
-<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
+<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
 <ul>
 <li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses</a></li>
 </ul></li>
@@ -276,7 +285,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="glossary" class="section level1" number="14">
+<div id="glossary" class="section level1" number="15">
 <h1><span class="header-section-number">B</span> Glossary</h1>
 <p>Here is a list of terms that are frequently used throught the manual.</p>
 <ul>
@@ -289,7 +298,7 @@ the statements that are executed when a function runs.</p></li>
 <li><p><strong>Comment</strong>:
 a statement or sentence in a program that is intended to help human understand what is going on, but is ignored by the computer. Comments in R start with a <code>#</code> character (called pound character) and run to the end of the line.</p></li>
 <li><p><strong>CSV</strong> (Comma-Separated Values):
-a text file used to represents tables by separating the values in each row by commas. You can recognize them by the file extension “.csv”.</p></li>
+a text file used to represents tables by separating the values in each row by commas. You can recognize them by the file extension “.csv.”</p></li>
 <li><p><strong>Function</strong>:
 a piece of organized, reusable code that is used to perform a single, related action. In R, functions are called (or run) by stating the name of the function followed by the arguments it can take between parenthesis. For example <code>length(A)</code>.</p></li>
 <li><p><strong>Installation</strong> (or setup):

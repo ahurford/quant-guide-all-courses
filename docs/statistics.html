@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Entering and loading data | Quantitative skills for biology</title>
-  <meta name="description" content="8 Entering and loading data | Quantitative skills for biology" />
+  <title>10 Statistics in R | Quantitative skills for biology</title>
+  <meta name="description" content="10 Statistics in R | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Entering and loading data | Quantitative skills for biology" />
+  <meta property="og:title" content="10 Statistics in R | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="8 Entering and loading data | Quantitative skills for biology" />
+  <meta property="og:description" content="10 Statistics in R | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Entering and loading data | Quantitative skills for biology" />
+  <meta name="twitter:title" content="10 Statistics in R | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="8 Entering and loading data | Quantitative skills for biology" />
+  <meta name="twitter:description" content="10 Statistics in R | Quantitative skills for biology" />
   
 
 
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="style.html"/>
-<link rel="next" href="graph.html"/>
+<link rel="prev" href="graph.html"/>
+<link rel="next" href="data.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -285,160 +285,80 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-entry" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> Entering and loading data</h1>
-<div id="entering-data" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Entering data</h2>
-<p>Good data organization is the foundation of any research project,
-and this begins with entering and archiving data. More detail on the practice of good data entry and documentation can be found in Chapter <a href="data.html#data">11</a>. This chapter focuses on the “how to” of data entry in R.</p>
-<p>There are several reasonable options for data entry, for example:</p>
-<ol style="list-style-type: decimal">
-<li>Spreadsheet</li>
-<li>Text file</li>
-<li>Database</li>
-<li>Form (web or GUI databases).</li>
-</ol>
-<p>In R, you can also input data directly, which can be the right choice if you are working with a small dataset.
-Here, you will learn how to enter the data from your experiments
-and save them using R.</p>
-<p>Let’s start by
-making Table 1 for your report, which we will call
-<code>solution-concentration-effect-on-potato.csv</code>:</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="data-entry.html#cb54-1" aria-hidden="true" tabindex="-1"></a>table1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">weight =</span> <span class="fu">c</span>(<span class="st">&quot;initial&quot;</span>, <span class="st">&quot;final&quot;</span>, </span>
-<span id="cb54-2"><a href="data-entry.html#cb54-2" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;difference&quot;</span>, <span class="st">&quot;percent-change&quot;</span>), </span>
-<span id="cb54-3"><a href="data-entry.html#cb54-3" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb54-4"><a href="data-entry.html#cb54-4" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb54-5"><a href="data-entry.html#cb54-5" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-2-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb54-6"><a href="data-entry.html#cb54-6" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-5-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>))</span>
-<span id="cb54-7"><a href="data-entry.html#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x =</span> table1, <span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>, </span>
-<span id="cb54-8"><a href="data-entry.html#cb54-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<p>In the above code, make sure to replace the <code>NA</code>’s with the values from your experiment.
-Keep in mind that the values entered into the tables should be
-decimals greater than or equal to zero, and likely less than
-100 since you measured mass in grams and the potato
-cubes for the experiments were 8 cm<sup>3</sup> in size.</p>
-<p>Notice that we used the file extension “.csv.”
-CSV stands for comma-separated values, which is a format for
-tabular data stored in a text file where a comma separates the columns of the data.
-That is why a comma separates each of the values in the rows for the different solutions.</p>
-<p>Now, we will make Table 2, which includes the class averages and we will call
-<code>solution-concentration-effect-on-potato-averages.csv</code>:</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="data-entry.html#cb55-1" aria-hidden="true" tabindex="-1"></a>table2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">weight =</span> <span class="fu">c</span>(<span class="st">&quot;percent-change&quot;</span>, <span class="st">&quot;minimum-value&quot;</span>, </span>
-<span id="cb55-2"><a href="data-entry.html#cb55-2" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;maximum-value&quot;</span>, <span class="st">&quot;difference&quot;</span>), </span>
-<span id="cb55-3"><a href="data-entry.html#cb55-3" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb55-4"><a href="data-entry.html#cb55-4" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb55-5"><a href="data-entry.html#cb55-5" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-2-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb55-6"><a href="data-entry.html#cb55-6" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-5-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>))</span>
-<span id="cb55-7"><a href="data-entry.html#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x =</span> table1, <span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>, </span>
-<span id="cb55-8"><a href="data-entry.html#cb55-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<p>You might have just done this in Excel. We did not teach this method because Excel is not recommended for data entry. There are compatability issues between <code>Excel</code> and <code>R</code> that create problems. Spreadsheet software like Excel can be handy for data entry, but you should think carefully about how to organize your rows and columns first (see Chapter <a href="data.html#data">11</a> for details). If you do have data in Excel, you should convert it to a .csv (comma delimited format) first, before you import to <code>R</code>.</p>
-<p>Here are two articles that do a nice job discussing the differences and pros/cons of Excel vs. <code>R</code></p>
-<p><a href="https://www.jessesadler.com/post/excel-vs-r/">Excel v R</a>: read the first section only</p>
-<p><a href="https://www.gapintelligence.com/blog/understanding-r-programming-over-excel-for-data-analysis/">Understanding R programming over Excel</a></p>
+<div id="statistics" class="section level1" number="10">
+<h1><span class="header-section-number">10</span> Statistics in R</h1>
+<p>Statistics is an important part of using R, and in various situations when you are using data, you might find useful to know certain functions or certain ways to test your data. The following section is to show some useful functions you might need to test your data added to some previous information regarding statistics in general</p>
+<div id="hypothesis-testing" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> Hypothesis Testing</h2>
+<p>Testing data begins by considering two hypothesis, which are called <code>null hypothesis</code> <span class="math inline">\(H_0\)</span> and <code>alternative hypothesis</code> <span class="math inline">\(H_1\)</span>. And they contain statements about the population/data under study
+Suppose we are interested in testing if the mean of a population <code>x</code> compares to the mean of a population <code>y</code>. Our <code>null hypothesis</code> and <code>alternative hypothesis</code> would look like this:</p>
+<p><span class="math inline">\(H_0: \mu_x = \mu_y\)</span></p>
+<p><span class="math inline">\(H_1: \mu_x \neq \mu_y\)</span></p>
 </div>
-<div id="loading-or-importing-data" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Loading or importing data</h2>
-<p>We will look at two ways of importing data into R, via a command or using the import feature.
-Both options are equivalent; and when they are sucsesfull you will see your data as
-a new object in the Environment tab (in the Environment/History pane).</p>
-<div id="programmatic" class="section level3" number="8.2.1">
-<h3><span class="header-section-number">8.2.1</span> The programmatic way (i.e., command line)</h3>
-<p>We can load our our data files in CSV format into R using the function <code>read.csv</code> in the following way:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="data-entry.html#cb56-1" aria-hidden="true" tabindex="-1"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>)</span>
-<span id="cb56-2"><a href="data-entry.html#cb56-2" aria-hidden="true" tabindex="-1"></a>data2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>)</span></code></pre></div>
-<p>Here, the argument <code>file =</code> of <code>read.csv</code> is the name of the file we want to read.
-Notice that the filename needs to be a character string, so we put it in quotes.</p>
+<div id="types-of-testing" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> Types of testing</h2>
+<p>Depending on what you want to test and what you want to prove there are differente names for different types of testing. One of them being :
+Two-sided tests:<br />
+<span class="math inline">\(H_0: \mu_x = \mu_y\)</span></p>
+<p><span class="math inline">\(H_1: \mu_x \neq \mu_y\)</span></p>
+<p>And One-sided tests:
+Lower-tailed test/less:</p>
+<p><span class="math inline">\(H_0: \mu_x \ge \mu_y\)</span></p>
+<p><span class="math inline">\(H_1: \mu_x &lt; \mu_y\)</span></p>
+<p>Upper-tailed tests/greater:</p>
+<p><span class="math inline">\(H_0: \mu_x \leq \mu_y\)</span></p>
+<p><span class="math inline">\(H_1: \mu_x &gt; \mu_y\)</span></p>
 </div>
-<div id="the-rstudio-way-the-import-feature" class="section level3" number="8.2.2">
-<h3><span class="header-section-number">8.2.2</span> The RStudio way (the “import” feature)</h3>
-<p>In RStudio, click on the Environment tab.
-Then, click on <code>Import Dataset</code> and select <code>From Text (base)</code>.</p>
-<div class="figure" style="text-align: center"><span id="fig:import-feature"></span>
-<img src="figures/import-feature.png" alt="Using the Import Dataset feature." width="80%" />
-<p class="caption">
-Figure 8.1: Using the Import Dataset feature.
-</p>
+<div id="significance-level" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> Significance level</h2>
+<p>In statistics tests will give you a p-value that you will want to compare to a significance. This significance level will determine the probability of us rejecting our <code>null hypothesis</code> when is actually true. The level of significance is denoted by <span class="math inline">\(\alpha\)</span>(alpha).And in most settings a significance level of <code>0.05</code> or <code>0.01</code> is used, which means there is only <code>5%</code> or <code>1%</code> probability of rejecting the null hypothesis when it is in fact true.</p>
 </div>
-<p>This feature will open a file browser where you can locate the <code>.csv</code> file,
-in our case, for Table 1, it is called <code>solution-concentration-effect-on-potato.csv</code>.
-Once you have selected the file click <code>Open</code>.
-A dialog for importing the file will open up:
-on the left you can set the options on the import;
-on the top right you can see <code>Input File</code>, which is how the file looks like;
-on the bottom right you can see <code>Data Frame</code>,
-which is a preview of how the file or data will look like in R.
-In the <code>Name</code> field, write <code>data1</code> to rename the dataset.
-Set <code>Heading</code> to <code>Yes</code>, this will
-tell R to read and include the first row of the file as the names of the columns -
-This is an important step!
-You will see that the column names appear in bold in the <code>Data Frame</code> box.
-When you are ready click <code>Import</code>.</p>
-<div class="figure" style="text-align: center"><span id="fig:import-dialog"></span>
-<img src="figures/import-dialog.png" alt="Dataset import options." width="70%" />
-<p class="caption">
-Figure 8.2: Dataset import options.
-</p>
+<div id="p-value" class="section level2" number="10.4">
+<h2><span class="header-section-number">10.4</span> P-value</h2>
+<p>The p-value is a measure of probability that an observed difference could have occurred just by random chance. The smaller the p-value is, the greater the statistical significance of the observed difference.</p>
 </div>
-<p>RStudio will now run the R code that imports your dataset.
-It will be similar to the command used in Section <a href="data-entry.html#programmatic">8.2.1</a>.</p>
-</div>
-</div>
-<div id="inspecting-the-data" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Inspecting the data</h2>
-<p>To take a look at our dataset, we can print it by typing the name in the Console and hitting <code>Enter</code> (or <code>Return</code>).</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="data-entry.html#cb57-1" aria-hidden="true" tabindex="-1"></a>data1</span></code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
-## 1        initial             NA               NA             NA             NA
-## 2          final             NA               NA             NA             NA
-## 3     difference             NA               NA             NA             NA
-## 4 percent-change             NA               NA             NA             NA</code></pre>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="data-entry.html#cb59-1" aria-hidden="true" tabindex="-1"></a>data2</span></code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
-## 1        initial             NA               NA             NA             NA
-## 2          final             NA               NA             NA             NA
-## 3     difference             NA               NA             NA             NA
-## 4 percent-change             NA               NA             NA             NA</code></pre>
-<p>You can also open the dataset by clicking on the object <code>data1</code> in the Environment tab.
-This will open a new tab with the dataset, instead of printing it into the Console,
-which is a good choice if your dataset is larger.
-Another option is to open the dataset using Microsoft Excel from your computer file browser.</p>
-</div>
-<div id="handling-the-data" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Handling the data</h2>
-<p>After we have loaded/imported our data we want to be able to handle by extracting specific columns or rows. To be able to extract specific columns we need to know if they have specific names, and that can be accomplished by using <code>names()</code> in the following way:</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="data-entry.html#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(data1)</span></code></pre></div>
-<pre><code>## [1] &quot;weight&quot;           &quot;NaCl.0.percent&quot;   &quot;NaCl.0.9.percent&quot; &quot;NaCl.2.percent&quot;  
-## [5] &quot;NaCl.5.percent&quot;</code></pre>
-<p>Knowing the names of the columns allows us to then use the symbol <code>$</code> followed by the name of the column you need(in this case <code>NaCl.0.percent</code>):</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="data-entry.html#cb63-1" aria-hidden="true" tabindex="-1"></a>  data1<span class="sc">$</span>NaCl.<span class="fl">0.</span>percent</span></code></pre></div>
-<pre><code>## [1] NA NA NA NA</code></pre>
-<p>If the columns do not have names you can specify the column you require by using <code>data1[,n]</code>, where <code>n</code> is the number of column you require, and it can be implemented the following way:</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="data-entry.html#cb65-1" aria-hidden="true" tabindex="-1"></a>data1[,<span class="dv">1</span>]</span></code></pre></div>
-<pre><code>## [1] &quot;initial&quot;        &quot;final&quot;          &quot;difference&quot;     &quot;percent-change&quot;</code></pre>
-<p>Rows unlike columns will not have number so they have to be treated the same way as above but we will use <code>data1[n,]</code> instead, where <code>n</code> represents the row number you want:</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="data-entry.html#cb67-1" aria-hidden="true" tabindex="-1"></a>  data1[<span class="dv">1</span>,]</span></code></pre></div>
-<pre><code>##    weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
-## 1 initial             NA               NA             NA             NA</code></pre>
-<p>Knowing that the use of <code>data1[n,]</code> or <code>data[,m]</code> allows us to retrieve specific rows(<code>n</code>) or columns (<code>m</code>), we can assume that using <code>data1[n,m]</code> will allow us to access specific values:</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="data-entry.html#cb69-1" aria-hidden="true" tabindex="-1"></a>  data1[<span class="dv">1</span>,<span class="dv">2</span>]</span></code></pre></div>
-<pre><code>## [1] NA</code></pre>
-<p>We can go one step further by retrieving more than one row/column by defining the limits of our search. This can be accomplished by <code>data1[n:m,]</code> for rows or <code>data1[,n:m]</code> for columns where <code>n</code> is the first column/row you need and <code>m</code> is the last column/row of your search(non-inclusive), and example is:
--For rows:</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="data-entry.html#cb71-1" aria-hidden="true" tabindex="-1"></a>  data1[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>,]</span></code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
-## 2          final             NA               NA             NA             NA
-## 3     difference             NA               NA             NA             NA
-## 4 percent-change             NA               NA             NA             NA</code></pre>
-<p>-For columns:</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="data-entry.html#cb73-1" aria-hidden="true" tabindex="-1"></a>  data1[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent
-## 1        initial             NA               NA
-## 2          final             NA               NA
-## 3     difference             NA               NA
-## 4 percent-change             NA               NA</code></pre>
-<p>This method is called <code>slicing</code> and its structured as <code>[start:finish:step]</code> where <code>start</code> defines where in your entries you want to start “slicing” the data from.
-<code>finish</code> defines the last entry you want to “slice”(finish is exclusive, meaning the last entry retrieve will be the one prior to finish. Eg:[0:5] will retrieve the data from 0 to 4).
-<code>step</code> is the sequence you require between start and finish (Eg: <code>[0:10:2]</code> will slice the following indexes 0,2,4,6,8)</p>
+<div id="t.test" class="section level2" number="10.5">
+<h2><span class="header-section-number">10.5</span> t.test</h2>
+<p>Sometimes with the data we want to test the mean of our population. The t-test will help us compare them and giving us an answer. An example of using the t-test would be:</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="statistics.html#cb101-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb101-2"><a href="statistics.html#cb101-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1] -0.23378056 -1.73440477 -1.32238813  0.24783585 -2.09573134  0.25854169
+##  [7] -0.12954300 -0.78681365 -0.40458706  0.01835047</code></pre>
+<p>Now with an <span class="math inline">\(\alpha = 0.1\)</span> we want to test that the mean of <code>x</code> is equal to <code>0</code>:</p>
+<p><span class="math inline">\(H_0: \mu = 0\)</span></p>
+<p><span class="math inline">\(H_1: \mu \neq 0\)</span></p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="statistics.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  x
+## t = -2.335, df = 9, p-value = 0.04438
+## alternative hypothesis: true mean is not equal to 0
+## 95 percent confidence interval:
+##  -1.21720932 -0.01929478
+## sample estimates:
+##  mean of x 
+## -0.6182521</code></pre>
+<p>Running this code gives us a nice way to look at the analysis of our data(s), and looking at the <code>p-value</code> we can compare it to our significance level and getting a <code>p-value &gt; 0.1</code> we do not have enough evidence to reject the <code>null hypothesis</code>.</p>
+<p>The <code>t.test</code> function can be modified by filling arguments or changing arguments as required:</p>
+<pre><code>t.test(x, y = NULL,
+       alternative = c(&quot;two.sided&quot;, &quot;less&quot;, &quot;greater&quot;),
+       mu = 0, paired = FALSE, var.equal = FALSE,
+       conf.level = 0.95, ...)
+       
+       x(required) : data to be analized
+       y(optional) : data to be compared to. The default value is NULL
+       
+       alternative (optional) : this refers to what you want to test: (&quot;two.sided&quot;,&quot;less&quot;,&quot;greater&quot;).
+          By default this value will be &quot;two.sided&quot;
+       mu (optional) : indicates the true value of the mean. Default value = 0
+       
+       paired (optional) :indicates whether you want a paired t-test. Default value = FALSE
+       
+       var.equal (optional) : indicates if the variances are equal. Default value = FALSE
+       
+       conf.level (optional) : confidence level of interval. Default value = 0.95
+       </code></pre>
 
 </div>
 </div>
@@ -447,8 +367,8 @@ Another option is to open the dataset using Microsoft Excel from your computer f
           </div>
         </div>
       </div>
-<a href="style.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="graph.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="graph.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

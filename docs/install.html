@@ -31,7 +31,7 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="rstudio.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,13 +49,13 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -211,6 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
+<li class="chapter" data-level="8.4" data-path="data-entry.html"><a href="data-entry.html#handling-the-data"><i class="fa fa-check"></i><b>8.4</b> Handling the data</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>9</b> Making graphs in R</a>
 <ul>
@@ -225,21 +226,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.6" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>9.6</b> Exporting your graphs</a></li>
 <li class="chapter" data-level="9.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>9.7</b> pch cheatsheet</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>10</b> Data and metadata</a>
+<li class="chapter" data-level="10" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>10</b> Statistics in R</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>10.1</b> Data</a>
+<li class="chapter" data-level="10.1" data-path="statistics.html"><a href="statistics.html#hypothesis-testing"><i class="fa fa-check"></i><b>10.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="10.2" data-path="statistics.html"><a href="statistics.html#types-of-testing"><i class="fa fa-check"></i><b>10.2</b> Types of testing</a></li>
+<li class="chapter" data-level="10.3" data-path="statistics.html"><a href="statistics.html#significance-level"><i class="fa fa-check"></i><b>10.3</b> Significance level</a></li>
+<li class="chapter" data-level="10.4" data-path="statistics.html"><a href="statistics.html#p-value"><i class="fa fa-check"></i><b>10.4</b> P-value</a></li>
+<li class="chapter" data-level="10.5" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>10.5</b> t.test</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>11</b> Data and metadata</a>
 <ul>
-<li class="chapter" data-level="10.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>10.1.1</b> Data guidelines</a></li>
-<li class="chapter" data-level="10.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>10.1.2</b> Database structure guidelines</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>10.2</b> Metadata</a>
+<li class="chapter" data-level="11.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>11.1</b> Data</a>
 <ul>
-<li class="chapter" data-level="10.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>10.2.1</b> Metadata guidelines</a></li>
+<li class="chapter" data-level="11.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>11.1.1</b> Data guidelines</a></li>
+<li class="chapter" data-level="11.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>11.1.2</b> Database structure guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>10.3</b> Further reading</a></li>
+<li class="chapter" data-level="11.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>11.2</b> Metadata</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>11.2.1</b> Metadata guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>11</b> Coding club at MUN</a></li>
-<li class="chapter" data-level="12" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>12</b> Contributions</a></li>
+<li class="chapter" data-level="11.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>11.3</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>12</b> Coding club at MUN</a></li>
+<li class="chapter" data-level="13" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>13</b> Contributions</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a>
 <ul>
@@ -252,7 +261,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a>
 <ul>
 <li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables</a></li>
-<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
+<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
 <ul>
 <li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses</a></li>
 </ul></li>
@@ -293,9 +302,9 @@ Figure 2.1: Analogy of the difference between R and RStudio <span class="citatio
 <ol style="list-style-type: decimal">
 <li><p>Download and install R from <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a>:</p>
 <ul>
-<li>If you are a Windows user: Click on “Download R for Windows”, then click on “base”, then click on the link “Download R X.X.X for Windows”.</li>
-<li>If you are macOS user: Click on “Download R for (Mac) OS X”, then look for “Latest release:” and click on the link to the left of the first paragraph “R-X.X.X.pkg”,</li>
-<li>If you are a Linux user: Click on “Download R for Linux”, choose your distribution and then your Linux version to find the installer for your setup.</li>
+<li>If you are a Windows user: Click on “Download R for Windows,” then click on “base,” then click on the link “Download R X.X.X for Windows.”</li>
+<li>If you are macOS user: Click on “Download R for (Mac) OS X,” then look for “Latest release:” and click on the link to the left of the first paragraph “R-X.X.X.pkg,”</li>
+<li>If you are a Linux user: Click on “Download R for Linux,” choose your distribution and then your Linux version to find the installer for your setup.</li>
 <li><strong>NOTE: The X’s in the links above stand for the version number, which may be different for you depending on the date when you download the files.</strong></li>
 </ul></li>
 <li><p>Download and install RStudio from <a href="https://rstudio.com/products/rstudio/download/#download" class="uri">https://rstudio.com/products/rstudio/download/#download</a>.</p>
@@ -310,7 +319,7 @@ Figure 2.1: Analogy of the difference between R and RStudio <span class="citatio
 <ul>
 <li>In a web browser, go to <a href="https://rstudio.cloud/plans/free" class="uri">https://rstudio.cloud/plans/free</a>.</li>
 <li>Sign up for the “Cloud Free” plan, then log in.</li>
-<li>You will be directed to a virtual dashboard called “Your Workspace”. Here, click on “New Project” to start working on a blank project.</li>
+<li>You will be directed to a virtual dashboard called “Your Workspace.” Here, click on “New Project” to start working on a blank project.</li>
 <li>After a few seconds, you will see the RStudio console load in your browser. You can use this interface as you would use RStudio on your computer.</li>
 <li>Keep in mind that this is a web-based app; therefore, it may take a few minutes to load, and it could also slow down the browser’s speed. Both are normal; try to be patient. We are not doing intense calculations for the labs, so it will not take that long.</li>
 </ul>

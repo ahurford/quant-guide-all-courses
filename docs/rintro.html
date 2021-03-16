@@ -31,7 +31,7 @@
   
 <link rel="prev" href="rstudio.html"/>
 <link rel="next" href="help.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -49,13 +49,13 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -211,6 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
+<li class="chapter" data-level="8.4" data-path="data-entry.html"><a href="data-entry.html#handling-the-data"><i class="fa fa-check"></i><b>8.4</b> Handling the data</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>9</b> Making graphs in R</a>
 <ul>
@@ -225,21 +226,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.6" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>9.6</b> Exporting your graphs</a></li>
 <li class="chapter" data-level="9.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>9.7</b> pch cheatsheet</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>10</b> Data and metadata</a>
+<li class="chapter" data-level="10" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>10</b> Statistics in R</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>10.1</b> Data</a>
+<li class="chapter" data-level="10.1" data-path="statistics.html"><a href="statistics.html#hypothesis-testing"><i class="fa fa-check"></i><b>10.1</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="10.2" data-path="statistics.html"><a href="statistics.html#types-of-testing"><i class="fa fa-check"></i><b>10.2</b> Types of testing</a></li>
+<li class="chapter" data-level="10.3" data-path="statistics.html"><a href="statistics.html#significance-level"><i class="fa fa-check"></i><b>10.3</b> Significance level</a></li>
+<li class="chapter" data-level="10.4" data-path="statistics.html"><a href="statistics.html#p-value"><i class="fa fa-check"></i><b>10.4</b> P-value</a></li>
+<li class="chapter" data-level="10.5" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>10.5</b> t.test</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>11</b> Data and metadata</a>
 <ul>
-<li class="chapter" data-level="10.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>10.1.1</b> Data guidelines</a></li>
-<li class="chapter" data-level="10.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>10.1.2</b> Database structure guidelines</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>10.2</b> Metadata</a>
+<li class="chapter" data-level="11.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>11.1</b> Data</a>
 <ul>
-<li class="chapter" data-level="10.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>10.2.1</b> Metadata guidelines</a></li>
+<li class="chapter" data-level="11.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>11.1.1</b> Data guidelines</a></li>
+<li class="chapter" data-level="11.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>11.1.2</b> Database structure guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>10.3</b> Further reading</a></li>
+<li class="chapter" data-level="11.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>11.2</b> Metadata</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>11.2.1</b> Metadata guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>11</b> Coding club at MUN</a></li>
-<li class="chapter" data-level="12" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>12</b> Contributions</a></li>
+<li class="chapter" data-level="11.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>11.3</b> Further reading</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>12</b> Coding club at MUN</a></li>
+<li class="chapter" data-level="13" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>13</b> Contributions</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a>
 <ul>
@@ -252,7 +261,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a>
 <ul>
 <li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables</a></li>
-<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
+<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
 <ul>
 <li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses</a></li>
 </ul></li>
@@ -286,17 +295,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="working-directory" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Working directory</h2>
-<p>The working directory is a folder on your computer where R will look for data, save your plots, etc. To make your workflow easier, it is good practice to save everything related to one project in the same place, as it will save you time typing up computer paths or finding the files across your computer. For example, you could save your script and all the data for this exercises in a folder called “Intro-to-R”. It is good practice to avoid spaces in file names because it can confuse R.</p>
+<p>The working directory is a folder on your computer where R will look for data, save your plots, etc. To make your workflow easier, it is good practice to save everything related to one project in the same place, as it will save you time typing up computer paths or finding the files across your computer. For example, you could save your script and all the data for this exercises in a folder called “Intro-to-R.” It is good practice to avoid spaces in file names because it can confuse R.</p>
 <p>To find out where your working directory is now, run the function <code>getwd()</code>. If you want to change it, you can use <code>setwd("dir")</code>, where <code>"dir"</code> is the path to the folder that you want to use. Notice that the path must be written inside quotation marks. You’ll see that in the console R runs the command for changing the working directory.</p>
 <p>Alternatively, you can set the working directory from the Files tab in the Files/Plot/Packages/Help pane. For this, navigate to the folder whence you want to read and save files or create a new one by clicking <code>New Folder</code>. Once you have located the folder, click on it to access it. Then, click <code>More</code> and select <code>Set As Working Directory</code>.</p>
-<p><strong>TRY IT!</strong> Set the working directory to a folder in your Desktop called “Intro-to-R”.</p>
+<p><strong>TRY IT!</strong> Set the working directory to a folder in your Desktop called “Intro-to-R.”</p>
 </div>
 <div id="variables-and-assignment" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Variables and assignment</h2>
 <p>The assignment operator is <code>&lt;-</code>. You create this by typing the “less than” sign (the <code>&lt;</code> symbol located above the comma) followed by a hyphen. It stores whatever you write on the right to variables on the left. Variable names can be made up of letters, numbers, underscores and periods. But, they cannot start with a number nor contain spaces. For instance:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="rintro.html#cb17-1"></a>x &lt;-<span class="st"> </span><span class="dv">10</span></span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="rintro.html#cb17-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span></code></pre></div>
 <p>Here, the variable <code>x</code> has been assigned the value <code>10</code>. Notice that assigning a variable does not print its value, but if you look at the <code>Environment</code> panel, you will see the new variable there. You can also check that it is stored by calling the variable:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="rintro.html#cb18-1"></a>x </span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="rintro.html#cb18-1" aria-hidden="true" tabindex="-1"></a>x </span></code></pre></div>
 <pre><code>## [1] 10</code></pre>
 <p><strong>TRY IT!</strong> Define a variable “y” with the value of 3.</p>
 <p><strong>TIP</strong> Try to give your variables meaningful names. For example, if you know you are working with variables that represent different measurements you took on a plant, you might name your variables things like <code>leaf_length</code> or <code>stem_diameter</code></p>
@@ -308,11 +317,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="using-variables" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Using variables</h2>
 <p>Variables can be used in calculations</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="rintro.html#cb20-1"></a>x <span class="op">+</span><span class="st"> </span>x</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="rintro.html#cb20-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> x</span></code></pre></div>
 <pre><code>## [1] 20</code></pre>
 <p>Variables can also be reassigned</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="rintro.html#cb22-1"></a>x &lt;-<span class="st"> </span><span class="dv">314</span></span>
-<span id="cb22-2"><a href="rintro.html#cb22-2"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="rintro.html#cb22-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">314</span></span>
+<span id="cb22-2"><a href="rintro.html#cb22-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>## [1] 314</code></pre>
 </div>
 <div id="comments" class="section level2" number="4.5">
@@ -334,7 +343,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="mathematical-functions" class="section level2" number="4.7">
 <h2><span class="header-section-number">4.7</span> Mathematical functions</h2>
 <p>R comes with many built in mathematical functions. Functions are called by typing its name followed by open and closing parentheses. Whatever we write inside the parentheses are the function’s arguments:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="rintro.html#cb24-1"></a><span class="kw">sqrt</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="rintro.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(x)</span></code></pre></div>
 <pre><code>## [1] 17.72005</code></pre>
 <p><strong>TRY IT!</strong> Calculate the natural logarithm of <code>x</code>. Hint: the function to do so is <code>log()</code>, and the argument would be the name of the variable that we want to use.</p>
 </div>
@@ -352,57 +361,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="data-structures" class="section level2" number="4.9">
 <h2><span class="header-section-number">4.9</span> Data structures</h2>
 <p>Elements of these data types may be combined to form data structures. We will look at three of them.</p>
-<div id="vectors" class="section level3 unnumbered" number="">
+<div id="vectors" class="section level3 unnumbered">
 <h3>Vectors</h3>
 <p>A <em>vector</em> is a set of values, in a specific order, and of the same data type. To create a vector we can use the function <code>c()</code>, where the “c” stands for concatenate or combine. For example:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="rintro.html#cb26-1"></a>rgb &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb26-2"><a href="rintro.html#cb26-2"></a>rgb</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="rintro.html#cb26-1" aria-hidden="true" tabindex="-1"></a>rgb <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;green&quot;</span>, <span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb26-2"><a href="rintro.html#cb26-2" aria-hidden="true" tabindex="-1"></a>rgb</span></code></pre></div>
 <pre><code>## [1] &quot;red&quot;   &quot;green&quot; &quot;blue&quot;</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="rintro.html#cb28-1"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>)</span>
-<span id="cb28-2"><a href="rintro.html#cb28-2"></a>y</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="rintro.html#cb28-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>)</span>
+<span id="cb28-2"><a href="rintro.html#cb28-2" aria-hidden="true" tabindex="-1"></a>y</span></code></pre></div>
 <pre><code>## [1] 2 3 5 7</code></pre>
 <p>To check what kind of data object it is you can use the function <code>class</code>. To see check how long is the object you can use <code>length()</code> for one-dimensional objects, or <code>dim()</code> for objects of two or more dimensions. For example:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="rintro.html#cb30-1"></a><span class="kw">class</span>(rgb)</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="rintro.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(rgb)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="rintro.html#cb32-1"></a><span class="kw">length</span>(rgb)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="rintro.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(rgb)</span></code></pre></div>
 <pre><code>## [1] 3</code></pre>
 <p><strong>TRY IT!</strong> What is the data type and length of the vector <code>y</code>?</p>
 <p><strong>HAND IN</strong> Tell us what the type and length of vector <code>y</code> is.</p>
 <p>The core idea behind vectorization is that operations can be applied at once to an entire set of values. For example:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="rintro.html#cb34-1"></a>y <span class="op">*</span><span class="st"> </span><span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="rintro.html#cb34-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">*</span> <span class="dv">3</span></span></code></pre></div>
 <pre><code>## [1]  6  9 15 21</code></pre>
 <p><strong>TRY IT!</strong> Create a vector with a sequence of numbers using the function <code>seq</code>. Hint: run <code>?seq</code> in the console to display the help page of the function. Remember, you can find a guide to the help files in Chapter <a href="help.html#help">5</a></p>
 <p><strong>HAND IN</strong> Copy the line of code you used to create a vector with a sequence of numbers from 0-20, increasing by 5.</p>
 <p>A key point of the previous example is that vectors can be used as arguments to functions. But, vectors are <em>atomic</em>, which means that they can only contain one class of data. In other words, different classes cannot be mixed in the same object. For instance, if we combine numeric with character data types, R will coerce all elements to be characters:</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="rintro.html#cb36-1"></a>primes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="st">&quot;seven&quot;</span>)</span>
-<span id="cb36-2"><a href="rintro.html#cb36-2"></a><span class="kw">class</span>(primes)</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="rintro.html#cb36-1" aria-hidden="true" tabindex="-1"></a>primes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="st">&quot;seven&quot;</span>)</span>
+<span id="cb36-2"><a href="rintro.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(primes)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 <p>For this reason, and to avoid errors, it is important to check frequently the data type of the objects that you are working with.</p>
 </div>
-<div id="matrices" class="section level3 unnumbered" number="">
+<div id="matrices" class="section level3 unnumbered">
 <h3>Matrices</h3>
 <p>In R, matrices are a type of vectors with two dimensions: the number of rows and columns. As with vectors, the elements of a matrix must be of the same data type (numeric or character). One way of creating a matrix with the function <code>matrix()</code>. Keep in mind that matrices are filled column-wise:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="rintro.html#cb38-1"></a>M &lt;-<span class="st"> </span><span class="kw">matrix</span>(</span>
-<span id="cb38-2"><a href="rintro.html#cb38-2"></a>  <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
-<span id="cb38-3"><a href="rintro.html#cb38-3"></a>  <span class="dt">nrow =</span> <span class="dv">2</span>,</span>
-<span id="cb38-4"><a href="rintro.html#cb38-4"></a>  <span class="dt">ncol =</span> <span class="dv">2</span>)</span>
-<span id="cb38-5"><a href="rintro.html#cb38-5"></a>M</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="rintro.html#cb38-1" aria-hidden="true" tabindex="-1"></a>M <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb38-2"><a href="rintro.html#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
+<span id="cb38-3"><a href="rintro.html#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">nrow =</span> <span class="dv">2</span>,</span>
+<span id="cb38-4"><a href="rintro.html#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb38-5"><a href="rintro.html#cb38-5" aria-hidden="true" tabindex="-1"></a>M</span></code></pre></div>
 <pre><code>##      [,1] [,2]
 ## [1,]    4    6
 ## [2,]    5    7</code></pre>
 <p>We can confirm the type of data with the function <code>class()</code>, and look at the size of the matrix with the function <code>dim()</code>:</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="rintro.html#cb40-1"></a><span class="kw">class</span>(M)</span></code></pre></div>
-<pre><code>## [1] &quot;matrix&quot;</code></pre>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="rintro.html#cb42-1"></a><span class="kw">dim</span>(M)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="rintro.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(M)</span></code></pre></div>
+<pre><code>## [1] &quot;matrix&quot; &quot;array&quot;</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="rintro.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(M)</span></code></pre></div>
 <pre><code>## [1] 2 2</code></pre>
 <p><strong>TRY IT!</strong> Create a 3 by 3 matrix in which the elements are the numbers from one to nine.</p>
 <p><strong>HAND IN</strong> Hand in a copy of the code you used to create the above matrix. Copy-paste the resulting matrix from the console into the Word document.</p>
 </div>
-<div id="lists" class="section level3 unnumbered" number="">
+<div id="lists" class="section level3 unnumbered">
 <h3>Lists</h3>
 <p>A list is a special type of vector, where each element can be of a different data type. To create a list we can use the function <code>list()</code>:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="rintro.html#cb44-1"></a>my_list &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">5</span>, <span class="st">&quot;hello&quot;</span>, <span class="ot">TRUE</span>, <span class="dv">1</span><span class="op">+</span>4i)</span>
-<span id="cb44-2"><a href="rintro.html#cb44-2"></a>my_list</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="rintro.html#cb44-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="dv">5</span>, <span class="st">&quot;hello&quot;</span>, <span class="cn">TRUE</span>, <span class="dv">1</span><span class="sc">+</span>4i)</span>
+<span id="cb44-2"><a href="rintro.html#cb44-2" aria-hidden="true" tabindex="-1"></a>my_list</span></code></pre></div>
 <pre><code>## [[1]]
 ## [1] 5
 ## 
@@ -414,17 +423,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## [[4]]
 ## [1] 1+4i</code></pre>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="rintro.html#cb46-1"></a><span class="kw">class</span>(my_list)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="rintro.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(my_list)</span></code></pre></div>
 <pre><code>## [1] &quot;list&quot;</code></pre>
 <p>As you can see from the output, each element of the list starts on a new line. Lists can be useful inside functions because you can combine different kinds of results into a single object that a function can return.</p>
 <p><strong>TRY IT!</strong> What is the length of the object <code>my_list</code>?</p>
 <p><strong>HAND IN</strong> State the length of the object <code>my_list</code></p>
 </div>
-<div id="data-frames" class="section level3 unnumbered" number="">
+<div id="data-frames" class="section level3 unnumbered">
 <h3>Data frames</h3>
 <p>A data frame is a type of list in which every element of the list has the same length, that means that a data frame is a “rectangular” list. We can create a data frame with the function <code>data.frame()</code>:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="rintro.html#cb48-1"></a>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id =</span> letters[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>], <span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">y =</span> <span class="dv">11</span><span class="op">:</span><span class="dv">20</span>)</span>
-<span id="cb48-2"><a href="rintro.html#cb48-2"></a>df</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="rintro.html#cb48-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">id =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>], <span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">y =</span> <span class="dv">11</span><span class="sc">:</span><span class="dv">20</span>)</span>
+<span id="cb48-2"><a href="rintro.html#cb48-2" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div>
 <pre><code>##    id  x  y
 ## 1   a  1 11
 ## 2   b  2 12
