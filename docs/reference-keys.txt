@@ -64,6 +64,7 @@ types-of-testing
 significance-level
 p-value
 t.test
+correlation
 data
 data-1
 data-guidelines

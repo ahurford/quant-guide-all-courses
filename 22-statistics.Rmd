@@ -77,3 +77,37 @@ t.test(x, y = NULL,
        conf.level (optional) : confidence level of interval. Default value = 0.95
        
 ```  
+
+## Correlation
+Correlation $r$  is a statistical measure that describes the extent to which two variables are linearly related (meaning they change together at a constant rate). While $r^2$ is the correlation coefficient that is the proportion of the variance of one variable that can be explained by the straight-line dependence on the other variable. 
+
+Association between variables describes the systematic connection between changes in one variable and changes in the other. Positively associated variables refers to when an increase in one variable is accompanied by an increase in the other. A negative association refers to when an increase in one variable is accompanied by a decrease in the other.
+
+```{r, results=F, include=F}
+
+data <- read.csv("correlation_data.csv")
+reg1 <- lm(y ~ x, data=data)
+reg2 <- lm(y.1 ~ x, data = data)
+reg3 <- lm(y.3 ~ x, data = data)
+
+```
+```{r}
+plot(data$x, data$y, xlab="x", ylab="y",
+     main="Plot 1: r = 1", pch=19, col="green")
+abline(reg1, col="green")
+
+plot(data$x, data$y.1 ,xlab="x", ylab="y",
+     main="Plot 2: r = -1", pch=19, col="red")
+abline(reg2, col="red")
+
+plot(data$x, data$y.3, xlab="x", ylab="y",
+     main="Plot 3: r = 0.17", pch=19)
+abline(reg3, col="blue")
+
+```
+
+- A $r=1$ means there is a perfect positive correlation between two variables (Plot 1).
+- A $r=-1$ means there is a perfect negative correlation between two variables (Plot 2).
+- A $r=0$ mean there is no correlation between the two variables. 
+
+
