@@ -345,12 +345,13 @@ Lower-tailed test/less:</p>
 </div>
 <div id="t.test" class="section level2" number="10.5">
 <h2><span class="header-section-number">10.5</span> t.test</h2>
-<p>Sometimes with the data we want to test the mean of our population. The t-test will help us compare them and giving us an answer. An example of using the t-test would be:</p>
+<p>Sometimes within data, we want to compare our sample mean to our population. A t-test will help us compare them and determine if the two are statistically different.</p>
+<p>Here is an example of how to compute a t.test within R.</p>
 <div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="statistics.html#cb101-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
 <span id="cb101-2"><a href="statistics.html#cb101-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -0.53136459  0.61997414  0.16861984  0.69358709  0.09978735 -2.69520119
-##  [7]  1.40031539 -0.10246550  0.12171943  2.22112631</code></pre>
-<p>Now with an <span class="math inline">\(\alpha = 0.1\)</span> we want to test that the mean of <code>x</code> is equal to <code>0</code>:</p>
+<pre><code>##  [1] -0.3501884 -0.9227973  1.6381602  0.6908481  0.8077635  1.3971183
+##  [7]  0.9640522  1.8070386 -0.8852401  1.2147632</code></pre>
+<p>With an <span class="math inline">\(\alpha = 0.1\)</span> we want to test that the mean of <code>x</code> is equal to <code>0</code>. Our two hypothesis are:</p>
 <p><span class="math inline">\(H_0: \mu = 0\)</span></p>
 <p><span class="math inline">\(H_1: \mu \neq 0\)</span></p>
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="statistics.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
@@ -358,15 +359,15 @@ Lower-tailed test/less:</p>
 ##  One Sample t-test
 ## 
 ## data:  x
-## t = 0.48941, df = 9, p-value = 0.6363
+## t = 1.9955, df = 9, p-value = 0.07711
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  -0.7230323  1.1222520
+##  -0.08500937  1.35731300
 ## sample estimates:
 ## mean of x 
-## 0.1996098</code></pre>
-<p>Running this code gives us a nice way to look at the analysis of our data(s), and looking at the <code>p-value</code> we can compare it to our significance level and getting a <code>p-value &gt; 0.1</code> we do not have enough evidence to reject the <code>null hypothesis</code>.</p>
-<p>The <code>t.test</code> function can be modified by filling arguments or changing arguments as required:</p>
+## 0.6361518</code></pre>
+<p>Running this code gives us a way analysis the data by comparing the <code>p-value</code> to our significance level <span class="math inline">\(\alpha = 0.1\)</span>. Since we’re getting a <code>p-value &gt; 0.1</code>, we do not have enough evidence to reject the <code>null hypothesis</code>.</p>
+<p>The <code>t.test</code> function can be expanded by filling arguments or changing arguments as required. For example, we can test two means to see if one is greater than, less than, or perform a two-sided t.test.</p>
 <pre><code>t.test(x, y = NULL,
        alternative = c(&quot;two.sided&quot;, &quot;less&quot;, &quot;greater&quot;),
        mu = 0, paired = FALSE, var.equal = FALSE,
@@ -388,8 +389,9 @@ Lower-tailed test/less:</p>
 </div>
 <div id="correlation" class="section level2" number="10.6">
 <h2><span class="header-section-number">10.6</span> Correlation</h2>
-<p>Correlation <span class="math inline">\(r\)</span> is a statistical measure that describes the extent to which two variables are linearly related (meaning they change together at a constant rate). While <span class="math inline">\(r^2\)</span> is the correlation coefficient that is the proportion of the variance of one variable that can be explained by the straight-line dependence on the other variable.</p>
-<p>Association between variables describes the systematic connection between changes in one variable and changes in the other. Positively associated variables refers to when an increase in one variable is accompanied by an increase in the other. A negative association refers to when an increase in one variable is accompanied by a decrease in the other.</p>
+<p>Correlation <span class="math inline">\(r\)</span> is a statistical measure that describes the extent to which two variables are linearly related (meaning they change together at a constant rate). While <span class="math inline">\(r^2\)</span> is the correlation coefficient and measures the proportion of the variance of one variable that can be explained by the straight-line dependence on the other variable.</p>
+<p>Association between variables describes the connection between changes in one variable and changes in the other. Positively associated variables refer to when an increase in the other accompanies an increase in one variable. A negative association refers to when a decrease in the other accompanies an increase in one variable.</p>
+<p>The plots below show the visual representation of different <span class="math inline">\(r\)</span> values:</p>
 <div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="statistics.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y, <span class="at">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;y&quot;</span>,</span>
 <span id="cb106-2"><a href="statistics.html#cb106-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;Plot 1: r = 1&quot;</span>, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span><span class="st">&quot;green&quot;</span>)</span>
 <span id="cb106-3"><a href="statistics.html#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg1, <span class="at">col=</span><span class="st">&quot;green&quot;</span>)</span></code></pre></div>
@@ -405,7 +407,7 @@ Lower-tailed test/less:</p>
 <ul>
 <li>A <span class="math inline">\(r=1\)</span> means there is a perfect positive correlation between two variables (Plot 1).</li>
 <li>A <span class="math inline">\(r=-1\)</span> means there is a perfect negative correlation between two variables (Plot 2).</li>
-<li>A <span class="math inline">\(r=0\)</span> mean there is no correlation between the two variables.</li>
+<li>A <span class="math inline">\(r=0\)</span> means there is no correlation between the two variables.</li>
 </ul>
 
 </div>

@@ -37,14 +37,17 @@ Statistics is an important part of using R, and in various situations when you a
   The p-value is a measure of probability that an observed difference could have occurred just by random chance. The smaller the p-value is, the greater the statistical significance of the observed difference.
 
 ## t.test
-Sometimes with the data we want to test the mean of our population. The t-test will help us compare them and giving us an answer. An example of using the t-test would be:
+Sometimes within data, we want to compare our sample mean to our population. A t-test will help us compare them and determine if the two are statistically different.
+
+Here is an example of how to compute a t.test within R.
 
 
 ```{r}
 x <- rnorm(10)
 x
 ```
-Now with an $\alpha = 0.1$ we want to test that the mean of `x` is equal to `0`:
+
+With an $\alpha = 0.1$ we want to test that the mean of `x` is equal to `0`. Our two hypothesis are:
 
 $H_0: \mu = 0$
 
@@ -54,9 +57,9 @@ $H_1: \mu \neq 0$
 t.test(x)
 ```
 
-Running this code gives us a nice way to look at the analysis of our data(s), and looking at the `p-value` we can compare it to our significance level and getting a `p-value > 0.1` we do not have enough evidence to reject the `null hypothesis`.
+Running this code gives us a way analysis the data by comparing the `p-value` to our significance level $\alpha = 0.1$. Since we're getting a `p-value > 0.1`, we do not have enough evidence to reject the `null hypothesis`.
 
-  The `t.test` function can be modified by filling arguments or changing arguments as required:
+The `t.test` function can be expanded by filling arguments or changing arguments as required. For example, we can test two means to see if one is greater than, less than, or perform a two-sided t.test.
 ```
 t.test(x, y = NULL,
        alternative = c("two.sided", "less", "greater"),
@@ -79,9 +82,11 @@ t.test(x, y = NULL,
 ```  
 
 ## Correlation
-Correlation $r$  is a statistical measure that describes the extent to which two variables are linearly related (meaning they change together at a constant rate). While $r^2$ is the correlation coefficient that is the proportion of the variance of one variable that can be explained by the straight-line dependence on the other variable. 
+Correlation $r$  is a statistical measure that describes the extent to which two variables are linearly related (meaning they change together at a constant rate). While $r^2$ is the correlation coefficient and measures the proportion of the variance of one variable that can be explained by the straight-line dependence on the other variable. 
 
-Association between variables describes the systematic connection between changes in one variable and changes in the other. Positively associated variables refers to when an increase in one variable is accompanied by an increase in the other. A negative association refers to when an increase in one variable is accompanied by a decrease in the other.
+Association between variables describes the connection between changes in one variable and changes in the other. Positively associated variables refer to when an increase in the other accompanies an increase in one variable. A negative association refers to when a decrease in the other accompanies an increase in one variable.
+
+The plots below show the visual representation of different $r$ values:
 
 ```{r, results=F, include=F}
 
@@ -108,6 +113,6 @@ abline(reg3, col="blue")
 
 - A $r=1$ means there is a perfect positive correlation between two variables (Plot 1).
 - A $r=-1$ means there is a perfect negative correlation between two variables (Plot 2).
-- A $r=0$ mean there is no correlation between the two variables. 
+- A $r=0$ means there is no correlation between the two variables. 
 
 
