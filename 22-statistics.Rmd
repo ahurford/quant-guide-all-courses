@@ -1,45 +1,51 @@
 # Statistics in R {#statistics}
 
-Statistics is an important part of using R, and in various situations when you are using data, you might find useful to know certain functions or certain ways to test your data. The following section is to show some useful functions you might need to test your data added to some previous information regarding statistics in general
+This section demonstrates, and gives a brief description of, some functions to perform statistical analyses.
 
-## Hypothesis Testing
-  Testing data begins by considering two hypothesis, which are called `null hypothesis` $H_0$ and `alternative hypothesis` $H_1$. And they contain statements about the population/data under study
-  Suppose we are interested in testing if the mean of a population `x` compares to the mean of a population `y`. Our `null hypothesis` and `alternative hypothesis` would look like this:
+## Comparing two means of a population or sample(s) using a t-test
+Consider two hypotheses: the _null hypothesis_, $H_0$, and the _alternative hypothesis_, $H_1$. We are interested in testing if the mean of a sample `x` is equal to the mean of a population (or sample) `y`. The _null hypothesis_ and _alternative hypothesis_ are:
   
   $H_0: \mu_x = \mu_y$
   
   $H_1: \mu_x \neq \mu_y$
   
-## Types of testing
-  Depending on what you want to test and what you want to prove there are differente names for different types of testing. One of them being :
-  Two-sided tests:  
+## Types of tests
+Depending on what you want to test, there are different names for different types of tests.
+  
+  **Two-sided tests (not equal to):**
+  
   $H_0: \mu_x = \mu_y$
   
   $H_1: \mu_x \neq \mu_y$
   
-  And One-sided tests:
-    Lower-tailed test/less:
+  
+  **One-sided tests:**
+  
+  Lower-tailed test (less):
     
   $H_0: \mu_x \ge \mu_y$
   
   $H_1: \mu_x < \mu_y$
     
-  Upper-tailed tests/greater:
+  Upper-tailed tests (greater):
     
   $H_0: \mu_x \leq \mu_y$
   
   $H_1: \mu_x > \mu_y$
   
-## Significance level
-  In statistics tests will give you a p-value that you will want to compare to a significance. This significance level will determine the probability of us rejecting our `null hypothesis` when is actually true. The level of significance is denoted by $\alpha$(alpha).And in most settings a significance level of `0.05` or `0.01` is used, which means there is only `5%` or `1%` probability of rejecting the null hypothesis when it is in fact true.
-
-## P-value
-  The p-value is a measure of probability that an observed difference could have occurred just by random chance. The smaller the p-value is, the greater the statistical significance of the observed difference.
+## p-values and statistical significance
+The p-value is a measure of the probability that an observed difference could have occurred just by random chance. The smaller the p-value is, the less likely the difference is due to chance.  
+  
+The significance value, $\alpha$ (alpha), will determine the threshold p-value for rejecting our _null hypothesis_ when it is actually true. A significance level of $\alpha=0.05$ is often used.
 
 ## t.test
-Sometimes within data, we want to compare our sample mean to our population. A t-test will help us compare them and determine if the two are statistically different.
+We use a t-test to compare two means. For example, suppose `x` is the change in weight of `10` domestic cats weighted one week apart. We will test if we can reject the _null hypothesis_ that the mean of the sample, `mean(x)`, is equal to `0` (the hypothesized mean value in the population of domestic cats). Our two hypothesis are:
 
-Here is an example of how to compute a t.test within R.
+$H_0: \mu = 0$
+
+$H_1: \mu \neq 0$
+
+Below, we generate some example data, `x`, to illustrate how to perform a `t.test` (when performing your analysis, this step is replaced with the step of loading or entering your data, i.e., see Chapter \@ref(data-entry)).
 
 
 ```{r}
@@ -47,19 +53,15 @@ x <- rnorm(10)
 x
 ```
 
-With an $\alpha = 0.1$ we want to test that the mean of `x` is equal to `0`. Our two hypothesis are:
-
-$H_0: \mu = 0$
-
-$H_1: \mu \neq 0$
+Before running the analysis, we decide to set $\alpha = 0.05$. Perform the test:
 
 ```{r}
 t.test(x)
 ```
 
-Running this code gives us a way analysis the data by comparing the `p-value` to our significance level $\alpha = 0.1$. Since we're getting a `p-value > 0.1`, we do not have enough evidence to reject the `null hypothesis`.
+Running this code, gives p-values greater than $\alpha = 0.05$. Therefore, we fail to reject the _null hypothesis_ that the weight change in the population of domestic cats is 0. As such, our data suggest that the cats have not changed weight.
 
-The `t.test` function can be expanded by filling arguments or changing arguments as required. For example, we can test two means to see if one is greater than, less than, or perform a two-sided t.test.
+The `t.test` function can be expanded by using additional arguments or changing arguments as required. For example, we can performed a one-sided test.
 ```
 t.test(x, y = NULL,
        alternative = c("two.sided", "less", "greater"),
@@ -81,12 +83,25 @@ t.test(x, y = NULL,
        
 ```  
 
+#### Questions {-}
+Suppose the `10` measures of change in cat weight were instead:
+```{r}
+x2 <- rnorm(10)+1
+x2
+```
+
+1. Using the code above to generate the example data, `x2`, perform a t-test with the _null hypothesis_ that the change in weight of the cat population was 0. 
+
+2. Perform a t-test with the _null hypothesis_ that the cats in the sample, `x2` have lost weight.
+
+3. Use the command `t.test(x,x2)` to test if the mean of the sample `x` is equal to the mean of the sample `x2`.
+
+4. Suppose two samples are exactly the same. Would you expect to reject the _null hypothesis_? Try `t.test(x,x)`.
+
 ## Correlation
-Correlation $r$  is a statistical measure that describes the extent to which two variables are linearly related (meaning they change together at a constant rate). While $r^2$ is the correlation coefficient and measures the proportion of the variance of one variable that can be explained by the straight-line dependence on the other variable. 
+Correlation, $r$, is a statistical measure that describes if two variables are linearly related (meaning they change together at a constant rate). The correlation coefficient, $r^2$, measures the proportion of the variance of one variable that can be explained by the straight-line dependence on the other variable. 
 
-Association between variables describes the connection between changes in one variable and changes in the other. Positively associated variables refer to when an increase in the other accompanies an increase in one variable. A negative association refers to when a decrease in the other accompanies an increase in one variable.
-
-The plots below show the visual representation of different $r$ values:
+- For positively-associated variables, an **increase** in one variable accompanies an **increase** in the other variable, and $r > 0$:
 
 ```{r, results=F, include=F}
 
@@ -96,23 +111,56 @@ reg2 <- lm(y.1 ~ x, data = data)
 reg3 <- lm(y.3 ~ x, data = data)
 
 ```
-```{r}
+```{r,echo=F}
 plot(data$x, data$y, xlab="x", ylab="y",
-     main="Plot 1: r = 1", pch=19, col="green")
+     main="Perfect positive correlation, r = 1", pch=19, col="green")
 abline(reg1, col="green")
+```
 
+```{r}
+cor(data$x,data$y)
+```
+
+For the output above, the value `1` means $r=1$, indicating a perfect positive correlation between two variables.
+
+- For negatively-associated variables, an **increase** in one variable accompanies a **decrease** in the other variable, and $r < 0$:
+
+```{r,echo=F}
 plot(data$x, data$y.1 ,xlab="x", ylab="y",
-     main="Plot 2: r = -1", pch=19, col="red")
+     main="Perfect negative correlation, r = -1", pch=19, col="red")
 abline(reg2, col="red")
+```
 
+
+```{r}
+cor(data$x,data$y.1)
+```
+
+For the output above, the value `-1` means $r=-1$, indicating a perfect negative correlation between two variables.
+
+- When two variables are not correlated, $r$ is near 0:
+
+```{r,echo=F}
 plot(data$x, data$y.3, xlab="x", ylab="y",
-     main="Plot 3: r = 0.17", pch=19)
+     main="r = 0.17", pch=19)
 abline(reg3, col="blue")
 
 ```
+```{r}
+cor(data$x, data$y.3)
+```
 
-- A $r=1$ means there is a perfect positive correlation between two variables (Plot 1).
-- A $r=-1$ means there is a perfect negative correlation between two variables (Plot 2).
-- A $r=0$ means there is no correlation between the two variables. 
+### cor(x,y)
+The correlation coefficient, $r$, is calculated with the `corr(x,y)` function. The function has two mandatory arguments, `x` and `y`, which are lists of values of equal length:
 
+```{r}
+x = c(1,4,5)
+y = c(2,8,9)
+cor(x, y)
+```
 
+#### Questions {-}
+
+1. Can you write the code to graph `x` and `y` from the code above to show the positive correlation? (see Chapter \@ref(graph) if you need help)
+
+2. Can you change `y` in the above code to yield negative correlation? 

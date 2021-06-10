@@ -59,12 +59,12 @@ other-useful-plot-functions
 export
 pch
 statistics
-hypothesis-testing
-types-of-testing
-significance-level
-p-value
+comparing-two-means-of-a-population-or-samples-using-a-t-test
+types-of-tests
+p-values-and-statistical-significance
 t.test
 correlation
+corxy
 data
 data-1
 data-guidelines
@@ -81,7 +81,7 @@ rstudio-error-messages
 glossary
 hypothesis
 discrete-and-continuous-variables
-hypothesis-testing-1
+hypothesis-testing
 null-hypotheses
 further-reading-1
 status

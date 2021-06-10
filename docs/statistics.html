@@ -253,12 +253,14 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="10" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>10</b> Statistics in R</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="statistics.html"><a href="statistics.html#hypothesis-testing"><i class="fa fa-check"></i><b>10.1</b> Hypothesis Testing</a></li>
-<li class="chapter" data-level="10.2" data-path="statistics.html"><a href="statistics.html#types-of-testing"><i class="fa fa-check"></i><b>10.2</b> Types of testing</a></li>
-<li class="chapter" data-level="10.3" data-path="statistics.html"><a href="statistics.html#significance-level"><i class="fa fa-check"></i><b>10.3</b> Significance level</a></li>
-<li class="chapter" data-level="10.4" data-path="statistics.html"><a href="statistics.html#p-value"><i class="fa fa-check"></i><b>10.4</b> P-value</a></li>
-<li class="chapter" data-level="10.5" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>10.5</b> t.test</a></li>
-<li class="chapter" data-level="10.6" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>10.6</b> Correlation</a></li>
+<li class="chapter" data-level="10.1" data-path="statistics.html"><a href="statistics.html#comparing-two-means-of-a-population-or-samples-using-a-t-test"><i class="fa fa-check"></i><b>10.1</b> Comparing two means of a population or sample(s) using a t-test</a></li>
+<li class="chapter" data-level="10.2" data-path="statistics.html"><a href="statistics.html#types-of-tests"><i class="fa fa-check"></i><b>10.2</b> Types of tests</a></li>
+<li class="chapter" data-level="10.3" data-path="statistics.html"><a href="statistics.html#p-values-and-statistical-significance"><i class="fa fa-check"></i><b>10.3</b> p-values and statistical significance</a></li>
+<li class="chapter" data-level="10.4" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>10.4</b> t.test</a></li>
+<li class="chapter" data-level="10.5" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>10.5</b> Correlation</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="statistics.html"><a href="statistics.html#corxy"><i class="fa fa-check"></i><b>10.5.1</b> cor(x,y)</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>11</b> Data and metadata</a>
 <ul>
@@ -287,7 +289,7 @@ div.csl-indent {
 <li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a>
 <ul>
 <li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables</a></li>
-<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
+<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
 <ul>
 <li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses</a></li>
 </ul></li>
@@ -313,61 +315,57 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="statistics" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Statistics in R</h1>
-<p>Statistics is an important part of using R, and in various situations when you are using data, you might find useful to know certain functions or certain ways to test your data. The following section is to show some useful functions you might need to test your data added to some previous information regarding statistics in general</p>
-<div id="hypothesis-testing" class="section level2" number="10.1">
-<h2><span class="header-section-number">10.1</span> Hypothesis Testing</h2>
-<p>Testing data begins by considering two hypothesis, which are called <code>null hypothesis</code> <span class="math inline">\(H_0\)</span> and <code>alternative hypothesis</code> <span class="math inline">\(H_1\)</span>. And they contain statements about the population/data under study
-Suppose we are interested in testing if the mean of a population <code>x</code> compares to the mean of a population <code>y</code>. Our <code>null hypothesis</code> and <code>alternative hypothesis</code> would look like this:</p>
+<p>This section demonstrates, and gives a brief description of, some functions to perform statistical analyses.</p>
+<div id="comparing-two-means-of-a-population-or-samples-using-a-t-test" class="section level2" number="10.1">
+<h2><span class="header-section-number">10.1</span> Comparing two means of a population or sample(s) using a t-test</h2>
+<p>Consider two hypotheses: the <em>null hypothesis</em>, <span class="math inline">\(H_0\)</span>, and the <em>alternative hypothesis</em>, <span class="math inline">\(H_1\)</span>. We are interested in testing if the mean of a sample <code>x</code> is equal to the mean of a population (or sample) <code>y</code>. The <em>null hypothesis</em> and <em>alternative hypothesis</em> are:</p>
 <p><span class="math inline">\(H_0: \mu_x = \mu_y\)</span></p>
 <p><span class="math inline">\(H_1: \mu_x \neq \mu_y\)</span></p>
 </div>
-<div id="types-of-testing" class="section level2" number="10.2">
-<h2><span class="header-section-number">10.2</span> Types of testing</h2>
-<p>Depending on what you want to test and what you want to prove there are differente names for different types of testing. One of them being :
-Two-sided tests:<br />
-<span class="math inline">\(H_0: \mu_x = \mu_y\)</span></p>
+<div id="types-of-tests" class="section level2" number="10.2">
+<h2><span class="header-section-number">10.2</span> Types of tests</h2>
+<p>Depending on what you want to test, there are different names for different types of tests.</p>
+<p><strong>Two-sided tests (not equal to):</strong></p>
+<p><span class="math inline">\(H_0: \mu_x = \mu_y\)</span></p>
 <p><span class="math inline">\(H_1: \mu_x \neq \mu_y\)</span></p>
-<p>And One-sided tests:
-Lower-tailed test/less:</p>
+<p><strong>One-sided tests:</strong></p>
+<p>Lower-tailed test (less):</p>
 <p><span class="math inline">\(H_0: \mu_x \ge \mu_y\)</span></p>
 <p><span class="math inline">\(H_1: \mu_x &lt; \mu_y\)</span></p>
-<p>Upper-tailed tests/greater:</p>
+<p>Upper-tailed tests (greater):</p>
 <p><span class="math inline">\(H_0: \mu_x \leq \mu_y\)</span></p>
 <p><span class="math inline">\(H_1: \mu_x &gt; \mu_y\)</span></p>
 </div>
-<div id="significance-level" class="section level2" number="10.3">
-<h2><span class="header-section-number">10.3</span> Significance level</h2>
-<p>In statistics tests will give you a p-value that you will want to compare to a significance. This significance level will determine the probability of us rejecting our <code>null hypothesis</code> when is actually true. The level of significance is denoted by <span class="math inline">\(\alpha\)</span>(alpha).And in most settings a significance level of <code>0.05</code> or <code>0.01</code> is used, which means there is only <code>5%</code> or <code>1%</code> probability of rejecting the null hypothesis when it is in fact true.</p>
+<div id="p-values-and-statistical-significance" class="section level2" number="10.3">
+<h2><span class="header-section-number">10.3</span> p-values and statistical significance</h2>
+<p>The p-value is a measure of the probability that an observed difference could have occurred just by random chance. The smaller the p-value is, the less likely the difference is due to chance.</p>
+<p>The significance value, <span class="math inline">\(\alpha\)</span> (alpha), will determine the threshold p-value for rejecting our <em>null hypothesis</em> when it is actually true. A significance level of <span class="math inline">\(\alpha=0.05\)</span> is often used.</p>
 </div>
-<div id="p-value" class="section level2" number="10.4">
-<h2><span class="header-section-number">10.4</span> P-value</h2>
-<p>The p-value is a measure of probability that an observed difference could have occurred just by random chance. The smaller the p-value is, the greater the statistical significance of the observed difference.</p>
-</div>
-<div id="t.test" class="section level2" number="10.5">
-<h2><span class="header-section-number">10.5</span> t.test</h2>
-<p>Sometimes within data, we want to compare our sample mean to our population. A t-test will help us compare them and determine if the two are statistically different.</p>
-<p>Here is an example of how to compute a t.test within R.</p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="statistics.html#cb101-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb101-2"><a href="statistics.html#cb101-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -0.3501884 -0.9227973  1.6381602  0.6908481  0.8077635  1.3971183
-##  [7]  0.9640522  1.8070386 -0.8852401  1.2147632</code></pre>
-<p>With an <span class="math inline">\(\alpha = 0.1\)</span> we want to test that the mean of <code>x</code> is equal to <code>0</code>. Our two hypothesis are:</p>
+<div id="t.test" class="section level2" number="10.4">
+<h2><span class="header-section-number">10.4</span> t.test</h2>
+<p>We use a t-test to compare two means. For example, suppose <code>x</code> is the change in weight of <code>10</code> domestic cats weighted one week apart. We will test if we can reject the <em>null hypothesis</em> that the mean of the sample, <code>mean(x)</code>, is equal to <code>0</code> (the hypothesized mean value in the population of domestic cats). Our two hypothesis are:</p>
 <p><span class="math inline">\(H_0: \mu = 0\)</span></p>
 <p><span class="math inline">\(H_1: \mu \neq 0\)</span></p>
+<p>Below, we generate some example data, <code>x</code>, to illustrate how to perform a <code>t.test</code> (when performing your analysis, this step is replaced with the step of loading or entering your data, i.e., see Chapter <a href="data-entry.html#data-entry">8</a>).</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="statistics.html#cb101-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb101-2"><a href="statistics.html#cb101-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1] -0.7116408  0.9094206  1.0940729  0.4916176  1.2905083  0.8069265
+##  [7] -0.4789321 -0.1038561  0.8828586  0.5178416</code></pre>
+<p>Before running the analysis, we decide to set <span class="math inline">\(\alpha = 0.05\)</span>. Perform the test:</p>
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="statistics.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
 ## data:  x
-## t = 1.9955, df = 9, p-value = 0.07711
+## t = 2.1833, df = 9, p-value = 0.05687
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  -0.08500937  1.35731300
+##  -0.01696858  0.95673199
 ## sample estimates:
 ## mean of x 
-## 0.6361518</code></pre>
-<p>Running this code gives us a way analysis the data by comparing the <code>p-value</code> to our significance level <span class="math inline">\(\alpha = 0.1\)</span>. Since we’re getting a <code>p-value &gt; 0.1</code>, we do not have enough evidence to reject the <code>null hypothesis</code>.</p>
-<p>The <code>t.test</code> function can be expanded by filling arguments or changing arguments as required. For example, we can test two means to see if one is greater than, less than, or perform a two-sided t.test.</p>
+## 0.4698817</code></pre>
+<p>Running this code, gives p-values greater than <span class="math inline">\(\alpha = 0.05\)</span>. Therefore, we fail to reject the <em>null hypothesis</em> that the weight change in the population of domestic cats is 0. As such, our data suggest that the cats have not changed weight.</p>
+<p>The <code>t.test</code> function can be expanded by using additional arguments or changing arguments as required. For example, we can performed a one-sided test.</p>
 <pre><code>t.test(x, y = NULL,
        alternative = c(&quot;two.sided&quot;, &quot;less&quot;, &quot;greater&quot;),
        mu = 0, paired = FALSE, var.equal = FALSE,
@@ -386,30 +384,60 @@ Lower-tailed test/less:</p>
        
        conf.level (optional) : confidence level of interval. Default value = 0.95
        </code></pre>
+<div id="questions" class="section level4 unnumbered">
+<h4>Questions</h4>
+<p>Suppose the <code>10</code> measures of change in cat weight were instead:</p>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="statistics.html#cb106-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb106-2"><a href="statistics.html#cb106-2" aria-hidden="true" tabindex="-1"></a>x2</span></code></pre></div>
+<pre><code>##  [1] -0.05946656  0.44001673 -2.14971704  0.04781494  2.35160180  2.09106698
+##  [7]  1.66613115  1.08198983  1.85441881  0.79845794</code></pre>
+<ol style="list-style-type: decimal">
+<li><p>Using the code above to generate the example data, <code>x2</code>, perform a t-test with the <em>null hypothesis</em> that the change in weight of the cat population was 0.</p></li>
+<li><p>Perform a t-test with the <em>null hypothesis</em> that the cats in the sample, <code>x2</code> have lost weight.</p></li>
+<li><p>Use the command <code>t.test(x,x2)</code> to test if the mean of the sample <code>x</code> is equal to the mean of the sample <code>x2</code>.</p></li>
+<li><p>Suppose two samples are exactly the same. Would you expect to reject the <em>null hypothesis</em>? Try <code>t.test(x,x)</code>.</p></li>
+</ol>
 </div>
-<div id="correlation" class="section level2" number="10.6">
-<h2><span class="header-section-number">10.6</span> Correlation</h2>
-<p>Correlation <span class="math inline">\(r\)</span> is a statistical measure that describes the extent to which two variables are linearly related (meaning they change together at a constant rate). While <span class="math inline">\(r^2\)</span> is the correlation coefficient and measures the proportion of the variance of one variable that can be explained by the straight-line dependence on the other variable.</p>
-<p>Association between variables describes the connection between changes in one variable and changes in the other. Positively associated variables refer to when an increase in the other accompanies an increase in one variable. A negative association refers to when a decrease in the other accompanies an increase in one variable.</p>
-<p>The plots below show the visual representation of different <span class="math inline">\(r\)</span> values:</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="statistics.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y, <span class="at">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;y&quot;</span>,</span>
-<span id="cb106-2"><a href="statistics.html#cb106-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;Plot 1: r = 1&quot;</span>, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span><span class="st">&quot;green&quot;</span>)</span>
-<span id="cb106-3"><a href="statistics.html#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg1, <span class="at">col=</span><span class="st">&quot;green&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="statistics.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y<span class="fl">.1</span> ,<span class="at">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;y&quot;</span>,</span>
-<span id="cb107-2"><a href="statistics.html#cb107-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;Plot 2: r = -1&quot;</span>, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span>
-<span id="cb107-3"><a href="statistics.html#cb107-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg2, <span class="at">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-59-2.png" width="672" /></p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="statistics.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y<span class="fl">.3</span>, <span class="at">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;y&quot;</span>,</span>
-<span id="cb108-2"><a href="statistics.html#cb108-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">&quot;Plot 3: r = 0.17&quot;</span>, <span class="at">pch=</span><span class="dv">19</span>)</span>
-<span id="cb108-3"><a href="statistics.html#cb108-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg3, <span class="at">col=</span><span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-59-3.png" width="672" /></p>
+</div>
+<div id="correlation" class="section level2" number="10.5">
+<h2><span class="header-section-number">10.5</span> Correlation</h2>
+<p>Correlation, <span class="math inline">\(r\)</span>, is a statistical measure that describes if two variables are linearly related (meaning they change together at a constant rate). The correlation coefficient, <span class="math inline">\(r^2\)</span>, measures the proportion of the variance of one variable that can be explained by the straight-line dependence on the other variable.</p>
 <ul>
-<li>A <span class="math inline">\(r=1\)</span> means there is a perfect positive correlation between two variables (Plot 1).</li>
-<li>A <span class="math inline">\(r=-1\)</span> means there is a perfect negative correlation between two variables (Plot 2).</li>
-<li>A <span class="math inline">\(r=0\)</span> means there is no correlation between the two variables.</li>
+<li>For positively-associated variables, an <strong>increase</strong> in one variable accompanies an <strong>increase</strong> in the other variable, and <span class="math inline">\(r &gt; 0\)</span>:</li>
 </ul>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="statistics.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y)</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<p>For the output above, the value <code>1</code> means <span class="math inline">\(r=1\)</span>, indicating a perfect positive correlation between two variables.</p>
+<ul>
+<li>For negatively-associated variables, an <strong>increase</strong> in one variable accompanies a <strong>decrease</strong> in the other variable, and <span class="math inline">\(r &lt; 0\)</span>:</li>
+</ul>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="statistics.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y<span class="fl">.1</span>)</span></code></pre></div>
+<pre><code>## [1] -1</code></pre>
+<p>For the output above, the value <code>-1</code> means <span class="math inline">\(r=-1\)</span>, indicating a perfect negative correlation between two variables.</p>
+<ul>
+<li>When two variables are not correlated, <span class="math inline">\(r\)</span> is near 0:</li>
+</ul>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-64-1.png" width="672" /></p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="statistics.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y<span class="fl">.3</span>)</span></code></pre></div>
+<pre><code>## [1] 0.1684607</code></pre>
+<div id="corxy" class="section level3" number="10.5.1">
+<h3><span class="header-section-number">10.5.1</span> cor(x,y)</h3>
+<p>The correlation coefficient, <span class="math inline">\(r\)</span>, is calculated with the <code>corr(x,y)</code> function. The function has two mandatory arguments, <code>x</code> and <code>y</code>, which are lists of values of equal length:</p>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="statistics.html#cb114-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb114-2"><a href="statistics.html#cb114-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
+<span id="cb114-3"><a href="statistics.html#cb114-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x, y)</span></code></pre></div>
+<pre><code>## [1] 0.9939441</code></pre>
+<div id="questions-1" class="section level4 unnumbered">
+<h4>Questions</h4>
+<ol style="list-style-type: decimal">
+<li><p>Can you write the code to graph <code>x</code> and <code>y</code> from the code above to show the positive correlation? (see Chapter <a href="graph.html#graph">9</a> if you need help)</p></li>
+<li><p>Can you change <code>y</code> in the above code to yield negative correlation?</p></li>
+</ol>
 
+</div>
+</div>
 </div>
 </div>
             </section>
