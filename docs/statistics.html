@@ -349,21 +349,21 @@ div.csl-indent {
 <p>Below, we generate some example data, <code>x</code>, to illustrate how to perform a <code>t.test</code> (when performing your analysis, this step is replaced with the step of loading or entering your data, i.e., see Chapter <a href="data-entry.html#data-entry">8</a>).</p>
 <div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="statistics.html#cb101-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
 <span id="cb101-2"><a href="statistics.html#cb101-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -0.7116408  0.9094206  1.0940729  0.4916176  1.2905083  0.8069265
-##  [7] -0.4789321 -0.1038561  0.8828586  0.5178416</code></pre>
+<pre><code>##  [1] -0.184466394 -0.274284481 -0.663799421  0.006593018 -0.304106739
+##  [6] -0.757647947  0.124223180  0.464556331  0.976416661  0.140080301</code></pre>
 <p>Before running the analysis, we decide to set <span class="math inline">\(\alpha = 0.05\)</span>. Perform the test:</p>
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="statistics.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
 ## data:  x
-## t = 2.1833, df = 9, p-value = 0.05687
+## t = -0.2894, df = 9, p-value = 0.7788
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  -0.01696858  0.95673199
+##  -0.4165276  0.3220405
 ## sample estimates:
-## mean of x 
-## 0.4698817</code></pre>
+##   mean of x 
+## -0.04724355</code></pre>
 <p>Running this code, gives p-values greater than <span class="math inline">\(\alpha = 0.05\)</span>. Therefore, we fail to reject the <em>null hypothesis</em> that the weight change in the population of domestic cats is 0. As such, our data suggest that the cats have not changed weight.</p>
 <p>The <code>t.test</code> function can be expanded by using additional arguments or changing arguments as required. For example, we can performed a one-sided test.</p>
 <pre><code>t.test(x, y = NULL,
@@ -389,8 +389,8 @@ div.csl-indent {
 <p>Suppose the <code>10</code> measures of change in cat weight were instead:</p>
 <div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="statistics.html#cb106-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)<span class="sc">+</span><span class="dv">1</span></span>
 <span id="cb106-2"><a href="statistics.html#cb106-2" aria-hidden="true" tabindex="-1"></a>x2</span></code></pre></div>
-<pre><code>##  [1] -0.05946656  0.44001673 -2.14971704  0.04781494  2.35160180  2.09106698
-##  [7]  1.66613115  1.08198983  1.85441881  0.79845794</code></pre>
+<pre><code>##  [1]  0.01268763  0.46302863  2.92955955  0.42592765  1.02829483  1.74553245
+##  [7]  2.03882026  1.97009108 -0.61675545  1.77843129</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>Using the code above to generate the example data, <code>x2</code>, perform a t-test with the <em>null hypothesis</em> that the change in weight of the cat population was 0.</p></li>
 <li><p>Perform a t-test with the <em>null hypothesis</em> that the cats in the sample, <code>x2</code> have lost weight.</p></li>

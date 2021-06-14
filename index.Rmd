@@ -34,7 +34,9 @@ This quantitative training manual teaches data manipulation and visualization in
 
 [BIOL 1001](https://ahurford.github.io/BIOL-1001/index.html)
 
-[BIOL 3295](https://ahurford.github.io/BIOL-3295-Fall-2020/)
+[BIOL 2010 - Botany](https://ahurford.github.io/walkThroughWoodsGuide/)
+
+[BIOL 3295 - Population and Evolutionary Ecology](https://ahurford.github.io/BIOL-3295-Fall-2020/) 
 
 [BIOL 4651 - Conservation GIS Module](https://nlboreal.github.io/ConservationGIS/)
 
