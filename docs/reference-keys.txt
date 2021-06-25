@@ -49,6 +49,7 @@ programmatic
 the-rstudio-way-the-import-feature
 inspecting-the-data
 handling-the-data
+dplyr
 graph
 making-graphs-in-r
 scatter-plots-with-plotxy
@@ -85,3 +86,4 @@ hypothesis-testing
 null-hypotheses
 further-reading-1
 status
+handling-data
