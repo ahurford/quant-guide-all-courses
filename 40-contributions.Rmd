@@ -1,5 +1,5 @@
 # Contributions
 
-This manual is written by Amy Hurford, Yolanda Wiersma, and Joany Marino.
+This manual is written by Amy Hurford, Yolanda Wiersma, Joany Marino, and Jake Prosser.
 
 This training manual is written in `R` using the `bookdown` package. Each chapter is an `R markdown` file. If you would like to contribute to the development of this training guide please email ahurford-at-mun.ca.
