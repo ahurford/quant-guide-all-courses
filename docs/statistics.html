@@ -239,11 +239,15 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.1</b> dplyr</a>
+<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#extracting-rows-and-columns"><i class="fa fa-check"></i><b>9.1</b> Extracting rows and columns</a></li>
+<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="handling-data.html"><a href="handling-data.html#selecting-a-column"><i class="fa fa-check"></i><b>9.1.1</b> Selecting a column</a></li>
+<li class="chapter" data-level="9.2.1" data-path="handling-data.html"><a href="handling-data.html#selecting-a-column"><i class="fa fa-check"></i><b>9.2.1</b> Selecting a column</a></li>
+<li class="chapter" data-level="9.2.2" data-path="handling-data.html"><a href="handling-data.html#adding-a-new-column"><i class="fa fa-check"></i><b>9.2.2</b> Adding a new column</a></li>
+<li class="chapter" data-level="9.2.3" data-path="handling-data.html"><a href="handling-data.html#sorting-the-data"><i class="fa fa-check"></i><b>9.2.3</b> Sorting the data</a></li>
+<li class="chapter" data-level="9.2.4" data-path="handling-data.html"><a href="handling-data.html#filtering-data"><i class="fa fa-check"></i><b>9.2.4</b> Filtering data</a></li>
+<li class="chapter" data-level="9.2.5" data-path="handling-data.html"><a href="handling-data.html#removing-na-entries-in-data"><i class="fa fa-check"></i><b>9.2.5</b> Removing NA entries in data</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#adding-a-new-column"><i class="fa fa-check"></i><b>9.2</b> Adding a new column</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a>
 <ul>
@@ -354,23 +358,23 @@ div.csl-indent {
 <p><span class="math inline">\(H_0: \mu = 0\)</span></p>
 <p><span class="math inline">\(H_1: \mu \neq 0\)</span></p>
 <p>Below, we generate some example data, <code>x</code>, to illustrate how to perform a <code>t.test</code> (when performing your analysis, this step is replaced with the step of loading or entering your data, i.e., see Chapter <a href="data-entry.html#data-entry">8</a>).</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="statistics.html#cb105-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb105-2"><a href="statistics.html#cb105-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -0.23583873 -0.00875827  0.07729969  0.73256316 -1.20711154 -1.45594590
-##  [7]  1.40993019  1.10206681 -0.13532311  0.03370406</code></pre>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="statistics.html#cb121-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb121-2"><a href="statistics.html#cb121-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1]  1.36110750 -1.20965378  0.98458469 -1.00671892  0.89107361 -0.28246527
+##  [7] -0.03882086  0.96006900  1.53731374 -0.32576118</code></pre>
 <p>Before running the analysis, we decide to set <span class="math inline">\(\alpha = 0.05\)</span>. Perform the test:</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="statistics.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="statistics.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
 ## data:  x
-## t = 0.10911, df = 9, p-value = 0.9155
+## t = 0.92115, df = 9, p-value = 0.381
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  -0.6168470  0.6793643
+##  -0.4179218  0.9920675
 ## sample estimates:
-##  mean of x 
-## 0.03125864</code></pre>
+## mean of x 
+## 0.2870729</code></pre>
 <p>Running this code, gives p-values greater than <span class="math inline">\(\alpha = 0.05\)</span>. Therefore, we fail to reject the <em>null hypothesis</em> that the weight change in the population of domestic cats is 0. As such, our data suggest that the cats have not changed weight.</p>
 <p>The <code>t.test</code> function can be expanded by using additional arguments or changing arguments as required. For example, we can performed a one-sided test.</p>
 <pre><code>t.test(x, y = NULL,
@@ -394,10 +398,10 @@ div.csl-indent {
 <div id="questions" class="section level4 unnumbered">
 <h4>Questions</h4>
 <p>Suppose the <code>10</code> measures of change in cat weight were instead:</p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="statistics.html#cb110-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)<span class="sc">+</span><span class="dv">1</span></span>
-<span id="cb110-2"><a href="statistics.html#cb110-2" aria-hidden="true" tabindex="-1"></a>x2</span></code></pre></div>
-<pre><code>##  [1]  1.10105458 -0.04880789 -0.14310653  0.86535704  1.22314421 -0.73373499
-##  [7]  1.45301115  0.92005931  0.11746933  1.69307951</code></pre>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="statistics.html#cb126-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb126-2"><a href="statistics.html#cb126-2" aria-hidden="true" tabindex="-1"></a>x2</span></code></pre></div>
+<pre><code>##  [1]  0.3199110  0.3850432  1.7730369  0.8757077  0.5762009  0.8991921
+##  [7]  0.6408777  3.3671400 -0.0673899  0.8418844</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>Using the code above to generate the example data, <code>x2</code>, perform a t-test with the <em>null hypothesis</em> that the change in weight of the cat population was 0.</p></li>
 <li><p>Perform a t-test with the <em>null hypothesis</em> that the cats in the sample, <code>x2</code> have lost weight.</p></li>
@@ -412,29 +416,29 @@ div.csl-indent {
 <ul>
 <li>For positively-associated variables, an <strong>increase</strong> in one variable accompanies an <strong>increase</strong> in the other variable, and <span class="math inline">\(r &gt; 0\)</span>:</li>
 </ul>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-64-1.png" width="672" /></p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="statistics.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="statistics.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y)</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>For the output above, the value <code>1</code> means <span class="math inline">\(r=1\)</span>, indicating a perfect positive correlation between two variables.</p>
 <ul>
 <li>For negatively-associated variables, an <strong>increase</strong> in one variable accompanies a <strong>decrease</strong> in the other variable, and <span class="math inline">\(r &lt; 0\)</span>:</li>
 </ul>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
-<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="statistics.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y<span class="fl">.1</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="statistics.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y<span class="fl">.1</span>)</span></code></pre></div>
 <pre><code>## [1] -1</code></pre>
 <p>For the output above, the value <code>-1</code> means <span class="math inline">\(r=-1\)</span>, indicating a perfect negative correlation between two variables.</p>
 <ul>
 <li>When two variables are not correlated, <span class="math inline">\(r\)</span> is near 0:</li>
 </ul>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="statistics.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y<span class="fl">.3</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-75-1.png" width="672" /></p>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="statistics.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y<span class="fl">.3</span>)</span></code></pre></div>
 <pre><code>## [1] 0.1684607</code></pre>
 <div id="corxy" class="section level3" number="11.5.1">
 <h3><span class="header-section-number">11.5.1</span> cor(x,y)</h3>
 <p>The correlation coefficient, <span class="math inline">\(r\)</span>, is calculated with the <code>corr(x,y)</code> function. The function has two mandatory arguments, <code>x</code> and <code>y</code>, which are lists of values of equal length:</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="statistics.html#cb118-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb118-2"><a href="statistics.html#cb118-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
-<span id="cb118-3"><a href="statistics.html#cb118-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x, y)</span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="statistics.html#cb134-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb134-2"><a href="statistics.html#cb134-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
+<span id="cb134-3"><a href="statistics.html#cb134-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x, y)</span></code></pre></div>
 <pre><code>## [1] 0.9939441</code></pre>
 <div id="questions-1" class="section level4 unnumbered">
 <h4>Questions</h4>

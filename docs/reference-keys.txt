@@ -49,9 +49,13 @@ programmatic
 the-rstudio-way-the-import-feature
 inspecting-the-data
 handling-data
+extracting-rows-and-columns
 dplyr
 selecting-a-column
 adding-a-new-column
+sorting-the-data
+filtering-data
+removing-na-entries-in-data
 graph
 making-graphs-in-r
 scatter-plots-with-plotxy
@@ -88,7 +92,3 @@ hypothesis-testing
 null-hypotheses
 further-reading-1
 status
-sorting-the-data
-extracting-rows-and-columns
-filtering-data
-removing-na-entries-in-data
