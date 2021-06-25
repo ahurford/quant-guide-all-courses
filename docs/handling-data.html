@@ -217,7 +217,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.1</b> dplyr</a></li>
+<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#extracting-rows-and-columns"><i class="fa fa-check"></i><b>9.1</b> Extracting rows and columns</a></li>
+<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="handling-data.html"><a href="handling-data.html#selecting-a-column"><i class="fa fa-check"></i><b>9.2.1</b> Selecting a column</a></li>
+<li class="chapter" data-level="9.2.2" data-path="handling-data.html"><a href="handling-data.html#adding-a-new-column"><i class="fa fa-check"></i><b>9.2.2</b> Adding a new column</a></li>
+<li class="chapter" data-level="9.2.3" data-path="handling-data.html"><a href="handling-data.html#sorting-the-data"><i class="fa fa-check"></i><b>9.2.3</b> Sorting the data</a></li>
+<li class="chapter" data-level="9.2.4" data-path="handling-data.html"><a href="handling-data.html#filtering-data"><i class="fa fa-check"></i><b>9.2.4</b> Filtering data</a></li>
+<li class="chapter" data-level="9.2.5" data-path="handling-data.html"><a href="handling-data.html#removing-na-entries-in-data"><i class="fa fa-check"></i><b>9.2.5</b> Removing NA entries in data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a>
 <ul>
@@ -295,43 +303,255 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="handling-data" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Handling data</h1>
+<div id="extracting-rows-and-columns" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Extracting rows and columns</h2>
 <p>After we have loaded/imported our data we want to be able to work with it. Typical operations are to extract specific columns, rows, or values, and to add new columns and rows. Recall that <strong>columns</strong> run top to bottom, while <strong>rows</strong> run left to right.</p>
 <p>In addition, columns will sometimes have names:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="handling-data.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(data1)</span></code></pre></div>
-<pre><code>## [1] &quot;weight&quot;           &quot;NaCl.0.percent&quot;   &quot;NaCl.0.9.percent&quot; &quot;NaCl.2.percent&quot;  
-## [5] &quot;NaCl.5.percent&quot;</code></pre>
-<p>To extract a column, we use the symbol <code>$</code> followed by the name of the column (in this case <code>NaCl.0.percent</code>):</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="handling-data.html#cb3-1" aria-hidden="true" tabindex="-1"></a>  data1<span class="sc">$</span>NaCl.<span class="fl">0.</span>percent</span></code></pre></div>
-<pre><code>## [1] NA NA NA NA</code></pre>
-<p>If the columns do not have names you can specify the column you require by using <code>data1[,n]</code>, where <code>n</code> is the number of column you require (beginning from the left). When no number precedes the <code>,n</code> this means <em>all rows</em>:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="handling-data.html#cb5-1" aria-hidden="true" tabindex="-1"></a>data1[,<span class="dv">1</span>]</span></code></pre></div>
-<pre><code>## [1] &quot;initial&quot;        &quot;final&quot;          &quot;difference&quot;     &quot;percent-change&quot;</code></pre>
-<p>To extract row <code>n</code>, and all the columns, we use <code>data1[n,]</code>. Row 1 (all columns) is extracted as:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="handling-data.html#cb7-1" aria-hidden="true" tabindex="-1"></a>  data1[<span class="dv">1</span>,]</span></code></pre></div>
-<pre><code>##    weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
-## 1 initial             NA               NA             NA             NA</code></pre>
-<p>If we want one specific value, <code>data1[n,m]</code> returns the value in row <code>n</code> and column <code>m</code>:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="handling-data.html#cb9-1" aria-hidden="true" tabindex="-1"></a>  data1[<span class="dv">1</span>,<span class="dv">2</span>]</span></code></pre></div>
-<pre><code>## [1] NA</code></pre>
-<p>Furthermore, <code>data1[,n:m]</code> returns all the rows for columns <code>n</code> to <code>m</code>:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="handling-data.html#cb11-1" aria-hidden="true" tabindex="-1"></a>  data1[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>,]</span></code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
-## 2          final             NA               NA             NA             NA
-## 3     difference             NA               NA             NA             NA
-## 4 percent-change             NA               NA             NA             NA</code></pre>
-<p>while <code>data1[n:m,]</code> returns all the columns for rows <code>n</code> to <code>m</code>:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="handling-data.html#cb13-1" aria-hidden="true" tabindex="-1"></a>  data1[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code></pre></div>
-<pre><code>##           weight NaCl.0.percent NaCl.0.9.percent
-## 1        initial             NA               NA
-## 2          final             NA               NA
-## 3     difference             NA               NA
-## 4 percent-change             NA               NA</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="handling-data.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(data)</span></code></pre></div>
+<pre><code>## [1] &quot;site&quot;       &quot;experiment&quot; &quot;length&quot;     &quot;width&quot;      &quot;height&quot;</code></pre>
+<p>To extract a column, we use the symbol <code>$</code> followed by the name of the column (in this case <code>site</code>):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="handling-data.html#cb3-1" aria-hidden="true" tabindex="-1"></a>  data<span class="sc">$</span>site</span></code></pre></div>
+<pre><code>##  [1] 1 1 1 2 2 2 3 3 3 4 4 4</code></pre>
+<p>If the columns do not have names you can specify the column you require by using <code>data[,n]</code>, where <code>n</code> is the number of column you require (beginning from the left). When no number precedes the <code>,n</code> this means <em>all rows</em>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="handling-data.html#cb5-1" aria-hidden="true" tabindex="-1"></a>data[,<span class="dv">1</span>]</span></code></pre></div>
+<pre><code>##  [1] 1 1 1 2 2 2 3 3 3 4 4 4</code></pre>
+<p>To extract row <code>n</code>, and all the columns, we use <code>data[n,]</code>. Row 1 (all columns) is extracted as:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="handling-data.html#cb7-1" aria-hidden="true" tabindex="-1"></a>  data[<span class="dv">1</span>,]</span></code></pre></div>
+<pre><code>##   site experiment length width height
+## 1    1          1    2.2   1.3    9.6</code></pre>
+<p>If we want one specific value, <code>data[n,m]</code> returns the value in row <code>n</code> and column <code>m</code>:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="handling-data.html#cb9-1" aria-hidden="true" tabindex="-1"></a>  data[<span class="dv">1</span>,<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<p>Furthermore, <code>data[,n:m]</code> returns all the rows for columns <code>n</code> to <code>m</code>:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="handling-data.html#cb11-1" aria-hidden="true" tabindex="-1"></a>  data[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>,]</span></code></pre></div>
+<pre><code>##   site experiment length width height
+## 2    1          2    2.1   2.2    7.6
+## 3    1          3    2.7   1.5    2.2
+## 4    2          1    3.0   4.5    1.5</code></pre>
+<p>while <code>data[n:m,]</code> returns all the columns for rows <code>n</code> to <code>m</code>:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="handling-data.html#cb13-1" aria-hidden="true" tabindex="-1"></a>  data[,<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>]</span></code></pre></div>
+<pre><code>##    experiment length
+## 1           1    2.2
+## 2           2    2.1
+## 3           3    2.7
+## 4           1    3.0
+## 5           2    3.1
+## 6           3    2.5
+## 7           1    1.9
+## 8           2    1.1
+## 9           3    3.5
+## 10          1    2.9
+## 11          2    4.5
+## 12          3    1.2</code></pre>
 <p>Note that in the two examples above <code>n</code> must be bigger than <code>m</code>. This method is called <em>slicing</em>.</p>
 <p>This are simple commands to work with data, but as data scientists frequently want to work with data in this way, the <code>dplyr</code> package was created to handle data more efficiently.</p>
-<div id="dplyr" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> dplyr</h2>
-<p>We recommend using <code>dplyr</code> to handle data as the commands are concise, making the code easier to read and write.</p>
+</div>
+<div id="dplyr" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> dplyr</h2>
+<p>We recommend using <code>dplyr</code> to handle data as the commands are concise, making the code easier to read and write. <a href="https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages">Install and load</a> the <u><a href="rdocumentation.org/packages/dplyr/versions/0.7.8">dplyr</a></u> R package.</p>
+<p>The <a href="rdocumentation.org/packages/dplyr/versions/0.7.8">dplyr</a> package contains several different function that are very useful when manipulating and cleaning large datasets. We will be highlighting the use of the <code>select()</code>, <code>mutate()</code>, <code>length()</code>, <code>arrange()</code>, and <code>filter()</code>.</p>
+<div id="selecting-a-column" class="section level3" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Selecting a column</h3>
+<p>The command <code>select(data, length)</code> selects the <code>length</code> column of the dataframe <code>data</code>:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="handling-data.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(data, length)</span></code></pre></div>
+<pre><code>##    length
+## 1     2.2
+## 2     2.1
+## 3     2.7
+## 4     3.0
+## 5     3.1
+## 6     2.5
+## 7     1.9
+## 8     1.1
+## 9     3.5
+## 10    2.9
+## 11    4.5
+## 12    1.2</code></pre>
+<p>This achieves the same result as the <code>data$length</code> command we learned in the previous section.</p>
+</div>
+<div id="adding-a-new-column" class="section level3" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Adding a new column</h3>
+<p>There are several different methods to add new columns to a data set in R, but when using the <code>dplyr</code> package, the function <code>mutate()</code> is appropriate. Below we create a new column called <code>site_double</code> that is equal to the <code>site</code> column times 2.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="handling-data.html#cb17-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="ot">=</span> <span class="fu">mutate</span>(data, <span class="at">site_double =</span> site <span class="sc">*</span> <span class="dv">2</span>)</span></code></pre></div>
+<p>We can see that <code>data2</code> has a new column called <code>site_double</code>.</p>
+</div>
+<div id="sorting-the-data" class="section level3" number="9.2.3">
+<h3><span class="header-section-number">9.2.3</span> Sorting the data</h3>
+<p>The <code>arrange()</code> function orders the rows of a data frame by the values in a specific column. Below we arrange <code>data</code> by increasing order of the <code>width</code> column.:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="handling-data.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(data, width)</span></code></pre></div>
+<pre><code>##    site experiment length width height
+## 1     3          2    1.1   0.5    2.3
+## 2     1          1    2.2   1.3    9.6
+## 3     1          3    2.7   1.5    2.2
+## 4     3          1    1.9   1.8    4.5
+## 5     3          3    3.5   2.0    7.5
+## 6     1          2    2.1   2.2    7.6
+## 7     4          1    2.9   2.7    3.2
+## 8     2          3    2.5   2.8    3.0
+## 9     2          2    3.1   3.1    4.0
+## 10    2          1    3.0   4.5    1.5
+## 11    4          2    4.5   4.8    6.5
+## 12    4          3    1.2    NA    2.7</code></pre>
+</div>
+<div id="filtering-data" class="section level3" number="9.2.4">
+<h3><span class="header-section-number">9.2.4</span> Filtering data</h3>
+<p>The <code>filter()</code> function is used to subset a data frame, retaining all rows that satisfy your conditions. For a row to be retained, <code>TRUE</code> must be produced for all conditions. To extract all rows of <code>data</code> with length greater than 7 cm:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="handling-data.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, height <span class="sc">&gt;</span> <span class="dv">7</span>)</span></code></pre></div>
+<pre><code>##   site experiment length width height
+## 1    1          1    2.2   1.3    9.6
+## 2    1          2    2.1   2.2    7.6
+## 3    3          3    3.5   2.0    7.5</code></pre>
+<p>We can also filter with two (or more) conditions. We use <code>&amp;</code> (meaning <em>and</em>) if we require <em>both</em> conditions to be satisfied, or <code>|</code> (meaning <em>or</em>) if we require <em>at least one</em> condition is satisfied. Below, we filter the <code>data</code> so that <code>data3</code> contains only plants that have length greater than 8 cm and width greater than 5 cm.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="handling-data.html#cb22-1" aria-hidden="true" tabindex="-1"></a>data3<span class="ot">=</span><span class="fu">filter</span>(data, height <span class="sc">&gt;</span><span class="dv">8</span> <span class="sc">&amp;</span> width <span class="sc">&gt;</span> <span class="dv">5</span>)</span></code></pre></div>
+<p>However, no plants met both conditions so <code>data3</code> is empty.</p>
+<p>We can filter to retain plants from Site 1 or Site 3:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="handling-data.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, site <span class="sc">==</span> <span class="dv">1</span> <span class="sc">|</span>site <span class="sc">==</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>##   site experiment length width height
+## 1    1          1    2.2   1.3    9.6
+## 2    1          2    2.1   2.2    7.6
+## 3    1          3    2.7   1.5    2.2
+## 4    3          1    1.9   1.8    4.5
+## 5    3          2    1.1   0.5    2.3
+## 6    3          3    3.5   2.0    7.5</code></pre>
+<p>In R, <code>==</code> evaluates whether something is <code>TRUE</code> or <code>FALSE</code>, while <code>=</code> assigns the value on the right hand side to the variable on the left hand side. <strong>TRY IT</strong> In the <code>Console</code> try the following:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="handling-data.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assigns x the value 0</span></span>
+<span id="cb25-2"><a href="handling-data.html#cb25-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb25-3"><a href="handling-data.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Evaluates TRUE if x = 0 (TRUE since we assigned x=0 on the above line of code)</span></span>
+<span id="cb25-4"><a href="handling-data.html#cb25-4" aria-hidden="true" tabindex="-1"></a>x <span class="sc">==</span> <span class="dv">0</span></span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="handling-data.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Evalues TRUE if x = 1 (FALSE since we assigned x=0 on the first line of code)</span></span>
+<span id="cb27-2"><a href="handling-data.html#cb27-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">==</span> <span class="dv">1</span></span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<p>Therefore, when we write <code>site == 1</code>, <code>TRUE</code> is returned when the value of <code>site</code> is <code>1</code>, and these rows are retained in the output. If we wrote <code>site = 1</code>, then <code>R</code> would try to assign the variable <code>site</code> with the value <code>1</code>, which would return an error message since the second argument of the <code>filter()</code> function requires a logical statement that evaluates as <code>TRUE</code> or <code>FALSE</code> and <code>site = 1</code> assigns a value; it is not a logical statement.</p>
+</div>
+<div id="removing-na-entries-in-data" class="section level3" number="9.2.5">
+<h3><span class="header-section-number">9.2.5</span> Removing NA entries in data</h3>
+<p>Often experimental data is not as neat or pretty as example data. There is often missing data, or empty or <code>NA</code> entries which may cause issues in graphing or data analysis. <code>R</code> does not allow empty values, so empty values in <code>.csv</code> or <code>.xlsx</code> files are often converted to <code>NA</code> when these data are uploaded into <code>R</code>. Luckily, again the <code>filter</code> function has a solution to this! We can filter the data to remove rows with <code>NULL</code> or <code>NA</code> entries.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="handling-data.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filter the data to remove rows with null values in the height column</span></span>
+<span id="cb29-2"><a href="handling-data.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, <span class="sc">!</span><span class="fu">is.na</span>(width))</span></code></pre></div>
+<pre><code>##    site experiment length width height
+## 1     1          1    2.2   1.3    9.6
+## 2     1          2    2.1   2.2    7.6
+## 3     1          3    2.7   1.5    2.2
+## 4     2          1    3.0   4.5    1.5
+## 5     2          2    3.1   3.1    4.0
+## 6     2          3    2.5   2.8    3.0
+## 7     3          1    1.9   1.8    4.5
+## 8     3          2    1.1   0.5    2.3
+## 9     3          3    3.5   2.0    7.5
+## 10    4          1    2.9   2.7    3.2
+## 11    4          2    4.5   4.8    6.5</code></pre>
+<p>Observe that row 12 of <code>data</code> has now been removed because it contained <code>NA</code> in the <code>width</code> column. To understand this command, note that <code>is.na(x)</code> returns <code>TRUE</code> if <code>x = NA</code>. The <code>!</code> means ‘not’ and reverses the <code>TRUE</code> and <code>FALSE</code> outputs. We illustrate <code>!</code> below:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="handling-data.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 equal to 2 (FALSE)</span></span>
+<span id="cb31-2"><a href="handling-data.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">==</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="handling-data.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 is not equal to 2 (TRUE)</span></span>
+<span id="cb33-2"><a href="handling-data.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">!=</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>Recall, that <code>filter()</code> retains the rows that evaluate as <code>TRUE</code>: we wish to remove the rows with <code>NA</code>, so we need to write a command that evaluates these to <code>FALSE</code>. Therefore, we use <code>!is.na()</code>.</p>
+<!-- R not only allows us to add columns to an existing data frame, but it can also allow us to create new data frames. Here, we will be creating a new data frame called `shrub_volumes` that contains the columns from `data`, and a new column called `volume`. -->
+<!-- ```{r} -->
+<!-- # Create a new data frame called shrub_volumes that has all the original data plus a new column containing volumes -->
+<!-- shrub_volumes <- mutate(ShrubData, volumes = length * width * height) -->
+<!-- head(shrub_volumes) -->
+<!-- ``` -->
+<!-- **HAND IN** Create a new data frame called shrub_volume and include the `tail()` print out. -->
+<!-- ### Code Shuffle -->
+<!-- In this section, we are interested in understanding the monthly variation in precipitation in Gainesville, FL. We'll use some data from the [NOAA National Climatic Data Center](https://www.ncdc.noaa.gov/). -->
+<!-- Each row of the data is a year (from 1961-2013) and each column is a month (January - December). -->
+<!-- In this section, we want you to  -->
+<!-- - import the `weather_data` from Brightspace  -->
+<!-- - calculate the average precipitation in each month across years  -->
+<!-- - plot the monthly averages as a simple line plot -->
+<!-- ```{r, include=F} -->
+<!-- weather.data <- read.csv(file = "lab_data/gainesville-precip.csv", header=F) -->
+<!-- monthly_mean_ppt <- colMeans(weather.data) -->
+<!-- ``` -->
+<!-- We can use the `colMeans` function to take the mean of each column within a data frame. **We will be demonstrating this using the `ShrubData` but you will use the weather data.** -->
+<!-- ```{r} -->
+<!-- col_means <- colMeans(ShrubData) -->
+<!-- # To show the column means, you will need to use the print() command -->
+<!-- print(col_means) -->
+<!-- ``` -->
+<!-- We can see that the means for each column was calculated. **HAND IN** Using the `weather_data`, calculate the mean precipitation for each month and produce a simple line plot. You will **hand in both** the R code and the plot. Your plot should resemble the line plot below. **You will need to change the axis titles.** -->
+<!-- ```{r, echo=FALSE} -->
+<!-- plot(monthly_mean_ppt, type = "l", xlab = "Month", ylab = "Mean Precipitation (ml)") -->
+<!-- ``` -->
+<!-- ### Bird Banding -->
+<!-- The number of birds banded at a series of sampling sites has been counted by your field crew and entered into the following vector.  -->
+<!-- ```{r} -->
+<!-- number_of_birds <- c(28, 32, 1, 0, 10, 22, 30, 19, 145, 27,  -->
+<!--                      36, 25, 9, 38, 21, 12, 122, 87, 36, 3, 0, 5, 55, 62, 98, 32,  -->
+<!--                      900, 33, 14, 39, 56, 81, 29, 38, 1, 0, 143, 37, 98, 77, 92,  -->
+<!--                      83, 34, 98, 40, 45, 51, 17, 22, 37, 48, 38, 91, 73, 54, 46, -->
+<!--                      102, 273, 600, 10, 11) -->
+<!-- ``` -->
+<!-- Counts are entered in order and sites are numbered starting at one. Using the following vector, answer the following questions and print the results on the screen. The following functions maybe useful: `length()`, `max()`, `min()`, `sum()`, and `mean()`. -->
+<!-- **Function Overview** -->
+<!-- -   `max()` indicates the maximum value in a vector -->
+<!-- -   `min()` indicates the minimum value in a vector -->
+<!-- -   `length()` indicates the total number of rows, or length of entries in a vector -->
+<!-- -   `sum()` adds or takes the sum of all values in a column -->
+<!-- -   `mean()` calculates the mean for a vector -->
+<!-- **HAND IN** Answer the following using the commands provided above.  -->
+<!-- 1) How many sites are there? -->
+<!-- 2)  What is the total number of birds counted across all of the sites? -->
+<!-- 3)  What is the smallest number of birds counted? -->
+<!-- 4)  What is the largest number of birds counted? -->
+<!-- 5)  What is the average number of birds seen at a site? -->
+<!-- 6)  How many birds were counted at the last site? Have the computer choose the last site automatically in some way, not manually entering its position. Do you know a function that will give you a position of the last value? (since positions start at 1 position of the last value in a vector is the same as its length) -->
+<!-- 7)  How many birds were counted at site 42? -->
+<!-- ```{r, include=F, echo=F} -->
+<!-- # Answers to the questions -->
+<!-- #how many sites -->
+<!-- length(number_of_birds) -->
+<!-- #how many birds at site 42 -->
+<!-- number_of_birds[42] -->
+<!-- #what is total number of birds across all sites? -->
+<!-- sum(number_of_birds) -->
+<!-- #what is smallest number of birds counted? -->
+<!-- min(number_of_birds) -->
+<!-- #what is largest number of birds counted? -->
+<!-- max(number_of_birds) -->
+<!-- #what is average number of birds per site? -->
+<!-- mean(number_of_birds) -->
+<!-- #how many birds were at the last site (without entering position) -->
+<!-- number_of_birds[length(number_of_birds)] -->
+<!-- ``` -->
+<!-- ### Portal Data Manipulation -->
+<!-- Download a copy of the `survey data` from Brightspace and load it into R using `read.csv()`. -->
+<!-- ```{r, include=F} -->
+<!-- survey <- read.csv("lab_data/surveys.csv") -->
+<!-- ``` -->
+<!-- **HAND IN** Answer the following.  -->
+<!-- 1.  Using the `select()` function create a new data frame called `survey_new` that only contains the columns `year`, `month`, `day`, and `species_id` in that order. -->
+<!-- 2.  Using the `mutate()`, `select()`, `filter()`, and `!is.na()` functions to create a new data frame with only `year()`, `species_id` and `weight()` in **kilograms of each individual**. The weight in the table is given in grams, so you will need to create a new column or convert weight into kilograms. (*Recall that 1 g = 0.001 kg.*) -->
+<!-- 3.  Use the `filter()` function, print only the rows in the data frame for the species ID =`SH`. -->
+<!-- ### Portal Data Manipulation Pipes  -->
+<!-- Using the `survey data` we will be using the `%>%` pipe operations to manipulate the data. The pipe operation can be used to easy combine previous functions. -->
+<!-- The pipe function allows for separate functions to be combined. For example, instead of creating two data frames where one removes `na` entries and the other adds new columns, the pipe operation combines them. Below is an example, I will create a new data frame with only `month()`, `plot_id()` and a new column `wight_mil`. -->
+<!-- ```{r} -->
+<!-- new_pipe_survey_df <-  -->
+<!--           survey %>%  -->
+<!--            filter(!is.na(weight)) %>% -->
+<!--             mutate(weight_mil=weight*100) %>% -->
+<!--             select(month, plot_id, weight_mil) -->
+<!-- ``` -->
+<!-- You can see that the same functions are used above in section **2.1.4 Portable Data Manipulation**, but rather than listing each command individually, the functions are connected via the `%>%` pipe operation. -->
+<!-- **HAND IN:** Using the `%>%` operation, answer the following questions. -->
+<!-- 1.  Using the `mutate()`, `select()`, `filter()`, and/or `!is.na()` functions to create a new data frame with only `year()`, `species_id` and `weight()` in **kilograms of each individual**. -->
+<!-- 2.  Use the `filter()` and `select()` to get the `year`, `month`, `day`, `weight` in kg, and `species_id` columns for all of the rows in the data frame where `species_id` is `SH`. Use the `head()` command to print the top of the data frame. -->
+<!-- ```{r, echo=F} -->
+<!-- head(survey %>% -->
+<!-- filter(species_id == "SH") %>% -->
+<!-- filter(!is.na(weight)) %>% -->
+<!--             mutate(weight_kg=weight/100) %>% -->
+<!--             select(year, month, day, weight_kg, species_id) -->
+<!-- ) -->
+<!-- ``` -->
+<!-- Above is the `head()` print out of the `%>%` piped operation. Does it look similar to yours? -->
 
+</div>
 </div>
 </div>
             </section>

@@ -48,8 +48,10 @@ loading-or-importing-data
 programmatic
 the-rstudio-way-the-import-feature
 inspecting-the-data
-handling-the-data
+handling-data
 dplyr
+selecting-a-column
+adding-a-new-column
 graph
 making-graphs-in-r
 scatter-plots-with-plotxy
@@ -86,4 +88,7 @@ hypothesis-testing
 null-hypotheses
 further-reading-1
 status
-handling-data
+sorting-the-data
+extracting-rows-and-columns
+filtering-data
+removing-na-entries-in-data

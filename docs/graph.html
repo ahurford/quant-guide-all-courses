@@ -29,7 +29,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="handling-the-data.html"/>
+<link rel="prev" href="handling-data.html"/>
 <link rel="next" href="statistics.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -237,9 +237,13 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="handling-the-data.html"><a href="handling-the-data.html"><i class="fa fa-check"></i><b>9</b> Handling the data</a>
+<li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="handling-the-data.html"><a href="handling-the-data.html#dplyr"><i class="fa fa-check"></i><b>9.1</b> dplyr</a></li>
+<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.1</b> dplyr</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="handling-data.html"><a href="handling-data.html#selecting-a-column"><i class="fa fa-check"></i><b>9.1.1</b> Selecting a column</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#adding-a-new-column"><i class="fa fa-check"></i><b>9.2</b> Adding a new column</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a>
 <ul>
@@ -326,46 +330,46 @@ div.csl-indent {
 <div id="scatter-plots-with-plotxy" class="section level2" number="10.2">
 <h2><span class="header-section-number">10.2</span> Scatter plots with <code>plot(x,y)</code></h2>
 <p>In <code>R</code>, <code>plot()</code> is a built-in function: you do not need to install a package to call it. There are two mandatory arguments <code>x</code> and <code>y</code>, which are vectors that must have the same length. For example,</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="graph.html#cb75-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
-<span id="cb75-2"><a href="graph.html#cb75-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="graph.html#cb79-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
+<span id="cb79-2"><a href="graph.html#cb79-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span></code></pre></div>
 <p>Copy and paste the above code into your <code>Console</code> and type <code>Enter/Return</code>. Note that to make a vector we need to use <code>c()</code>. Now, query the value of <code>x</code> by typing <code>x</code> into your <code>Console</code></p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="graph.html#cb76-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="graph.html#cb80-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>## [1]  2  4  6  8 10</code></pre>
 <p>This lets us know that <code>x</code> is a vector that is a list of 5 numbers.</p>
 <p>The command <code>plot(x, y)</code> will mark points on the graph by taking elements in the same position in the <code>x</code> and <code>y</code> vectors. For example, in the first position of the <code>x</code> and <code>y</code> vectors are <code>2</code> and <code>10</code>, respectively. Because <code>plot(x, y)</code> has <code>x</code> as its first argument, the values of <code>x</code> will correspond to the horizontal axis of the plot. Therefore, the first element of the lists <code>x</code> and <code>y</code>, will be reflected in the plot as a point marked at the <code>2</code> position of the horizontal axis and the <code>10</code> position on the vertical axis.</p>
 <p>As the vectors <code>x</code> and <code>y</code> in our example are a list of 5 numbers, our graph will consist of 5 points, generated by pairing values in the <code>x</code> and <code>y</code> vectors in the same position:</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="graph.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="graph.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
 <p><strong>TRY IT!</strong> Copy and paste the above code into your <code>Console</code> or into a new script and run it. If <code>x</code> and <code>y</code> do not have the same lengths, the <code>plot()</code> function will give an error. <strong>Try it!</strong> Take the code below by copy and pasting it into your console:</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="graph.html#cb79-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>)</span>
-<span id="cb79-2"><a href="graph.html#cb79-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
-<span id="cb79-3"><a href="graph.html#cb79-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="graph.html#cb83-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>)</span>
+<span id="cb83-2"><a href="graph.html#cb83-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
+<span id="cb83-3"><a href="graph.html#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div>
 <pre><code>## Error in xy.coords(x, y, xlabel, ylabel, log): &#39;x&#39; and &#39;y&#39; lengths differ</code></pre>
 <p>Note the error message that is generated so that if you get this error later when coding on your own you might remember that this error is generated because <code>x</code> and <code>y</code> have different lengths.</p>
 <p>Now try this code:</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="graph.html#cb81-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb81-2"><a href="graph.html#cb81-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
-<span id="cb81-3"><a href="graph.html#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="graph.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="graph.html#cb85-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb85-2"><a href="graph.html#cb85-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
+<span id="cb85-3"><a href="graph.html#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="graph.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x)</span></code></pre></div>
 <pre><code>## [1] 5</code></pre>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="graph.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y)</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="graph.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y)</span></code></pre></div>
 <pre><code>## [1] 5</code></pre>
 <p>Note we can use <code>length()</code> to query the length of <code>x</code> and <code>y</code>. In addition, the names <code>x</code> and <code>y</code> are the users choice. A nearly identical plot is generated with the code:</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="graph.html#cb86-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb86-2"><a href="graph.html#cb86-2" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
-<span id="cb86-3"><a href="graph.html#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(A, B)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="graph.html#cb90-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb90-2"><a href="graph.html#cb90-2" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
+<span id="cb90-3"><a href="graph.html#cb90-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(A, B)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
 <p>The key is the internal consistency: <code>A</code> and <code>B</code> are the names of the vectors and these same names appear as the arguments of <code>plot(A, B)</code>. Can you guess what happens if you try <code>plot(B, A)</code> or <code>plot(A, A)</code>? Type these into your <code>Console</code> and give it a try.</p>
 <hr />
 <p><strong>HAND IN</strong></p>
 <ol style="list-style-type: decimal">
 <li>Which two vectors below will generate a plot if executed before <code>plot(a, b)</code>?</li>
 </ol>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="graph.html#cb87-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb87-2"><a href="graph.html#cb87-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>)</span>
-<span id="cb87-3"><a href="graph.html#cb87-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
-<span id="cb87-4"><a href="graph.html#cb87-4" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="graph.html#cb91-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb91-2"><a href="graph.html#cb91-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>)</span>
+<span id="cb91-3"><a href="graph.html#cb91-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
+<span id="cb91-4"><a href="graph.html#cb91-4" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>A friend has written the code below, but it will not run. What do you think the problem could be?</li>
 </ol>
@@ -384,7 +388,7 @@ plot(x, y)</code></pre>
 <li>maybe you want the symbols to be a different shape or colour.</li>
 </ul>
 <p>In addition, to the two manadatory arguments <code>x</code> and <code>y</code>, the <code>plot()</code> function has other optional argument that can be called to make a better figure. Try using the <code>help()</code> to learn about more options to change the look of your plot (refer to Chapter <a href="help.html#help">5</a>, <em>Getting help in R</em>, to recall how to display and read help files):</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="graph.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(plot)</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="graph.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(plot)</span></code></pre></div>
 <pre><code>## Help on topic &#39;plot&#39; was found in the following packages:
 ## 
 ##   Package               Library
@@ -394,36 +398,36 @@ plot(x, y)</code></pre>
 ## 
 ## Using the first match ...</code></pre>
 <p>You’ll see there are a lot of optional arguments. First, let’s fix the axis labels.</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="graph.html#cb91-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
-<span id="cb91-2"><a href="graph.html#cb91-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
-<span id="cb91-3"><a href="graph.html#cb91-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="graph.html#cb95-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
+<span id="cb95-2"><a href="graph.html#cb95-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
+<span id="cb95-3"><a href="graph.html#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
 <p>This one is a little better.</p>
 <p><strong>TRY IT!</strong> Copy and paste the above code into your <code>Console</code> to make sure you can make the graph with axes labels.</p>
 <p>If you want to change the symbols, you use the <code>pch</code> argument to change the style (see Section <a href="graph.html#pch">10.7</a>). Note, that <code>pch = 17</code> corresponds to filled triangles, so let’s make the graph, but with filled triangles.</p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="graph.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="graph.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
 <p>Note that the order of the optional arguments is unimportant (the function arguments are separated by <code>,</code>) particularly where arguments are labelled with <code>xlab =</code> or <code>ylab =</code>. Lets try to see if we can put the arguments out of order and end up with the wrong graph:</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="graph.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">pch =</span> <span class="dv">17</span>, <span class="at">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, y, x)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="graph.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">pch =</span> <span class="dv">17</span>, <span class="at">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, y, x)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
 <p>In the above graph, we wanted <code>"growth rate (cm)"</code> and the vertical axis and this has appeared correctly, but the values of growth rate should be <code>c(10, 20, 30, 40, 50)</code> and now we see the values of <code>y</code> have appeared on the horizontal axes rather than on the vertical axis where they should be. This is because <code>y</code> appears before <code>x</code> in the plot command and whichever vector appears first will be read as corresponding to the values on the horizontal axis. On the other hand <code>"ylab ="</code> appears before <code>"xlab ="</code> but this does not cause a problem because <code>"ylab ="</code> still appears on the vertical axis as it should.</p>
 <div id="getting-a-bit-more-sophisticated" class="section level3" number="10.3.1">
 <h3><span class="header-section-number">10.3.1</span> Getting a bit more sophisticated</h3>
 <p>It’s not hard to get more sophisticated with R graphics. The best approach is to explore one of the reference books listed to figure out how to do what you want to do.</p>
 <p>One thing most undergrads will probably need or want to do is to visualize two sets of data on the same graph. For example, the goldfish data in <a href="%22NEED%20TO%20ADD%20THE%20LINK%22">Appendix VI</a> of the BIOL 1001 lab manual shows the opercular beats of two fish in response to temperature. It would be logical to show both fish on the same graph, but with different symbols. Here’s how you would do it:</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="graph.html#cb94-1" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">20</span>, <span class="dv">23</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="graph.html#cb98-1" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">20</span>, <span class="dv">23</span>)</span></code></pre></div>
 <p>This creates the vector of data for the x-axis.</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="graph.html#cb95-1" aria-hidden="true" tabindex="-1"></a>fishA <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">59</span>, <span class="dv">73</span>, <span class="dv">88</span>, <span class="dv">96</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="graph.html#cb99-1" aria-hidden="true" tabindex="-1"></a>fishA <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">59</span>, <span class="dv">73</span>, <span class="dv">88</span>, <span class="dv">96</span>)</span></code></pre></div>
 <p>This creates the vector of data for <code>Fish A</code>.</p>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="graph.html#cb96-1" aria-hidden="true" tabindex="-1"></a>fishB <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">40</span>, <span class="dv">49</span>, <span class="dv">61</span>, <span class="dv">71</span>, <span class="dv">82</span>, <span class="dv">90</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="graph.html#cb100-1" aria-hidden="true" tabindex="-1"></a>fishB <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">40</span>, <span class="dv">49</span>, <span class="dv">61</span>, <span class="dv">71</span>, <span class="dv">82</span>, <span class="dv">90</span>)</span></code></pre></div>
 <p>This creates the vector of data for <code>Fish B</code>.</p>
 <p>First, we plot <code>x</code> and <code>y</code> with the <code>temp</code> vector as <code>x</code>, and the <code>fishA</code> vector as <code>y</code></p>
-<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="graph.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(temp, fishA, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="graph.html#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(temp, fishA, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
 <p>Then, to add a second vector of data (<code>fishB</code>) to the same plot, we use:</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="graph.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(temp, fishA, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span>
-<span id="cb98-2"><a href="graph.html#cb98-2" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(temp, fishB, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;dimgray&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="graph.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(temp, fishA, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span>
+<span id="cb102-2"><a href="graph.html#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(temp, fishB, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;dimgray&quot;</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
 <p><em>Caption: Opercular beats of two goldfish over increasing temperature. Triangle symbols represent fish A and dots represent fish B</em></p>
 <p>Voila!</p>
 <p>Note that the difference in the two symbols is described in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we’ll leave those for a more advanced course.</p>
@@ -434,8 +438,8 @@ plot(x, y)</code></pre>
 <div id="line-graphs" class="section level2" number="10.4">
 <h2><span class="header-section-number">10.4</span> Line graphs</h2>
 <p>Finally, if you wanted to have a line joining the points, you’d specify the <code>type = "l"</code> in the arguments of the plot fuction (<code>l</code> is for line, <code>p</code> is for points, and <code>b</code> is for both).</p>
-<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="graph.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(temp, fishA, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="graph.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(temp, fishA, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
 </div>
 <div id="other-useful-plot-functions" class="section level2" number="10.5">
 <h2><span class="header-section-number">10.5</span> Other useful plot functions</h2>
@@ -468,21 +472,21 @@ Figure 10.2: Setting file path (oval - click the Directory button to change the 
 <div id="pch" class="section level2" number="10.7">
 <h2><span class="header-section-number">10.7</span> pch cheatsheet</h2>
 <p>As it is hard to remember that <code>pch = 17</code> corresponds to filled triangles you can make a little cheat sheet for <code>pch</code> codes using the code below. You may want to print out a chart of the <code>pch</code> codes and tape it up on your wall by your computer, or in the front of your notebook as a handy reference.</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="graph.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span></span>
-<span id="cb100-2"><a href="graph.html#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="co">#generate a plot of point shapes which R knows about.</span></span>
-<span id="cb100-3"><a href="graph.html#cb100-3" aria-hidden="true" tabindex="-1"></a><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span></span>
-<span id="cb100-4"><a href="graph.html#cb100-4" aria-hidden="true" tabindex="-1"></a>generateRPointShapes<span class="ot">&lt;-</span><span class="cf">function</span>(){</span>
-<span id="cb100-5"><a href="graph.html#cb100-5" aria-hidden="true" tabindex="-1"></a>  oldPar<span class="ot">&lt;-</span><span class="fu">par</span>()</span>
-<span id="cb100-6"><a href="graph.html#cb100-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">par</span>(<span class="at">font=</span><span class="dv">2</span>, <span class="at">mar=</span><span class="fu">c</span>(<span class="fl">0.5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span>
-<span id="cb100-7"><a href="graph.html#cb100-7" aria-hidden="true" tabindex="-1"></a>  y<span class="ot">=</span><span class="fu">rev</span>(<span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">6</span>),<span class="fu">rep</span>(<span class="dv">2</span>,<span class="dv">5</span>), <span class="fu">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>), <span class="fu">rep</span>(<span class="dv">4</span>,<span class="dv">5</span>), <span class="fu">rep</span>(<span class="dv">5</span>,<span class="dv">5</span>)))</span>
-<span id="cb100-8"><a href="graph.html#cb100-8" aria-hidden="true" tabindex="-1"></a>  x<span class="ot">=</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="dv">5</span>),<span class="dv">6</span>)</span>
-<span id="cb100-9"><a href="graph.html#cb100-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(x, y, <span class="at">pch =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">25</span>, <span class="at">cex=</span><span class="fl">1.5</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="fl">5.5</span>), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="fl">6.5</span>), </span>
-<span id="cb100-10"><a href="graph.html#cb100-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">axes=</span><span class="cn">FALSE</span>, <span class="at">xlab=</span><span class="st">&quot;&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;&quot;</span>, <span class="at">bg=</span><span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb100-11"><a href="graph.html#cb100-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">text</span>(x, y, <span class="at">labels=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">25</span>, <span class="at">pos=</span><span class="dv">3</span>)</span>
-<span id="cb100-12"><a href="graph.html#cb100-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">par</span>(<span class="at">mar=</span>oldPar<span class="sc">$</span>mar,<span class="at">font=</span>oldPar<span class="sc">$</span>font )</span>
-<span id="cb100-13"><a href="graph.html#cb100-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb100-14"><a href="graph.html#cb100-14" aria-hidden="true" tabindex="-1"></a><span class="fu">generateRPointShapes</span>()</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="graph.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span></span>
+<span id="cb104-2"><a href="graph.html#cb104-2" aria-hidden="true" tabindex="-1"></a><span class="co">#generate a plot of point shapes which R knows about.</span></span>
+<span id="cb104-3"><a href="graph.html#cb104-3" aria-hidden="true" tabindex="-1"></a><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span></span>
+<span id="cb104-4"><a href="graph.html#cb104-4" aria-hidden="true" tabindex="-1"></a>generateRPointShapes<span class="ot">&lt;-</span><span class="cf">function</span>(){</span>
+<span id="cb104-5"><a href="graph.html#cb104-5" aria-hidden="true" tabindex="-1"></a>  oldPar<span class="ot">&lt;-</span><span class="fu">par</span>()</span>
+<span id="cb104-6"><a href="graph.html#cb104-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">par</span>(<span class="at">font=</span><span class="dv">2</span>, <span class="at">mar=</span><span class="fu">c</span>(<span class="fl">0.5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span>
+<span id="cb104-7"><a href="graph.html#cb104-7" aria-hidden="true" tabindex="-1"></a>  y<span class="ot">=</span><span class="fu">rev</span>(<span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">6</span>),<span class="fu">rep</span>(<span class="dv">2</span>,<span class="dv">5</span>), <span class="fu">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>), <span class="fu">rep</span>(<span class="dv">4</span>,<span class="dv">5</span>), <span class="fu">rep</span>(<span class="dv">5</span>,<span class="dv">5</span>)))</span>
+<span id="cb104-8"><a href="graph.html#cb104-8" aria-hidden="true" tabindex="-1"></a>  x<span class="ot">=</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="dv">5</span>),<span class="dv">6</span>)</span>
+<span id="cb104-9"><a href="graph.html#cb104-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(x, y, <span class="at">pch =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">25</span>, <span class="at">cex=</span><span class="fl">1.5</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="fl">5.5</span>), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="fl">6.5</span>), </span>
+<span id="cb104-10"><a href="graph.html#cb104-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">axes=</span><span class="cn">FALSE</span>, <span class="at">xlab=</span><span class="st">&quot;&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;&quot;</span>, <span class="at">bg=</span><span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb104-11"><a href="graph.html#cb104-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">text</span>(x, y, <span class="at">labels=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">25</span>, <span class="at">pos=</span><span class="dv">3</span>)</span>
+<span id="cb104-12"><a href="graph.html#cb104-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">par</span>(<span class="at">mar=</span>oldPar<span class="sc">$</span>mar,<span class="at">font=</span>oldPar<span class="sc">$</span>font )</span>
+<span id="cb104-13"><a href="graph.html#cb104-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb104-14"><a href="graph.html#cb104-14" aria-hidden="true" tabindex="-1"></a><span class="fu">generateRPointShapes</span>()</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
 
 </div>
 </div>
@@ -491,7 +495,7 @@ Figure 10.2: Setting file path (oval - click the Directory button to change the 
           </div>
         </div>
       </div>
-<a href="handling-the-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="handling-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="statistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
