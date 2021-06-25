@@ -49,6 +49,8 @@ programmatic
 the-rstudio-way-the-import-feature
 inspecting-the-data
 handling-data
+base-r
+useful-functions
 extracting-rows-and-columns
 dplyr
 selecting-a-column
@@ -56,6 +58,7 @@ adding-a-new-column
 sorting-the-data
 filtering-data
 removing-na-entries-in-data
+pipes
 graph
 making-graphs-in-r
 scatter-plots-with-plotxy

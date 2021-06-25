@@ -1,6 +1,37 @@
 # Handling data
 
-## Extracting rows and columns
+Base R refers to functions that come with an installation of `R`, not those that are in packages that are must be installed. We will learn how to handle data both using the base R functions, and using the package `dplyr`.
+
+## Base R
+
+### Useful functions
+
+-   `max()` outputs the maximum value in a vector (recall, a vector is a list of numbers, e.g., `c(0,2,5)`), matrix, or data frame;
+
+-   `min()` outputs the minimum value in a vector, matrix, or data frame;
+
+-   `length()` outputs the total number of elements, in a vector, matrix, or data frame;
+
+-   `sum()` adds or takes the sum of all values in a vector, matrix, or data frame;
+
+-   `mean()` calculates the mean of all values in a vector or matrix;
+
+-   `colMeans()` calculates the mean of a column in a matrix or data frame.
+
+**TRY IT!** In the `Console` do some tests on these functions by creating a test matrix and a test data frame:
+
+```{r, echo=FALSE}
+test = data.frame(col1 = c(0,2), col2 = c(5,6))
+test2 = matrix(c(2,3),c(5,1),nrow=2)
+mean(test)
+colMeans(test)
+mean(test2)
+colMeans(test2)
+```
+
+Which command generates an error? Why? How is `mean()` different to `colMeans()`? Is the `length()`, when applied to a data frame or matrix, equal to the number of rows?
+
+### Extracting rows and columns
 After we have loaded/imported our data we want to be able to work with it. Typical operations are to extract specific columns, rows, or values, and to add new columns and rows. Recall that **columns** run top to bottom, while **rows** run left to right.
 
 In addition, columns will sometimes have names:
@@ -42,6 +73,8 @@ while `data[n:m,]` returns all the columns for rows `n` to `m`:
 Note that in the two examples above `n` must be bigger than `m`. This method is called _slicing_.
 
 This are simple commands to work with data, but as data scientists frequently want to work with data in this way, the `dplyr` package was created to handle data more efficiently.
+
+
 
 ## dplyr
 We recommend using `dplyr` to handle data as the commands are concise, making the code easier to read and write. [Install and load](https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages) the <u>[dplyr](rdocumentation.org/packages/dplyr/versions/0.7.8)</u> R package.
@@ -138,173 +171,34 @@ Observe that row 12 of `data` has now been removed because it contained `NA` in 
 
 Recall, that `filter()` retains the rows that evaluate as `TRUE`: we wish to remove the rows with `NA`, so we need to write a command that evaluates these to `FALSE`. Therefore, we use `!is.na()`.
 
-
-<!-- R not only allows us to add columns to an existing data frame, but it can also allow us to create new data frames. Here, we will be creating a new data frame called `shrub_volumes` that contains the columns from `data`, and a new column called `volume`. -->
-
-<!-- ```{r} -->
-<!-- # Create a new data frame called shrub_volumes that has all the original data plus a new column containing volumes -->
-
-<!-- shrub_volumes <- mutate(ShrubData, volumes = length * width * height) -->
-
-<!-- head(shrub_volumes) -->
-<!-- ``` -->
-
-<!-- **HAND IN** Create a new data frame called shrub_volume and include the `tail()` print out. -->
-
-<!-- ### Code Shuffle -->
-
-<!-- In this section, we are interested in understanding the monthly variation in precipitation in Gainesville, FL. We'll use some data from the [NOAA National Climatic Data Center](https://www.ncdc.noaa.gov/). -->
-
-<!-- Each row of the data is a year (from 1961-2013) and each column is a month (January - December). -->
-
-<!-- In this section, we want you to  -->
-
-<!-- - import the `weather_data` from Brightspace  -->
-
-<!-- - calculate the average precipitation in each month across years  -->
-
-<!-- - plot the monthly averages as a simple line plot -->
-
-
-
-<!-- ```{r, include=F} -->
-<!-- weather.data <- read.csv(file = "lab_data/gainesville-precip.csv", header=F) -->
-<!-- monthly_mean_ppt <- colMeans(weather.data) -->
-<!-- ``` -->
-
-<!-- We can use the `colMeans` function to take the mean of each column within a data frame. **We will be demonstrating this using the `ShrubData` but you will use the weather data.** -->
-
-<!-- ```{r} -->
-<!-- col_means <- colMeans(ShrubData) -->
-<!-- # To show the column means, you will need to use the print() command -->
-<!-- print(col_means) -->
-<!-- ``` -->
-
-<!-- We can see that the means for each column was calculated. **HAND IN** Using the `weather_data`, calculate the mean precipitation for each month and produce a simple line plot. You will **hand in both** the R code and the plot. Your plot should resemble the line plot below. **You will need to change the axis titles.** -->
-
-<!-- ```{r, echo=FALSE} -->
-<!-- plot(monthly_mean_ppt, type = "l", xlab = "Month", ylab = "Mean Precipitation (ml)") -->
-<!-- ``` -->
-
-<!-- ### Bird Banding -->
-
-<!-- The number of birds banded at a series of sampling sites has been counted by your field crew and entered into the following vector.  -->
-
-<!-- ```{r} -->
-<!-- number_of_birds <- c(28, 32, 1, 0, 10, 22, 30, 19, 145, 27,  -->
-<!--                      36, 25, 9, 38, 21, 12, 122, 87, 36, 3, 0, 5, 55, 62, 98, 32,  -->
-<!--                      900, 33, 14, 39, 56, 81, 29, 38, 1, 0, 143, 37, 98, 77, 92,  -->
-<!--                      83, 34, 98, 40, 45, 51, 17, 22, 37, 48, 38, 91, 73, 54, 46, -->
-<!--                      102, 273, 600, 10, 11) -->
-<!-- ``` -->
-<!-- Counts are entered in order and sites are numbered starting at one. Using the following vector, answer the following questions and print the results on the screen. The following functions maybe useful: `length()`, `max()`, `min()`, `sum()`, and `mean()`. -->
-
-
-<!-- **Function Overview** -->
-
-<!-- -   `max()` indicates the maximum value in a vector -->
-
-<!-- -   `min()` indicates the minimum value in a vector -->
-
-<!-- -   `length()` indicates the total number of rows, or length of entries in a vector -->
-
-<!-- -   `sum()` adds or takes the sum of all values in a column -->
-
-<!-- -   `mean()` calculates the mean for a vector -->
-
-
-<!-- **HAND IN** Answer the following using the commands provided above.  -->
-
-<!-- 1) How many sites are there? -->
-
-<!-- 2)  What is the total number of birds counted across all of the sites? -->
-
-<!-- 3)  What is the smallest number of birds counted? -->
-
-<!-- 4)  What is the largest number of birds counted? -->
-
-<!-- 5)  What is the average number of birds seen at a site? -->
-
-<!-- 6)  How many birds were counted at the last site? Have the computer choose the last site automatically in some way, not manually entering its position. Do you know a function that will give you a position of the last value? (since positions start at 1 position of the last value in a vector is the same as its length) -->
-
-<!-- 7)  How many birds were counted at site 42? -->
-
-
-<!-- ```{r, include=F, echo=F} -->
-<!-- # Answers to the questions -->
-
-<!-- #how many sites -->
-<!-- length(number_of_birds) -->
-
-<!-- #how many birds at site 42 -->
-<!-- number_of_birds[42] -->
-
-<!-- #what is total number of birds across all sites? -->
-<!-- sum(number_of_birds) -->
-
-<!-- #what is smallest number of birds counted? -->
-<!-- min(number_of_birds) -->
-
-<!-- #what is largest number of birds counted? -->
-<!-- max(number_of_birds) -->
-
-<!-- #what is average number of birds per site? -->
-<!-- mean(number_of_birds) -->
-
-<!-- #how many birds were at the last site (without entering position) -->
-<!-- number_of_birds[length(number_of_birds)] -->
-
-<!-- ``` -->
-
-<!-- ### Portal Data Manipulation -->
-
-<!-- Download a copy of the `survey data` from Brightspace and load it into R using `read.csv()`. -->
-
-<!-- ```{r, include=F} -->
-
-<!-- survey <- read.csv("lab_data/surveys.csv") -->
-
-<!-- ``` -->
-
-<!-- **HAND IN** Answer the following.  -->
-
-<!-- 1.  Using the `select()` function create a new data frame called `survey_new` that only contains the columns `year`, `month`, `day`, and `species_id` in that order. -->
-
-<!-- 2.  Using the `mutate()`, `select()`, `filter()`, and `!is.na()` functions to create a new data frame with only `year()`, `species_id` and `weight()` in **kilograms of each individual**. The weight in the table is given in grams, so you will need to create a new column or convert weight into kilograms. (*Recall that 1 g = 0.001 kg.*) -->
-
-<!-- 3.  Use the `filter()` function, print only the rows in the data frame for the species ID =`SH`. -->
-
-<!-- ### Portal Data Manipulation Pipes  -->
-
-<!-- Using the `survey data` we will be using the `%>%` pipe operations to manipulate the data. The pipe operation can be used to easy combine previous functions. -->
-
-<!-- The pipe function allows for separate functions to be combined. For example, instead of creating two data frames where one removes `na` entries and the other adds new columns, the pipe operation combines them. Below is an example, I will create a new data frame with only `month()`, `plot_id()` and a new column `wight_mil`. -->
-
-<!-- ```{r} -->
-<!-- new_pipe_survey_df <-  -->
-<!--           survey %>%  -->
-<!--            filter(!is.na(weight)) %>% -->
-<!--             mutate(weight_mil=weight*100) %>% -->
-<!--             select(month, plot_id, weight_mil) -->
-
-<!-- ``` -->
-
-<!-- You can see that the same functions are used above in section **2.1.4 Portable Data Manipulation**, but rather than listing each command individually, the functions are connected via the `%>%` pipe operation. -->
-
-<!-- **HAND IN:** Using the `%>%` operation, answer the following questions. -->
-
-<!-- 1.  Using the `mutate()`, `select()`, `filter()`, and/or `!is.na()` functions to create a new data frame with only `year()`, `species_id` and `weight()` in **kilograms of each individual**. -->
-
-<!-- 2.  Use the `filter()` and `select()` to get the `year`, `month`, `day`, `weight` in kg, and `species_id` columns for all of the rows in the data frame where `species_id` is `SH`. Use the `head()` command to print the top of the data frame. -->
-
-<!-- ```{r, echo=F} -->
-
-<!-- head(survey %>% -->
-<!-- filter(species_id == "SH") %>% -->
-<!-- filter(!is.na(weight)) %>% -->
-<!--             mutate(weight_kg=weight/100) %>% -->
-<!--             select(year, month, day, weight_kg, species_id) -->
-<!-- ) -->
-<!-- ``` -->
-
-<!-- Above is the `head()` print out of the `%>%` piped operation. Does it look similar to yours? -->
+### Pipes
+
+The pipe function, `%>%`,  allows for compact coding when the output on the lefthand size of `%>%` is the input for the calculations performed on the righthand size of `%>%`. Consider:
+
+```{r}
+data2 <- data %>%
+         filter(!is.na(width)) %>%
+         mutate(height_cm=height*100) %>%
+         select(site, experiment, height_cm)
+head(data2)
+```
+
+We end up with a new dataframe, `data2`, that is `data` with three operations sequentially performed. The advantage of using `%>%` is the compactness and clarity of the code to achieve this result. Let's understand these commands further.
+
+- `data2` is the name of the output when we are finished all our operations;
+- `data` is the data that we start with;
+- `filter(!is.na(width))` removes all rows with `NA` in the `width` column of `data`. In the previous sections, when we demonstarted `filter(x,y)`, the first argument, `x`, was a dataframe, and the second argument was a logical statement, i.e., `!is.na(width)`. Above, when `%>%` is used only the logical statement is provided and the data that the function applies to is supplied on the left hand side of `%>%`.
+- `mutate(height_cm=height*100)` converts height in meters to centimeters, and this operation is applied to all the data that passed through the pipe from the previous operation where `NA`s in the `width` column were removed.
+- `select(site, experiment, height_cm)` is used to output only columns of interest, and again, the data argument to the `select()` function is supplied by the lefthand size of the pipe.
+
+Note that the pipes will not work if the output of one operation is of the wrong type to be the input to the next operation.
+
+To understand the value of pipes, consider the equivalent code written without using pipes:
+```{r}
+data2 <- filter(data,!is.na(width))
+data3 <- mutate(data2,height_cm=height*100)
+data4 <- select(data3, site, experiment, height_cm)
+head(data4)
+```
+
+Without using pipes, we create variables `data2` and `data3` that only serve as intermediaries, that we may never use again in our subsequent lines of code. Creating many variables can bog down both the computer memory and your own memory, when you are trying to remember the variable name you gave to a particular output when writing subsequent commands.
