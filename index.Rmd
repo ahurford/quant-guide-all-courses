@@ -10,7 +10,7 @@ github-repo: ahurford/quantitative-training-guide
 description: "Quantitative skills for biology"
 ---
 
-# Introduction {#intro}
+# Overview {#intro}
 
 Many biology-relevant skills are now performed using computers: statistical analyses, mathematical modelling, managing and reformatting data, visualizing data, identifying genes from DNA sequences, constructing 3D models of proteins, and making phylogenies. Quantitative skills and best practices in data science are now being incorporated throughout the biology major.
 

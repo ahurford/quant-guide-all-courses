@@ -82,6 +82,9 @@ database-structure-guidelines
 metadata
 metadata-guidelines
 further-reading
+ggplot
+writing-your-own-functions
+making-maps
 coding-club-at-mun
 contributions
 faq

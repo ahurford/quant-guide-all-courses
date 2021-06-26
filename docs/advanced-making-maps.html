@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>5 Getting R help | Quantitative skills for biology</title>
-  <meta name="description" content="5 Getting R help | Quantitative skills for biology" />
+  <title>15 ADVANCED Making maps | Quantitative skills for biology</title>
+  <meta name="description" content="15 ADVANCED Making maps | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="5 Getting R help | Quantitative skills for biology" />
+  <meta property="og:title" content="15 ADVANCED Making maps | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="5 Getting R help | Quantitative skills for biology" />
+  <meta property="og:description" content="15 ADVANCED Making maps | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Getting R help | Quantitative skills for biology" />
+  <meta name="twitter:title" content="15 ADVANCED Making maps | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="5 Getting R help | Quantitative skills for biology" />
+  <meta name="twitter:description" content="15 ADVANCED Making maps | Quantitative skills for biology" />
   
 
 
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="rintro.html"/>
-<link rel="next" href="howtoask.html"/>
+<link rel="prev" href="advanced-writing-your-own-functions.html"/>
+<link rel="next" href="coding-club-at-mun.html"/>
 <script src="libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -157,11 +157,10 @@ div.csl-indent {
 <li><a href="./">Quantitative skills for biology</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-links"><i class="fa fa-check"></i><b>1.1</b> Course links</a></li>
 </ul></li>
-<li><a href="part-i-introduction.html#part-i-introduction"><strong>PART I: INTRODUCTION</strong></a></li>
 <li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a>
@@ -292,10 +291,9 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="12.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>12.3</b> Further reading</a></li>
 </ul></li>
-<li><a href="part-ii-advanced.html#part-ii-advanced"><strong>PART II: ADVANCED</strong></a></li>
-<li class="chapter" data-level="13" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>13</b> ggplot</a></li>
-<li class="chapter" data-level="14" data-path="writing-your-own-functions.html"><a href="writing-your-own-functions.html"><i class="fa fa-check"></i><b>14</b> Writing your own functions</a></li>
-<li class="chapter" data-level="15" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>15</b> Making maps</a></li>
+<li class="chapter" data-level="13" data-path="advanced-ggplot.html"><a href="advanced-ggplot.html"><i class="fa fa-check"></i><b>13</b> <strong>ADVANCED</strong> ggplot</a></li>
+<li class="chapter" data-level="14" data-path="advanced-writing-your-own-functions.html"><a href="advanced-writing-your-own-functions.html"><i class="fa fa-check"></i><b>14</b> <strong>ADVANCED</strong> Writing your own functions</a></li>
+<li class="chapter" data-level="15" data-path="advanced-making-maps.html"><a href="advanced-making-maps.html"><i class="fa fa-check"></i><b>15</b> <strong>ADVANCED</strong> Making maps</a></li>
 <li class="chapter" data-level="16" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>16</b> Coding club at MUN</a></li>
 <li class="chapter" data-level="17" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>17</b> Contributions</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -334,78 +332,17 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="help" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Getting R help</h1>
-<p>The first place most people go for R help is the “Help” tab in the “Files/Plots/Packages/Help” pane on the console (described in Chapter <a href="rstudio.html#rstudio">3</a>). Here you can do a search by topic/term using the search window at the top right. You can also click the “house” icon to go to the home menu for the help files and use the table of contents there to navigate to what you are looking for.</p>
-<div id="using-r-help" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Using R help</h2>
-<p>The hardest part about R help files is that at first they don’t seem that helpful, and to new R users, they seem to be written in code. However, all of the help pages are structured the same way, so once you learn how to de-code them, you’ll be well on your way. Below is an example of how to interpret R help files</p>
-</div>
-<div id="r-cheatsheets" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> R “Cheatsheets”</h2>
-<p>Because R is open source software, there is also a culture of open access help. Several R programmers have made helpful “Cheatsheets” that are worth printing off and hanging by your desk. Try <a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf">this one</a> by Tom Short for starters.</p>
-</div>
-<div id="r-books" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> R books</h2>
-<p>As with the cheatsheets, there are open access books out there (as well as expensive ones to buy). For beginners, “The Pirates Guide to R” by Nathaniel D. Phillips is <strong>HIGHLY</strong> recommended. You can access it <a href="https://bookdown.org/ndphillips/YaRrr/">here</a></p>
-</div>
-<div id="how-to-interpret-r-help-files" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> How to interpret R help files</h2>
-<p>R documentation follows the following format. As an example, we’ll use the screenshot below for a really simple statistical command (the t-test) to walk you through the R documentation. Numbers below correspond to the labels on the screenshot.</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>header</strong> This simply gives the command for the thing you are trying to do, in R language</p></li>
-<li><p><strong>Title</strong> This is a title of the function/command/tool in more plain language</p></li>
-<li><p><strong>Description</strong> This section provides a short description of what the command does, written in reasonably plain language</p></li>
-<li><p><strong>Usage</strong> This is where you see an example of R code that you use to execute the command (<strong>TIP</strong> you can tell what text in the help file is R code and what is other information by the font. Example code is in courier font). Any example prefaced with two hashtags (“##”) is a comment that adds additional description or provides different options for the comment. For example, for the t-test here, the first example is for the default method, where you are doing a t-test for a difference between two numeric vectors of data values (“x” and “y”). The second example is where you are applying the t-test to a formula instead of two numeric vectors. Until you start doing more advanced statistics, the default method will usually be what you use.</p></li>
-<li><p><strong>Arguments</strong> This section breaks down every element in the R code under “Usage” above it and describes what the input is that you need to provide. It also gives you details about the options as well as what the defaults are. For example, for the t-test documentation here, it tells you that “x” is “a (non-empty) numeric vector of data values.” It also tells you that this is what “y” is but note that it tells you that “y” is optional (i.e., you can do a t-test on just one vector of data values). This fact is also shown in the example code where it says “y = NULL.”</p></li>
-</ol>
-<p>Note that you often do not have to input ALL the arguments. If you are happy with the defaults you don’t have to type in the code. For example, the description of the argument “alternative” tells you that you can specify whether the alternative hypothesis is two-sided (i.e., two-tailed), or one-tailed, in which case you have to say whether the alternative hypothesis is that the second set of data (e.g., the treatment) are greater or less than the first (e.g., the control). The default is that you are assuming the alternative hypothesis is two-sided. If this is what you want, then your code only needs to look like this</p>
-<p><code>t.test(x, y)</code></p>
-<p>However, if you want a one-sided test, and your alternate hypothesis is that the treatment (y) is greater than the control (x), then you need to type a bit more code, like this:</p>
-<p><code>t.test(x, y, alternative = c("greater"))</code></p>
-<ol start="6" style="list-style-type: decimal">
-<li><p><strong>Details</strong> This section gives you a little more detail about what the function is doing. For more advanced functions, there may be details on the types of inputs allowed and other caveats. <em>This section is really helpful to read closely!</em></p></li>
-<li><p><strong>Value</strong> This section lists the objects (output) created when you execute the command. The relevance of this list will become more clear once you start using R.</p></li>
-<li><p><strong>See Also</strong> This section is usually just links to similar commands to the one you are reading up on, or related to it somehow. These can be useful to explore when doing more complex statistical tests, or if you are not sure which test you should be using. Clicking the link will just take you to the Documentation page for that command, which will be set up exactly the same way as this one.</p></li>
-<li><p><strong>Examples</strong> This gives sample code and output. If you have installed the necessary package(s) to run this code, you can just try the code out yourself by typing the code <em>exactly</em> as shown in the example in the Console window of RStudio. It will call data that comes built in with the package when you installed it and can be a helpful way for you to understand how the command is working before you try it with your own data.</p></li>
-</ol>
-<p><img src="figures/HelpDoc_partA.jpg" width="95%" style="display: block; margin: auto;" /></p>
-<p><img src="figures/HelpDoc_partB.jpg" width="95%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="debugging" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> Debugging</h2>
-<p>You are inevitably going to get error messages! Don’t panic when you do! Debugging is part of using any coding language. Here are a few tips for debugging</p>
-<ol style="list-style-type: decimal">
-<li>As a first step, check for spelling mistakes and typos. If you accidentally mis-spelled the name of the variable, vector or object you were specifying when you defined it (e.g., <code>leaf.legnth &lt;- c(2,4,6,8)</code>) then if you spell it the way you MEANT to spell it when you apply a function to it. For example lets say I want to convert the leaf length vector into millimeters by multiplying it by 10 like this: <code>leaf.length.mm &lt;- leaf.length*10</code> then I will get an error message because <code>R</code> is looking for something called <code>leaf.length</code> but I accidentally spelled it <code>leaf.legnth</code>.</li>
-</ol>
-<ul>
-<li><p>You will know you have a spelling issue when you get an error that says <code>Error: object 'XXXX' not found</code> where xxxx is the name of the thing you mis-spelled.</p></li>
-<li><p>Related to spelling errors is accidentally putting in a period instead of a comma, or missing a parentheses.</p></li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>A second common error is input the wrong data type to a function. For example, if I create a vector of character data for leaf type, and a vector of leaf lengths (spelling correctly this time!), and then apply a t-test, I will get an error message because I cannot do a t-test with character data. However, the error message will not clearly state that. See code snippet below.</li>
-</ol>
-<!-- -->
-<pre><code>leaf.length &lt;- c(2.0, 2.1, 2.4, 2.2, 2.1)
-leaf.type &lt;- c(&quot;simple&quot;, &quot;compound&quot;, &quot;lobed&quot;, &quot;toothed&quot;, &quot;palmate&quot;)
-t.test(leaf.length, leaf.type)</code></pre>
-<p>This will give an error message.</p>
-<p><strong>TRY IT:</strong> type the code above in the console and see what the error message is.</p>
-<p><code>Error in if (stderr &lt; 10 * .Machine$double.eps * max(abs(mx), abs(my))) stop("data are essentially constant") :    missing value where TRUE/FALSE needed In addition: Warning messages: 1: In mean.default(y) : argument is not numeric or logical: returning NA 2: In var(y) : NAs introduced by coercion</code></p>
-<p><em>More tips</em></p>
-<p>Learning to de-bug takes practice! If your error isn’t due to one of the two reasons above, then the next step is to try running the code line-by-line to figure out where the error is.</p>
-<p>A good idea is to use Google or the <code>R</code> documentation files to find an example of code that is doing the same thing you want to do. Cut and paste it in as an example, and then modify it with your inputs.</p>
-<p>You can also try to type the exact text of the error message into Google, but this isn’t always the most useful approach.</p>
+<div id="advanced-making-maps" class="section level1" number="15">
+<h1><span class="header-section-number">15</span> <strong>ADVANCED</strong> Making maps</h1>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="rintro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="howtoask.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="advanced-writing-your-own-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="coding-club-at-mun.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
