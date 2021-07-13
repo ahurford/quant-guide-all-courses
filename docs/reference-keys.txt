@@ -58,6 +58,7 @@ adding-a-new-column
 sorting-the-data
 filtering-data
 removing-na-entries-in-data
+group-summary
 pipes
 graph
 making-graphs-in-r

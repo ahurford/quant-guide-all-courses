@@ -18,9 +18,13 @@ Base R refers to functions that come with an installation of `R`, not those that
 
 -   `colMeans()` calculates the mean of a column in a matrix or data frame.
 
+- `head()` prints the first 6 rows of the argument to your console. This can be helpful if you want to check your data without having to sort through a long output.
+
+- `tail()` similar to `head()` but prints the last 6 rows of the argument.
+
 **TRY IT!** In the `Console` do some tests on these functions by creating a test matrix and a test data frame:
 
-```{r, echo=FALSE}
+```{r}
 test = data.frame(col1 = c(0,2), col2 = c(5,6))
 test2 = matrix(c(2,3),c(5,1),nrow=2)
 mean(test)
@@ -73,7 +77,6 @@ while `data[n:m,]` returns all the columns for rows `n` to `m`:
 Note that in the two examples above `n` must be bigger than `m`. This method is called _slicing_.
 
 This are simple commands to work with data, but as data scientists frequently want to work with data in this way, the `dplyr` package was created to handle data more efficiently.
-
 
 
 ## dplyr
@@ -170,6 +173,36 @@ Observe that row 12 of `data` has now been removed because it contained `NA` in 
 
 
 Recall, that `filter()` retains the rows that evaluate as `TRUE`: we wish to remove the rows with `NA`, so we need to write a command that evaluates these to `FALSE`. Therefore, we use `!is.na()`.
+
+### Group summary
+The functions `group_by()` and `summarize()` can be used together to apply functions to a group within a column of your data frame. Recall that our data consists of different sites:
+
+```{r}
+head(data)
+```
+
+
+The code below calculates the mean `length` for each `site`:
+
+```{r}
+by_site <- group_by(data,site)
+data2 <- summarize(by_site,length=mean(length))
+print(data2)
+```
+
+The function `group_by()` doesn't make the data noticeably different aside from noting the grouping:
+
+```{r}
+by_site <- group_by(data,site)
+head(print(by_site))
+```
+
+The first argument of `summarize(x,y)` is the grouped data, `x`, and the second argument, `y`, has the structure `name of the new column` = `function to be applied to(column of grouped data)`. Recalling that the function [`min()`](https://ahurford.github.io/quant-guide-all-courses/handling-data.html#useful-functions) calculates the minimum of its argument, we might also calculate the minimum width for each of the sites:
+
+```{r}
+summarize(by_site, min.width = min(width))
+```
+
 
 ### Pipes
 
