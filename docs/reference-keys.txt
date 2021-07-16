@@ -59,6 +59,7 @@ sorting-the-data
 filtering-data
 removing-na-entries-in-data
 grouping
+joining
 pipes
 graph
 making-graphs-in-r

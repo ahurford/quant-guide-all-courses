@@ -213,6 +213,9 @@ Equivalently, we could apply the function `length()` using `summarize()`:
 summarize(by_site,n=length(site))
 ```
 
+### Joining
+
+A good description of joining data sets using `inner_join()` is provided [here](https://stat545.com/join-cheatsheet.html).
 
 ### Pipes
 

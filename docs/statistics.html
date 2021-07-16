@@ -253,7 +253,8 @@ div.csl-indent {
 <li class="chapter" data-level="9.2.4" data-path="handling-data.html"><a href="handling-data.html#filtering-data"><i class="fa fa-check"></i><b>9.2.4</b> Filtering data</a></li>
 <li class="chapter" data-level="9.2.5" data-path="handling-data.html"><a href="handling-data.html#removing-na-entries-in-data"><i class="fa fa-check"></i><b>9.2.5</b> Removing NA entries in data</a></li>
 <li class="chapter" data-level="9.2.6" data-path="handling-data.html"><a href="handling-data.html#grouping"><i class="fa fa-check"></i><b>9.2.6</b> Grouping</a></li>
-<li class="chapter" data-level="9.2.7" data-path="handling-data.html"><a href="handling-data.html#pipes"><i class="fa fa-check"></i><b>9.2.7</b> Pipes</a></li>
+<li class="chapter" data-level="9.2.7" data-path="handling-data.html"><a href="handling-data.html#joining"><i class="fa fa-check"></i><b>9.2.7</b> Joining</a></li>
+<li class="chapter" data-level="9.2.8" data-path="handling-data.html"><a href="handling-data.html#pipes"><i class="fa fa-check"></i><b>9.2.8</b> Pipes</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a>
@@ -371,21 +372,21 @@ div.csl-indent {
 <p>Below, we generate some example data, <code>x</code>, to illustrate how to perform a <code>t.test</code> (when performing your analysis, this step is replaced with the step of loading or entering your data, i.e., see Chapter <a href="data-entry.html#data-entry">8</a>).</p>
 <div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="statistics.html#cb147-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
 <span id="cb147-2"><a href="statistics.html#cb147-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1]  1.40097192 -0.27227188  1.43412980 -0.19953337 -0.03627825 -0.32019996
-##  [7] -0.85109483  0.90310078  0.72332302 -0.46907082</code></pre>
+<pre><code>##  [1]  0.4894223 -0.0572585  1.2923441 -0.6131208  1.6481231  0.7540754
+##  [7] -0.1598985 -0.8317375  1.3214450  0.1834814</code></pre>
 <p>Before running the analysis, we decide to set <span class="math inline">\(\alpha = 0.05\)</span>. Perform the test:</p>
 <div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="statistics.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
 ## data:  x
-## t = 0.89694, df = 9, p-value = 0.3931
+## t = 1.5043, df = 9, p-value = 0.1668
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  -0.3520670  0.8146823
+##  -0.202882  1.008257
 ## sample estimates:
 ## mean of x 
-## 0.2313076</code></pre>
+## 0.4026876</code></pre>
 <p>Running this code, gives p-values greater than <span class="math inline">\(\alpha = 0.05\)</span>. Therefore, we fail to reject the <em>null hypothesis</em> that the weight change in the population of domestic cats is 0. As such, our data suggest that the cats have not changed weight.</p>
 <p>The <code>t.test</code> function can be expanded by using additional arguments or changing arguments as required. For example, we can performed a one-sided test.</p>
 <pre><code>t.test(x, y = NULL,
@@ -411,8 +412,8 @@ div.csl-indent {
 <p>Suppose the <code>10</code> measures of change in cat weight were instead:</p>
 <div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="statistics.html#cb152-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)<span class="sc">+</span><span class="dv">1</span></span>
 <span id="cb152-2"><a href="statistics.html#cb152-2" aria-hidden="true" tabindex="-1"></a>x2</span></code></pre></div>
-<pre><code>##  [1]  0.1118675  1.2789923  0.9593261 -0.8727289  0.1839403  0.8082912
-##  [7]  0.6181909  1.0940007  1.5504848  0.8546391</code></pre>
+<pre><code>##  [1]  1.44033972  1.21230604  1.00781027  1.31224132 -0.04365394  1.49453175
+##  [7]  1.42588491  1.47170701  0.29215689  0.55344521</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>Using the code above to generate the example data, <code>x2</code>, perform a t-test with the <em>null hypothesis</em> that the change in weight of the cat population was 0.</p></li>
 <li><p>Perform a t-test with the <em>null hypothesis</em> that the cats in the sample, <code>x2</code> have lost weight.</p></li>
