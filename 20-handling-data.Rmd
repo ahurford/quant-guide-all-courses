@@ -174,15 +174,15 @@ Observe that row 12 of `data` has now been removed because it contained `NA` in 
 
 Recall, that `filter()` retains the rows that evaluate as `TRUE`: we wish to remove the rows with `NA`, so we need to write a command that evaluates these to `FALSE`. Therefore, we use `!is.na()`.
 
-### Group summary
-The functions `group_by()` and `summarize()` can be used together to apply functions to a group within a column of your data frame. Recall that our data consists of different sites:
+### Grouping
+The function`group_by()` can be used with `summarize()` and `tally()`. Recall that our data consists of different sites:
 
 ```{r}
 head(data)
 ```
 
 
-The code below calculates the mean `length` for each `site`:
+The code below calculates the mean `length` for each `site` (because we group `data` by `site`):
 
 ```{r}
 by_site <- group_by(data,site)
@@ -190,17 +190,27 @@ data2 <- summarize(by_site,length=mean(length))
 print(data2)
 ```
 
-The function `group_by()` doesn't make the data noticeably different aside from noting the grouping:
+Applying the function `group_by()` doesn't make the data noticeably different aside from noting the grouping:
 
 ```{r}
 by_site <- group_by(data,site)
 head(print(by_site))
 ```
 
-The first argument of `summarize(x,y)` is the grouped data, `x`, and the second argument, `y`, has the structure `name of the new column` = `function to be applied to(column of grouped data)`. Recalling that the function [`min()`](https://ahurford.github.io/quant-guide-all-courses/handling-data.html#useful-functions) calculates the minimum of its argument, we might also calculate the minimum width for each of the sites:
+The first argument,  `x`, of `summarize(x,y)` is the grouped data, and the second argument, `y`, has the structure `name of the new column` = `function to be applied to(column of grouped data)`. Recalling that the function [`min()`](https://ahurford.github.io/quant-guide-all-courses/handling-data.html#useful-functions) calculates the minimum of its argument, we might also calculate the minimum width for each of the sites:
 
 ```{r}
 summarize(by_site, min.width = min(width))
+```
+
+The function `tally()` counts the number of records in each group.
+```{r}
+tally(by_site)
+```
+
+Equivalently, we could apply the function `length()` using `summarize()`:
+```{r}
+summarize(by_site,n=length(site))
 ```
 
 
