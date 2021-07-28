@@ -1,7 +1,13 @@
 # **PART II: ADVANCED** {-}
 
+# Writing functions
+
+# Loops and repeating commands
+
 # ggplot
 
-# Writing your own functions
-
 # Making maps
+
+
+
+
