@@ -85,7 +85,7 @@ b <- c(2, 4, 6)
 
 ------------------------------------------------------------------------
 
-## Adding axes labels and changing symbols
+## Adding axes labels and changing symbols {#axes}
 
 Note that all of the figures we have made so far are not great: none meet the standards of a good figure. What's missing?
 
@@ -132,22 +132,22 @@ It's not hard to get more sophisticated with R graphics. The best approach is to
 One thing most undergrads will probably need or want to do is to visualize two sets of data on the same graph. For example, the goldfish data in [Appendix VI]("NEED TO ADD THE LINK") of the BIOL 1001 lab manual shows the opercular beats of two fish in response to temperature. It would be logical to show both fish on the same graph, but with different symbols. Here's how you would do it:
 
 ```{r}
-temp <- cbind(5, 8, 12, 16, 20, 23)
+temp <- c(5, 8, 12, 16, 20, 23)
 ```
 
 This creates the vector of data for the x-axis.
 
 ```{r}
-fishA <- cbind(36, 42, 59, 73, 88, 96)
+fishA <- c(36, 42, 59, 73, 88, 96)
 ```
 
 This creates the vector of data for `Fish A`.
 
 ```{r}
-fishB <- cbind(40, 49, 61, 71, 82, 90)
+fishB <- c(40, 49, 61, 71, 82, 90)
 ```
 
-This creates the vector of data for `Fish B`.
+This creates the vector of data for `fish B`.
 
 First, we plot `x` and `y` with the `temp` vector as `x`, and the `fishA` vector as `y`
 
@@ -162,11 +162,12 @@ plot(temp, fishA, pch = 17, xlab = "temperature (degrees C)", ylab = "opercular 
 points(temp, fishB, pch = 19, col = "dimgray")
 ```
 
-*Caption: Opercular beats of two goldfish over increasing temperature. Triangle symbols represent fish A and dots represent fish B*
+*Caption: Opercular beats of two goldfish over increasing temperature. Triangle symbols represent fish A and dots represent fish B*.
 
 Voila!
 
-Note that the difference in the two symbols is described in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we'll leave those for a more advanced course.
+Note that `points()` can only be used after `plot()` as the `points()` function only adds data points to an existing plot, it does not create a plot on its own.
+You can describe what the two symbols represent in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we'll leave those for a more advanced course.
 
 **HAND IN**
 
@@ -179,6 +180,11 @@ Finally, if you wanted to have a line joining the points, you'd specify the `typ
 ```{r}
 plot(temp, fishA, pch = 17, type = "l", xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")
 ```
+
+**HAND IN**
+
+Re-create the graph above on your own, but this time, also add a line for `fishB` which
+joins the points as is shown above for `fishA`. Just as in section \@ref(axes), where we used the `points()` function to an existing plot, we can use the `lines()` function to add a line to an existing plot. To select the line type, use `Ity = 2` (or another value), just as you would use `pch` in the `points()` function. Export this plot and hand it in with your assignment (by pasting the .pdf file into an MS Word document or other text editor, see section \@ref(export)).
 
 ## Other useful plot functions
 

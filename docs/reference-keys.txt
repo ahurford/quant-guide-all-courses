@@ -65,7 +65,7 @@ pipes
 graph
 making-graphs-in-r
 scatter-plots-with-plotxy
-adding-axes-labels-and-changing-symbols
+axes
 getting-a-bit-more-sophisticated
 line-graphs
 other-useful-plot-functions

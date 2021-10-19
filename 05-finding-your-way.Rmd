@@ -85,7 +85,7 @@ It is important to note that saving commands in a script in your `Source` window
 
 `Source` your script and then evaluate `x` in your `Console`. If you have done this task correctly the value of `x` should be `6` and it will appear as `[1] 6` in your `Console`.
 
-What happened to `x <- 2`? When `Source` is called the commands are executed in the `Console` from top to bottom as they appear in the script. Therefore, `x <- 2` was only the current value of `x` for a very short time before it was overwritten with the command `x <- 6`.
+What happened to `x <- 4`? When `Source` is called the commands are executed in the `Console` from top to bottom as they appear in the script. Therefore, `x <- 4` was only the current value of `x` for a very short time before it was overwritten with the command `x <- 6`.
 
 ------------------------------------------------------------------------
 
@@ -102,8 +102,6 @@ Edit your script so that now it reads:
 
     > y
     > z
-
-Explain why the values of `y` and `z` are `5` and `7` respectively.
 
 ------------------------------------------------------------------------
 
