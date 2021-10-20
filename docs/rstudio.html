@@ -339,7 +339,7 @@ x &lt;- 6</code></pre>
 <pre><code>## [1] 1</code></pre>
 <p>It is important to note that saving commands in a script in your <code>Source</code> window does not evaluate the commands in your <code>Console</code>. To execute the commands, with your script displayed in the <code>Source</code> pane, you need to click the <code>Source</code> button (righthand side of the source pane, equivalently select <code>Code &gt; Source</code> from the top menu bar; note, if you have a small <code>Source</code> pane the <code>Source</code> button may not appear and you may need to make it bigger or use the menu bar).</p>
 <p><code>Source</code> your script and then evaluate <code>x</code> in your <code>Console</code>. If you have done this task correctly the value of <code>x</code> should be <code>6</code> and it will appear as <code>[1] 6</code> in your <code>Console</code>.</p>
-<p>What happened to <code>x &lt;- 2</code>? When <code>Source</code> is called the commands are executed in the <code>Console</code> from top to bottom as they appear in the script. Therefore, <code>x &lt;- 2</code> was only the current value of <code>x</code> for a very short time before it was overwritten with the command <code>x &lt;- 6</code>.</p>
+<p>What happened to <code>x &lt;- 4</code>? When <code>Source</code> is called the commands are executed in the <code>Console</code> from top to bottom as they appear in the script. Therefore, <code>x &lt;- 4</code> was only the current value of <code>x</code> for a very short time before it was overwritten with the command <code>x &lt;- 6</code>.</p>
 <hr />
 <p>EXERCISE</p>
 <p>Edit your script so that now it reads:</p>
@@ -350,7 +350,6 @@ z &lt;- x + 1</code></pre>
 <p><code>Source</code> the script and then query the values of <code>y</code> and <code>z</code> in your <code>Console</code>. What are the values returned for <code>y</code> and <code>z</code>? Explain how these values were returned.</p>
 <pre><code>&gt; y
 &gt; z</code></pre>
-<p>Explain why the values of <code>y</code> and <code>z</code> are <code>5</code> and <code>7</code> respectively.</p>
 <hr />
 <p>If you would like to run one line or several lines of your script only (not all the lines), then place your cursor on the line you want to execute and click the <code>Run</code> button (equivalently <code>Code &gt; Run Selected Line(s)</code>, or press <code>Ctrl</code>+<code>enter</code> or <code>Cmmd</code>+<code>return</code> for a shortcut).</p>
 </div>

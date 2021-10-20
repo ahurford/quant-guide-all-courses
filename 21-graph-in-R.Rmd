@@ -184,7 +184,7 @@ plot(temp, fishA, pch = 17, type = "l", xlab = "temperature (degrees C)", ylab =
 **HAND IN**
 
 Re-create the graph above on your own, but this time, also add a line for `fishB` which
-joins the points as is shown above for `fishA`. Just as in section \@ref(axes), where we used the `points()` function to an existing plot, we can use the `lines()` function to add a line to an existing plot. To select the line type, use `Ity = 2` (or another value), just as you would use `pch` in the `points()` function. Export this plot and hand it in with your assignment (by pasting the .pdf file into an MS Word document or other text editor, see section \@ref(export)).
+joins the points as is shown above for `fishA`. Just as in section \@ref(axes), where we used the `points()` function to an existing plot, we can use the `lines()` function to add a line to an existing plot. To select the line type, use `lty = 2` (or another value), just as you would use `pch` in the `points()` function. Export this plot and hand it in with your assignment (by pasting the .pdf file into an MS Word document or other text editor, see section \@ref(export)).
 
 ## Other useful plot functions
 
