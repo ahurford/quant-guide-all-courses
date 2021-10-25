@@ -80,13 +80,13 @@ This are simple commands to work with data, but as data scientists frequently wa
 
 
 ## dplyr
-We recommend using `dplyr` to handle data as the commands are concise, making the code easier to read and write. [Install and load](https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages) the <u>[dplyr](rdocumentation.org/packages/dplyr/versions/0.7.8)</u> R package.
+We recommend using `dplyr` to handle data as the commands are concise, making the code easier to read and write. [Install and load](https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages) the `dplyr` R package.
 
 ```{r, include=F, echo=F}
 library(dplyr)
 ```
 
-The [dplyr](rdocumentation.org/packages/dplyr/versions/0.7.8) package contains several different function that are very useful when manipulating and cleaning large datasets. We will be highlighting the use of the `select()`, `mutate()`, `length()`, `arrange()`, and `filter()`.
+The `dplyr` package contains several different function that are very useful when manipulating and cleaning large datasets. We will be highlighting the use of the `select()`, `mutate()`, `length()`, `arrange()`, and `filter()`.
 
 ### Selecting a column
 The command `select(data, length)` selects the `length` column of the dataframe `data`:
