@@ -326,21 +326,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Below, we generate some example data, <code>x</code>, to illustrate how to perform a <code>t.test</code> (when performing your analysis, this step is replaced with the step of loading or entering your data, i.e., see Chapter <a href="data-entry.html#data-entry">8</a>).</p>
 <div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="statistics.html#cb147-1"></a>x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>)</span>
 <span id="cb147-2"><a href="statistics.html#cb147-2"></a>x</span></code></pre></div>
-<pre><code>##  [1]  0.34786996 -0.09526838 -0.96661017 -0.86456582 -1.20086644  1.74429370
-##  [7]  0.43221161  0.72722060 -0.83562316 -1.16102314</code></pre>
+<pre><code>##  [1]  0.34795586  0.05536320 -0.71517360  1.04615559 -0.08238968  1.18208656
+##  [7] -3.34563317 -1.49803354 -0.10836188  0.49156142</code></pre>
 <p>Before running the analysis, we decide to set <span class="math inline">\(\alpha = 0.05\)</span>. Perform the test:</p>
 <div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="statistics.html#cb149-1"></a><span class="kw">t.test</span>(x)</span></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
 ## data:  x
-## t = -0.60194, df = 9, p-value = 0.5621
+## t = -0.62031, df = 9, p-value = 0.5504
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  -0.8908871  0.5164149
+##  -1.220474  0.695180
 ## sample estimates:
 ##  mean of x 
-## -0.1872361</code></pre>
+## -0.2626469</code></pre>
 <p>Running this code, gives p-values greater than <span class="math inline">\(\alpha = 0.05\)</span>. Therefore, we fail to reject the <em>null hypothesis</em> that the weight change in the population of domestic cats is 0. As such, our data suggest that the cats have not changed weight.</p>
 <p>The <code>t.test</code> function can be expanded by using additional arguments or changing arguments as required. For example, we can performed a one-sided test.</p>
 <pre><code>t.test(x, y = NULL,
@@ -366,8 +366,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Suppose the <code>10</code> measures of change in cat weight were instead:</p>
 <div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="statistics.html#cb152-1"></a>x2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>)<span class="op">+</span><span class="dv">1</span></span>
 <span id="cb152-2"><a href="statistics.html#cb152-2"></a>x2</span></code></pre></div>
-<pre><code>##  [1]  2.0857363  0.6780518  1.0852906  1.0668843  2.2643001  0.4770086
-##  [7] -0.1032085  1.1945442  0.9807379 -0.8061158</code></pre>
+<pre><code>##  [1] -0.6792617  1.5619735 -0.6290650  0.4395193  1.0647586  2.0121288
+##  [7]  1.0947159  0.7931598 -0.6334250 -0.7538995</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>Using the code above to generate the example data, <code>x2</code>, perform a t-test with the <em>null hypothesis</em> that the change in weight of the cat population was 0.</p></li>
 <li><p>Perform a t-test with the <em>null hypothesis</em> that the cats in the sample, <code>x2</code> have lost weight.</p></li>
