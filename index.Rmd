@@ -45,7 +45,7 @@ The quantitative training program at MUNL was launched in BIOL 1001 in [Spring 2
 
 [BIOL 3295 - Population and Evolutionary Ecology](https://ahurford.github.io/BIOL-3295-Fall-2020/) 
 
-[BIOL 4650 - Conservation](https://jbaafi.github.io/BIOL4650-marine_conservation/)
+[BIOL 4650 - Conservation](https://ahurford.github.io/BIOL4650-marine_conservation/)
 
 [BIOL 4651 - Conservation GIS Module](https://nlboreal.github.io/ConservationGIS/)
 
