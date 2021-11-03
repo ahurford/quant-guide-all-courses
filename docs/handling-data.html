@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9 Handling data | Quantitative skills for biology</title>
   <meta name="description" content="9 Handling data | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9 Handling data | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -31,8 +31,8 @@
   
 <link rel="prev" href="data-entry.html"/>
 <link rel="next" href="graph.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,24 +48,24 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -118,6 +118,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,25 +157,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Quantitative skills for biology</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-links"><i class="fa fa-check"></i><b>1.1</b> Course links</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#instructor-guide"><i class="fa fa-check"></i><b>1.2</b> Instructor guide</a></li>
 </ul></li>
 <li><a href="part-i-introduction.html#part-i-introduction"><strong>PART I: INTRODUCTION</strong></a></li>
-<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a><ul>
-<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a><ul>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a>
+<ul>
 <li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rcloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a><ul>
+<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
-<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a><ul>
+<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a><ul>
+<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#files-tab"><i class="fa fa-check"></i>Files tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#plots-tab"><i class="fa fa-check"></i>Plots tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#packages-tab"><i class="fa fa-check"></i>Packages tab</a></li>
@@ -161,10 +189,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#viewer-tab"><i class="fa fa-check"></i>Viewer tab</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a><ul>
+<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="rintro.html"><a href="rintro.html#workflow"><i class="fa fa-check"></i><b>4.1</b> Workflow</a></li>
 <li class="chapter" data-level="4.2" data-path="rintro.html"><a href="rintro.html#working-directory"><i class="fa fa-check"></i><b>4.2</b> Working directory</a></li>
-<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a><ul>
+<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a>
+<ul>
 <li class="chapter" data-level="4.3.1" data-path="rintro.html"><a href="rintro.html#shortcuts"><i class="fa fa-check"></i><b>4.3.1</b> Shortcuts</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="rintro.html"><a href="rintro.html#using-variables"><i class="fa fa-check"></i><b>4.4</b> Using variables</a></li>
@@ -172,7 +202,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>4.6</b> Precedence</a></li>
 <li class="chapter" data-level="4.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>4.7</b> Mathematical functions</a></li>
 <li class="chapter" data-level="4.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>4.8</b> Data types</a></li>
-<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a><ul>
+<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a>
+<ul>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#lists"><i class="fa fa-check"></i>Lists</a></li>
@@ -180,7 +211,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>4.10</b> R Packages</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a><ul>
+<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>5.1</b> Using R help</a></li>
 <li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R “Cheatsheets”</a></li>
 <li class="chapter" data-level="5.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>5.3</b> R books</a></li>
@@ -188,7 +220,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5" data-path="help.html"><a href="help.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="howtoask.html"><a href="howtoask.html"><i class="fa fa-check"></i><b>6</b> How to ask for help</a></li>
-<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a><ul>
+<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="style.html"><a href="style.html#file-organization"><i class="fa fa-check"></i><b>7.1</b> File organization</a></li>
 <li class="chapter" data-level="7.2" data-path="style.html"><a href="style.html#comments-1"><i class="fa fa-check"></i><b>7.2</b> Comments</a></li>
 <li class="chapter" data-level="7.3" data-path="style.html"><a href="style.html#spacing"><i class="fa fa-check"></i><b>7.3</b> Spacing</a></li>
@@ -196,20 +229,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5" data-path="style.html"><a href="style.html#template"><i class="fa fa-check"></i><b>7.5</b> Template</a></li>
 <li class="chapter" data-level="7.6" data-path="style.html"><a href="style.html#checklist"><i class="fa fa-check"></i><b>7.6</b> Checklist</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a><ul>
+<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>8.1</b> Entering data</a></li>
-<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a><ul>
+<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data</a><ul>
-<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#base-r"><i class="fa fa-check"></i><b>9.1</b> Base R</a><ul>
+<li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#base-r"><i class="fa fa-check"></i><b>9.1</b> Base R</a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="handling-data.html"><a href="handling-data.html#useful-functions"><i class="fa fa-check"></i><b>9.1.1</b> Useful functions</a></li>
 <li class="chapter" data-level="9.1.2" data-path="handling-data.html"><a href="handling-data.html#extracting-rows-and-columns"><i class="fa fa-check"></i><b>9.1.2</b> Extracting rows and columns</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a><ul>
+<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a>
+<ul>
 <li class="chapter" data-level="9.2.1" data-path="handling-data.html"><a href="handling-data.html#selecting-a-column"><i class="fa fa-check"></i><b>9.2.1</b> Selecting a column</a></li>
 <li class="chapter" data-level="9.2.2" data-path="handling-data.html"><a href="handling-data.html#adding-a-new-column"><i class="fa fa-check"></i><b>9.2.2</b> Adding a new column</a></li>
 <li class="chapter" data-level="9.2.3" data-path="handling-data.html"><a href="handling-data.html#sorting-the-data"><i class="fa fa-check"></i><b>9.2.3</b> Sorting the data</a></li>
@@ -220,10 +258,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2.8" data-path="handling-data.html"><a href="handling-data.html#pipes"><i class="fa fa-check"></i><b>9.2.8</b> Pipes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a><ul>
+<li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a>
+<ul>
 <li class="chapter" data-level="10.1" data-path="graph.html"><a href="graph.html#making-graphs-in-r"><i class="fa fa-check"></i><b>10.1</b> Making graphs in R</a></li>
 <li class="chapter" data-level="10.2" data-path="graph.html"><a href="graph.html#scatter-plots-with-plotxy"><i class="fa fa-check"></i><b>10.2</b> Scatter plots with <code>plot(x,y)</code></a></li>
-<li class="chapter" data-level="10.3" data-path="graph.html"><a href="graph.html#axes"><i class="fa fa-check"></i><b>10.3</b> Adding axes labels and changing symbols</a><ul>
+<li class="chapter" data-level="10.3" data-path="graph.html"><a href="graph.html#axes"><i class="fa fa-check"></i><b>10.3</b> Adding axes labels and changing symbols</a>
+<ul>
 <li class="chapter" data-level="10.3.1" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>10.3.1</b> Getting a bit more sophisticated</a></li>
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>10.4</b> Line graphs</a></li>
@@ -231,21 +271,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.6" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>10.6</b> Exporting your graphs</a></li>
 <li class="chapter" data-level="10.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>10.7</b> pch cheatsheet</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>11</b> Statistics in R</a><ul>
+<li class="chapter" data-level="11" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>11</b> Statistics in R</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="statistics.html"><a href="statistics.html#comparing-two-means-of-a-population-or-samples-using-a-t-test"><i class="fa fa-check"></i><b>11.1</b> Comparing two means of a population or sample(s) using a t-test</a></li>
 <li class="chapter" data-level="11.2" data-path="statistics.html"><a href="statistics.html#types-of-tests"><i class="fa fa-check"></i><b>11.2</b> Types of tests</a></li>
 <li class="chapter" data-level="11.3" data-path="statistics.html"><a href="statistics.html#p-values-and-statistical-significance"><i class="fa fa-check"></i><b>11.3</b> p-values and statistical significance</a></li>
 <li class="chapter" data-level="11.4" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>11.4</b> t.test</a></li>
-<li class="chapter" data-level="11.5" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>11.5</b> Correlation</a><ul>
+<li class="chapter" data-level="11.5" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>11.5</b> Correlation</a>
+<ul>
 <li class="chapter" data-level="11.5.1" data-path="statistics.html"><a href="statistics.html#corxy"><i class="fa fa-check"></i><b>11.5.1</b> cor(x,y)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>12</b> Data and metadata</a><ul>
-<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>12.1</b> Data</a><ul>
+<li class="chapter" data-level="12" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>12</b> Data and metadata</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>12.1</b> Data</a>
+<ul>
 <li class="chapter" data-level="12.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>12.1.1</b> Data guidelines</a></li>
 <li class="chapter" data-level="12.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>12.1.2</b> Database structure guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>12.2</b> Metadata</a><ul>
+<li class="chapter" data-level="12.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>12.2</b> Metadata</a>
+<ul>
 <li class="chapter" data-level="12.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>12.2.1</b> Metadata guidelines</a></li>
 </ul></li>
 <li class="chapter" data-level="12.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>12.3</b> Further reading</a></li>
@@ -258,16 +303,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="17" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>17</b> Coding club at MUN</a></li>
 <li class="chapter" data-level="18" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>18</b> Contributions</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a><ul>
+<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a>
+<ul>
 <li class="chapter" data-level="A.1" data-path="faq.html"><a href="faq.html#download-and-installation-issues"><i class="fa fa-check"></i><b>A.1</b> Download and Installation Issues</a></li>
 <li class="chapter" data-level="A.2" data-path="faq.html"><a href="faq.html#computer-issues"><i class="fa fa-check"></i><b>A.2</b> Computer Issues</a></li>
 <li class="chapter" data-level="A.3" data-path="faq.html"><a href="faq.html#rstudio-error-messages"><i class="fa fa-check"></i><b>A.3</b> RStudio Error Messages</a></li>
 </ul></li>
 <li class="chapter" data-level="B" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>B</b> Glossary</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a><ul>
+<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a>
+<ul>
 <li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables</a></li>
-<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a><ul>
+<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
+<ul>
 <li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses</a></li>
 </ul></li>
 <li class="chapter" data-level="C.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-1"><i class="fa fa-check"></i><b>C.3</b> Further reading</a></li>
@@ -290,12 +338,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="handling-data" class="section level1">
+<div id="handling-data" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Handling data</h1>
 <p>Base R refers to functions that come with an installation of <code>R</code>, not those that are in packages that are must be installed. We will learn how to handle data both using the base R functions, and using the package <code>dplyr</code>.</p>
-<div id="base-r" class="section level2">
+<div id="base-r" class="section level2" number="9.1">
 <h2><span class="header-section-number">9.1</span> Base R</h2>
-<div id="useful-functions" class="section level3">
+<div id="useful-functions" class="section level3" number="9.1.1">
 <h3><span class="header-section-number">9.1.1</span> Useful functions</h3>
 <ul>
 <li><p><code>max()</code> outputs the maximum value in a vector (recall, a vector is a list of numbers, e.g., <code>c(0,2,5)</code>), matrix, or data frame;</p></li>
@@ -308,47 +356,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><code>tail()</code> similar to <code>head()</code> but prints the last 6 rows of the argument.</p></li>
 </ul>
 <p><strong>TRY IT!</strong> In the <code>Console</code> do some tests on these functions by creating a test matrix and a test data frame:</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="handling-data.html#cb61-1"></a>test =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">col1 =</span> <span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">2</span>), <span class="dt">col2 =</span> <span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">6</span>))</span>
-<span id="cb61-2"><a href="handling-data.html#cb61-2"></a>test2 =<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>),<span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">1</span>),<span class="dt">nrow=</span><span class="dv">2</span>)</span>
-<span id="cb61-3"><a href="handling-data.html#cb61-3"></a><span class="kw">mean</span>(test)</span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="handling-data.html#cb61-1" aria-hidden="true" tabindex="-1"></a>test <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">col1 =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>), <span class="at">col2 =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">6</span>))</span>
+<span id="cb61-2"><a href="handling-data.html#cb61-2" aria-hidden="true" tabindex="-1"></a>test2 <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>),<span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">1</span>),<span class="at">nrow=</span><span class="dv">2</span>)</span>
+<span id="cb61-3"><a href="handling-data.html#cb61-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(test)</span></code></pre></div>
 <pre><code>## Warning in mean.default(test): argument is not numeric or logical: returning NA</code></pre>
 <pre><code>## [1] NA</code></pre>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="handling-data.html#cb64-1"></a><span class="kw">colMeans</span>(test)</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="handling-data.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colMeans</span>(test)</span></code></pre></div>
 <pre><code>## col1 col2 
 ##  1.0  5.5</code></pre>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="handling-data.html#cb66-1"></a><span class="kw">mean</span>(test2)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="handling-data.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(test2)</span></code></pre></div>
 <pre><code>## [1] 2.5</code></pre>
-<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="handling-data.html#cb68-1"></a><span class="kw">colMeans</span>(test2)</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="handling-data.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colMeans</span>(test2)</span></code></pre></div>
 <pre><code>## [1] 2.5 2.5 2.5 2.5 2.5</code></pre>
 <p>Which command generates an error? Why? How is <code>mean()</code> different to <code>colMeans()</code>? Is the <code>length()</code>, when applied to a data frame or matrix, equal to the number of rows?</p>
 </div>
-<div id="extracting-rows-and-columns" class="section level3">
+<div id="extracting-rows-and-columns" class="section level3" number="9.1.2">
 <h3><span class="header-section-number">9.1.2</span> Extracting rows and columns</h3>
 <p>After we have loaded/imported our data we want to be able to work with it. Typical operations are to extract specific columns, rows, or values, and to add new columns and rows. Recall that <strong>columns</strong> run top to bottom, while <strong>rows</strong> run left to right.</p>
 <p>In addition, columns will sometimes have names:</p>
-<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="handling-data.html#cb70-1"></a><span class="kw">names</span>(data)</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="handling-data.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(data)</span></code></pre></div>
 <pre><code>## [1] &quot;site&quot;       &quot;experiment&quot; &quot;length&quot;     &quot;width&quot;      &quot;height&quot;</code></pre>
 <p>To extract a column, we use the symbol <code>$</code> followed by the name of the column (in this case <code>site</code>):</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="handling-data.html#cb72-1"></a>  data<span class="op">$</span>site</span></code></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="handling-data.html#cb72-1" aria-hidden="true" tabindex="-1"></a>  data<span class="sc">$</span>site</span></code></pre></div>
 <pre><code>##  [1] 1 1 1 2 2 2 3 3 3 4 4 4</code></pre>
 <p>If the columns do not have names you can specify the column you require by using <code>data[,n]</code>, where <code>n</code> is the number of column you require (beginning from the left). When no number precedes the <code>,n</code> this means <em>all rows</em>:</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="handling-data.html#cb74-1"></a>data[,<span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="handling-data.html#cb74-1" aria-hidden="true" tabindex="-1"></a>data[,<span class="dv">1</span>]</span></code></pre></div>
 <pre><code>##  [1] 1 1 1 2 2 2 3 3 3 4 4 4</code></pre>
 <p>To extract row <code>n</code>, and all the columns, we use <code>data[n,]</code>. Row 1 (all columns) is extracted as:</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="handling-data.html#cb76-1"></a>  data[<span class="dv">1</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="handling-data.html#cb76-1" aria-hidden="true" tabindex="-1"></a>  data[<span class="dv">1</span>,]</span></code></pre></div>
 <pre><code>##   site experiment length width height
 ## 1    1          1    2.2   1.3    9.6</code></pre>
 <p>If we want one specific value, <code>data[n,m]</code> returns the value in row <code>n</code> and column <code>m</code>:</p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="handling-data.html#cb78-1"></a>  data[<span class="dv">1</span>,<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="handling-data.html#cb78-1" aria-hidden="true" tabindex="-1"></a>  data[<span class="dv">1</span>,<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>Furthermore, <code>data[,n:m]</code> returns all the rows for columns <code>n</code> to <code>m</code>:</p>
-<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="handling-data.html#cb80-1"></a>  data[<span class="dv">2</span><span class="op">:</span><span class="dv">4</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="handling-data.html#cb80-1" aria-hidden="true" tabindex="-1"></a>  data[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>,]</span></code></pre></div>
 <pre><code>##   site experiment length width height
 ## 2    1          2    2.1   2.2    7.6
 ## 3    1          3    2.7   1.5    2.2
 ## 4    2          1    3.0   4.5    1.5</code></pre>
 <p>while <code>data[n:m,]</code> returns all the columns for rows <code>n</code> to <code>m</code>:</p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="handling-data.html#cb82-1"></a>  data[,<span class="dv">2</span><span class="op">:</span><span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="handling-data.html#cb82-1" aria-hidden="true" tabindex="-1"></a>  data[,<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>]</span></code></pre></div>
 <pre><code>##    experiment length
 ## 1           1    2.2
 ## 2           2    2.1
@@ -366,14 +414,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This are simple commands to work with data, but as data scientists frequently want to work with data in this way, the <code>dplyr</code> package was created to handle data more efficiently.</p>
 </div>
 </div>
-<div id="dplyr" class="section level2">
+<div id="dplyr" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> dplyr</h2>
 <p>We recommend using <code>dplyr</code> to handle data as the commands are concise, making the code easier to read and write. <a href="https://ahurford.github.io/quant-guide-all-courses/rintro.html#r-packages">Install and load</a> the <code>dplyr</code> R package.</p>
 <p>The <code>dplyr</code> package contains several different function that are very useful when manipulating and cleaning large datasets. We will be highlighting the use of the <code>select()</code>, <code>mutate()</code>, <code>length()</code>, <code>arrange()</code>, and <code>filter()</code>.</p>
-<div id="selecting-a-column" class="section level3">
+<div id="selecting-a-column" class="section level3" number="9.2.1">
 <h3><span class="header-section-number">9.2.1</span> Selecting a column</h3>
 <p>The command <code>select(data, length)</code> selects the <code>length</code> column of the dataframe <code>data</code>:</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="handling-data.html#cb84-1"></a><span class="kw">select</span>(data, length)</span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="handling-data.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(data, length)</span></code></pre></div>
 <pre><code>##    length
 ## 1     2.2
 ## 2     2.1
@@ -389,16 +437,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 12    1.2</code></pre>
 <p>This achieves the same result as the <code>data$length</code> command we learned in the previous section.</p>
 </div>
-<div id="adding-a-new-column" class="section level3">
+<div id="adding-a-new-column" class="section level3" number="9.2.2">
 <h3><span class="header-section-number">9.2.2</span> Adding a new column</h3>
 <p>There are several different methods to add new columns to a data set in R, but when using the <code>dplyr</code> package, the function <code>mutate()</code> is appropriate. Below we create a new column called <code>site_double</code> that is equal to the <code>site</code> column times 2.</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="handling-data.html#cb86-1"></a>data2 =<span class="st"> </span><span class="kw">mutate</span>(data, <span class="dt">site_double =</span> site <span class="op">*</span><span class="st"> </span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="handling-data.html#cb86-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="ot">=</span> <span class="fu">mutate</span>(data, <span class="at">site_double =</span> site <span class="sc">*</span> <span class="dv">2</span>)</span></code></pre></div>
 <p>We can see that <code>data2</code> has a new column called <code>site_double</code>.</p>
 </div>
-<div id="sorting-the-data" class="section level3">
+<div id="sorting-the-data" class="section level3" number="9.2.3">
 <h3><span class="header-section-number">9.2.3</span> Sorting the data</h3>
 <p>The <code>arrange()</code> function orders the rows of a data frame by the values in a specific column. Below we arrange <code>data</code> by increasing order of the <code>width</code> column.:</p>
-<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="handling-data.html#cb87-1"></a><span class="kw">arrange</span>(data, width)</span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="handling-data.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(data, width)</span></code></pre></div>
 <pre><code>##    site experiment length width height
 ## 1     3          2    1.1   0.5    2.3
 ## 2     1          1    2.2   1.3    9.6
@@ -413,19 +461,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 11    4          2    4.5   4.8    6.5
 ## 12    4          3    1.2    NA    2.7</code></pre>
 </div>
-<div id="filtering-data" class="section level3">
+<div id="filtering-data" class="section level3" number="9.2.4">
 <h3><span class="header-section-number">9.2.4</span> Filtering data</h3>
 <p>The <code>filter()</code> function is used to subset a data frame, retaining all rows that satisfy your conditions. For a row to be retained, <code>TRUE</code> must be produced for all conditions. To extract all rows of <code>data</code> with length greater than 7 cm:</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="handling-data.html#cb89-1"></a><span class="kw">filter</span>(data, height <span class="op">&gt;</span><span class="st"> </span><span class="dv">7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="handling-data.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, height <span class="sc">&gt;</span> <span class="dv">7</span>)</span></code></pre></div>
 <pre><code>##   site experiment length width height
 ## 1    1          1    2.2   1.3    9.6
 ## 2    1          2    2.1   2.2    7.6
 ## 3    3          3    3.5   2.0    7.5</code></pre>
 <p>We can also filter with two (or more) conditions. We use <code>&amp;</code> (meaning <em>and</em>) if we require <em>both</em> conditions to be satisfied, or <code>|</code> (meaning <em>or</em>) if we require <em>at least one</em> condition is satisfied. Below, we filter the <code>data</code> so that <code>data3</code> contains only plants that have length greater than 8 cm and width greater than 5 cm.</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="handling-data.html#cb91-1"></a>data3=<span class="kw">filter</span>(data, height <span class="op">&gt;</span><span class="dv">8</span> <span class="op">&amp;</span><span class="st"> </span>width <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="handling-data.html#cb91-1" aria-hidden="true" tabindex="-1"></a>data3<span class="ot">=</span><span class="fu">filter</span>(data, height <span class="sc">&gt;</span><span class="dv">8</span> <span class="sc">&amp;</span> width <span class="sc">&gt;</span> <span class="dv">5</span>)</span></code></pre></div>
 <p>However, no plants met both conditions so <code>data3</code> is empty.</p>
 <p>We can filter to retain plants from Site 1 or Site 3:</p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="handling-data.html#cb92-1"></a><span class="kw">filter</span>(data, site <span class="op">==</span><span class="st"> </span><span class="dv">1</span> <span class="op">|</span>site <span class="op">==</span><span class="st"> </span><span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="handling-data.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, site <span class="sc">==</span> <span class="dv">1</span> <span class="sc">|</span>site <span class="sc">==</span> <span class="dv">3</span>)</span></code></pre></div>
 <pre><code>##   site experiment length width height
 ## 1    1          1    2.2   1.3    9.6
 ## 2    1          2    2.1   2.2    7.6
@@ -434,21 +482,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5    3          2    1.1   0.5    2.3
 ## 6    3          3    3.5   2.0    7.5</code></pre>
 <p>In R, <code>==</code> evaluates whether something is <code>TRUE</code> or <code>FALSE</code>, while <code>=</code> assigns the value on the right hand side to the variable on the left hand side. <strong>TRY IT</strong> In the <code>Console</code> try the following:</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="handling-data.html#cb94-1"></a><span class="co"># Assigns x the value 0</span></span>
-<span id="cb94-2"><a href="handling-data.html#cb94-2"></a>x =<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb94-3"><a href="handling-data.html#cb94-3"></a><span class="co"># Evaluates TRUE if x = 0 (TRUE since we assigned x=0 on the above line of code)</span></span>
-<span id="cb94-4"><a href="handling-data.html#cb94-4"></a>x <span class="op">==</span><span class="st"> </span><span class="dv">0</span></span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="handling-data.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assigns x the value 0</span></span>
+<span id="cb94-2"><a href="handling-data.html#cb94-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb94-3"><a href="handling-data.html#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Evaluates TRUE if x = 0 (TRUE since we assigned x=0 on the above line of code)</span></span>
+<span id="cb94-4"><a href="handling-data.html#cb94-4" aria-hidden="true" tabindex="-1"></a>x <span class="sc">==</span> <span class="dv">0</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="handling-data.html#cb96-1"></a><span class="co"># Evalues TRUE if x = 1 (FALSE since we assigned x=0 on the first line of code)</span></span>
-<span id="cb96-2"><a href="handling-data.html#cb96-2"></a>x <span class="op">==</span><span class="st"> </span><span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="handling-data.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Evalues TRUE if x = 1 (FALSE since we assigned x=0 on the first line of code)</span></span>
+<span id="cb96-2"><a href="handling-data.html#cb96-2" aria-hidden="true" tabindex="-1"></a>x <span class="sc">==</span> <span class="dv">1</span></span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 <p>Therefore, when we write <code>site == 1</code>, <code>TRUE</code> is returned when the value of <code>site</code> is <code>1</code>, and these rows are retained in the output. If we wrote <code>site = 1</code>, then <code>R</code> would try to assign the variable <code>site</code> with the value <code>1</code>, which would return an error message since the second argument of the <code>filter()</code> function requires a logical statement that evaluates as <code>TRUE</code> or <code>FALSE</code> and <code>site = 1</code> assigns a value; it is not a logical statement.</p>
 </div>
-<div id="removing-na-entries-in-data" class="section level3">
+<div id="removing-na-entries-in-data" class="section level3" number="9.2.5">
 <h3><span class="header-section-number">9.2.5</span> Removing NA entries in data</h3>
 <p>Often experimental data is not as neat or pretty as example data. There is often missing data, or empty or <code>NA</code> entries which may cause issues in graphing or data analysis. <code>R</code> does not allow empty values, so empty values in <code>.csv</code> or <code>.xlsx</code> files are often converted to <code>NA</code> when these data are uploaded into <code>R</code>. Luckily, again the <code>filter</code> function has a solution to this! We can filter the data to remove rows with <code>NULL</code> or <code>NA</code> entries.</p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="handling-data.html#cb98-1"></a><span class="co">#filter the data to remove rows with null values in the height column</span></span>
-<span id="cb98-2"><a href="handling-data.html#cb98-2"></a><span class="kw">filter</span>(data, <span class="op">!</span><span class="kw">is.na</span>(width))</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="handling-data.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filter the data to remove rows with null values in the height column</span></span>
+<span id="cb98-2"><a href="handling-data.html#cb98-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, <span class="sc">!</span><span class="fu">is.na</span>(width))</span></code></pre></div>
 <pre><code>##    site experiment length width height
 ## 1     1          1    2.2   1.3    9.6
 ## 2     1          2    2.1   2.2    7.6
@@ -462,18 +510,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 10    4          1    2.9   2.7    3.2
 ## 11    4          2    4.5   4.8    6.5</code></pre>
 <p>Observe that row 12 of <code>data</code> has now been removed because it contained <code>NA</code> in the <code>width</code> column. To understand this command, note that <code>is.na(x)</code> returns <code>TRUE</code> if <code>x = NA</code>. The <code>!</code> means ‘not’ and reverses the <code>TRUE</code> and <code>FALSE</code> outputs. We illustrate <code>!</code> below:</p>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="handling-data.html#cb100-1"></a><span class="co"># 1 equal to 2 (FALSE)</span></span>
-<span id="cb100-2"><a href="handling-data.html#cb100-2"></a><span class="dv">1</span> <span class="op">==</span><span class="st"> </span><span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="handling-data.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 equal to 2 (FALSE)</span></span>
+<span id="cb100-2"><a href="handling-data.html#cb100-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">==</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="handling-data.html#cb102-1"></a><span class="co"># 1 is not equal to 2 (TRUE)</span></span>
-<span id="cb102-2"><a href="handling-data.html#cb102-2"></a><span class="dv">1</span> <span class="op">!=</span><span class="st"> </span><span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="handling-data.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 is not equal to 2 (TRUE)</span></span>
+<span id="cb102-2"><a href="handling-data.html#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">!=</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <p>Recall, that <code>filter()</code> retains the rows that evaluate as <code>TRUE</code>: we wish to remove the rows with <code>NA</code>, so we need to write a command that evaluates these to <code>FALSE</code>. Therefore, we use <code>!is.na()</code>.</p>
 </div>
-<div id="grouping" class="section level3">
+<div id="grouping" class="section level3" number="9.2.6">
 <h3><span class="header-section-number">9.2.6</span> Grouping</h3>
 <p>The function<code>group_by()</code> can be used with <code>summarize()</code> and <code>tally()</code>. Recall that our data consists of different sites:</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="handling-data.html#cb104-1"></a><span class="kw">head</span>(data)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="handling-data.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code></pre></div>
 <pre><code>##   site experiment length width height
 ## 1    1          1    2.2   1.3    9.6
 ## 2    1          2    2.1   2.2    7.6
@@ -482,9 +530,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5    2          2    3.1   3.1    4.0
 ## 6    2          3    2.5   2.8    3.0</code></pre>
 <p>The code below calculates the mean <code>length</code> for each <code>site</code> (because we group <code>data</code> by <code>site</code>):</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="handling-data.html#cb106-1"></a>by_site &lt;-<span class="st"> </span><span class="kw">group_by</span>(data,site)</span>
-<span id="cb106-2"><a href="handling-data.html#cb106-2"></a>data2 &lt;-<span class="st"> </span><span class="kw">summarize</span>(by_site,<span class="dt">length=</span><span class="kw">mean</span>(length))</span>
-<span id="cb106-3"><a href="handling-data.html#cb106-3"></a><span class="kw">print</span>(data2)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="handling-data.html#cb106-1" aria-hidden="true" tabindex="-1"></a>by_site <span class="ot">&lt;-</span> <span class="fu">group_by</span>(data,site)</span>
+<span id="cb106-2"><a href="handling-data.html#cb106-2" aria-hidden="true" tabindex="-1"></a>data2 <span class="ot">&lt;-</span> <span class="fu">summarize</span>(by_site,<span class="at">length=</span><span class="fu">mean</span>(length))</span>
+<span id="cb106-3"><a href="handling-data.html#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(data2)</span></code></pre></div>
 <pre><code>## # A tibble: 4 x 2
 ##    site length
 ##   &lt;int&gt;  &lt;dbl&gt;
@@ -493,8 +541,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 3     3   2.17
 ## 4     4   2.87</code></pre>
 <p>Applying the function <code>group_by()</code> doesn’t make the data noticeably different aside from noting the grouping:</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="handling-data.html#cb108-1"></a>by_site &lt;-<span class="st"> </span><span class="kw">group_by</span>(data,site)</span>
-<span id="cb108-2"><a href="handling-data.html#cb108-2"></a><span class="kw">head</span>(<span class="kw">print</span>(by_site))</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="handling-data.html#cb108-1" aria-hidden="true" tabindex="-1"></a>by_site <span class="ot">&lt;-</span> <span class="fu">group_by</span>(data,site)</span>
+<span id="cb108-2"><a href="handling-data.html#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">print</span>(by_site))</span></code></pre></div>
 <pre><code>## # A tibble: 12 x 5
 ## # Groups:   site [4]
 ##     site experiment length width height
@@ -522,7 +570,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5     2          2    3.1   3.1    4  
 ## 6     2          3    2.5   2.8    3</code></pre>
 <p>The first argument, <code>x</code>, of <code>summarize(x,y)</code> is the grouped data, and the second argument, <code>y</code>, has the structure <code>name of the new column</code> = <code>function to be applied to(column of grouped data)</code>. Recalling that the function <a href="https://ahurford.github.io/quant-guide-all-courses/handling-data.html#useful-functions"><code>min()</code></a> calculates the minimum of its argument, we might also calculate the minimum width for each of the sites:</p>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="handling-data.html#cb111-1"></a><span class="kw">summarize</span>(by_site, <span class="dt">min.width =</span> <span class="kw">min</span>(width))</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="handling-data.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(by_site, <span class="at">min.width =</span> <span class="fu">min</span>(width))</span></code></pre></div>
 <pre><code>## # A tibble: 4 x 2
 ##    site min.width
 ##   &lt;int&gt;     &lt;dbl&gt;
@@ -531,7 +579,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 3     3       0.5
 ## 4     4      NA</code></pre>
 <p>The function <code>tally()</code> counts the number of records in each group.</p>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="handling-data.html#cb113-1"></a><span class="kw">tally</span>(by_site)</span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="handling-data.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tally</span>(by_site)</span></code></pre></div>
 <pre><code>## # A tibble: 4 x 2
 ##    site     n
 ##   &lt;int&gt; &lt;int&gt;
@@ -540,7 +588,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 3     3     3
 ## 4     4     3</code></pre>
 <p>Equivalently, we could apply the function <code>length()</code> using <code>summarize()</code>:</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="handling-data.html#cb115-1"></a><span class="kw">summarize</span>(by_site,<span class="dt">n=</span><span class="kw">length</span>(site))</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="handling-data.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summarize</span>(by_site,<span class="at">n=</span><span class="fu">length</span>(site))</span></code></pre></div>
 <pre><code>## # A tibble: 4 x 2
 ##    site     n
 ##   &lt;int&gt; &lt;int&gt;
@@ -549,18 +597,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 3     3     3
 ## 4     4     3</code></pre>
 </div>
-<div id="joining" class="section level3">
+<div id="joining" class="section level3" number="9.2.7">
 <h3><span class="header-section-number">9.2.7</span> Joining</h3>
 <p>A good description of joining data sets using <code>inner_join()</code> is provided <a href="https://stat545.com/join-cheatsheet.html">here</a>.</p>
 </div>
-<div id="pipes" class="section level3">
+<div id="pipes" class="section level3" number="9.2.8">
 <h3><span class="header-section-number">9.2.8</span> Pipes</h3>
 <p>The pipe function, <code>%&gt;%</code>, allows for compact coding when the output on the lefthand size of <code>%&gt;%</code> is the input for the calculations performed on the righthand size of <code>%&gt;%</code>. Consider:</p>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="handling-data.html#cb117-1"></a>data2 &lt;-<span class="st"> </span>data <span class="op">%&gt;%</span></span>
-<span id="cb117-2"><a href="handling-data.html#cb117-2"></a><span class="st">         </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(width)) <span class="op">%&gt;%</span></span>
-<span id="cb117-3"><a href="handling-data.html#cb117-3"></a><span class="st">         </span><span class="kw">mutate</span>(<span class="dt">height_cm=</span>height<span class="op">*</span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
-<span id="cb117-4"><a href="handling-data.html#cb117-4"></a><span class="st">         </span><span class="kw">select</span>(site, experiment, height_cm)</span>
-<span id="cb117-5"><a href="handling-data.html#cb117-5"></a><span class="kw">head</span>(data2)</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="handling-data.html#cb117-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb117-2"><a href="handling-data.html#cb117-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(width)) <span class="sc">%&gt;%</span></span>
+<span id="cb117-3"><a href="handling-data.html#cb117-3" aria-hidden="true" tabindex="-1"></a>         <span class="fu">mutate</span>(<span class="at">height_cm=</span>height<span class="sc">*</span><span class="dv">100</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb117-4"><a href="handling-data.html#cb117-4" aria-hidden="true" tabindex="-1"></a>         <span class="fu">select</span>(site, experiment, height_cm)</span>
+<span id="cb117-5"><a href="handling-data.html#cb117-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data2)</span></code></pre></div>
 <pre><code>##   site experiment height_cm
 ## 1    1          1       960
 ## 2    1          2       760
@@ -578,10 +626,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Note that the pipes will not work if the output of one operation is of the wrong type to be the input to the next operation.</p>
 <p>To understand the value of pipes, consider the equivalent code written without using pipes:</p>
-<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="handling-data.html#cb119-1"></a>data2 &lt;-<span class="st"> </span><span class="kw">filter</span>(data,<span class="op">!</span><span class="kw">is.na</span>(width))</span>
-<span id="cb119-2"><a href="handling-data.html#cb119-2"></a>data3 &lt;-<span class="st"> </span><span class="kw">mutate</span>(data2,<span class="dt">height_cm=</span>height<span class="op">*</span><span class="dv">100</span>)</span>
-<span id="cb119-3"><a href="handling-data.html#cb119-3"></a>data4 &lt;-<span class="st"> </span><span class="kw">select</span>(data3, site, experiment, height_cm)</span>
-<span id="cb119-4"><a href="handling-data.html#cb119-4"></a><span class="kw">head</span>(data4)</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="handling-data.html#cb119-1" aria-hidden="true" tabindex="-1"></a>data2 <span class="ot">&lt;-</span> <span class="fu">filter</span>(data,<span class="sc">!</span><span class="fu">is.na</span>(width))</span>
+<span id="cb119-2"><a href="handling-data.html#cb119-2" aria-hidden="true" tabindex="-1"></a>data3 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(data2,<span class="at">height_cm=</span>height<span class="sc">*</span><span class="dv">100</span>)</span>
+<span id="cb119-3"><a href="handling-data.html#cb119-3" aria-hidden="true" tabindex="-1"></a>data4 <span class="ot">&lt;-</span> <span class="fu">select</span>(data3, site, experiment, height_cm)</span>
+<span id="cb119-4"><a href="handling-data.html#cb119-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data4)</span></code></pre></div>
 <pre><code>##   site experiment height_cm
 ## 1    1          1       960
 ## 2    1          2       760
@@ -604,6 +652,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -643,10 +692,6 @@ gitbook.start({
 "text": null
 },
 "download": ["quant-guide.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
 "toc": {
 "collapse": "subsection"
 }

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11 Statistics in R | Quantitative skills for biology</title>
   <meta name="description" content="11 Statistics in R | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11 Statistics in R | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -31,8 +31,8 @@
   
 <link rel="prev" href="graph.html"/>
 <link rel="next" href="data.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,24 +48,24 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -118,6 +118,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,25 +157,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Quantitative skills for biology</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-links"><i class="fa fa-check"></i><b>1.1</b> Course links</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#instructor-guide"><i class="fa fa-check"></i><b>1.2</b> Instructor guide</a></li>
 </ul></li>
 <li><a href="part-i-introduction.html#part-i-introduction"><strong>PART I: INTRODUCTION</strong></a></li>
-<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a><ul>
-<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a><ul>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a>
+<ul>
 <li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rcloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a><ul>
+<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
-<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a><ul>
+<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a><ul>
+<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#files-tab"><i class="fa fa-check"></i>Files tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#plots-tab"><i class="fa fa-check"></i>Plots tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#packages-tab"><i class="fa fa-check"></i>Packages tab</a></li>
@@ -161,10 +189,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#viewer-tab"><i class="fa fa-check"></i>Viewer tab</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a><ul>
+<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="rintro.html"><a href="rintro.html#workflow"><i class="fa fa-check"></i><b>4.1</b> Workflow</a></li>
 <li class="chapter" data-level="4.2" data-path="rintro.html"><a href="rintro.html#working-directory"><i class="fa fa-check"></i><b>4.2</b> Working directory</a></li>
-<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a><ul>
+<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a>
+<ul>
 <li class="chapter" data-level="4.3.1" data-path="rintro.html"><a href="rintro.html#shortcuts"><i class="fa fa-check"></i><b>4.3.1</b> Shortcuts</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="rintro.html"><a href="rintro.html#using-variables"><i class="fa fa-check"></i><b>4.4</b> Using variables</a></li>
@@ -172,7 +202,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>4.6</b> Precedence</a></li>
 <li class="chapter" data-level="4.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>4.7</b> Mathematical functions</a></li>
 <li class="chapter" data-level="4.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>4.8</b> Data types</a></li>
-<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a><ul>
+<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a>
+<ul>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#lists"><i class="fa fa-check"></i>Lists</a></li>
@@ -180,7 +211,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>4.10</b> R Packages</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a><ul>
+<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>5.1</b> Using R help</a></li>
 <li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R “Cheatsheets”</a></li>
 <li class="chapter" data-level="5.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>5.3</b> R books</a></li>
@@ -188,7 +220,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5" data-path="help.html"><a href="help.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="howtoask.html"><a href="howtoask.html"><i class="fa fa-check"></i><b>6</b> How to ask for help</a></li>
-<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a><ul>
+<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="style.html"><a href="style.html#file-organization"><i class="fa fa-check"></i><b>7.1</b> File organization</a></li>
 <li class="chapter" data-level="7.2" data-path="style.html"><a href="style.html#comments-1"><i class="fa fa-check"></i><b>7.2</b> Comments</a></li>
 <li class="chapter" data-level="7.3" data-path="style.html"><a href="style.html#spacing"><i class="fa fa-check"></i><b>7.3</b> Spacing</a></li>
@@ -196,20 +229,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5" data-path="style.html"><a href="style.html#template"><i class="fa fa-check"></i><b>7.5</b> Template</a></li>
 <li class="chapter" data-level="7.6" data-path="style.html"><a href="style.html#checklist"><i class="fa fa-check"></i><b>7.6</b> Checklist</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a><ul>
+<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>8.1</b> Entering data</a></li>
-<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a><ul>
+<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data</a><ul>
-<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#base-r"><i class="fa fa-check"></i><b>9.1</b> Base R</a><ul>
+<li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#base-r"><i class="fa fa-check"></i><b>9.1</b> Base R</a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="handling-data.html"><a href="handling-data.html#useful-functions"><i class="fa fa-check"></i><b>9.1.1</b> Useful functions</a></li>
 <li class="chapter" data-level="9.1.2" data-path="handling-data.html"><a href="handling-data.html#extracting-rows-and-columns"><i class="fa fa-check"></i><b>9.1.2</b> Extracting rows and columns</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a><ul>
+<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a>
+<ul>
 <li class="chapter" data-level="9.2.1" data-path="handling-data.html"><a href="handling-data.html#selecting-a-column"><i class="fa fa-check"></i><b>9.2.1</b> Selecting a column</a></li>
 <li class="chapter" data-level="9.2.2" data-path="handling-data.html"><a href="handling-data.html#adding-a-new-column"><i class="fa fa-check"></i><b>9.2.2</b> Adding a new column</a></li>
 <li class="chapter" data-level="9.2.3" data-path="handling-data.html"><a href="handling-data.html#sorting-the-data"><i class="fa fa-check"></i><b>9.2.3</b> Sorting the data</a></li>
@@ -220,10 +258,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2.8" data-path="handling-data.html"><a href="handling-data.html#pipes"><i class="fa fa-check"></i><b>9.2.8</b> Pipes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a><ul>
+<li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a>
+<ul>
 <li class="chapter" data-level="10.1" data-path="graph.html"><a href="graph.html#making-graphs-in-r"><i class="fa fa-check"></i><b>10.1</b> Making graphs in R</a></li>
 <li class="chapter" data-level="10.2" data-path="graph.html"><a href="graph.html#scatter-plots-with-plotxy"><i class="fa fa-check"></i><b>10.2</b> Scatter plots with <code>plot(x,y)</code></a></li>
-<li class="chapter" data-level="10.3" data-path="graph.html"><a href="graph.html#axes"><i class="fa fa-check"></i><b>10.3</b> Adding axes labels and changing symbols</a><ul>
+<li class="chapter" data-level="10.3" data-path="graph.html"><a href="graph.html#axes"><i class="fa fa-check"></i><b>10.3</b> Adding axes labels and changing symbols</a>
+<ul>
 <li class="chapter" data-level="10.3.1" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>10.3.1</b> Getting a bit more sophisticated</a></li>
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>10.4</b> Line graphs</a></li>
@@ -231,21 +271,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.6" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>10.6</b> Exporting your graphs</a></li>
 <li class="chapter" data-level="10.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>10.7</b> pch cheatsheet</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>11</b> Statistics in R</a><ul>
+<li class="chapter" data-level="11" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>11</b> Statistics in R</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="statistics.html"><a href="statistics.html#comparing-two-means-of-a-population-or-samples-using-a-t-test"><i class="fa fa-check"></i><b>11.1</b> Comparing two means of a population or sample(s) using a t-test</a></li>
 <li class="chapter" data-level="11.2" data-path="statistics.html"><a href="statistics.html#types-of-tests"><i class="fa fa-check"></i><b>11.2</b> Types of tests</a></li>
 <li class="chapter" data-level="11.3" data-path="statistics.html"><a href="statistics.html#p-values-and-statistical-significance"><i class="fa fa-check"></i><b>11.3</b> p-values and statistical significance</a></li>
 <li class="chapter" data-level="11.4" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>11.4</b> t.test</a></li>
-<li class="chapter" data-level="11.5" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>11.5</b> Correlation</a><ul>
+<li class="chapter" data-level="11.5" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>11.5</b> Correlation</a>
+<ul>
 <li class="chapter" data-level="11.5.1" data-path="statistics.html"><a href="statistics.html#corxy"><i class="fa fa-check"></i><b>11.5.1</b> cor(x,y)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>12</b> Data and metadata</a><ul>
-<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>12.1</b> Data</a><ul>
+<li class="chapter" data-level="12" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>12</b> Data and metadata</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>12.1</b> Data</a>
+<ul>
 <li class="chapter" data-level="12.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>12.1.1</b> Data guidelines</a></li>
 <li class="chapter" data-level="12.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>12.1.2</b> Database structure guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>12.2</b> Metadata</a><ul>
+<li class="chapter" data-level="12.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>12.2</b> Metadata</a>
+<ul>
 <li class="chapter" data-level="12.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>12.2.1</b> Metadata guidelines</a></li>
 </ul></li>
 <li class="chapter" data-level="12.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>12.3</b> Further reading</a></li>
@@ -258,16 +303,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="17" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>17</b> Coding club at MUN</a></li>
 <li class="chapter" data-level="18" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>18</b> Contributions</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a><ul>
+<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a>
+<ul>
 <li class="chapter" data-level="A.1" data-path="faq.html"><a href="faq.html#download-and-installation-issues"><i class="fa fa-check"></i><b>A.1</b> Download and Installation Issues</a></li>
 <li class="chapter" data-level="A.2" data-path="faq.html"><a href="faq.html#computer-issues"><i class="fa fa-check"></i><b>A.2</b> Computer Issues</a></li>
 <li class="chapter" data-level="A.3" data-path="faq.html"><a href="faq.html#rstudio-error-messages"><i class="fa fa-check"></i><b>A.3</b> RStudio Error Messages</a></li>
 </ul></li>
 <li class="chapter" data-level="B" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>B</b> Glossary</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a><ul>
+<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a>
+<ul>
 <li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables</a></li>
-<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a><ul>
+<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
+<ul>
 <li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses</a></li>
 </ul></li>
 <li class="chapter" data-level="C.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-1"><i class="fa fa-check"></i><b>C.3</b> Further reading</a></li>
@@ -290,16 +338,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="statistics" class="section level1">
+<div id="statistics" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> Statistics in R</h1>
 <p>This section demonstrates, and gives a brief description of, some functions to perform statistical analyses.</p>
-<div id="comparing-two-means-of-a-population-or-samples-using-a-t-test" class="section level2">
+<div id="comparing-two-means-of-a-population-or-samples-using-a-t-test" class="section level2" number="11.1">
 <h2><span class="header-section-number">11.1</span> Comparing two means of a population or sample(s) using a t-test</h2>
 <p>Consider two hypotheses: the <em>null hypothesis</em>, <span class="math inline">\(H_0\)</span>, and the <em>alternative hypothesis</em>, <span class="math inline">\(H_1\)</span>. We are interested in testing if the mean of a sample <code>x</code> is equal to the mean of a population (or sample) <code>y</code>. The <em>null hypothesis</em> and <em>alternative hypothesis</em> are:</p>
 <p><span class="math inline">\(H_0: \mu_x = \mu_y\)</span></p>
 <p><span class="math inline">\(H_1: \mu_x \neq \mu_y\)</span></p>
 </div>
-<div id="types-of-tests" class="section level2">
+<div id="types-of-tests" class="section level2" number="11.2">
 <h2><span class="header-section-number">11.2</span> Types of tests</h2>
 <p>Depending on what you want to test, there are different names for different types of tests.</p>
 <p><strong>Two-sided tests (not equal to):</strong></p>
@@ -313,34 +361,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math inline">\(H_0: \mu_x \leq \mu_y\)</span></p>
 <p><span class="math inline">\(H_1: \mu_x &gt; \mu_y\)</span></p>
 </div>
-<div id="p-values-and-statistical-significance" class="section level2">
+<div id="p-values-and-statistical-significance" class="section level2" number="11.3">
 <h2><span class="header-section-number">11.3</span> p-values and statistical significance</h2>
 <p>The p-value is a measure of the probability that an observed difference could have occurred just by random chance. The smaller the p-value is, the less likely the difference is due to chance.</p>
 <p>The significance value, <span class="math inline">\(\alpha\)</span> (alpha), will determine the threshold p-value for rejecting our <em>null hypothesis</em> when it is actually true. A significance level of <span class="math inline">\(\alpha=0.05\)</span> is often used.</p>
 </div>
-<div id="t.test" class="section level2">
+<div id="t.test" class="section level2" number="11.4">
 <h2><span class="header-section-number">11.4</span> t.test</h2>
 <p>We use a t-test to compare two means. For example, suppose <code>x</code> is the change in weight of <code>10</code> domestic cats weighted one week apart. We will test if we can reject the <em>null hypothesis</em> that the mean of the sample, <code>mean(x)</code>, is equal to <code>0</code> (the hypothesized mean value in the population of domestic cats). Our two hypothesis are:</p>
 <p><span class="math inline">\(H_0: \mu = 0\)</span></p>
 <p><span class="math inline">\(H_1: \mu \neq 0\)</span></p>
 <p>Below, we generate some example data, <code>x</code>, to illustrate how to perform a <code>t.test</code> (when performing your analysis, this step is replaced with the step of loading or entering your data, i.e., see Chapter <a href="data-entry.html#data-entry">8</a>).</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="statistics.html#cb147-1"></a>x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb147-2"><a href="statistics.html#cb147-2"></a>x</span></code></pre></div>
-<pre><code>##  [1]  0.34795586  0.05536320 -0.71517360  1.04615559 -0.08238968  1.18208656
-##  [7] -3.34563317 -1.49803354 -0.10836188  0.49156142</code></pre>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="statistics.html#cb147-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb147-2"><a href="statistics.html#cb147-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1]  0.9475883  0.4210132  1.1039640 -0.3173125 -0.7204303 -0.2260405
+##  [7]  1.4817847 -0.2589304 -1.0347315 -0.2829639</code></pre>
 <p>Before running the analysis, we decide to set <span class="math inline">\(\alpha = 0.05\)</span>. Perform the test:</p>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="statistics.html#cb149-1"></a><span class="kw">t.test</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="statistics.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
 ## data:  x
-## t = -0.62031, df = 9, p-value = 0.5504
+## t = 0.42257, df = 9, p-value = 0.6825
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  -1.220474  0.695180
+##  -0.4849320  0.7077202
 ## sample estimates:
-##  mean of x 
-## -0.2626469</code></pre>
+## mean of x 
+## 0.1113941</code></pre>
 <p>Running this code, gives p-values greater than <span class="math inline">\(\alpha = 0.05\)</span>. Therefore, we fail to reject the <em>null hypothesis</em> that the weight change in the population of domestic cats is 0. As such, our data suggest that the cats have not changed weight.</p>
 <p>The <code>t.test</code> function can be expanded by using additional arguments or changing arguments as required. For example, we can performed a one-sided test.</p>
 <pre><code>t.test(x, y = NULL,
@@ -364,10 +412,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="questions" class="section level4 unnumbered">
 <h4>Questions</h4>
 <p>Suppose the <code>10</code> measures of change in cat weight were instead:</p>
-<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="statistics.html#cb152-1"></a>x2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>)<span class="op">+</span><span class="dv">1</span></span>
-<span id="cb152-2"><a href="statistics.html#cb152-2"></a>x2</span></code></pre></div>
-<pre><code>##  [1] -0.6792617  1.5619735 -0.6290650  0.4395193  1.0647586  2.0121288
-##  [7]  1.0947159  0.7931598 -0.6334250 -0.7538995</code></pre>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="statistics.html#cb152-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb152-2"><a href="statistics.html#cb152-2" aria-hidden="true" tabindex="-1"></a>x2</span></code></pre></div>
+<pre><code>##  [1]  0.64595267  1.72406642  0.64271562 -0.35412174  2.22795455  0.11426315
+##  [7]  4.02063436  0.17805916  3.05278125  0.01680568</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>Using the code above to generate the example data, <code>x2</code>, perform a t-test with the <em>null hypothesis</em> that the change in weight of the cat population was 0.</p></li>
 <li><p>Perform a t-test with the <em>null hypothesis</em> that the cats in the sample, <code>x2</code> have lost weight.</p></li>
@@ -376,35 +424,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 </div>
 </div>
-<div id="correlation" class="section level2">
+<div id="correlation" class="section level2" number="11.5">
 <h2><span class="header-section-number">11.5</span> Correlation</h2>
 <p>Correlation, <span class="math inline">\(r\)</span>, is a statistical measure that describes if two variables are linearly related (meaning they change together at a constant rate). The correlation coefficient, <span class="math inline">\(r^2\)</span>, measures the proportion of the variance of one variable that can be explained by the straight-line dependence on the other variable.</p>
 <ul>
 <li>For positively-associated variables, an <strong>increase</strong> in one variable accompanies an <strong>increase</strong> in the other variable, and <span class="math inline">\(r &gt; 0\)</span>:</li>
 </ul>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="statistics.html#cb154-1"></a><span class="kw">cor</span>(data<span class="op">$</span>x,data<span class="op">$</span>y)</span></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="statistics.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y)</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>For the output above, the value <code>1</code> means <span class="math inline">\(r=1\)</span>, indicating a perfect positive correlation between two variables.</p>
 <ul>
 <li>For negatively-associated variables, an <strong>increase</strong> in one variable accompanies a <strong>decrease</strong> in the other variable, and <span class="math inline">\(r &lt; 0\)</span>:</li>
 </ul>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
-<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="statistics.html#cb156-1"></a><span class="kw">cor</span>(data<span class="op">$</span>x,data<span class="op">$</span>y<span class="fl">.1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="statistics.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y<span class="fl">.1</span>)</span></code></pre></div>
 <pre><code>## [1] -1</code></pre>
 <p>For the output above, the value <code>-1</code> means <span class="math inline">\(r=-1\)</span>, indicating a perfect negative correlation between two variables.</p>
 <ul>
 <li>When two variables are not correlated, <span class="math inline">\(r\)</span> is near 0:</li>
 </ul>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-84-1.png" width="672" /></p>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="statistics.html#cb158-1"></a><span class="kw">cor</span>(data<span class="op">$</span>x, data<span class="op">$</span>y<span class="fl">.3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="statistics.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y<span class="fl">.3</span>)</span></code></pre></div>
 <pre><code>## [1] 0.1684607</code></pre>
-<div id="corxy" class="section level3">
+<div id="corxy" class="section level3" number="11.5.1">
 <h3><span class="header-section-number">11.5.1</span> cor(x,y)</h3>
 <p>The correlation coefficient, <span class="math inline">\(r\)</span>, is calculated with the <code>corr(x,y)</code> function. The function has two mandatory arguments, <code>x</code> and <code>y</code>, which are lists of values of equal length:</p>
-<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="statistics.html#cb160-1"></a>x =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb160-2"><a href="statistics.html#cb160-2"></a>y =<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
-<span id="cb160-3"><a href="statistics.html#cb160-3"></a><span class="kw">cor</span>(x, y)</span></code></pre></div>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="statistics.html#cb160-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb160-2"><a href="statistics.html#cb160-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
+<span id="cb160-3"><a href="statistics.html#cb160-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x, y)</span></code></pre></div>
 <pre><code>## [1] 0.9939441</code></pre>
 <div id="questions-1" class="section level4 unnumbered">
 <h4>Questions</h4>
@@ -427,6 +475,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -466,10 +515,6 @@ gitbook.start({
 "text": null
 },
 "download": ["quant-guide.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
 "toc": {
 "collapse": "subsection"
 }

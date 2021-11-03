@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10 Making graphs in R | Quantitative skills for biology</title>
   <meta name="description" content="10 Making graphs in R | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10 Making graphs in R | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -31,8 +31,8 @@
   
 <link rel="prev" href="handling-data.html"/>
 <link rel="next" href="statistics.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,24 +48,24 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -118,6 +118,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -135,25 +157,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Quantitative skills for biology</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-links"><i class="fa fa-check"></i><b>1.1</b> Course links</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#instructor-guide"><i class="fa fa-check"></i><b>1.2</b> Instructor guide</a></li>
 </ul></li>
 <li><a href="part-i-introduction.html#part-i-introduction"><strong>PART I: INTRODUCTION</strong></a></li>
-<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a><ul>
-<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a><ul>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a>
+<ul>
 <li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rcloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a><ul>
+<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
 <li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
-<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a><ul>
+<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a><ul>
+<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a>
+<ul>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#files-tab"><i class="fa fa-check"></i>Files tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#plots-tab"><i class="fa fa-check"></i>Plots tab</a></li>
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#packages-tab"><i class="fa fa-check"></i>Packages tab</a></li>
@@ -161,10 +189,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#viewer-tab"><i class="fa fa-check"></i>Viewer tab</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a><ul>
+<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a>
+<ul>
 <li class="chapter" data-level="4.1" data-path="rintro.html"><a href="rintro.html#workflow"><i class="fa fa-check"></i><b>4.1</b> Workflow</a></li>
 <li class="chapter" data-level="4.2" data-path="rintro.html"><a href="rintro.html#working-directory"><i class="fa fa-check"></i><b>4.2</b> Working directory</a></li>
-<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a><ul>
+<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a>
+<ul>
 <li class="chapter" data-level="4.3.1" data-path="rintro.html"><a href="rintro.html#shortcuts"><i class="fa fa-check"></i><b>4.3.1</b> Shortcuts</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="rintro.html"><a href="rintro.html#using-variables"><i class="fa fa-check"></i><b>4.4</b> Using variables</a></li>
@@ -172,7 +202,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>4.6</b> Precedence</a></li>
 <li class="chapter" data-level="4.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>4.7</b> Mathematical functions</a></li>
 <li class="chapter" data-level="4.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>4.8</b> Data types</a></li>
-<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a><ul>
+<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a>
+<ul>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
 <li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#lists"><i class="fa fa-check"></i>Lists</a></li>
@@ -180,7 +211,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>4.10</b> R Packages</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a><ul>
+<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>5.1</b> Using R help</a></li>
 <li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R “Cheatsheets”</a></li>
 <li class="chapter" data-level="5.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>5.3</b> R books</a></li>
@@ -188,7 +220,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.5" data-path="help.html"><a href="help.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="howtoask.html"><a href="howtoask.html"><i class="fa fa-check"></i><b>6</b> How to ask for help</a></li>
-<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a><ul>
+<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="style.html"><a href="style.html#file-organization"><i class="fa fa-check"></i><b>7.1</b> File organization</a></li>
 <li class="chapter" data-level="7.2" data-path="style.html"><a href="style.html#comments-1"><i class="fa fa-check"></i><b>7.2</b> Comments</a></li>
 <li class="chapter" data-level="7.3" data-path="style.html"><a href="style.html#spacing"><i class="fa fa-check"></i><b>7.3</b> Spacing</a></li>
@@ -196,20 +229,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5" data-path="style.html"><a href="style.html#template"><i class="fa fa-check"></i><b>7.5</b> Template</a></li>
 <li class="chapter" data-level="7.6" data-path="style.html"><a href="style.html#checklist"><i class="fa fa-check"></i><b>7.6</b> Checklist</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a><ul>
+<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a>
+<ul>
 <li class="chapter" data-level="8.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>8.1</b> Entering data</a></li>
-<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a><ul>
+<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data</a><ul>
-<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#base-r"><i class="fa fa-check"></i><b>9.1</b> Base R</a><ul>
+<li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#base-r"><i class="fa fa-check"></i><b>9.1</b> Base R</a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="handling-data.html"><a href="handling-data.html#useful-functions"><i class="fa fa-check"></i><b>9.1.1</b> Useful functions</a></li>
 <li class="chapter" data-level="9.1.2" data-path="handling-data.html"><a href="handling-data.html#extracting-rows-and-columns"><i class="fa fa-check"></i><b>9.1.2</b> Extracting rows and columns</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a><ul>
+<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a>
+<ul>
 <li class="chapter" data-level="9.2.1" data-path="handling-data.html"><a href="handling-data.html#selecting-a-column"><i class="fa fa-check"></i><b>9.2.1</b> Selecting a column</a></li>
 <li class="chapter" data-level="9.2.2" data-path="handling-data.html"><a href="handling-data.html#adding-a-new-column"><i class="fa fa-check"></i><b>9.2.2</b> Adding a new column</a></li>
 <li class="chapter" data-level="9.2.3" data-path="handling-data.html"><a href="handling-data.html#sorting-the-data"><i class="fa fa-check"></i><b>9.2.3</b> Sorting the data</a></li>
@@ -220,10 +258,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2.8" data-path="handling-data.html"><a href="handling-data.html#pipes"><i class="fa fa-check"></i><b>9.2.8</b> Pipes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a><ul>
+<li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a>
+<ul>
 <li class="chapter" data-level="10.1" data-path="graph.html"><a href="graph.html#making-graphs-in-r"><i class="fa fa-check"></i><b>10.1</b> Making graphs in R</a></li>
 <li class="chapter" data-level="10.2" data-path="graph.html"><a href="graph.html#scatter-plots-with-plotxy"><i class="fa fa-check"></i><b>10.2</b> Scatter plots with <code>plot(x,y)</code></a></li>
-<li class="chapter" data-level="10.3" data-path="graph.html"><a href="graph.html#axes"><i class="fa fa-check"></i><b>10.3</b> Adding axes labels and changing symbols</a><ul>
+<li class="chapter" data-level="10.3" data-path="graph.html"><a href="graph.html#axes"><i class="fa fa-check"></i><b>10.3</b> Adding axes labels and changing symbols</a>
+<ul>
 <li class="chapter" data-level="10.3.1" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>10.3.1</b> Getting a bit more sophisticated</a></li>
 </ul></li>
 <li class="chapter" data-level="10.4" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>10.4</b> Line graphs</a></li>
@@ -231,21 +271,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10.6" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>10.6</b> Exporting your graphs</a></li>
 <li class="chapter" data-level="10.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>10.7</b> pch cheatsheet</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>11</b> Statistics in R</a><ul>
+<li class="chapter" data-level="11" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>11</b> Statistics in R</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="statistics.html"><a href="statistics.html#comparing-two-means-of-a-population-or-samples-using-a-t-test"><i class="fa fa-check"></i><b>11.1</b> Comparing two means of a population or sample(s) using a t-test</a></li>
 <li class="chapter" data-level="11.2" data-path="statistics.html"><a href="statistics.html#types-of-tests"><i class="fa fa-check"></i><b>11.2</b> Types of tests</a></li>
 <li class="chapter" data-level="11.3" data-path="statistics.html"><a href="statistics.html#p-values-and-statistical-significance"><i class="fa fa-check"></i><b>11.3</b> p-values and statistical significance</a></li>
 <li class="chapter" data-level="11.4" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>11.4</b> t.test</a></li>
-<li class="chapter" data-level="11.5" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>11.5</b> Correlation</a><ul>
+<li class="chapter" data-level="11.5" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>11.5</b> Correlation</a>
+<ul>
 <li class="chapter" data-level="11.5.1" data-path="statistics.html"><a href="statistics.html#corxy"><i class="fa fa-check"></i><b>11.5.1</b> cor(x,y)</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>12</b> Data and metadata</a><ul>
-<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>12.1</b> Data</a><ul>
+<li class="chapter" data-level="12" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>12</b> Data and metadata</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>12.1</b> Data</a>
+<ul>
 <li class="chapter" data-level="12.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>12.1.1</b> Data guidelines</a></li>
 <li class="chapter" data-level="12.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>12.1.2</b> Database structure guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>12.2</b> Metadata</a><ul>
+<li class="chapter" data-level="12.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>12.2</b> Metadata</a>
+<ul>
 <li class="chapter" data-level="12.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>12.2.1</b> Metadata guidelines</a></li>
 </ul></li>
 <li class="chapter" data-level="12.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>12.3</b> Further reading</a></li>
@@ -258,16 +303,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="17" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>17</b> Coding club at MUN</a></li>
 <li class="chapter" data-level="18" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>18</b> Contributions</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a><ul>
+<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a>
+<ul>
 <li class="chapter" data-level="A.1" data-path="faq.html"><a href="faq.html#download-and-installation-issues"><i class="fa fa-check"></i><b>A.1</b> Download and Installation Issues</a></li>
 <li class="chapter" data-level="A.2" data-path="faq.html"><a href="faq.html#computer-issues"><i class="fa fa-check"></i><b>A.2</b> Computer Issues</a></li>
 <li class="chapter" data-level="A.3" data-path="faq.html"><a href="faq.html#rstudio-error-messages"><i class="fa fa-check"></i><b>A.3</b> RStudio Error Messages</a></li>
 </ul></li>
 <li class="chapter" data-level="B" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>B</b> Glossary</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a><ul>
+<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a>
+<ul>
 <li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables</a></li>
-<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a><ul>
+<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
+<ul>
 <li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses</a></li>
 </ul></li>
 <li class="chapter" data-level="C.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-1"><i class="fa fa-check"></i><b>C.3</b> Further reading</a></li>
@@ -290,45 +338,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="graph" class="section level1">
+<div id="graph" class="section level1" number="10">
 <h1><span class="header-section-number">10</span> Making graphs in R</h1>
-<div id="making-graphs-in-r" class="section level2">
+<div id="making-graphs-in-r" class="section level2" number="10.1">
 <h2><span class="header-section-number">10.1</span> Making graphs in R</h2>
 <p>You might have had experience making graphs using <code>Microsoft Excel</code>, however, making graphs with <code>Excel</code> is not recommended. A number of reasons to choose <code>R</code> over <code>Excel</code> are given in Chapter <a href="index.html#intro">1</a>. In addition, the defaults in <code>Excel</code> do not meet standards for good scientific graphs and you do not have the option to learn more sophisticated graphs after you master the basics, as the range of options available in <code>Excel</code> is limited.</p>
-<p>You can make very attractive, clean, professional graphs and figures in <code>R</code>. This chapter is a basic introduction to <code>plot()</code> functions in <code>R</code>. More advanced users can use the package <code>ggplot2</code>. There are many good reference manuals for making sophisticated graphs <span class="citation">(e.g. Abedin and Mittal 2014; Murrell 2018)</span>.</p>
+<p>You can make very attractive, clean, professional graphs and figures in <code>R</code>. This chapter is a basic introduction to <code>plot()</code> functions in <code>R</code>. More advanced users can use the package <code>ggplot2</code>. There are many good reference manuals for making sophisticated graphs <span class="citation">(e.g. Abedin and Mittal 2014; Murrell 2018)</span>.</p>
 </div>
-<div id="scatter-plots-with-plotxy" class="section level2">
+<div id="scatter-plots-with-plotxy" class="section level2" number="10.2">
 <h2><span class="header-section-number">10.2</span> Scatter plots with <code>plot(x,y)</code></h2>
 <p>In <code>R</code>, <code>plot()</code> is a built-in function: you do not need to install a package to call it. There are two mandatory arguments <code>x</code> and <code>y</code>, which are vectors that must have the same length. For example,</p>
-<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="graph.html#cb121-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
-<span id="cb121-2"><a href="graph.html#cb121-2"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="graph.html#cb121-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
+<span id="cb121-2"><a href="graph.html#cb121-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span></code></pre></div>
 <p>Copy and paste the above code into your <code>Console</code> and type <code>Enter/Return</code>. Note that to make a vector we need to use <code>c()</code>. Now, query the value of <code>x</code> by typing <code>x</code> into your <code>Console</code></p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="graph.html#cb122-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="graph.html#cb122-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>## [1]  2  4  6  8 10</code></pre>
 <p>This lets us know that <code>x</code> is a vector that is a list of 5 numbers.</p>
 <p>The command <code>plot(x, y)</code> will mark points on the graph by taking elements in the same position in the <code>x</code> and <code>y</code> vectors. For example, in the first position of the <code>x</code> and <code>y</code> vectors are <code>2</code> and <code>10</code>, respectively. Because <code>plot(x, y)</code> has <code>x</code> as its first argument, the values of <code>x</code> will correspond to the horizontal axis of the plot. Therefore, the first element of the lists <code>x</code> and <code>y</code>, will be reflected in the plot as a point marked at the <code>2</code> position of the horizontal axis and the <code>10</code> position on the vertical axis.</p>
 <p>As the vectors <code>x</code> and <code>y</code> in our example are a list of 5 numbers, our graph will consist of 5 points, generated by pairing values in the <code>x</code> and <code>y</code> vectors in the same position:</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="graph.html#cb124-1"></a><span class="kw">plot</span>(x, y)</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="graph.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
 <p><strong>TRY IT!</strong> Copy and paste the above code into your <code>Console</code> or into a new script and run it. If <code>x</code> and <code>y</code> do not have the same lengths, the <code>plot()</code> function will give an error. <strong>Try it!</strong> Take the code below by copy and pasting it into your console:</p>
-<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="graph.html#cb125-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>)</span>
-<span id="cb125-2"><a href="graph.html#cb125-2"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
-<span id="cb125-3"><a href="graph.html#cb125-3"></a><span class="kw">plot</span>(x, y)</span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="graph.html#cb125-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>)</span>
+<span id="cb125-2"><a href="graph.html#cb125-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
+<span id="cb125-3"><a href="graph.html#cb125-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div>
 <pre><code>## Error in xy.coords(x, y, xlabel, ylabel, log): &#39;x&#39; and &#39;y&#39; lengths differ</code></pre>
 <p>Note the error message that is generated so that if you get this error later when coding on your own you might remember that this error is generated because <code>x</code> and <code>y</code> have different lengths.</p>
 <p>Now try this code:</p>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="graph.html#cb127-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb127-2"><a href="graph.html#cb127-2"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
-<span id="cb127-3"><a href="graph.html#cb127-3"></a><span class="kw">plot</span>(x, y)</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="graph.html#cb127-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb127-2"><a href="graph.html#cb127-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
+<span id="cb127-3"><a href="graph.html#cb127-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="graph.html#cb128-1"></a><span class="kw">length</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="graph.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x)</span></code></pre></div>
 <pre><code>## [1] 5</code></pre>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="graph.html#cb130-1"></a><span class="kw">length</span>(y)</span></code></pre></div>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="graph.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(y)</span></code></pre></div>
 <pre><code>## [1] 5</code></pre>
 <p>Note we can use <code>length()</code> to query the length of <code>x</code> and <code>y</code>. In addition, the names <code>x</code> and <code>y</code> are the users choice. A nearly identical plot is generated with the code:</p>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="graph.html#cb132-1"></a>A &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb132-2"><a href="graph.html#cb132-2"></a>B &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
-<span id="cb132-3"><a href="graph.html#cb132-3"></a><span class="kw">plot</span>(A, B)</span></code></pre></div>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="graph.html#cb132-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb132-2"><a href="graph.html#cb132-2" aria-hidden="true" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
+<span id="cb132-3"><a href="graph.html#cb132-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(A, B)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
 <p>The key is the internal consistency: <code>A</code> and <code>B</code> are the names of the vectors and these same names appear as the arguments of <code>plot(A, B)</code>. Can you guess what happens if you try <code>plot(B, A)</code> or <code>plot(A, A)</code>? Type these into your <code>Console</code> and give it a try.</p>
 <hr />
@@ -336,10 +384,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li>Which two vectors below will generate a plot if executed before <code>plot(a, b)</code>?</li>
 </ol>
-<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="graph.html#cb133-1"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb133-2"><a href="graph.html#cb133-2"></a>a &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>)</span>
-<span id="cb133-3"><a href="graph.html#cb133-3"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
-<span id="cb133-4"><a href="graph.html#cb133-4"></a>b &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="graph.html#cb133-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb133-2"><a href="graph.html#cb133-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>)</span>
+<span id="cb133-3"><a href="graph.html#cb133-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span>
+<span id="cb133-4"><a href="graph.html#cb133-4" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>)</span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>A friend has written the code below, but it will not run. What do you think the problem could be?</li>
 </ol>
@@ -349,7 +397,7 @@ b &lt;- c(2, 4, 6)
 plot(x, y)</code></pre>
 <hr />
 </div>
-<div id="axes" class="section level2">
+<div id="axes" class="section level2" number="10.3">
 <h2><span class="header-section-number">10.3</span> Adding axes labels and changing symbols</h2>
 <p>Note that all of the figures we have made so far are not great: none meet the standards of a good figure. What’s missing?</p>
 <ul>
@@ -358,7 +406,7 @@ plot(x, y)</code></pre>
 <li>maybe you want the symbols to be a different shape or colour.</li>
 </ul>
 <p>In addition, to the two manadatory arguments <code>x</code> and <code>y</code>, the <code>plot()</code> function has other optional argument that can be called to make a better figure. Try using the <code>help()</code> to learn about more options to change the look of your plot (refer to Chapter <a href="help.html#help">5</a>, <em>Getting help in R</em>, to recall how to display and read help files):</p>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="graph.html#cb135-1"></a><span class="kw">help</span>(plot)</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="graph.html#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(plot)</span></code></pre></div>
 <pre><code>## Help on topic &#39;plot&#39; was found in the following packages:
 ## 
 ##   Package               Library
@@ -368,35 +416,35 @@ plot(x, y)</code></pre>
 ## 
 ## Using the first match ...</code></pre>
 <p>You’ll see there are a lot of optional arguments. First, let’s fix the axis labels.</p>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="graph.html#cb137-1"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
-<span id="cb137-2"><a href="graph.html#cb137-2"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
-<span id="cb137-3"><a href="graph.html#cb137-3"></a><span class="kw">plot</span>(x,y, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="graph.html#cb137-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span>
+<span id="cb137-2"><a href="graph.html#cb137-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
+<span id="cb137-3"><a href="graph.html#cb137-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
 <p>This one is a little better.</p>
 <p><strong>TRY IT!</strong> Copy and paste the above code into your <code>Console</code> to make sure you can make the graph with axes labels.</p>
 <p>If you want to change the symbols, you use the <code>pch</code> argument to change the style (see Section <a href="graph.html#pch">10.7</a>). Note, that <code>pch = 17</code> corresponds to filled triangles, so let’s make the graph, but with filled triangles.</p>
-<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="graph.html#cb138-1"></a><span class="kw">plot</span>(x,y, <span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="graph.html#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x,y, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
 <p>Note that the order of the optional arguments is unimportant (the function arguments are separated by <code>,</code>) particularly where arguments are labelled with <code>xlab =</code> or <code>ylab =</code>. Lets try to see if we can put the arguments out of order and end up with the wrong graph:</p>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="graph.html#cb139-1"></a><span class="kw">plot</span>(<span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, y, x)</span></code></pre></div>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="graph.html#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">pch =</span> <span class="dv">17</span>, <span class="at">ylab =</span> <span class="st">&quot;growth rate (cm)&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, y, x)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
 <p>In the above graph, we wanted <code>"growth rate (cm)"</code> and the vertical axis and this has appeared correctly, but the values of growth rate should be <code>c(10, 20, 30, 40, 50)</code> and now we see the values of <code>y</code> have appeared on the horizontal axes rather than on the vertical axis where they should be. This is because <code>y</code> appears before <code>x</code> in the plot command and whichever vector appears first will be read as corresponding to the values on the horizontal axis. On the other hand <code>"ylab ="</code> appears before <code>"xlab ="</code> but this does not cause a problem because <code>"ylab ="</code> still appears on the vertical axis as it should.</p>
-<div id="getting-a-bit-more-sophisticated" class="section level3">
+<div id="getting-a-bit-more-sophisticated" class="section level3" number="10.3.1">
 <h3><span class="header-section-number">10.3.1</span> Getting a bit more sophisticated</h3>
 <p>It’s not hard to get more sophisticated with R graphics. The best approach is to explore one of the reference books listed to figure out how to do what you want to do.</p>
 <p>One thing most undergrads will probably need or want to do is to visualize two sets of data on the same graph. For example, the goldfish data in <a href="%22NEED%20TO%20ADD%20THE%20LINK%22">Appendix VI</a> of the BIOL 1001 lab manual shows the opercular beats of two fish in response to temperature. It would be logical to show both fish on the same graph, but with different symbols. Here’s how you would do it:</p>
-<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="graph.html#cb140-1"></a>temp &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">20</span>, <span class="dv">23</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="graph.html#cb140-1" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">20</span>, <span class="dv">23</span>)</span></code></pre></div>
 <p>This creates the vector of data for the x-axis.</p>
-<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="graph.html#cb141-1"></a>fishA &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">59</span>, <span class="dv">73</span>, <span class="dv">88</span>, <span class="dv">96</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="graph.html#cb141-1" aria-hidden="true" tabindex="-1"></a>fishA <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">59</span>, <span class="dv">73</span>, <span class="dv">88</span>, <span class="dv">96</span>)</span></code></pre></div>
 <p>This creates the vector of data for <code>Fish A</code>.</p>
-<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="graph.html#cb142-1"></a>fishB &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">40</span>, <span class="dv">49</span>, <span class="dv">61</span>, <span class="dv">71</span>, <span class="dv">82</span>, <span class="dv">90</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="graph.html#cb142-1" aria-hidden="true" tabindex="-1"></a>fishB <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">49</span>, <span class="dv">61</span>, <span class="dv">71</span>, <span class="dv">82</span>, <span class="dv">90</span>)</span></code></pre></div>
 <p>This creates the vector of data for <code>fish B</code>.</p>
 <p>First, we plot <code>x</code> and <code>y</code> with the <code>temp</code> vector as <code>x</code>, and the <code>fishA</code> vector as <code>y</code></p>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="graph.html#cb143-1"></a><span class="kw">plot</span>(temp, fishA, <span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="graph.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(temp, fishA, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
 <p>Then, to add a second vector of data (<code>fishB</code>) to the same plot, we use:</p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="graph.html#cb144-1"></a><span class="kw">plot</span>(temp, fishA, <span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span>
-<span id="cb144-2"><a href="graph.html#cb144-2"></a><span class="kw">points</span>(temp, fishB, <span class="dt">pch =</span> <span class="dv">19</span>, <span class="dt">col =</span> <span class="st">&quot;dimgray&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="graph.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(temp, fishA, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span>
+<span id="cb144-2"><a href="graph.html#cb144-2" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(temp, fishB, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">&quot;dimgray&quot;</span>)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
 <p><em>Caption: Opercular beats of two goldfish over increasing temperature. Triangle symbols represent fish A and dots represent fish B</em>.</p>
 <p>Voila!</p>
@@ -406,16 +454,16 @@ You can describe what the two symbols represent in the caption. For most scienti
 <p>Re-create the graph above on your own, but this time, make the symbol for <code>fishA</code> an open square and the symbol for <code>fishB</code> a filled circle (see section <a href="graph.html#pch">10.7</a>). Export this plot and hand it in with your assignment (either as a .pdf file, or by pasting the .pdf file into an MS Word document or other text editor, see section <a href="graph.html#export">10.6</a>).</p>
 </div>
 </div>
-<div id="line-graphs" class="section level2">
+<div id="line-graphs" class="section level2" number="10.4">
 <h2><span class="header-section-number">10.4</span> Line graphs</h2>
 <p>Finally, if you wanted to have a line joining the points, you’d specify the <code>type = "l"</code> in the arguments of the plot fuction (<code>l</code> is for line, <code>p</code> is for points, and <code>b</code> is for both).</p>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="graph.html#cb145-1"></a><span class="kw">plot</span>(temp, fishA, <span class="dt">pch =</span> <span class="dv">17</span>, <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="graph.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(temp, fishA, <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span>)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
 <p><strong>HAND IN</strong></p>
 <p>Re-create the graph above on your own, but this time, also add a line for <code>fishB</code> which
 joins the points as is shown above for <code>fishA</code>. Just as in section <a href="graph.html#axes">10.3</a>, where we used the <code>points()</code> function to an existing plot, we can use the <code>lines()</code> function to add a line to an existing plot. To select the line type, use <code>lty = 2</code> (or another value), just as you would use <code>pch</code> in the <code>points()</code> function. Export this plot and hand it in with your assignment (by pasting the .pdf file into an MS Word document or other text editor, see section <a href="graph.html#export">10.6</a>).</p>
 </div>
-<div id="other-useful-plot-functions" class="section level2">
+<div id="other-useful-plot-functions" class="section level2" number="10.5">
 <h2><span class="header-section-number">10.5</span> Other useful plot functions</h2>
 <p>The generic <code>plot()</code> function makes a scatter plot, with variations.</p>
 <p>For other types of plots, R has different functions, but all have similar arguments for adjusting the labels, spacing, tic marks, symbols, etc.</p>
@@ -426,40 +474,40 @@ joins the points as is shown above for <code>fishA</code>. Just as in section <a
 <li><code>hist</code> to make a histogram.</li>
 </ul>
 </div>
-<div id="export" class="section level2">
+<div id="export" class="section level2" number="10.6">
 <h2><span class="header-section-number">10.6</span> Exporting your graphs</h2>
 <p>Once you’ve got plots in the “plot” window that you like, you can export them using them so that you can insert them into things like a word document, a power point file or a website. Click on the down arrow on the “Export” button in the Plots pane in RStudio, then select either to save as an Image or as a PDF. In the “Image” option you can choose various file formats (JPEG, TIFF, PNG, etc.).</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:panes2"></span>
+<div class="figure" style="text-align: center"><span id="fig:panes2"></span>
 <img src="figures/ExportPlotWindow.jpg" alt="Export button in the Plots Window" width="70%" />
 <p class="caption">
 Figure 10.1: Export button in the Plots Window
 </p>
 </div>
 <p>Be sure to check that you have the correct file path (circled in the figure below) and then give your figure a file name that makes sense (see rectangle in the figure below).</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:panes3"></span>
+<div class="figure" style="text-align: center"><span id="fig:panes3"></span>
 <img src="figures/ExportPlot.jpg" alt="Setting file path (oval - click the Directory button to change the file path) and file name for your exported figure" width="70%" />
 <p class="caption">
 Figure 10.2: Setting file path (oval - click the Directory button to change the file path) and file name for your exported figure
 </p>
 </div>
 </div>
-<div id="pch" class="section level2">
+<div id="pch" class="section level2" number="10.7">
 <h2><span class="header-section-number">10.7</span> pch cheatsheet</h2>
 <p>As it is hard to remember that <code>pch = 17</code> corresponds to filled triangles you can make a little cheat sheet for <code>pch</code> codes using the code below. You may want to print out a chart of the <code>pch</code> codes and tape it up on your wall by your computer, or in the front of your notebook as a handy reference.</p>
-<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="graph.html#cb146-1"></a><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span></span>
-<span id="cb146-2"><a href="graph.html#cb146-2"></a><span class="co">#generate a plot of point shapes which R knows about.</span></span>
-<span id="cb146-3"><a href="graph.html#cb146-3"></a><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span></span>
-<span id="cb146-4"><a href="graph.html#cb146-4"></a>generateRPointShapes&lt;-<span class="cf">function</span>(){</span>
-<span id="cb146-5"><a href="graph.html#cb146-5"></a>  oldPar&lt;-<span class="kw">par</span>()</span>
-<span id="cb146-6"><a href="graph.html#cb146-6"></a>  <span class="kw">par</span>(<span class="dt">font=</span><span class="dv">2</span>, <span class="dt">mar=</span><span class="kw">c</span>(<span class="fl">0.5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span>
-<span id="cb146-7"><a href="graph.html#cb146-7"></a>  y=<span class="kw">rev</span>(<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>,<span class="dv">6</span>),<span class="kw">rep</span>(<span class="dv">2</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">4</span>,<span class="dv">5</span>), <span class="kw">rep</span>(<span class="dv">5</span>,<span class="dv">5</span>)))</span>
-<span id="cb146-8"><a href="graph.html#cb146-8"></a>  x=<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>,<span class="dv">5</span>),<span class="dv">6</span>)</span>
-<span id="cb146-9"><a href="graph.html#cb146-9"></a>  <span class="kw">plot</span>(x, y, <span class="dt">pch =</span> <span class="dv">0</span><span class="op">:</span><span class="dv">25</span>, <span class="dt">cex=</span><span class="fl">1.5</span>, <span class="dt">ylim=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="fl">5.5</span>), <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="fl">6.5</span>), </span>
-<span id="cb146-10"><a href="graph.html#cb146-10"></a>       <span class="dt">axes=</span><span class="ot">FALSE</span>, <span class="dt">xlab=</span><span class="st">&quot;&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;&quot;</span>, <span class="dt">bg=</span><span class="st">&quot;blue&quot;</span>)</span>
-<span id="cb146-11"><a href="graph.html#cb146-11"></a>  <span class="kw">text</span>(x, y, <span class="dt">labels=</span><span class="dv">0</span><span class="op">:</span><span class="dv">25</span>, <span class="dt">pos=</span><span class="dv">3</span>)</span>
-<span id="cb146-12"><a href="graph.html#cb146-12"></a>  <span class="kw">par</span>(<span class="dt">mar=</span>oldPar<span class="op">$</span>mar,<span class="dt">font=</span>oldPar<span class="op">$</span>font )</span>
-<span id="cb146-13"><a href="graph.html#cb146-13"></a>}</span>
-<span id="cb146-14"><a href="graph.html#cb146-14"></a><span class="kw">generateRPointShapes</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="graph.html#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span></span>
+<span id="cb146-2"><a href="graph.html#cb146-2" aria-hidden="true" tabindex="-1"></a><span class="co">#generate a plot of point shapes which R knows about.</span></span>
+<span id="cb146-3"><a href="graph.html#cb146-3" aria-hidden="true" tabindex="-1"></a><span class="co">#++++++++++++++++++++++++++++++++++++++++++++</span></span>
+<span id="cb146-4"><a href="graph.html#cb146-4" aria-hidden="true" tabindex="-1"></a>generateRPointShapes<span class="ot">&lt;-</span><span class="cf">function</span>(){</span>
+<span id="cb146-5"><a href="graph.html#cb146-5" aria-hidden="true" tabindex="-1"></a>  oldPar<span class="ot">&lt;-</span><span class="fu">par</span>()</span>
+<span id="cb146-6"><a href="graph.html#cb146-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">par</span>(<span class="at">font=</span><span class="dv">2</span>, <span class="at">mar=</span><span class="fu">c</span>(<span class="fl">0.5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>))</span>
+<span id="cb146-7"><a href="graph.html#cb146-7" aria-hidden="true" tabindex="-1"></a>  y<span class="ot">=</span><span class="fu">rev</span>(<span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>,<span class="dv">6</span>),<span class="fu">rep</span>(<span class="dv">2</span>,<span class="dv">5</span>), <span class="fu">rep</span>(<span class="dv">3</span>,<span class="dv">5</span>), <span class="fu">rep</span>(<span class="dv">4</span>,<span class="dv">5</span>), <span class="fu">rep</span>(<span class="dv">5</span>,<span class="dv">5</span>)))</span>
+<span id="cb146-8"><a href="graph.html#cb146-8" aria-hidden="true" tabindex="-1"></a>  x<span class="ot">=</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="dv">5</span>),<span class="dv">6</span>)</span>
+<span id="cb146-9"><a href="graph.html#cb146-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(x, y, <span class="at">pch =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">25</span>, <span class="at">cex=</span><span class="fl">1.5</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="fl">5.5</span>), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="fl">6.5</span>), </span>
+<span id="cb146-10"><a href="graph.html#cb146-10" aria-hidden="true" tabindex="-1"></a>       <span class="at">axes=</span><span class="cn">FALSE</span>, <span class="at">xlab=</span><span class="st">&quot;&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;&quot;</span>, <span class="at">bg=</span><span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb146-11"><a href="graph.html#cb146-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">text</span>(x, y, <span class="at">labels=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">25</span>, <span class="at">pos=</span><span class="dv">3</span>)</span>
+<span id="cb146-12"><a href="graph.html#cb146-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">par</span>(<span class="at">mar=</span>oldPar<span class="sc">$</span>mar,<span class="at">font=</span>oldPar<span class="sc">$</span>font )</span>
+<span id="cb146-13"><a href="graph.html#cb146-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb146-14"><a href="graph.html#cb146-14" aria-hidden="true" tabindex="-1"></a><span class="fu">generateRPointShapes</span>()</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-75-1.png" width="672" /></p>
 
 </div>
@@ -474,6 +522,7 @@ Figure 10.2: Setting file path (oval - click the Directory button to change the 
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -513,10 +562,6 @@ gitbook.start({
 "text": null
 },
 "download": ["quant-guide.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
 "toc": {
 "collapse": "subsection"
 }
