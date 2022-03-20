@@ -176,7 +176,7 @@ Within our `for()` loop we will need to include several steps. First we subset o
 ```{r}
 for(i in exp_num){
   exp_subset <- subset(data, experiment == exp_num[i])
-  cor_val <- cor(exp_susetb$length, exp_subset$height) 
+  cor_val <- cor(exp_subset$length, exp_subset$height) 
   df_cor <- data.frame(experiment = i,
                        correlation = cor_val)
   cor_output <- rbind(cor_output, df_cor) 

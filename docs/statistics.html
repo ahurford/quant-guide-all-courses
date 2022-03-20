@@ -296,9 +296,28 @@ div.csl-indent {
 <li class="chapter" data-level="12.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>12.3</b> Further reading</a></li>
 </ul></li>
 <li><a href="part-ii-advanced.html#part-ii-advanced"><strong>PART II: ADVANCED</strong></a></li>
-<li class="chapter" data-level="13" data-path="writing-functions.html"><a href="writing-functions.html"><i class="fa fa-check"></i><b>13</b> Writing functions</a></li>
-<li class="chapter" data-level="14" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html"><i class="fa fa-check"></i><b>14</b> Loops and repeating commands</a></li>
-<li class="chapter" data-level="15" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>15</b> ggplot</a></li>
+<li class="chapter" data-level="13" data-path="writing-functions.html"><a href="writing-functions.html"><i class="fa fa-check"></i><b>13</b> Writing functions</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="writing-functions.html"><a href="writing-functions.html#introduction"><i class="fa fa-check"></i><b>13.1</b> Introduction</a></li>
+<li class="chapter" data-level="13.2" data-path="writing-functions.html"><a href="writing-functions.html#writing-your-own-functions"><i class="fa fa-check"></i><b>13.2</b> Writing your own functions</a></li>
+<li class="chapter" data-level="13.3" data-path="writing-functions.html"><a href="writing-functions.html#returning-multiple-outputs"><i class="fa fa-check"></i><b>13.3</b> Returning Multiple Outputs</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html"><i class="fa fa-check"></i><b>14</b> Loops and repeating commands</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#introduction-1"><i class="fa fa-check"></i><b>14.1</b> Introduction</a></li>
+<li class="chapter" data-level="14.2" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#for-loops"><i class="fa fa-check"></i><b>14.2</b> for loops</a></li>
+<li class="chapter" data-level="14.3" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#nested-for-loop"><i class="fa fa-check"></i><b>14.3</b> Nested for loop?</a></li>
+<li class="chapter" data-level="14.4" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#loop-alternatives"><i class="fa fa-check"></i><b>14.4</b> Loop alternatives</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>15</b> ggplot</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="ggplot.html"><a href="ggplot.html#introduction-2"><i class="fa fa-check"></i><b>15.1</b> Introduction</a></li>
+<li class="chapter" data-level="15.2" data-path="ggplot.html"><a href="ggplot.html#making-scatter-plots-with-ggplot2"><i class="fa fa-check"></i><b>15.2</b> Making scatter plots with ggplot2</a></li>
+<li class="chapter" data-level="15.3" data-path="ggplot.html"><a href="ggplot.html#customising-graphs"><i class="fa fa-check"></i><b>15.3</b> Customising graphs</a></li>
+<li class="chapter" data-level="15.4" data-path="ggplot.html"><a href="ggplot.html#adding-lines-of-best-fit"><i class="fa fa-check"></i><b>15.4</b> Adding lines of best fit</a></li>
+<li class="chapter" data-level="15.5" data-path="ggplot.html"><a href="ggplot.html#facet-wrapping"><i class="fa fa-check"></i><b>15.5</b> Facet wrapping</a></li>
+<li class="chapter" data-level="15.6" data-path="ggplot.html"><a href="ggplot.html#other-types-of-plots"><i class="fa fa-check"></i><b>15.6</b> Other types of plots</a></li>
+</ul></li>
 <li class="chapter" data-level="16" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>16</b> Making maps</a></li>
 <li class="chapter" data-level="17" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>17</b> Coding club at MUN</a></li>
 <li class="chapter" data-level="18" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>18</b> Contributions</a></li>
@@ -374,21 +393,21 @@ div.csl-indent {
 <p>Below, we generate some example data, <code>x</code>, to illustrate how to perform a <code>t.test</code> (when performing your analysis, this step is replaced with the step of loading or entering your data, i.e., see Chapter <a href="data-entry.html#data-entry">8</a>).</p>
 <div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="statistics.html#cb147-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
 <span id="cb147-2"><a href="statistics.html#cb147-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -0.90048211  1.40700257  1.04256554  0.80995338 -0.58485653 -0.56009405
-##  [7] -0.16075034  0.08685596  2.02048180  0.74644720</code></pre>
+<pre><code>##  [1]  0.50678765  1.94394222 -0.60146075 -0.28886512 -1.21538999  0.16975047
+##  [7] -0.07509455 -0.15323992 -0.12672009  0.83162509</code></pre>
 <p>Before running the analysis, we decide to set <span class="math inline">\(\alpha = 0.05\)</span>. Perform the test:</p>
 <div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="statistics.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
 ## data:  x
-## t = 1.2838, df = 9, p-value = 0.2313
+## t = 0.36537, df = 9, p-value = 0.7233
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  -0.2977341  1.0791588
+##  -0.5146409  0.7129079
 ## sample estimates:
 ## mean of x 
-## 0.3907123</code></pre>
+## 0.0991335</code></pre>
 <p>Running this code, gives p-values greater than <span class="math inline">\(\alpha = 0.05\)</span>. Therefore, we fail to reject the <em>null hypothesis</em> that the weight change in the population of domestic cats is 0. As such, our data suggest that the cats have not changed weight.</p>
 <p>The <code>t.test</code> function can be expanded by using additional arguments or changing arguments as required. For example, we can performed a one-sided test.</p>
 <pre><code>t.test(x, y = NULL,
@@ -414,8 +433,8 @@ div.csl-indent {
 <p>Suppose the <code>10</code> measures of change in cat weight were instead:</p>
 <div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="statistics.html#cb152-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)<span class="sc">+</span><span class="dv">1</span></span>
 <span id="cb152-2"><a href="statistics.html#cb152-2" aria-hidden="true" tabindex="-1"></a>x2</span></code></pre></div>
-<pre><code>##  [1]  0.9082777  2.6132169  1.4769139  0.8076360 -0.7443536  1.4854035
-##  [7]  0.6655683  1.0470654  0.3420343  1.0051843</code></pre>
+<pre><code>##  [1]  1.79805807 -1.62139176  0.01960006  0.32095601  1.18749331 -0.13628883
+##  [7]  1.37335515  1.24982060  2.11560711  0.13990953</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>Using the code above to generate the example data, <code>x2</code>, perform a t-test with the <em>null hypothesis</em> that the change in weight of the cat population was 0.</p></li>
 <li><p>Perform a t-test with the <em>null hypothesis</em> that the cats in the sample, <code>x2</code> have lost weight.</p></li>
