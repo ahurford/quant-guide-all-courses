@@ -105,8 +105,11 @@ making-maps
 introduction-3
 creating-maps-using-ggplot2-and-sf
 changing-map-colours
+projections
 map-extent
+mapping-points
 scale-bar-and-north-arrow
+finalizing-the-map
 additional-reading
 coding-club-at-mun
 contributions

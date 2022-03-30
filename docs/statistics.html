@@ -322,9 +322,12 @@ div.csl-indent {
 <li class="chapter" data-level="16.1" data-path="making-maps.html"><a href="making-maps.html#introduction-3"><i class="fa fa-check"></i><b>16.1</b> Introduction<span></span></a></li>
 <li class="chapter" data-level="16.2" data-path="making-maps.html"><a href="making-maps.html#creating-maps-using-ggplot2-and-sf"><i class="fa fa-check"></i><b>16.2</b> Creating maps using <code>ggplot2</code> and <code>sf</code><span></span></a></li>
 <li class="chapter" data-level="16.3" data-path="making-maps.html"><a href="making-maps.html#changing-map-colours"><i class="fa fa-check"></i><b>16.3</b> Changing map colours<span></span></a></li>
-<li class="chapter" data-level="16.4" data-path="making-maps.html"><a href="making-maps.html#map-extent"><i class="fa fa-check"></i><b>16.4</b> Map Extent<span></span></a></li>
-<li class="chapter" data-level="16.5" data-path="making-maps.html"><a href="making-maps.html#scale-bar-and-north-arrow"><i class="fa fa-check"></i><b>16.5</b> Scale bar and north arrow<span></span></a></li>
-<li class="chapter" data-level="16.6" data-path="making-maps.html"><a href="making-maps.html#additional-reading"><i class="fa fa-check"></i><b>16.6</b> Additional Reading<span></span></a></li>
+<li class="chapter" data-level="16.4" data-path="making-maps.html"><a href="making-maps.html#projections"><i class="fa fa-check"></i><b>16.4</b> Projections<span></span></a></li>
+<li class="chapter" data-level="16.5" data-path="making-maps.html"><a href="making-maps.html#map-extent"><i class="fa fa-check"></i><b>16.5</b> Map Extent<span></span></a></li>
+<li class="chapter" data-level="16.6" data-path="making-maps.html"><a href="making-maps.html#mapping-points"><i class="fa fa-check"></i><b>16.6</b> Mapping points<span></span></a></li>
+<li class="chapter" data-level="16.7" data-path="making-maps.html"><a href="making-maps.html#scale-bar-and-north-arrow"><i class="fa fa-check"></i><b>16.7</b> Scale bar and north arrow<span></span></a></li>
+<li class="chapter" data-level="16.8" data-path="making-maps.html"><a href="making-maps.html#finalizing-the-map"><i class="fa fa-check"></i><b>16.8</b> Finalizing the map<span></span></a></li>
+<li class="chapter" data-level="16.9" data-path="making-maps.html"><a href="making-maps.html#additional-reading"><i class="fa fa-check"></i><b>16.9</b> Additional Reading<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>17</b> Coding club at MUN<span></span></a></li>
 <li class="chapter" data-level="18" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>18</b> Contributions<span></span></a></li>
@@ -400,21 +403,21 @@ div.csl-indent {
 <p>Below, we generate some example data, <code>x</code>, to illustrate how to perform a <code>t.test</code> (when performing your analysis, this step is replaced with the step of loading or entering your data, i.e., see Chapter <a href="data-entry.html#data-entry">8</a>).</p>
 <div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="statistics.html#cb147-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
 <span id="cb147-2"><a href="statistics.html#cb147-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1]  0.40272740 -0.41519768 -1.16770537  0.40845020 -0.46481779  0.88263422
-##  [7] -1.24695561  0.21089329  0.00127234 -0.35565625</code></pre>
+<pre><code>##  [1] -1.0349797 -0.3289030 -1.7107691  1.2386026 -0.9406798  0.5687237
+##  [7]  0.4678053 -0.2416340 -0.6036883 -1.1191381</code></pre>
 <p>Before running the analysis, we decide to set <span class="math inline">\(\alpha = 0.05\)</span>. Perform the test:</p>
 <div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="statistics.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
 ## data:  x
-## t = -0.79974, df = 9, p-value = 0.4445
+## t = -1.2946, df = 9, p-value = 0.2277
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  -0.6678437  0.3189726
+##  -1.0178208  0.2768887
 ## sample estimates:
-##  mean of x 
-## -0.1744355</code></pre>
+## mean of x 
+## -0.370466</code></pre>
 <p>Running this code, gives p-values greater than <span class="math inline">\(\alpha = 0.05\)</span>. Therefore, we fail to reject the <em>null hypothesis</em> that the weight change in the population of domestic cats is 0. As such, our data suggest that the cats have not changed weight.</p>
 <p>The <code>t.test</code> function can be expanded by using additional arguments or changing arguments as required. For example, we can performed a one-sided test.</p>
 <pre><code>t.test(x, y = NULL,
@@ -440,8 +443,8 @@ div.csl-indent {
 <p>Suppose the <code>10</code> measures of change in cat weight were instead:</p>
 <div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="statistics.html#cb152-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)<span class="sc">+</span><span class="dv">1</span></span>
 <span id="cb152-2"><a href="statistics.html#cb152-2" aria-hidden="true" tabindex="-1"></a>x2</span></code></pre></div>
-<pre><code>##  [1]  0.6764774  2.8905746  1.4375167 -0.8098802  2.5043025  1.6450397
-##  [7]  1.1711180 -1.3189350 -0.1592728  1.4832780</code></pre>
+<pre><code>##  [1]  2.20621493  2.34113862  0.14273854  2.75478795 -1.07160832  0.10023099
+##  [7]  0.18995121  0.03896671  2.49659476  1.94409455</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>Using the code above to generate the example data, <code>x2</code>, perform a t-test with the <em>null hypothesis</em> that the change in weight of the cat population was 0.</p></li>
 <li><p>Perform a t-test with the <em>null hypothesis</em> that the cats in the sample, <code>x2</code> have lost weight.</p></li>
