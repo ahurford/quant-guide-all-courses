@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2 R and R Studio | Quantitative skills for biology</title>
   <meta name="description" content="2 R and R Studio | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2 R and R Studio | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="2 R and R Studio | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-guide" />
@@ -31,8 +30,8 @@
   
 <link rel="prev" href="part-i-introduction.html"/>
 <link rel="next" href="rstudio.html"/>
-<script src="libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -48,9 +47,9 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -157,188 +156,196 @@ div.csl-indent {
 <li><a href="./">Quantitative skills for biology</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview<span></span></a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-links"><i class="fa fa-check"></i><b>1.1</b> Course links</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#instructor-guide"><i class="fa fa-check"></i><b>1.2</b> Instructor guide</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-links"><i class="fa fa-check"></i><b>1.1</b> Course links<span></span></a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#instructor-guide"><i class="fa fa-check"></i><b>1.2</b> Instructor guide<span></span></a></li>
 </ul></li>
-<li><a href="part-i-introduction.html#part-i-introduction"><strong>PART I: INTRODUCTION</strong></a></li>
-<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a>
+<li><a href="part-i-introduction.html#part-i-introduction"><strong>PART I: INTRODUCTION</strong><span></span></a></li>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio<span></span></a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rcloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
+<li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rcloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio</a></li>
+<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a>
+<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio<span></span></a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
-<li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
-<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a>
+<li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane<span></span></a></li>
+<li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane<span></span></a></li>
+<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
-<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
+<li><a href="rstudio.html#environment-tab">Environment tab<span></span></a></li>
+<li><a href="rstudio.html#history-tab">History tab<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a>
+<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane<span></span></a>
 <ul>
-<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#files-tab"><i class="fa fa-check"></i>Files tab</a></li>
-<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#plots-tab"><i class="fa fa-check"></i>Plots tab</a></li>
-<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#packages-tab"><i class="fa fa-check"></i>Packages tab</a></li>
-<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#help-tab"><i class="fa fa-check"></i>Help tab</a></li>
-<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#viewer-tab"><i class="fa fa-check"></i>Viewer tab</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="rintro.html"><a href="rintro.html#workflow"><i class="fa fa-check"></i><b>4.1</b> Workflow</a></li>
-<li class="chapter" data-level="4.2" data-path="rintro.html"><a href="rintro.html#working-directory"><i class="fa fa-check"></i><b>4.2</b> Working directory</a></li>
-<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="rintro.html"><a href="rintro.html#shortcuts"><i class="fa fa-check"></i><b>4.3.1</b> Shortcuts</a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="rintro.html"><a href="rintro.html#using-variables"><i class="fa fa-check"></i><b>4.4</b> Using variables</a></li>
-<li class="chapter" data-level="4.5" data-path="rintro.html"><a href="rintro.html#comments"><i class="fa fa-check"></i><b>4.5</b> Comments</a></li>
-<li class="chapter" data-level="4.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>4.6</b> Precedence</a></li>
-<li class="chapter" data-level="4.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>4.7</b> Mathematical functions</a></li>
-<li class="chapter" data-level="4.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>4.8</b> Data types</a></li>
-<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a>
-<ul>
-<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
-<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
-<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#lists"><i class="fa fa-check"></i>Lists</a></li>
-<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#data-frames"><i class="fa fa-check"></i>Data frames</a></li>
-</ul></li>
-<li class="chapter" data-level="4.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>4.10</b> R Packages</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>5.1</b> Using R help</a></li>
-<li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R “Cheatsheets”</a></li>
-<li class="chapter" data-level="5.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>5.3</b> R books</a></li>
-<li class="chapter" data-level="5.4" data-path="help.html"><a href="help.html#how-to-interpret-r-help-files"><i class="fa fa-check"></i><b>5.4</b> How to interpret R help files</a></li>
-<li class="chapter" data-level="5.5" data-path="help.html"><a href="help.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="howtoask.html"><a href="howtoask.html"><i class="fa fa-check"></i><b>6</b> How to ask for help</a></li>
-<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="style.html"><a href="style.html#file-organization"><i class="fa fa-check"></i><b>7.1</b> File organization</a></li>
-<li class="chapter" data-level="7.2" data-path="style.html"><a href="style.html#comments-1"><i class="fa fa-check"></i><b>7.2</b> Comments</a></li>
-<li class="chapter" data-level="7.3" data-path="style.html"><a href="style.html#spacing"><i class="fa fa-check"></i><b>7.3</b> Spacing</a></li>
-<li class="chapter" data-level="7.4" data-path="style.html"><a href="style.html#names"><i class="fa fa-check"></i><b>7.4</b> Names</a></li>
-<li class="chapter" data-level="7.5" data-path="style.html"><a href="style.html#template"><i class="fa fa-check"></i><b>7.5</b> Template</a></li>
-<li class="chapter" data-level="7.6" data-path="style.html"><a href="style.html#checklist"><i class="fa fa-check"></i><b>7.6</b> Checklist</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>8.1</b> Entering data</a></li>
-<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
-<li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#base-r"><i class="fa fa-check"></i><b>9.1</b> Base R</a>
-<ul>
-<li class="chapter" data-level="9.1.1" data-path="handling-data.html"><a href="handling-data.html#useful-functions"><i class="fa fa-check"></i><b>9.1.1</b> Useful functions</a></li>
-<li class="chapter" data-level="9.1.2" data-path="handling-data.html"><a href="handling-data.html#extracting-rows-and-columns"><i class="fa fa-check"></i><b>9.1.2</b> Extracting rows and columns</a></li>
-</ul></li>
-<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a>
-<ul>
-<li class="chapter" data-level="9.2.1" data-path="handling-data.html"><a href="handling-data.html#selecting-a-column"><i class="fa fa-check"></i><b>9.2.1</b> Selecting a column</a></li>
-<li class="chapter" data-level="9.2.2" data-path="handling-data.html"><a href="handling-data.html#adding-a-new-column"><i class="fa fa-check"></i><b>9.2.2</b> Adding a new column</a></li>
-<li class="chapter" data-level="9.2.3" data-path="handling-data.html"><a href="handling-data.html#sorting-the-data"><i class="fa fa-check"></i><b>9.2.3</b> Sorting the data</a></li>
-<li class="chapter" data-level="9.2.4" data-path="handling-data.html"><a href="handling-data.html#filtering-data"><i class="fa fa-check"></i><b>9.2.4</b> Filtering data</a></li>
-<li class="chapter" data-level="9.2.5" data-path="handling-data.html"><a href="handling-data.html#removing-na-entries-in-data"><i class="fa fa-check"></i><b>9.2.5</b> Removing NA entries in data</a></li>
-<li class="chapter" data-level="9.2.6" data-path="handling-data.html"><a href="handling-data.html#grouping"><i class="fa fa-check"></i><b>9.2.6</b> Grouping</a></li>
-<li class="chapter" data-level="9.2.7" data-path="handling-data.html"><a href="handling-data.html#joining"><i class="fa fa-check"></i><b>9.2.7</b> Joining</a></li>
-<li class="chapter" data-level="9.2.8" data-path="handling-data.html"><a href="handling-data.html#pipes"><i class="fa fa-check"></i><b>9.2.8</b> Pipes</a></li>
+<li><a href="rstudio.html#files-tab">Files tab<span></span></a></li>
+<li><a href="rstudio.html#plots-tab">Plots tab<span></span></a></li>
+<li><a href="rstudio.html#packages-tab">Packages tab<span></span></a></li>
+<li><a href="rstudio.html#help-tab">Help tab<span></span></a></li>
+<li><a href="rstudio.html#viewer-tab">Viewer tab<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a>
+<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R<span></span></a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="graph.html"><a href="graph.html#making-graphs-in-r"><i class="fa fa-check"></i><b>10.1</b> Making graphs in R</a></li>
-<li class="chapter" data-level="10.2" data-path="graph.html"><a href="graph.html#scatter-plots-with-plotxy"><i class="fa fa-check"></i><b>10.2</b> Scatter plots with <code>plot(x,y)</code></a></li>
-<li class="chapter" data-level="10.3" data-path="graph.html"><a href="graph.html#axes"><i class="fa fa-check"></i><b>10.3</b> Adding axes labels and changing symbols</a>
+<li class="chapter" data-level="4.1" data-path="rintro.html"><a href="rintro.html#workflow"><i class="fa fa-check"></i><b>4.1</b> Workflow<span></span></a></li>
+<li class="chapter" data-level="4.2" data-path="rintro.html"><a href="rintro.html#working-directory"><i class="fa fa-check"></i><b>4.2</b> Working directory<span></span></a></li>
+<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment<span></span></a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>10.3.1</b> Getting a bit more sophisticated</a></li>
+<li class="chapter" data-level="4.3.1" data-path="rintro.html"><a href="rintro.html#shortcuts"><i class="fa fa-check"></i><b>4.3.1</b> Shortcuts<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>10.4</b> Line graphs</a></li>
-<li class="chapter" data-level="10.5" data-path="graph.html"><a href="graph.html#other-useful-plot-functions"><i class="fa fa-check"></i><b>10.5</b> Other useful plot functions</a></li>
-<li class="chapter" data-level="10.6" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>10.6</b> Exporting your graphs</a></li>
-<li class="chapter" data-level="10.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>10.7</b> pch cheatsheet</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>11</b> Statistics in R</a>
+<li class="chapter" data-level="4.4" data-path="rintro.html"><a href="rintro.html#using-variables"><i class="fa fa-check"></i><b>4.4</b> Using variables<span></span></a></li>
+<li class="chapter" data-level="4.5" data-path="rintro.html"><a href="rintro.html#comments"><i class="fa fa-check"></i><b>4.5</b> Comments<span></span></a></li>
+<li class="chapter" data-level="4.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>4.6</b> Precedence<span></span></a></li>
+<li class="chapter" data-level="4.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>4.7</b> Mathematical functions<span></span></a></li>
+<li class="chapter" data-level="4.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>4.8</b> Data types<span></span></a></li>
+<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures<span></span></a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="statistics.html"><a href="statistics.html#comparing-two-means-of-a-population-or-samples-using-a-t-test"><i class="fa fa-check"></i><b>11.1</b> Comparing two means of a population or sample(s) using a t-test</a></li>
-<li class="chapter" data-level="11.2" data-path="statistics.html"><a href="statistics.html#types-of-tests"><i class="fa fa-check"></i><b>11.2</b> Types of tests</a></li>
-<li class="chapter" data-level="11.3" data-path="statistics.html"><a href="statistics.html#p-values-and-statistical-significance"><i class="fa fa-check"></i><b>11.3</b> p-values and statistical significance</a></li>
-<li class="chapter" data-level="11.4" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>11.4</b> t.test</a></li>
-<li class="chapter" data-level="11.5" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>11.5</b> Correlation</a>
+<li><a href="rintro.html#vectors">Vectors<span></span></a></li>
+<li><a href="rintro.html#matrices">Matrices<span></span></a></li>
+<li><a href="rintro.html#lists">Lists<span></span></a></li>
+<li><a href="rintro.html#data-frames">Data frames<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="4.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>4.10</b> R Packages<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help<span></span></a>
 <ul>
-<li class="chapter" data-level="11.5.1" data-path="statistics.html"><a href="statistics.html#corxy"><i class="fa fa-check"></i><b>11.5.1</b> cor(x,y)</a></li>
+<li class="chapter" data-level="5.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>5.1</b> Using R help<span></span></a></li>
+<li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R “Cheatsheets”<span></span></a></li>
+<li class="chapter" data-level="5.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>5.3</b> R books<span></span></a></li>
+<li class="chapter" data-level="5.4" data-path="help.html"><a href="help.html#how-to-interpret-r-help-files"><i class="fa fa-check"></i><b>5.4</b> How to interpret R help files<span></span></a></li>
+<li class="chapter" data-level="5.5" data-path="help.html"><a href="help.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="howtoask.html"><a href="howtoask.html"><i class="fa fa-check"></i><b>6</b> How to ask for help<span></span></a></li>
+<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices<span></span></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="style.html"><a href="style.html#file-organization"><i class="fa fa-check"></i><b>7.1</b> File organization<span></span></a></li>
+<li class="chapter" data-level="7.2" data-path="style.html"><a href="style.html#comments-1"><i class="fa fa-check"></i><b>7.2</b> Comments<span></span></a></li>
+<li class="chapter" data-level="7.3" data-path="style.html"><a href="style.html#spacing"><i class="fa fa-check"></i><b>7.3</b> Spacing<span></span></a></li>
+<li class="chapter" data-level="7.4" data-path="style.html"><a href="style.html#names"><i class="fa fa-check"></i><b>7.4</b> Names<span></span></a></li>
+<li class="chapter" data-level="7.5" data-path="style.html"><a href="style.html#template"><i class="fa fa-check"></i><b>7.5</b> Template<span></span></a></li>
+<li class="chapter" data-level="7.6" data-path="style.html"><a href="style.html#checklist"><i class="fa fa-check"></i><b>7.6</b> Checklist<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data<span></span></a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>8.1</b> Entering data<span></span></a></li>
+<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data<span></span></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)<span></span></a></li>
+<li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data<span></span></a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#base-r"><i class="fa fa-check"></i><b>9.1</b> Base R<span></span></a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="handling-data.html"><a href="handling-data.html#useful-functions"><i class="fa fa-check"></i><b>9.1.1</b> Useful functions<span></span></a></li>
+<li class="chapter" data-level="9.1.2" data-path="handling-data.html"><a href="handling-data.html#extracting-rows-and-columns"><i class="fa fa-check"></i><b>9.1.2</b> Extracting rows and columns<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr<span></span></a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="handling-data.html"><a href="handling-data.html#selecting-a-column"><i class="fa fa-check"></i><b>9.2.1</b> Selecting a column<span></span></a></li>
+<li class="chapter" data-level="9.2.2" data-path="handling-data.html"><a href="handling-data.html#adding-a-new-column"><i class="fa fa-check"></i><b>9.2.2</b> Adding a new column<span></span></a></li>
+<li class="chapter" data-level="9.2.3" data-path="handling-data.html"><a href="handling-data.html#sorting-the-data"><i class="fa fa-check"></i><b>9.2.3</b> Sorting the data<span></span></a></li>
+<li class="chapter" data-level="9.2.4" data-path="handling-data.html"><a href="handling-data.html#filtering-data"><i class="fa fa-check"></i><b>9.2.4</b> Filtering data<span></span></a></li>
+<li class="chapter" data-level="9.2.5" data-path="handling-data.html"><a href="handling-data.html#removing-na-entries-in-data"><i class="fa fa-check"></i><b>9.2.5</b> Removing NA entries in data<span></span></a></li>
+<li class="chapter" data-level="9.2.6" data-path="handling-data.html"><a href="handling-data.html#grouping"><i class="fa fa-check"></i><b>9.2.6</b> Grouping<span></span></a></li>
+<li class="chapter" data-level="9.2.7" data-path="handling-data.html"><a href="handling-data.html#joining"><i class="fa fa-check"></i><b>9.2.7</b> Joining<span></span></a></li>
+<li class="chapter" data-level="9.2.8" data-path="handling-data.html"><a href="handling-data.html#pipes"><i class="fa fa-check"></i><b>9.2.8</b> Pipes<span></span></a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>12</b> Data and metadata</a>
+<li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R<span></span></a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>12.1</b> Data</a>
+<li class="chapter" data-level="10.1" data-path="graph.html"><a href="graph.html#making-graphs-in-r"><i class="fa fa-check"></i><b>10.1</b> Making graphs in R<span></span></a></li>
+<li class="chapter" data-level="10.2" data-path="graph.html"><a href="graph.html#scatter-plots-with-plotxy"><i class="fa fa-check"></i><b>10.2</b> Scatter plots with <code>plot(x,y)</code><span></span></a></li>
+<li class="chapter" data-level="10.3" data-path="graph.html"><a href="graph.html#axes"><i class="fa fa-check"></i><b>10.3</b> Adding axes labels and changing symbols<span></span></a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>12.1.1</b> Data guidelines</a></li>
-<li class="chapter" data-level="12.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>12.1.2</b> Database structure guidelines</a></li>
+<li class="chapter" data-level="10.3.1" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>10.3.1</b> Getting a bit more sophisticated<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>12.2</b> Metadata</a>
-<ul>
-<li class="chapter" data-level="12.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>12.2.1</b> Metadata guidelines</a></li>
+<li class="chapter" data-level="10.4" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>10.4</b> Line graphs<span></span></a></li>
+<li class="chapter" data-level="10.5" data-path="graph.html"><a href="graph.html#other-useful-plot-functions"><i class="fa fa-check"></i><b>10.5</b> Other useful plot functions<span></span></a></li>
+<li class="chapter" data-level="10.6" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>10.6</b> Exporting your graphs<span></span></a></li>
+<li class="chapter" data-level="10.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>10.7</b> pch cheatsheet<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="12.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>12.3</b> Further reading</a></li>
-</ul></li>
-<li><a href="part-ii-advanced.html#part-ii-advanced"><strong>PART II: ADVANCED</strong></a></li>
-<li class="chapter" data-level="13" data-path="writing-functions.html"><a href="writing-functions.html"><i class="fa fa-check"></i><b>13</b> Writing functions</a>
+<li class="chapter" data-level="11" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>11</b> Statistics in R<span></span></a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="writing-functions.html"><a href="writing-functions.html#introduction"><i class="fa fa-check"></i><b>13.1</b> Introduction</a></li>
-<li class="chapter" data-level="13.2" data-path="writing-functions.html"><a href="writing-functions.html#writing-your-own-functions"><i class="fa fa-check"></i><b>13.2</b> Writing your own functions</a></li>
-<li class="chapter" data-level="13.3" data-path="writing-functions.html"><a href="writing-functions.html#returning-multiple-outputs"><i class="fa fa-check"></i><b>13.3</b> Returning Multiple Outputs</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html"><i class="fa fa-check"></i><b>14</b> Loops and repeating commands</a>
+<li class="chapter" data-level="11.1" data-path="statistics.html"><a href="statistics.html#comparing-two-means-of-a-population-or-samples-using-a-t-test"><i class="fa fa-check"></i><b>11.1</b> Comparing two means of a population or sample(s) using a t-test<span></span></a></li>
+<li class="chapter" data-level="11.2" data-path="statistics.html"><a href="statistics.html#types-of-tests"><i class="fa fa-check"></i><b>11.2</b> Types of tests<span></span></a></li>
+<li class="chapter" data-level="11.3" data-path="statistics.html"><a href="statistics.html#p-values-and-statistical-significance"><i class="fa fa-check"></i><b>11.3</b> p-values and statistical significance<span></span></a></li>
+<li class="chapter" data-level="11.4" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>11.4</b> t.test<span></span></a></li>
+<li class="chapter" data-level="11.5" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>11.5</b> Correlation<span></span></a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#introduction-1"><i class="fa fa-check"></i><b>14.1</b> Introduction</a></li>
-<li class="chapter" data-level="14.2" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#for-loops"><i class="fa fa-check"></i><b>14.2</b> for loops</a></li>
-<li class="chapter" data-level="14.3" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#nested-for-loop"><i class="fa fa-check"></i><b>14.3</b> Nested for loop?</a></li>
-<li class="chapter" data-level="14.4" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#loop-alternatives"><i class="fa fa-check"></i><b>14.4</b> Loop alternatives</a></li>
+<li class="chapter" data-level="11.5.1" data-path="statistics.html"><a href="statistics.html#corxy"><i class="fa fa-check"></i><b>11.5.1</b> cor(x,y)<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>15</b> ggplot</a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="ggplot.html"><a href="ggplot.html#introduction-2"><i class="fa fa-check"></i><b>15.1</b> Introduction</a></li>
-<li class="chapter" data-level="15.2" data-path="ggplot.html"><a href="ggplot.html#making-scatter-plots-with-ggplot2"><i class="fa fa-check"></i><b>15.2</b> Making scatter plots with ggplot2</a></li>
-<li class="chapter" data-level="15.3" data-path="ggplot.html"><a href="ggplot.html#customising-graphs"><i class="fa fa-check"></i><b>15.3</b> Customising graphs</a></li>
-<li class="chapter" data-level="15.4" data-path="ggplot.html"><a href="ggplot.html#adding-lines-of-best-fit"><i class="fa fa-check"></i><b>15.4</b> Adding lines of best fit</a></li>
-<li class="chapter" data-level="15.5" data-path="ggplot.html"><a href="ggplot.html#facet-wrapping"><i class="fa fa-check"></i><b>15.5</b> Facet wrapping</a></li>
-<li class="chapter" data-level="15.6" data-path="ggplot.html"><a href="ggplot.html#other-types-of-plots"><i class="fa fa-check"></i><b>15.6</b> Other types of plots</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>16</b> Making maps</a></li>
-<li class="chapter" data-level="17" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>17</b> Coding club at MUN</a></li>
-<li class="chapter" data-level="18" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>18</b> Contributions</a></li>
-<li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a>
+<li class="chapter" data-level="12" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>12</b> Data and metadata<span></span></a>
 <ul>
-<li class="chapter" data-level="A.1" data-path="faq.html"><a href="faq.html#download-and-installation-issues"><i class="fa fa-check"></i><b>A.1</b> Download and Installation Issues</a></li>
-<li class="chapter" data-level="A.2" data-path="faq.html"><a href="faq.html#computer-issues"><i class="fa fa-check"></i><b>A.2</b> Computer Issues</a></li>
-<li class="chapter" data-level="A.3" data-path="faq.html"><a href="faq.html#rstudio-error-messages"><i class="fa fa-check"></i><b>A.3</b> RStudio Error Messages</a></li>
+<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>12.1</b> Data<span></span></a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>12.1.1</b> Data guidelines<span></span></a></li>
+<li class="chapter" data-level="12.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>12.1.2</b> Database structure guidelines<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="B" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>B</b> Glossary</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a>
+<li class="chapter" data-level="12.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>12.2</b> Metadata<span></span></a>
 <ul>
-<li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables</a></li>
-<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
-<ul>
-<li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses</a></li>
+<li class="chapter" data-level="12.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>12.2.1</b> Metadata guidelines<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="C.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-1"><i class="fa fa-check"></i><b>C.3</b> Further reading</a></li>
-<li class="chapter" data-level="C.4" data-path="hypothesis.html"><a href="hypothesis.html#status"><i class="fa fa-check"></i><b>C.4</b> Status</a></li>
+<li class="chapter" data-level="12.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>12.3</b> Further reading<span></span></a></li>
+</ul></li>
+<li><a href="part-ii-advanced.html#part-ii-advanced"><strong>PART II: ADVANCED</strong><span></span></a></li>
+<li class="chapter" data-level="13" data-path="writing-functions.html"><a href="writing-functions.html"><i class="fa fa-check"></i><b>13</b> Writing functions<span></span></a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="writing-functions.html"><a href="writing-functions.html#introduction"><i class="fa fa-check"></i><b>13.1</b> Introduction<span></span></a></li>
+<li class="chapter" data-level="13.2" data-path="writing-functions.html"><a href="writing-functions.html#writing-your-own-functions"><i class="fa fa-check"></i><b>13.2</b> Writing your own functions<span></span></a></li>
+<li class="chapter" data-level="13.3" data-path="writing-functions.html"><a href="writing-functions.html#returning-multiple-outputs"><i class="fa fa-check"></i><b>13.3</b> Returning Multiple Outputs<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html"><i class="fa fa-check"></i><b>14</b> Loops and repeating commands<span></span></a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#introduction-1"><i class="fa fa-check"></i><b>14.1</b> Introduction<span></span></a></li>
+<li class="chapter" data-level="14.2" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#for-loops"><i class="fa fa-check"></i><b>14.2</b> for loops<span></span></a></li>
+<li class="chapter" data-level="14.3" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#nested-for-loop"><i class="fa fa-check"></i><b>14.3</b> Nested for loop?<span></span></a></li>
+<li class="chapter" data-level="14.4" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#loop-alternatives"><i class="fa fa-check"></i><b>14.4</b> Loop alternatives<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>15</b> ggplot<span></span></a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="ggplot.html"><a href="ggplot.html#introduction-2"><i class="fa fa-check"></i><b>15.1</b> Introduction<span></span></a></li>
+<li class="chapter" data-level="15.2" data-path="ggplot.html"><a href="ggplot.html#making-scatter-plots-with-ggplot2"><i class="fa fa-check"></i><b>15.2</b> Making scatter plots with ggplot2<span></span></a></li>
+<li class="chapter" data-level="15.3" data-path="ggplot.html"><a href="ggplot.html#customising-graphs"><i class="fa fa-check"></i><b>15.3</b> Customising graphs<span></span></a></li>
+<li class="chapter" data-level="15.4" data-path="ggplot.html"><a href="ggplot.html#adding-lines-of-best-fit"><i class="fa fa-check"></i><b>15.4</b> Adding lines of best fit<span></span></a></li>
+<li class="chapter" data-level="15.5" data-path="ggplot.html"><a href="ggplot.html#facet-wrapping"><i class="fa fa-check"></i><b>15.5</b> Facet wrapping<span></span></a></li>
+<li class="chapter" data-level="15.6" data-path="ggplot.html"><a href="ggplot.html#other-types-of-plots"><i class="fa fa-check"></i><b>15.6</b> Other types of plots<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>16</b> Making maps<span></span></a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="making-maps.html"><a href="making-maps.html#introduction-3"><i class="fa fa-check"></i><b>16.1</b> Introduction<span></span></a></li>
+<li class="chapter" data-level="16.2" data-path="making-maps.html"><a href="making-maps.html#creating-maps-using-ggplot2-and-sf"><i class="fa fa-check"></i><b>16.2</b> Creating maps using <code>ggplot2</code> and <code>sf</code><span></span></a></li>
+<li class="chapter" data-level="16.3" data-path="making-maps.html"><a href="making-maps.html#changing-map-colours"><i class="fa fa-check"></i><b>16.3</b> Changing map colours<span></span></a></li>
+<li class="chapter" data-level="16.4" data-path="making-maps.html"><a href="making-maps.html#map-extent"><i class="fa fa-check"></i><b>16.4</b> Map Extent<span></span></a></li>
+<li class="chapter" data-level="16.5" data-path="making-maps.html"><a href="making-maps.html#scale-bar-and-north-arrow"><i class="fa fa-check"></i><b>16.5</b> Scale bar and north arrow<span></span></a></li>
+<li class="chapter" data-level="16.6" data-path="making-maps.html"><a href="making-maps.html#additional-reading"><i class="fa fa-check"></i><b>16.6</b> Additional Reading<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>17</b> Coding club at MUN<span></span></a></li>
+<li class="chapter" data-level="18" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>18</b> Contributions<span></span></a></li>
+<li class="appendix"><span><b>Appendix<span></span></b></span></li>
+<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ<span></span></a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="faq.html"><a href="faq.html#download-and-installation-issues"><i class="fa fa-check"></i><b>A.1</b> Download and Installation Issues<span></span></a></li>
+<li class="chapter" data-level="A.2" data-path="faq.html"><a href="faq.html#computer-issues"><i class="fa fa-check"></i><b>A.2</b> Computer Issues<span></span></a></li>
+<li class="chapter" data-level="A.3" data-path="faq.html"><a href="faq.html#rstudio-error-messages"><i class="fa fa-check"></i><b>A.3</b> RStudio Error Messages<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>B</b> Glossary<span></span></a></li>
+<li><a href="references.html#references">References<span></span></a></li>
+<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations<span></span></a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables<span></span></a></li>
+<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing<span></span></a>
+<ul>
+<li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses<span></span></a></li>
+</ul></li>
+<li class="chapter" data-level="C.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-1"><i class="fa fa-check"></i><b>C.3</b> Further reading<span></span></a></li>
+<li class="chapter" data-level="C.4" data-path="hypothesis.html"><a href="hypothesis.html#status"><i class="fa fa-check"></i><b>C.4</b> Status<span></span></a></li>
 </ul></li>
 </ul>
 
@@ -357,19 +364,19 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="install" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> R and R Studio</h1>
+<div id="install" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> R and R Studio<a href="install.html#install" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>R is a programming language for statistical computation and graphics. A user-friendly way to use R is through RStudio. RStudio is a Graphical User Interface (GUI) that facilitates R coding by providing buttons and menus for commonly used commands.</p>
 <p>A simple way of understanding the difference between R and RStudio is thinking of R like a car’s engine while RStudio is like a car’s dashboard, as depicted in Figure <a href="install.html#fig:R-vs-RStudio-1">2.1</a>. In the same way as having access to instrumentation, gauges, controls, and a navigation system makes driving more comfortable, using RStudio’s interface makes using R easier <span class="citation">(Ismay and Kim 2019)</span>. Similarly, R can be used without RStudio, but RStudio cannot be used without R.</p>
 <p><strong>In this guide, we recommend and assume that you are using R via RStudio.</strong></p>
-<div class="figure" style="text-align: center"><span id="fig:R-vs-RStudio-1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:R-vs-RStudio-1"></span>
 <img src="figures/R_vs_RStudio_1.png" alt="Analogy of the difference between R and RStudio [@ismay2019statistical]." width="95%" />
 <p class="caption">
 Figure 2.1: Analogy of the difference between R and RStudio <span class="citation">(Ismay and Kim 2019)</span>.
 </p>
 </div>
-<div id="installing" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Installing R and RStudio</h2>
+<div id="installing" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Installing R and RStudio<a href="install.html#installing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Since RStudio is an add-on to R, you must first download and install R and then download and install RStudio. Follow these instructions in order:</p>
 <ol style="list-style-type: decimal">
 <li><p>Download and install R from <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a>:</p>
@@ -385,8 +392,8 @@ Figure 2.1: Analogy of the difference between R and RStudio <span class="citatio
 <li>Click on the corresponding download link.</li>
 </ul></li>
 </ol>
-<div id="rcloud" class="section level3" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> RStudio Cloud</h3>
+<div id="rcloud" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> RStudio Cloud<a href="install.html#rcloud" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you prefer not installing additional software on your computer or are experiencing issues during the installation, we recommend using RStudio Cloud as an alternative. These are the steps that you have to follow:</p>
 <ul>
 <li>In a web browser, go to <a href="https://rstudio.cloud/plans/free" class="uri">https://rstudio.cloud/plans/free</a>.</li>
@@ -397,10 +404,10 @@ Figure 2.1: Analogy of the difference between R and RStudio <span class="citatio
 </ul>
 </div>
 </div>
-<div id="using-r-via-rstudio" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Using R via RStudio</h2>
+<div id="using-r-via-rstudio" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Using R via RStudio<a href="install.html#using-r-via-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Now that you have installed R and RStudio on your computer, you will see that you have both new programs. We will always work in RStudio and not in the R application, as shown in Figure <a href="install.html#fig:R-vs-RStudio-2">2.2</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:R-vs-RStudio-2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:R-vs-RStudio-2"></span>
 <img src="figures/R_vs_RStudio.png" alt="Icons of R and RStudio on your computer [@ismay2019statistical]. Remember to always click on RStudio!" width="90%" />
 <p class="caption">
 Figure 2.2: Icons of R and RStudio on your computer <span class="citation">(Ismay and Kim 2019)</span>. Remember to always click on RStudio!
@@ -419,7 +426,6 @@ Figure 2.2: Icons of R and RStudio on your computer <span class="citation">(Isma
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -459,6 +465,10 @@ gitbook.start({
 "text": null
 },
 "download": ["quant-guide.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
