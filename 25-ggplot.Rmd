@@ -380,6 +380,7 @@ ggplot() +
   theme_bw() +
   theme(panel.background = element_rect(fill = "aliceblue"))
 ```
+
 ## Projections
 The Earth exists in three-dimensions but, other than globes, most representations of the earth, such as maps, are two dimensional. A map projection is the process of representing Earth's surface in two dimensions using a set of mathematical transformations. However, the Earth's surface cannot be flattened without distorting at least one geometrical property, such as area, shape, and distance. You cannot accurately represent all of these properties simultaneously therefore, it is important to select a projection that has the most suitable properties for that the mapping situation. 
 
@@ -412,12 +413,14 @@ map_nl <- canada_map[canada_map$name == "Newfoundland and Labrador",]
 ggplot() +
   geom_sf(data = map_nl, colour = "black", fill = "white") 
 ```
+
 Lastly, we can specify the values we want in our x or y axes by setting breaks in the data. For example, we can reduce the number of longitude values included by setting `scale_x_continuous`.
 ```{r}
 ggplot() +
   geom_sf(data = map_nl, colour = "black", fill = "white") +
   scale_x_continuous(breaks=seq(-68, -52, 3)) 
 ```
+
 ## Mapping points
 We can add layers to our base map using additional `geom` functions in the same way that we would for any ggplot item. For points, we would use the function `geom_point()` and specify the coordinates as the x and y values within `aes()`. For this example, we will be mapping the populations of towns across Newfoundland and Labrador using the 2021 census report (Statistics Canada. Table 98-10-0002-01  Population and dwelling counts: Canada and census subdivisions (municipalities)).
 ```{r include = FALSE}
@@ -433,8 +436,11 @@ ggplot() +
   geom_point(data = nl.cities, aes(x = Longitude, y = Latitude, colour = Population_2021)) +
   scale_x_continuous(breaks=seq(-68, -52, 3)) 
 ```
+
 This map doesn't provide a lot of information about the population sizes in NL since most towns have fewer than 25 000 people. To create a more meaningful representation of our data, we can change the scale and colour. 
+
 One option is to add a layer using the function `scale_color_viridis_c()`, which provides a range of colour blind friendly palettes. We will just use the default option in this example.
+
 We can also scale the data by specifying the transformation we would like to use; in the example below, we will use the `log10` transformation, which returns the base 10 logarithm of a number. Note that this transformation is for the colour scale only and it will not alter the values of our data. The legend will now provide a wider range of colours for values between 10 and 10 000.
 Lastly, we will change the name of the legend within the `labs()` function.
 ```{r warning = FALSE}
@@ -445,6 +451,7 @@ ggplot() +
   scale_color_viridis_c(trans = "log10") +
   labs(colour = "Population 2021") 
 ```
+
 Other spatial elements such as lines or polygons can be added in the same way using the `geom_line()` or `geom_polygon()` functions.
 
 ## Scale bar and north arrow
@@ -459,6 +466,7 @@ ggplot() +
   annotation_scale(location = "tr", width_hint = 0.5)
 
 ```
+
 A north arrow indicates the orientation of the map inside the frame. Using the argument `annotation_north_arror()`, we can specify the orientation using `which_north`. Options include "grid", where the north arrow always pointing up and "true", which always points to the north pole. We can also define the size of the north arrow using `height` and `width`, as well as the style and location.
 ```{r message=FALSE}
 ggplot() +
@@ -470,6 +478,7 @@ ggplot() +
                          style = north_arrow_fancy_orienteering)
 
 ```
+
 ## Finalizing the map
 You may need to save the map for a report, presentation, or thesis. We will combine each of the previous steps into one map below, which we will assign as the object named `final`. These previous steps include:
 * Plot a base map of Newfoundland and Labrador
@@ -477,7 +486,7 @@ You may need to save the map for a report, presentation, or thesis. We will comb
 * Add a scale bar and north arrow
 * Set the background colour to blue
 In addition, we will move the legend inside the map margins by defining `legend.position` within the `theme` layer. 
-```{r message = FALSE}
+```{r message = FALSE, warning = FALSE}
 final <- ggplot() +
   geom_sf(data = map_nl, colour = "black", fill = "white") +
   geom_point(data = nl.cities, aes(x = Longitude, y = Latitude, colour = Population_2021)) + 
@@ -491,31 +500,33 @@ final <- ggplot() +
                          style = north_arrow_fancy_orienteering) +
   theme_bw() +
   theme(panel.background = element_rect(fill = "aliceblue"),
-        legend.position = c(0.8, 0.75), legend.background = element_rect(fill = "transparent"),
-        legend.title = element_text(size = 12, face = "bold")) 
+        legend.position = c(0.85, 0.75), legend.background = element_rect(fill = "transparent"),
+        legend.title = element_text(size = 10, face = "bold")) 
 final
 ```
+
 We may also want to create an inset map, which shows the location of the main map in the context of a larger area. For example, we can use the larger Canadian map we made previously, with Newfoundland and Labrador highlighted. We will assign this map as the object `inset`. Reminder, the previous steps included:
 * Using an `ifelse` statement to colour Newfoundland and Labrador blue and the remainder of Canada white
 * Reprojected the map using the Lambert Conformal Conical projection
 * Set the map theme and changed the background colour
-Now we will also add a scale bar to our inset map using `annotation_scale()`.
+Now we will also add a scale bar to our inset map using `annotation_scale()` and remove the white background by setting `plot.background = element_blank()`.
 ```{r}
 inset <- ggplot() + 
   geom_sf(data = canada_map, colour = "black", 
           fill = ifelse(canada_map$name == "Newfoundland and Labrador", 'blue', 'white')) + 
   coord_sf(crs = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs") +
-  scale_x_continuous(breaks = c(-120, -100, -80)) +
+  scale_x_continuous(breaks = c(-100, -80)) +
   annotation_scale(location = "bl", width_hint = 0.25) +
   theme_bw() +
-  theme(panel.background = element_rect(fill = "aliceblue", size = 1))
+  theme(panel.background = element_rect(fill = "aliceblue", size = 1),
+         plot.background = element_blank())
 
 inset
 ```
 Lastly, we will add inset the inset to the main map using the `cowplot` package. We specify which is the main map using `ggdraw` and add the inset with a second function called `draw_plot`. Within `draw_plot` we define the size of the inset with `width` and `height`, as well as the location within the main map margins using `x` and `y`.
-```{r message = FALSE}
+```{r warning = FALSE, message = FALSE}
 NL.full <- ggdraw(final) + 
-  draw_plot(inset, width = 0.3, height = 0.3, x = 0.25, y = 0.05)
+  draw_plot(inset, width = 0.3, height = 0.3, x = 0.3, y = 0.1)
 
 NL.full
 ```
