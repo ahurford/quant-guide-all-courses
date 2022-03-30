@@ -318,7 +318,7 @@ Further reading
 * The ggplot2 package has a website with many help articles including other geom types and how to customize your graphs (fonts, colours, shapes, etc.) https://ggplot2.tidyverse.org/index.html
 
 # Making maps
-```{r include = false}
+```{r, include = FALSE}
 libs <- c('ggplot2', "sf", "rnaturalearth", "rnaturalearthdata", "rnaturalearthhires", "ggspatial", "raster", "dplyr", "cowplot")
 lapply(libs, require, character.only = TRUE)
 
@@ -423,7 +423,7 @@ We can add layers to our base map using additional `geom` functions in the same 
 ```{r include = FALSE}
 # Import Dataset
 library(data.table)
-nl.cities <- fread("~/Documents/R Help/TA-W22/2021_Can_Census_w_Locs.csv")
+nl.cities <- fread("2021_Can_Census_w_Locs.csv")
 options(scipen=10000)
 ```
 Once we have our data, we will use the same base map that we used prior, and add the `geom_point()` layer. Note that we have also specified the colour of the points to be based on the 2021 population of the town/city and that we have done so within the `aes()`.
