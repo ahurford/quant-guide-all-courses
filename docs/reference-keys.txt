@@ -65,6 +65,7 @@ pipes
 graph
 making-graphs-in-r
 scatter-plots-with-plotxy
+line-of-best-fit
 axes
 getting-a-bit-more-sophisticated
 line-graphs
@@ -92,7 +93,6 @@ returning-multiple-outputs
 loops-and-repeating-commands
 introduction-1
 for-loops
-nested-for-loop
 loop-alternatives
 ggplot
 introduction-2
@@ -101,15 +101,16 @@ customising-graphs
 adding-lines-of-best-fit
 facet-wrapping
 other-types-of-plots
+further-reading-1
 making-maps
 introduction-3
 creating-maps-using-ggplot2-and-sf
 changing-map-colours
-projections
 map-extent
 mapping-points
 scale-bar-and-north-arrow
 finalizing-the-map
+exporting-your-map
 additional-reading
 coding-club-at-mun
 contributions
@@ -122,5 +123,5 @@ hypothesis
 discrete-and-continuous-variables
 hypothesis-testing
 null-hypotheses
-further-reading-1
+further-reading-2
 status

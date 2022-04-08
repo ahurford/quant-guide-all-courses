@@ -512,7 +512,7 @@ ggplot() +
 
 ```
 
-A north arrow indicates the orientation of the map inside the frame. Using the argument `annotation_north_arror()`, we can specify the orientation using `which_north`. Options include "grid", where the north arrow always pointing up and "true", which always points to the north pole. We can also define the size of the north arrow using `height` and `width`, as well as the style and location.
+A north arrow indicates the orientation of the map inside the frame. Using the argument `annotation_north_arrow()`, we can specify the orientation using `which_north`. Options include "grid", where the north arrow always pointing up and "true", which always points to the north pole. We can also define the size of the north arrow using `height` and `width`, as well as the style and location.
 
 ```{r message=FALSE}
 ggplot() +
@@ -536,7 +536,7 @@ You may need to save the map for a report, presentation, or thesis. We will comb
 
 In addition, we will move the legend inside the map margins by defining `legend.position` within the `theme` layer. 
 
-```{r message = FALSE, warning = FALSE}
+```{r message = FALSE, warning = FALSE, fig.dim = c(7,7)}
 final <- ggplot() +
   geom_sf(data = map_nl, colour = "black", fill = "white") +
   geom_point(data = nl.cities, aes(x = Longitude, y = Latitude, colour = Population_2021)) + 
@@ -577,11 +577,19 @@ inset
 ```
 Lastly, we will add inset the inset to the main map using the `cowplot` package. We specify which is the main map using `ggdraw` and add the inset with a second function called `draw_plot`. Within `draw_plot` we define the size of the inset with `width` and `height`, as well as the location within the main map margins using `x` and `y`.
 
-```{r warning = FALSE, message = FALSE, fig.dim = c(7, 5)}
+```{r warning = FALSE, message = FALSE, fig.dim = c(7, 7)}
 NL.full <- ggdraw(final) + 
-  draw_plot(inset, width = 0.3, height = 0.3, x = 0.3, y = 0.1)
+  draw_plot(inset, width = 0.3, height = 0.3, x = 0.25, y = 0.05)
 
 NL.full
+```
+
+### Exporting your map
+
+You can now export your map to use for a report, presentation, etc. One option is to use the method outlined in Chapter \@ref(export). However, we can also use the function `ggsave()`. This will allow us to name our map as well as set the file format (.PNG, .JPEG, .TIFF), size (width and height in inches), and image resolution (dpi) when exporting the map.
+
+```{r, eval=F, echo=T}
+ggsave("map_final.png", plot = NL.full, width = 7, height = 7, dpi = "screen")
 ```
 
 ## Additional Reading
