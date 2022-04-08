@@ -63,7 +63,7 @@ The key is the internal consistency: `A` and `B` are the names of the vectors an
 
 ------------------------------------------------------------------------
 
-**HAND IN**
+**EXERCISE 10.1**
 
 1.  Which two vectors below will generate a plot if executed before `plot(a, b)`?
 
@@ -84,6 +84,22 @@ b <- c(2, 4, 6)
     plot(x, y)
 
 ------------------------------------------------------------------------
+
+## Line of best fit
+
+A line of best fit represents a trendline that approximates the relationship between points of a scatter plot. Most often, we will use a linear equation to estimate this relationship, for example a simple linear regression or `y = mx + b`. Here m represents the slope of the line and b represents the y-intercept. 
+
+We can calculate this equation by hand but R will do this for us using the function `abline()`, specifying `lm()` for linear model. The syntax we use for the equation is `lm(y-variable ~ x-variable)`.
+
+```{r}
+x <- c(1, 3, 4, 6, 9)
+
+y <- c(21, 16, 25, 29, 33)
+
+plot(x, y)
+abline(lm(y ~ x))
+```
+Note that we use the `abline()` function after `plot()`. This will add the line of best fit to the existing plot, but it will not plot a line on its own.
 
 ## Adding axes labels and changing symbols {#axes}
 
@@ -169,19 +185,19 @@ Voila!
 Note that `points()` can only be used after `plot()` as the `points()` function only adds data points to an existing plot, it does not create a plot on its own.
 You can describe what the two symbols represent in the caption. For most scientific journals it is preferred to describe the symbology in the caption, rather than use a legend. However, with more complex graphs, or for some publications, you may wish to include a legend. Legends can be a bit tricky to work with in R - we'll leave those for a more advanced course.
 
-**HAND IN**
+**EXERCISE 10.2**
 
 Re-create the graph above on your own, but this time, make the symbol for `fishA` an open square and the symbol for `fishB` a filled circle (see section \@ref(pch)). Export this plot and hand it in with your assignment (either as a .pdf file, or by pasting the .pdf file into an MS Word document or other text editor, see section \@ref(export)).
 
 ## Line graphs
 
-Finally, if you wanted to have a line joining the points, you'd specify the `type = "l"` in the arguments of the plot fuction (`l` is for line, `p` is for points, and `b` is for both).
+Finally, if you wanted to have a line joining the points, you'd specify the `type = "l"` in the arguments of the plot function (`l` is for line, `p` is for points, and `b` is for both).
 
 ```{r}
 plot(temp, fishA, pch = 17, type = "l", xlab = "temperature (degrees C)", ylab = "opercular beats (bpm)")
 ```
 
-**HAND IN**
+**EXERCISE 10.3**
 
 Re-create the graph above on your own, but this time, also add a line for `fishB` which
 joins the points as is shown above for `fishA`. Just as in section \@ref(axes), where we used the `points()` function to an existing plot, we can use the `lines()` function to add a line to an existing plot. To select the line type, use `lty = 2` (or another value), just as you would use `pch` in the `points()` function. Export this plot and hand it in with your assignment (by pasting the .pdf file into an MS Word document or other text editor, see section \@ref(export)).
