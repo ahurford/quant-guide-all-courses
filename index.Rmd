@@ -57,7 +57,7 @@ BIOL 4630 - Mammalogy
 
 [BIOL 4650 - Conservation](https://ahurford.github.io/BIOL4650-marine_conservation/)
 
-[BIOL 4651 - Conservation: (GIS Module)](https://nlboreal.github.io/ConservationGIS/); [(Quantitative Methods Module)](https://nlboreal.github.io/ConsBiolQuantFun/)
+[BIOL 4651 - Conservation: (GIS Module)](https://nlboreal.github.io/ConservationGIS/); [(Quantitative Methods Module)](https://nlboreal.github.io/ConsBiolQuantFun/) [(Interactive maps)](https://bookdown.org/ededeban/ConsBioMap/)
 
 ## Instructor guide
 If you are a biology instructor who is interested in furthering quantitative training in your course you can download a guide [here](https://github.com/ahurford/quant-guide-all-courses/blob/master/files/Instructor_Guide.pdf) (please download the file as viewing it does not display all the information).
