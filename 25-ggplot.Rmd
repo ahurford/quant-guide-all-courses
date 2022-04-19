@@ -340,6 +340,15 @@ ggplot(data = ShrubData, aes(x = experiment, y = height)) +
 
 # Making maps
 ```{r, include = FALSE}
+### Install Packages ----
+## An R package to hold and facilitate interaction with Natural Earth map data.
+if (!require(rnaturalearth)) install.packages("rnaturalearth")
+
+## Data to support much of the package functionality are stored in two additional data packages
+if (!require(rnaturalearthdata)) devtools::install_github("ropensci/rnaturalearthdata")
+if (!require(rnaturalearthhires)) devtools::install_github("ropensci/rnaturalearthhires")
+
+## Load Library
 libs <- c('ggplot2', "sf", "rnaturalearth", "rnaturalearthdata", "rnaturalearthhires", "ggspatial", "raster", "dplyr", "cowplot")
 lapply(libs, require, character.only = TRUE)
 
