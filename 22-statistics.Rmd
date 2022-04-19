@@ -83,7 +83,7 @@ t.test(x, y = NULL,
        
 ```  
 
-#### Questions {-}
+#### EXERCISE 11.1 {-}
 Suppose the `10` measures of change in cat weight were instead:
 ```{r}
 x2 <- rnorm(10)+1
@@ -159,7 +159,7 @@ y = c(2,8,9)
 cor(x, y)
 ```
 
-#### Questions {-}
+#### EXERCISE 11.2 {-}
 
 1. Can you write the code to graph `x` and `y` from the code above to show the positive correlation? (see Chapter \@ref(graph) if you need help)
 
