@@ -601,7 +601,12 @@ You can now export your map to use for a report, presentation, etc. One option i
 ggsave("map_final.png", plot = NL.full, width = 7, height = 7, dpi = "screen")
 ```
 
+
+
+
+
 ## Additional Reading
+* https://bookdown.org/ededeban/ConsBioMap/
 * https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/understand-epsg-wkt-and-other-crs-definition-file-types/
 * https://pro.arcgis.com/en/pro-app/2.7/help/mapping/properties/coordinate-systems-and-projections.htm
 * https://cran.r-project.org/web/packages/sf/vignettes/sf1.html
