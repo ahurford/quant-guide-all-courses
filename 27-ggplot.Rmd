@@ -1,0 +1,143 @@
+# ggplot {#ggplot}
+
+## Introduction
+
+ggplot2 is an R package for producing data graphics. Unlike the base plot function we learned earlier, ggplot2 creates graphs using a step-by-step process that combines independent layers. This makes ggplot2 a very flexible and powerful tool for producing statistical graphics.
+
+Every plot made using ggplot2 has three key components:
+
+1. Data: a data frame
+
+2 Aesthetic mappings: creates the link between data variables (x and y) and visual properties (colour, size or shape of points, etc)
+
+3. Geometry (geom) functions: at least one layer that describes the type of graphic
+
+We link these components together to create our plot: plot = data + aesthetics + geometry
+
+## Making scatter plots with ggplot2
+
+We first load the `ggplot2` package and import our dataset. 
+
+```{r, include=F}
+ShrubData <- read.csv(file = "shrub-volume-data.csv")
+ShrubData$experiment <- as.factor(ShrubData$experiment)
+ShrubData$site <- as.factor(ShrubData$site)
+ShrubData$plant <- as.factor(1:nrow(ShrubData))
+```
+
+```{r}
+library(ggplot2)
+head(ShrubData)
+```
+
+We begin to build our graphic one step at a time, first using the function `ggplot` to specify our data frame and set our x and y variables within the aesthetic `aes()`. When we run this code, it produces a blank figure with our x and y axis set because we haven't specified the type of graphic we want.
+
+```{r}
+ggplot(data = ShrubData, aes(x = length, y = height))
+```
+
+To add the data, we must choose a geom function, for example `geom_point()`.
+
+```{r, warning = FALSE}
+ggplot(data = ShrubData, aes(x = length, y = height)) + 
+  geom_point()
+
+```
+
+If we want to change the colour or shape of the points to represent the specific site, we can add that to the aesthetic within `geom_point`.
+
+```{r, warning = FALSE}
+ggplot(data = ShrubData, aes(x = length, y = height)) + 
+  geom_point(aes(colour = experiment, shape = experiment))
+```
+
+**TRY IT!** Set `colour = blue` both inside `aes()` and outside it. How does your graph change?
+
+Hint: Specifying colour within the aesthetic allows you to set variable colour according to a class. If you want to set a fixed variable colour, you do this outside the aesthetic. 
+
+## Customising graphs
+
+To change any aspect of your graph (e.g., colour, shape, line type, font, etc.), you can build off the existing plot. We do this by adding an additional layer for each element we want to change. 
+
+For example, if we want to change the colour or shape of the points, we can run the following code:
+
+```{r}
+ggplot(data = ShrubData, aes(x = length, y = height)) + 
+  geom_point(aes(colour = experiment, shape = experiment)) +
+  scale_color_manual(values=c("blue", "orange", "purple")) + 
+  scale_shape_manual(values=c(21, 23, 22))
+```
+
+We can also change our axis title using the `xlab()` or `ylab()` functions.
+```{r}
+ggplot(data = ShrubData, aes(x = length, y = height)) + 
+  geom_point(aes(colour = experiment, shape = experiment)) + 
+  xlab("Shrub Length (cm)") + 
+  ylab("Shrub Height (cm)") 
+```
+
+Similarly, we can change the limits of the axes using `xlim()` or `ylim()`.
+```{r}
+ggplot(data = ShrubData, aes(x = length, y = height)) + 
+  geom_point(aes(colour = experiment, shape = experiment)) + 
+  xlim(0, 5) + 
+  ylim(0, 10) 
+```
+
+All aspects of a ggplot graph are customizable, making it a very flexible tool. More information can be found here:https://ggplot2.tidyverse.org/articles/faq-customising.html 
+
+## Bar plots
+
+To make bar plots we use `geom_bar()`. The default function makes height of the bars proportional to the number of cases in each group. In this case, we only specify an x value, which is a categorical variable not continuous. For example, using the same shrub data as above, we can create a bar plot showing that the number of plants in each experiment is four. 
+
+```{r}
+ggplot(ShrubData, aes(x = experiment)) + 
+  geom_bar()
+```
+
+We can instead use `geom_bar()` to represent values in the data. Here, we set x as a categorical variable, y as a continuous variable, and specify `stat = "identity"` within `geom_bar()` to override the default (i.e., count). For example, we can plot the height of each individual shrub in our dataset.
+```{r}
+ggplot(ShrubData, aes(x = plant, y = height)) + 
+  geom_bar(stat = "identity")
+```
+
+When plotting multiple bars, the default is to return stacked bars. For example, we can look at shrub height across experiment and site type. However, it might be more informative to have the bars side-by-side. We can change this by setting `position = position_dodge()`.
+
+```{r}
+ggplot(ShrubData, aes(x = experiment, y = height, fill = site)) + 
+  geom_bar(stat = "identity")
+
+ggplot(ShrubData, aes(x = experiment, y = height, fill = site)) + 
+  geom_bar(stat = "identity", position = position_dodge())
+```
+
+## Facet wrapping
+
+Facet wrapping allows you to view each category on its own. 
+
+For example, if you wanted to make a separate graph for each experiment, you can add `facet_wrap(~experiment)`. Here the tilde (~) indicates which category you want to separate your data by.
+
+```{r, message = FALSE, warning = FALSE}
+ggplot(data = ShrubData, aes(x = length, y = height)) + 
+  geom_point(aes(colour = experiment, shape = experiment)) + 
+  geom_smooth(aes(colour= experiment), 
+              method= "lm", formula = y ~ x, se = FALSE) + 
+  facet_wrap(~experiment)
+```
+
+## Other types of plots
+
+We can visualize the data using other geom functions such as `geom_line` or `geom_boxplot`.
+
+``` {r}
+ggplot(data = ShrubData, aes(x = length, y = height)) + 
+  geom_line(aes(colour = experiment, linetype = experiment))
+```
+
+``` {r}
+ggplot(data = ShrubData, aes(x = experiment, y = height)) + 
+  geom_boxplot(aes(fill= experiment)) 
+```
+
+## Further reading
+* The ggplot2 package has a website with many help articles including other geom types and how to customize your graphs (fonts, colours, shapes, etc.) https://ggplot2.tidyverse.org/index.html

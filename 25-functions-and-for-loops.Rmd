@@ -1,0 +1,210 @@
+# **PART II: ADVANCED** {-}
+
+# Writing functions
+## Introduction
+
+Writing your own functions allows you to automate common tasks rather than copy-and-pasting. Functions reduce duplication by identifying repeated patterns of code and extract them out into independent pieces that can be easily reused and updated. This is beneficial for several reasons.
+
+If you need to update your code, you only need to do so in one place.
+
+You're less likely to make inadvertent mistakes when writing functions compared to when you copy and paste. For example, when updating a variable or name in one section of a copy-and-pasted script, you will need to remember to change it in all the others.
+
+It will tidy and shorten your R scripts.
+
+## Writing your own functions
+
+If you find yourself having to repeat a task multiple times, it can be helpful to create your own custom function. The syntax of a function is given below:
+
+```
+function_name <- function(argument1, argument2, ...) {
+    statement or code that completes your task # function body
+    return(value)
+}
+```
+
+function_name: This is the name you give your function. It should be relatively short but describe what the function does. Try avoid using function names that are already used elsewhere in R (e.g., sum). 
+
+argument1, argument2, …: The arguments of the function are any R objects (numeric, strings, characters, data.frames, matrices, other functions). You can have any number of arguments
+
+function body: The code between the '{}' is the function body and uses the arguments to complete the specified tasks. Every time the function is called this code is run.
+
+return value: The last line of code is the object to be returned. 
+
+Using this format, we can write a simple function to calculate the squared value of object x.
+
+```{r}
+square_num <- function(x) {
+  square <- x^2
+  return(square)
+}
+```
+
+Now, we can use 'square_num' as we would any other function. We type out the name of the function, and inside the parentheses we provide a numeric value for x:
+
+```{r}  
+square_num(5)
+```
+
+We can write a function with multiple arguments as well.
+
+```{r}
+add_num <- function(a, b, c) {
+  a * b + c
+}
+add_num(3,10,8)
+```
+
+We can also use functions to calculate a range of values. For example, we might be given a set of temperature values in degrees Celsius that we need to change to Fahrenheit. 
+
+```{r}
+temp_C <- c(0, 5, 10, 15, 20, 25, 30)
+
+celsius_to_fahrenheit <- function(temp_C) {
+  temp_F <- (temp_C * 9/5) + 32
+  return(temp_F)
+}
+
+celsius_to_fahrenheit(temp_C)
+```
+
+## Returning Multiple Outputs
+
+The examples above all return a single item. What if I want to return multiple items from a function? Let's start with a simple example that is similar to what we have already covered. The following function, which we have called `dice`, simulates rolling a six-sided dice by randomly sampling numbers 1 to 6 `n` times with replacement.
+
+```{r}
+dice <- function(n){
+    roll <- sample(1:6, n, replace = T)
+    return(roll)
+}
+
+```
+
+Choosing to "roll" the dice 10 times gives us the following output.
+
+```{r}
+dice(10)
+```
+
+Now instead of the dice function returning the result of each individual roll, we now want a) a table with the total number of times each result occurred, and b) to plot the results. We can add a new line to the function for each argument. First we construct a table called 'total' that provides the summed results, then we plot these totals.
+
+```{r}
+dice <- function(n){
+    toss <- sample(1:6, n, rep = T)
+    total <- table(toss)
+    barplot(total, xlab = "Dice Number", ylab = "Total Rolls", main = "")
+    return(total)
+}
+
+dice(10)
+```
+
+# Loops and repeating commands
+
+## Introduction
+Loops are used in programming to repeat a specific block of code. Similar to writing functions, this approach will reduce repetition and keep your code organized. 
+
+## for loops 
+A for loop is used to iterate over a vector in R programming. Iteration helps apply the same task to multiple inputs, in other words, for loops perform the same action for each item in a list. 
+
+The syntax of loops is relatively simple - for each value listed within the `for()` component, the operation stated within the `{}` is performed.
+
+```
+for(value in sequence)
+{
+statement
+}
+```
+
+In the for loop below, we have specified a vector containing the numbers 1 to 5. The statement within the `{}` will use the `print` function to return the value of `i` with each loop or iteration. In this example, the loop iterates 5 times as the vector within `for()` contains 5 elements. 
+
+```{r}
+for (i in 1:5) {
+  print(i)
+}
+
+```
+
+Instead of creating the vectors within `for()`, we can also use existing vectors. We first assign the vector we are looping over before calling the loop. In the example below, the loop will return the squared value for each term within x.
+
+```{r}
+x <- 1:5
+for (i in x) {
+  print(i^2)
+}
+
+```
+
+Often we will want to save the output from our loop. The first option is to make a blank vector or data frame and save the results to it. 
+
+In the example below, we first create an empty vector `x`. The for loop first calculates the square of the numbers 1 to 10 and then saves them to vector `x`.
+
+```{r}
+x <- vector() 
+
+for (i in 1:10) {
+  y <- i^2
+  x <- c(x, y)
+}
+
+x
+```
+
+If you know the dimensions of your data, you can also make a blank vector or dataframe of a specified size. This can help increase processing speeds for more complicated loops. For example, if we had a loop with 10 elements, we could store the results of each operation in a vector with a length of 10
+
+Here is code that will store both the square and the square root of the numbers 1 to 10 in two columns of a new dataframe called x2
+
+```{r}
+x2 <- data.frame(col1 = vector(length = 10), col2 = vector(length = 10)) 
+
+for (i in 1:10) {
+  col1 <- i^2 
+  col2 <- sqrt(i) 
+  x2[i, 1] <- col1 
+  x2[i, 2] <- col2 
+}
+
+x2
+```
+
+Now let's say we are given a dataset that includes three experiments across four different sites.
+
+```{r, include=F}
+data <- read.csv(file = "shrub-volume-data.csv")
+```
+
+```{r}
+data
+```
+
+We are then asked to calculate the correlation between shrub length and height for experiment 1 and 2. We first create a vector that specifies these experiment numbers and then create an empty vector that will be used to store the correlation results.
+
+```{r}
+exp_num <- c(1, 2)
+
+cor_output <- c()
+```
+
+Within our `for()` loop we will need to include several steps. First we subset our data using the values previously defined in `exp_num` above and store as a variable, which we call `exp_subset`. We then calculate the correlation between length and height from `exp_subet`. Next we create a dataframe that will include both the experiment number as well as the correlation results and finally, we use the function `rbind` to bind the rows from `df_cor` with our empty vector. 
+
+```{r}
+for(i in exp_num){
+  exp_subset <- subset(data, experiment == exp_num[i])
+  cor_val <- cor(exp_subset$length, exp_subset$height) 
+  df_cor <- data.frame(experiment = i,
+                       correlation = cor_val)
+  cor_output <- rbind(cor_output, df_cor) 
+}
+cor_output
+```
+
+**TRY IT** How out would rewrite the above code if you wanted to instead subset for sites 2 and 4?
+
+## Loop alternatives
+
+Loops, specifically for-loops, are essential to programming in general. However, in R, you should avoid them when there are built-in functions that already exist. These built-in functions are often more efficient ways of doing things rather than writing a loop yourself.
+
+One option is to use the `apply()` family of functions. These functions manipulate data from matrices, arrays, lists and dataframes in a repetitive way while avoiding explicit use of loops. Here is an example of some of the more common functions within the `apply()` family:
+
+* `apply()` -	Applies a function over over rows or columns of an array or matrix.
+* `lapply()` - Apply a function over a vector or list and returns a list.
+* `sapply()` - Similar to `lapply()` but can simplify the result to a vector or matrix.
