@@ -185,7 +185,9 @@ abline(lm(y ~ x))
 Note that we use the `abline()` function after `plot()`. This will add the line of best fit to the existing plot, but it will not plot a line on its own.
 
 ### Adding lines of best fit with ggplot
-
+```{r, include = F}
+library(ggplot2)
+```
 When creating figures with \@ref(ggplot), we build layers of our graphic by adding additional geoms. This is also the case if we want to add a line of best fit. We build our scatterplot by specifying `geom_point`, then use `geom_smooth` for the regression line, specifying `method = "lm"` for a linear model. 
 
 
