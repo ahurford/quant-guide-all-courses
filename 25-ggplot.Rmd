@@ -209,7 +209,7 @@ One option is to use the `apply()` family of functions. These functions manipula
 * `lapply()` - Apply a function over a vector or list and returns a list.
 * `sapply()` - Similar to `lapply()` but can simplify the result to a vector or matrix.
 
-# ggplot
+# ggplot {#ggplot}
 
 ## Introduction
 
@@ -295,18 +295,7 @@ ggplot(data = ShrubData, aes(x = length, y = height)) +
 
 All aspects of a ggplot graph are customizable, making it a very flexible tool. More information can be found here:https://ggplot2.tidyverse.org/articles/faq-customising.html 
 
-## Adding lines of best fit
 
-We can continue to build layers to our graphic by adding additional geoms. For example, if we want to add a line of best fit we use `geom_smooth`, specifying `method = "lm"` for a linear model. We also add `colour = experiment` within the `aes()` to ensure we get one line for each experiment. 
-
-```{r, message = FALSE, warning = FALSE}
-ggplot(data = ShrubData, aes(x = length, y = height)) + 
-  geom_point(aes(colour = experiment, shape = experiment)) + 
-  geom_smooth(aes(colour= experiment), 
-              method= "lm", formula = y ~ x, se = FALSE)
-```
-
-**TRY IT!** What happens if we don't include the `aes()` within `geom_smooth()`?
 
 ## Facet wrapping
 Facet wrapping allows you to view each category on its own. 
