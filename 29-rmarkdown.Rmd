@@ -2,4 +2,65 @@
 
 ## Introduction
 
+In general, you’d better leave at least one empty line between adjacent but different elements, e.g., a header and a paragraph.
+
 ## Syntax
+
+## Headers
+
+Section headers can be written after a number of pound signs, e.g.,
+
+```{r}
+# First-level header
+
+## Second-level header
+
+### Third-level header
+
+```
+
+If you do not want a certain heading to be numbered, you can add {-} or {.unnumbered} after the heading, e.g.,
+
+```{r}
+# Preface {-}
+```
+
+## Lists
+
+Unordered list items start with *, -, or +, and you can nest one list within another list by indenting the sub-list, e.g.,
+
+```
+- one item
+- one item
+- one item
+    - one more item
+    - one more item
+    - one more item
+
+```
+
+The output is:
+
+- one item
+- one item
+- one item
+  - one more item
+  - one more item
+  - one more item
+
+Ordered list items start with numbers (you can also nest lists within lists), e.g.,
+```
+1. the first item
+2. the second item
+3. the third item
+    - one unordered item
+    - one unordered item
+```
+
+The output does not look too much different with the Markdown source:
+
+1. the first item
+2. the second item
+3. the third item
+  - one unordered item
+  - one unordered item
