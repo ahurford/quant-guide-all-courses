@@ -1,0 +1,37 @@
+# Advanced graphing - silhouettes {#silhouettes}
+
+## Introduction
+
+Read about the [rphylopic](https://cran.r-project.org/web/packages/rphylopic/readme/README.html) package.
+
+Read about the function [add_phylopic()](https://www.rdocumentation.org/packages/rphylopic/versions/0.3.0/topics/add_phylopic)
+
+## Adding silhouettes in ggplot
+
+The following code from [here](https://scrogster.wordpress.com/2014/06/02/adding-phylopic-org-silhouettes-to-r-plots/), will work if the rphylopic package isn’t working well:
+```{r}
+# You need to install these packages first
+library(png)
+library(RCurl)
+library(ggplot2)
+library(rphylopic)
+
+# go to phylopic.org and search for your image. Click on the image you want (twice) # and the url should be similar to as below:
+
+squidurl<-"http://phylopic.org/assets/images/submissions/938a7ea7-5262-4bbb-85ba-cb39181002f0.512.png"
+kiwiurl<-"http://phylopic.org/assets/images/submissions/ad7d0f80-889e-4dba-a89d-c864f2f48184.512.png"
+# Read in the PNG file:
+squid <-  readPNG(getURLContent(squidurl))
+kiwi <-  readPNG(getURLContent(kiwiurl))
+
+# Some fake data to make a graph with
+data = data.frame(x = seq(1,10), y = sample(1:10))
+
+g=ggplot(data, aes(x=x,y=y))+
+  geom_point()
+
+# Note that add_phylopic is added as a layer to the ggplot()
+g + add_phylopic(squid,alpha=.5,x=5,y=7,ysize=7) + add_phylopic(kiwi,1,3,4,2)
+```
+
+Optional. View visualizations that can be produced with some advanced geometries: [ggridges](https://cran.r-project.org/web/packages/ggridges/vignettes/gallery.html), [ggviolin](https://rpkgs.datanovia.com/ggpubr/reference/ggviolin.html), [ggmarginal](https://r-graph-gallery.com/277-marginal-histogram-for-ggplot2.html). The key to getting any of these advanced visualizations to work is to have the right information formatted correctly in a dataframe. Of course you should also consider that visualization best communicates the important information.
