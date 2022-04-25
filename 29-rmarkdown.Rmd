@@ -2,11 +2,30 @@
 
 ## Introduction
 
-In general, you’d better leave at least one empty line between adjacent but different elements, e.g., a header and a paragraph.
+R Markdown provides a fully reproducible framework for presenting and sharing data science. You can use a single R Markdown file to both:
+
+* save and execute code
+* generate high quality written documents
+
+R Markdown documents can be rendered to many output formats including HTML documents, PDFs, Word files, slideshows, etc.
+
+### Installation
+
+You can install the [R Markdown](https://rmarkdown.rstudio.com) package from CRAN:
+
+```{r, eval = R}
+install.packages("rmarkdown")
+```
+
+## Setup
+
+To get started, open a new plain text file and save it with the extension .Rmd. Alternatively, if you are using RStudio, you can create a new Rmd file from the menu File -> New File -> R Markdown.
+
+Tip: Try to leave at least one empty line between adjacent elements, e.g., between a header and a paragraph or between text and code, to ensure everything renders properly.
 
 ## Syntax
 
-## Headers
+### Headers
 
 Section headers can be written after a number of pound signs, e.g.,
 
@@ -25,7 +44,7 @@ If you do not want a certain heading to be numbered, you can add {-} or {.unnumb
 # Preface {-}
 ```
 
-## Lists
+### Lists
 
 Unordered list items start with *, -, or +, and you can nest one list within another list by indenting the sub-list, e.g.,
 
