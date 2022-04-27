@@ -85,7 +85,7 @@ The output is:
   - one more item
   - one more item
 
-Ordered list items start with numbers (you can also nest lists within lists), e.g.,
+Ordered list items start with numbers. You can also nest unordered lists within ordered lists.
 ```
 1. the first item
 2. the second item
@@ -94,7 +94,7 @@ Ordered list items start with numbers (you can also nest lists within lists), e.
     - one unordered item
 ```
 
-The output does not look too much different with the Markdown source:
+The output:
 
 1. the first item
 2. the second item
