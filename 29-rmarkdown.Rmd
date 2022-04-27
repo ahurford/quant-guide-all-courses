@@ -21,6 +21,28 @@ install.packages("rmarkdown")
 
 To get started, open a new plain text file and save it with the extension .Rmd. Alternatively, if you are using RStudio, you can create a new Rmd file from the menu File -> New File -> R Markdown.
 
+An R Markdown file contains three types of content:
+
+1. An optional header that contains the document metadata and is surrounded by --- on either side.
+
+2. Chunks of R code surrounded by ```.
+
+3. Text 
+
+
+```{r, fig.cap="R Markdown general setup", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/RMarkdown1.png')
+```
+
+```{r, fig.cap="R Markdown output preview", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/RMarkdown2.png')
+```
+
+The optional header is written using [YAML](https://yaml.org) programming language. 
+Note when you 
+
+When you open an .Rmd, you get a notebook interface where code and output are interleaved. You can run each code chunk by clicking the Run icon (it looks like a play button at the top of the chunk), or by pressing Cmd/Ctrl + Shift + Enter. RStudio executes the code and displays the results inline with the code:
+
 Tip: Try to leave at least one empty line between adjacent elements, e.g., between a header and a paragraph or between text and code, to ensure everything renders properly.
 
 ## Syntax
