@@ -19,29 +19,31 @@ install.packages("rmarkdown")
 
 ## Setup
 
-To get started, open a new plain text file and save it with the extension .Rmd. Alternatively, if you are using RStudio, you can create a new Rmd file from the menu File -> New File -> R Markdown.
+To get started, open a new text file and save it with the extension .Rmd. Alternatively, if you are using RStudio, you can create a new Rmd file from the menu File -> New File -> R Markdown.
 
 An R Markdown file contains three types of content:
 
-1. An optional header that contains the document metadata and is surrounded by --- on either side.
+1. An optional header that contains the document metadata and is surrounded by `---` on either side.
 
-2. Chunks of R code surrounded by ```.
+2. Chunks of R code surrounded by ` ``` ` and specifying `{r}` at the top.
 
-3. Text 
+3. Text that is easily formatted
 
+In general, your R Markdown file will look like this when using RStudio.
 
 ```{r, fig.cap="R Markdown general setup", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/RMarkdown1.png')
 ```
 
+The optional header is written using [YAML](https://yaml.org) programming language. R Markdown files are often set as html documents and can be changed to a PDF or word document at any time.
+
+You can run each code chunk by clicking the Run icon or small green triangle at the start of each chunk. RStudio executes the code and displays the results inline with the code. If you only want to prevent the source code from being displayed, you can set `{r, echo = FALSE}` at the start of the code chunk.
+
+Note that text is written as you would in any word processing program, unlike `.R` files where you need to comment text using the pound symbol (#).
+
 ```{r, fig.cap="R Markdown output preview", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/RMarkdown2.png')
 ```
-
-The optional header is written using [YAML](https://yaml.org) programming language. 
-Note when you 
-
-When you open an .Rmd, you get a notebook interface where code and output are interleaved. You can run each code chunk by clicking the Run icon (it looks like a play button at the top of the chunk), or by pressing Cmd/Ctrl + Shift + Enter. RStudio executes the code and displays the results inline with the code:
 
 Tip: Try to leave at least one empty line between adjacent elements, e.g., between a header and a paragraph or between text and code, to ensure everything renders properly.
 
@@ -58,12 +60,6 @@ Section headers can be written after a number of pound signs, e.g.,
 
 ### Third-level header
 
-```
-
-If you do not want a certain heading to be numbered, you can add {-} or {.unnumbered} after the heading, e.g.,
-
-```{r}
-# Preface {-}
 ```
 
 ### Lists
@@ -105,3 +101,10 @@ The output does not look too much different with the Markdown source:
 3. the third item
   - one unordered item
   - one unordered item
+
+
+## Further Reading
+
+* Reference guide: https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.39431847.562324105.1650909679-1492771989.1650909679
+
+* R Markdown: The Definitive Guide by Xie et al.: https://bookdown.org/yihui/rmarkdown/ 
