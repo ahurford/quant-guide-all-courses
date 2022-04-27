@@ -13,7 +13,7 @@ R Markdown documents can be rendered to many output formats including HTML docum
 
 You can install the [R Markdown](https://rmarkdown.rstudio.com) package from CRAN:
 
-```{r, eval = R}
+```{r, eval = F}
 install.packages("rmarkdown")
 ```
 

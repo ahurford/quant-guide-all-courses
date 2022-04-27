@@ -5,6 +5,8 @@ fig:import-feature
 fig:import-dialog
 fig:panes2
 fig:panes3
+fig:unnamed-chunk-141
+fig:unnamed-chunk-142
 intro
 course-links
 instructor-guide
@@ -103,8 +105,11 @@ bar-plots
 facet-wrapping
 other-types-of-plots
 further-reading-1
-making-maps
+silhouettes
 introduction-3
+adding-silhouettes-in-ggplot
+making-maps
+introduction-4
 creating-maps-using-ggplot2-and-sf
 changing-map-colours
 projections
@@ -114,6 +119,13 @@ scale-bar-and-north-arrow
 finalizing-the-map
 exporting-your-map
 additional-reading
+rmarkdown
+introduction-5
+installation
+setup
+syntax
+headers
+lists-1
 coding-club-at-mun
 contributions
 faq

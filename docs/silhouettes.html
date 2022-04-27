@@ -4,20 +4,20 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3 Finding your way around RStudio | Quantitative skills for biology</title>
-  <meta name="description" content="3 Finding your way around RStudio | Quantitative skills for biology" />
+  <title>16 Advanced graphing - silhouettes | Quantitative skills for biology</title>
+  <meta name="description" content="16 Advanced graphing - silhouettes | Quantitative skills for biology" />
   <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3 Finding your way around RStudio | Quantitative skills for biology" />
+  <meta property="og:title" content="16 Advanced graphing - silhouettes | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="3 Finding your way around RStudio | Quantitative skills for biology" />
+  <meta property="og:description" content="16 Advanced graphing - silhouettes | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Finding your way around RStudio | Quantitative skills for biology" />
+  <meta name="twitter:title" content="16 Advanced graphing - silhouettes | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="3 Finding your way around RStudio | Quantitative skills for biology" />
+  <meta name="twitter:description" content="16 Advanced graphing - silhouettes | Quantitative skills for biology" />
   
 
 
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="install.html"/>
-<link rel="next" href="rintro.html"/>
+<link rel="prev" href="ggplot.html"/>
+<link rel="next" href="making-maps.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -392,111 +392,41 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="rstudio" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">3</span> Finding your way around RStudio<a href="rstudio.html#rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>RStudio has 4 windows (also known as “panes”) that are inter-linked. The default layout is shown in Figure <a href="rstudio.html#fig:panes">3.1</a>. The first time you open <code>RStudio</code> you may not see the top left pane (the Source pane, labeled 2 in the figure below). To make it visible, use your mouse to select <code>File -&gt; New File -&gt; R Script</code>. You can move the layout of the panes and change their size and shape by clicking and dragging with your mouse along the windowpane borders. The details of what happens in each pane are detailed below.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:panes"></span>
-<img src="figures/Fig_5_1.jpg" alt="Panes in RStudio. 1. Console pane, where code is executed by R. 2. Source pane, to work with R scripts (code won't be evaluated until you send it to the console). 3. Environment/History pane, to view objects in the working space and command history, respectively. 4. Files/Plots/Packages/Help pane, to see the file directories, plots, installed packages and access R help, respectively." width="70%" />
-<p class="caption">
-Figure 3.1: Panes in RStudio. 1. Console pane, where code is executed by R. 2. Source pane, to work with R scripts (code won’t be evaluated until you send it to the console). 3. Environment/History pane, to view objects in the working space and command history, respectively. 4. Files/Plots/Packages/Help pane, to see the file directories, plots, installed packages and access R help, respectively.
-</p>
+<div id="silhouettes" class="section level1 hasAnchor" number="16">
+<h1><span class="header-section-number">16</span> Advanced graphing - silhouettes<a href="silhouettes.html#silhouettes" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-3" class="section level2 hasAnchor" number="16.1">
+<h2><span class="header-section-number">16.1</span> Introduction<a href="silhouettes.html#introduction-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Read about the <a href="https://cran.r-project.org/web/packages/rphylopic/readme/README.html">rphylopic</a> package.</p>
+<p>Read about the function <a href="https://www.rdocumentation.org/packages/rphylopic/versions/0.3.0/topics/add_phylopic">add_phylopic()</a></p>
 </div>
-<div id="console-pane" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Console pane<a href="rstudio.html#console-pane" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The Console pane (labeled 1 in Figure <a href="rstudio.html#fig:panes">3.1</a>) is where code is evaluated (also referred to as executed). The Console pane has a prompt (the <code>&gt;</code> symbol), which tell you that R is ready to receive input. You can type code here to evaluate it and get an output.</p>
-<p><strong>TRY IT!</strong> Type 5 + 5 in the console at the prompt and press <code>enter</code> or <code>return</code>. You’ll see that R gives the correct output (Don’t worry about the [1] for now, we’ll discuss what this means later.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rstudio.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span></span></code></pre></div>
-<pre><code>## [1] 10</code></pre>
-<p>Use the console to test and query code, or do a quick analysis that you do not want to save. Press the up arrow to scroll through past commands, from most to least recent.</p>
-<p>To do more interesting things, we need to assign values to objects. For this, we create an object by specifying a name followed by the assignment operator <code>&lt;-</code> and the value we want to give it. For example:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="rstudio.html#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">5</span></span></code></pre></div>
-<p>When you run this code by pressing <code>enter/return</code> you will not see an output as you did before. But, you can ask R for the value by typing the object name and pressing <code>enter/return</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rstudio.html#cb4-1" aria-hidden="true" tabindex="-1"></a>x </span></code></pre></div>
-<pre><code>## [1] 5</code></pre>
-<p>Now that we have saved the value of <code>x</code>, we can do arithmetic operations with it. For example, instead of adding two numbers, we can assign those values to objects and then add them.</p>
-<p><strong>TRY IT!</strong> Add 3 and 8 by assigning the values to objects. First assign 3 to <code>x</code> and 8 to <code>y</code>. Then add <code>x+y</code>.</p>
-<p>You can overwrite the value of objects The current value of your object is the last value you gave it. In the console type:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="rstudio.html#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">2</span></span></code></pre></div>
-<p>Press <code>enter/return</code>. Now type:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="rstudio.html#cb7-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span></code></pre></div>
-<p>Press <code>enter/return</code>. What is the value of</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rstudio.html#cb8-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
-<pre><code>## [1] 2</code></pre>
-<p>Type:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rstudio.html#cb10-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>## [1] 1</code></pre>
-<p>to query the current value of <code>x</code>.</p>
-<hr />
-<p>EXCERCISE</p>
-<p>Can you write the code, and execute the commands in the correct order so that <code>x + 1 = 6</code>?</p>
-<hr />
-</div>
-<div id="source-pane" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Source pane<a href="rstudio.html#source-pane" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The Source pane (labeled 2 in Figure <a href="rstudio.html#fig:panes">3.1</a>) is where you create, save, and edit <code>R</code> scripts. <code>R</code> scripts are blocks of code that perform a task that you want to save (e.g.., are the answer to the EXERCISE above, or import and clean data to make a figure) and when saved have a <code>.R</code> extension. When you’ve written and saved a script, you can re-use it for future projects. Try it now: open and save a new <code>.R</code> file to save your work in. In the top menu select <code>File &gt; New File &gt; R Script</code>, then <code>File &gt; Save As</code>. Paste the following <code>R</code> code into your script and save it:</p>
-<pre><code>x &lt;- 4
-x &lt;- 6</code></pre>
-<p>Now, you have saved this code, but has it been evaluated? To answer this question type <code>x</code> in your <code>Console</code> and press ENTER:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="rstudio.html#cb13-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>## [1] 1</code></pre>
-<p>It is important to note that saving commands in a script in your <code>Source</code> window does not evaluate the commands in your <code>Console</code>. To execute the commands, with your script displayed in the <code>Source</code> pane, you need to click the <code>Source</code> button (righthand side of the source pane, equivalently select <code>Code &gt; Source</code> from the top menu bar; note, if you have a small <code>Source</code> pane the <code>Source</code> button may not appear and you may need to make it bigger or use the menu bar).</p>
-<p><code>Source</code> your script and then evaluate <code>x</code> in your <code>Console</code>. If you have done this task correctly the value of <code>x</code> should be <code>6</code> and it will appear as <code>[1] 6</code> in your <code>Console</code>.</p>
-<p>What happened to <code>x &lt;- 4</code>? When <code>Source</code> is called the commands are executed in the <code>Console</code> from top to bottom as they appear in the script. Therefore, <code>x &lt;- 4</code> was only the current value of <code>x</code> for a very short time before it was overwritten with the command <code>x &lt;- 6</code>.</p>
-<hr />
-<p>EXERCISE</p>
-<p>Edit your script so that now it reads:</p>
-<pre><code>x &lt;- 4
-y &lt;- x + 1
-x &lt;- 6
-z &lt;- x + 1</code></pre>
-<p><code>Source</code> the script and then query the values of <code>y</code> and <code>z</code> in your <code>Console</code>. What are the values returned for <code>y</code> and <code>z</code>? Explain how these values were returned.</p>
-<pre><code>&gt; y
-&gt; z</code></pre>
-<hr />
-<p>If you would like to run one line or several lines of your script only (not all the lines), then place your cursor on the line you want to execute and click the <code>Run</code> button (equivalently <code>Code &gt; Run Selected Line(s)</code>, or press <code>Ctrl</code>+<code>enter</code> or <code>Cmmd</code>+<code>return</code> for a shortcut).</p>
-</div>
-<div id="environmenthistory-pane" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Environment/History pane<a href="rstudio.html#environmenthistory-pane" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This pane has several tabs, we’ll discuss each in turn.</p>
-<div id="environment-tab" class="section level3 unnumbered hasAnchor">
-<h3>Environment tab<a href="rstudio.html#environment-tab" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This shows you the names of all data objects (e.g., vectors, matrices, data frames) that you’ve defined in the current R session, along with information about the size of data objects.</p>
-<p>There are also clickable actions, like <code>Import dataset</code>, which we’ll refer to in Chapter <a href="data-entry.html#data-entry">8</a>.</p>
-</div>
-<div id="history-tab" class="section level3 unnumbered hasAnchor">
-<h3>History tab<a href="rstudio.html#history-tab" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This shows you a history of all the code you’ve previously run in the console. From here you can re-run these commands by selecting them and clicking <code>To Console</code> or include them in your script by clicking <code>To Source</code>.</p>
-<p><strong>TRY IT!</strong> Select one of the commands and click <code>To Console</code>. You’ll see the command is executed and the output is given. Now, try to include another command in the script that you have been working with during this session.</p>
-</div>
-</div>
-<div id="filesplotspackageshelpviewer-pane" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Files/Plots/Packages/Help/Viewer pane<a href="rstudio.html#filesplotspackageshelpviewer-pane" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This pane also has a few tabs. We’ll go through each one in detail.</p>
-<div id="files-tab" class="section level3 unnumbered hasAnchor">
-<h3>Files tab<a href="rstudio.html#files-tab" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This tab gives you access to the file directory on your own computer. It’s a useful spot to set your working directory. For this, you have to navigate to the folder whence you want to read and save files, then click <code>More</code> and select <code>Set As Working Directory</code> (see Chapter <a href="data-entry.html#data-entry">8</a> for more details).</p>
-<p><strong>TRY IT!</strong> Navigate through the file tree and find the folder that you want to work with, alternatively, create a new one by clicking <code>New Folder</code>. Now, open the folder and make it your working directory. You’ll see that in the console R runs the command for changing the working directory.</p>
-</div>
-<div id="plots-tab" class="section level3 unnumbered hasAnchor">
-<h3>Plots tab<a href="rstudio.html#plots-tab" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This tab lets you see all the plots (graphs) that you create. You can also use the buttons at the top to zoom or export the graph as a PDF or jpeg file. If you make multiple plots, you can navigate through them by clicking on the left and right arrows. We will come back to this tab in Chapter <a href="graph.html#graph">10</a>.</p>
-</div>
-<div id="packages-tab" class="section level3 unnumbered hasAnchor">
-<h3>Packages tab<a href="rstudio.html#packages-tab" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This tab shows a list of all the R packages installed on your computer (see Chapter <a href="rintro.html#rintro">4</a> for more on packages). It also indicates which packages are currently loaded via a check mark. You can browse through the installed packages by typing the name in the blank search field. Packages are add-on functions and data sets that you can add to your <code>R</code> installation.</p>
-<p>More information about on Packages can be found in section 4.10 R Package.</p>
-<p><strong>TRY IT!</strong> One package that we will use later on is called <code>ggplot2</code>, install it either using the <code>install.packages</code> command or the <code>Install</code> feature.</p>
-</div>
-<div id="help-tab" class="section level3 unnumbered hasAnchor">
-<h3>Help tab<a href="rstudio.html#help-tab" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Here you can get help with R functions. You can type the name of the function in the search field (blank bar with the magnifying glass beside it) to see the related help page. Equivalently, you can use code to perform the search by typing <code>?</code> followed by the function name. See Chapter <a href="help.html#help">5</a> “Getting R help” for more details on reading the help files.</p>
-<p><strong>TRY IT!</strong> Find the help page for the <code>plot</code> function, either by typing the function name in the search field or directly into the console. You can type it directly into the console via <code>?plot</code> command. We will use this function in Chapter <a href="graph.html#graph">10</a>.</p>
-</div>
-<div id="viewer-tab" class="section level3 unnumbered hasAnchor">
-<h3>Viewer tab<a href="rstudio.html#viewer-tab" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This tab is similar to the Plots tab, but it is used to view local web content. For example, to display generated web content or applications that you are developing. This is a more advanced feature and we will not cover it in this guide.</p>
+<div id="adding-silhouettes-in-ggplot" class="section level2 hasAnchor" number="16.2">
+<h2><span class="header-section-number">16.2</span> Adding silhouettes in ggplot<a href="silhouettes.html#adding-silhouettes-in-ggplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The following code from <a href="https://scrogster.wordpress.com/2014/06/02/adding-phylopic-org-silhouettes-to-r-plots/">here</a>, will work if the rphylopic package isn’t working well:</p>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="silhouettes.html#cb206-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You need to install these packages first</span></span>
+<span id="cb206-2"><a href="silhouettes.html#cb206-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
+<span id="cb206-3"><a href="silhouettes.html#cb206-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RCurl)</span>
+<span id="cb206-4"><a href="silhouettes.html#cb206-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb206-5"><a href="silhouettes.html#cb206-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rphylopic)</span>
+<span id="cb206-6"><a href="silhouettes.html#cb206-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb206-7"><a href="silhouettes.html#cb206-7" aria-hidden="true" tabindex="-1"></a><span class="co"># go to phylopic.org and search for your image. Click on the image you want (twice) # and the url should be similar to as below:</span></span>
+<span id="cb206-8"><a href="silhouettes.html#cb206-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb206-9"><a href="silhouettes.html#cb206-9" aria-hidden="true" tabindex="-1"></a>squidurl<span class="ot">&lt;-</span><span class="st">&quot;http://phylopic.org/assets/images/submissions/938a7ea7-5262-4bbb-85ba-cb39181002f0.512.png&quot;</span></span>
+<span id="cb206-10"><a href="silhouettes.html#cb206-10" aria-hidden="true" tabindex="-1"></a>kiwiurl<span class="ot">&lt;-</span><span class="st">&quot;http://phylopic.org/assets/images/submissions/ad7d0f80-889e-4dba-a89d-c864f2f48184.512.png&quot;</span></span>
+<span id="cb206-11"><a href="silhouettes.html#cb206-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the PNG file:</span></span>
+<span id="cb206-12"><a href="silhouettes.html#cb206-12" aria-hidden="true" tabindex="-1"></a>squid <span class="ot">&lt;-</span>  <span class="fu">readPNG</span>(<span class="fu">getURLContent</span>(squidurl))</span>
+<span id="cb206-13"><a href="silhouettes.html#cb206-13" aria-hidden="true" tabindex="-1"></a>kiwi <span class="ot">&lt;-</span>  <span class="fu">readPNG</span>(<span class="fu">getURLContent</span>(kiwiurl))</span>
+<span id="cb206-14"><a href="silhouettes.html#cb206-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb206-15"><a href="silhouettes.html#cb206-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Some fake data to make a graph with</span></span>
+<span id="cb206-16"><a href="silhouettes.html#cb206-16" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>), <span class="at">y =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>))</span>
+<span id="cb206-17"><a href="silhouettes.html#cb206-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb206-18"><a href="silhouettes.html#cb206-18" aria-hidden="true" tabindex="-1"></a>g<span class="ot">=</span><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y))<span class="sc">+</span></span>
+<span id="cb206-19"><a href="silhouettes.html#cb206-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb206-20"><a href="silhouettes.html#cb206-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb206-21"><a href="silhouettes.html#cb206-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that add_phylopic is added as a layer to the ggplot()</span></span>
+<span id="cb206-22"><a href="silhouettes.html#cb206-22" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">add_phylopic</span>(squid,<span class="at">alpha=</span>.<span class="dv">5</span>,<span class="at">x=</span><span class="dv">5</span>,<span class="at">y=</span><span class="dv">7</span>,<span class="at">ysize=</span><span class="dv">7</span>) <span class="sc">+</span> <span class="fu">add_phylopic</span>(kiwi,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">2</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
+<p>Optional. View visualizations that can be produced with some advanced geometries: <a href="https://cran.r-project.org/web/packages/ggridges/vignettes/gallery.html">ggridges</a>, <a href="https://rpkgs.datanovia.com/ggpubr/reference/ggviolin.html">ggviolin</a>, <a href="https://r-graph-gallery.com/277-marginal-histogram-for-ggplot2.html">ggmarginal</a>. The key to getting any of these advanced visualizations to work is to have the right information formatted correctly in a dataframe. Of course you should also consider that visualization best communicates the important information.</p>
 
-</div>
 </div>
 </div>
             </section>
@@ -504,8 +434,8 @@ z &lt;- x + 1</code></pre>
           </div>
         </div>
       </div>
-<a href="install.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="rintro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ggplot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="making-maps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
