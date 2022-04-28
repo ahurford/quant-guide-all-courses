@@ -353,6 +353,7 @@ div.csl-indent {
 <li class="chapter" data-level="18.3.1" data-path="rmarkdown.html"><a href="rmarkdown.html#headers"><i class="fa fa-check"></i><b>18.3.1</b> Headers<span></span></a></li>
 <li class="chapter" data-level="18.3.2" data-path="rmarkdown.html"><a href="rmarkdown.html#lists-1"><i class="fa fa-check"></i><b>18.3.2</b> Lists<span></span></a></li>
 </ul></li>
+<li class="chapter" data-level="18.4" data-path="rmarkdown.html"><a href="rmarkdown.html#further-reading-2"><i class="fa fa-check"></i><b>18.4</b> Further Reading<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>19</b> Coding club at MUN<span></span></a></li>
 <li class="chapter" data-level="20" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>20</b> Contributions<span></span></a></li>
@@ -372,7 +373,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="C.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-2"><i class="fa fa-check"></i><b>C.3</b> Further reading<span></span></a></li>
+<li class="chapter" data-level="C.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-3"><i class="fa fa-check"></i><b>C.3</b> Further reading<span></span></a></li>
 <li class="chapter" data-level="C.4" data-path="hypothesis.html"><a href="hypothesis.html#status"><i class="fa fa-check"></i><b>C.4</b> Status<span></span></a></li>
 </ul></li>
 </ul>
@@ -428,21 +429,21 @@ div.csl-indent {
 <p>Below, we generate some example data, <code>x</code>, to illustrate how to perform a <code>t.test</code> (when performing your analysis, this step is replaced with the step of loading or entering your data, i.e., see Chapter <a href="data-entry.html#data-entry">8</a>).</p>
 <div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="statistics.html#cb147-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
 <span id="cb147-2"><a href="statistics.html#cb147-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1]  0.3825375  0.6838034 -0.9785551 -0.5425471  1.5410111  0.4671979
-##  [7] -1.1569318 -0.3779747 -1.0715387 -0.8917229</code></pre>
+<pre><code>##  [1] -0.31901482 -0.46775763 -0.45008986 -1.00787923 -0.04070458  1.11413069
+##  [7] -0.78493125 -0.01093573 -0.24983223  1.74532847</code></pre>
 <p>Before running the analysis, we decide to set <span class="math inline">\(\alpha = 0.05\)</span>. Perform the test:</p>
 <div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="statistics.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
 ## data:  x
-## t = -0.67343, df = 9, p-value = 0.5176
+## t = -0.17573, df = 9, p-value = 0.8644
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  -0.8477341  0.4587900
+##  -0.6543793  0.5600420
 ## sample estimates:
-## mean of x 
-## -0.194472</code></pre>
+##   mean of x 
+## -0.04716862</code></pre>
 <p>Running this code, gives p-values greater than <span class="math inline">\(\alpha = 0.05\)</span>. Therefore, we fail to reject the <em>null hypothesis</em> that the weight change in the population of domestic cats is 0. As such, our data suggest that the cats have not changed weight.</p>
 <p>The <code>t.test</code> function can be expanded by using additional arguments or changing arguments as required. For example, we can performed a one-sided test.</p>
 <pre><code>t.test(x, y = NULL,
@@ -468,8 +469,8 @@ div.csl-indent {
 <p>Suppose the <code>10</code> measures of change in cat weight were instead:</p>
 <div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="statistics.html#cb152-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)<span class="sc">+</span><span class="dv">1</span></span>
 <span id="cb152-2"><a href="statistics.html#cb152-2" aria-hidden="true" tabindex="-1"></a>x2</span></code></pre></div>
-<pre><code>##  [1]  1.3068229  0.8514165  0.5765983  0.5928538  1.0545447  1.6539444
-##  [7]  0.2545452  0.7904738  0.8360763 -1.2056617</code></pre>
+<pre><code>##  [1]  1.0987657  1.0559806  0.6611010  0.8557652  0.7016352  1.4090421
+##  [7]  1.6443351 -0.7657658  0.6349749  0.3231310</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>Using the code above to generate the example data, <code>x2</code>, perform a t-test with the <em>null hypothesis</em> that the change in weight of the cat population was 0.</p></li>
 <li><p>Perform a t-test with the <em>null hypothesis</em> that the cats in the sample, <code>x2</code> have lost weight.</p></li>

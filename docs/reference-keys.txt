@@ -126,6 +126,7 @@ setup
 syntax
 headers
 lists-1
+further-reading-2
 coding-club-at-mun
 contributions
 faq
@@ -137,5 +138,5 @@ hypothesis
 discrete-and-continuous-variables
 hypothesis-testing
 null-hypotheses
-further-reading-2
+further-reading-3
 status
