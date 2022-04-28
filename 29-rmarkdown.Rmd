@@ -61,7 +61,7 @@ knitr::include_graphics('./figures/RMarkdown2.png')
 
 It is very easy to modify your inline text. *Italic* text is produced by surrounding words with underscores or asterisks, e.g., `_italic_` or `*italic*`. **Bold** text is produced with a pair of double underscores or asterisks, e.g., `**bold**` or `__bold__`.
 
-Superscripts are produced using a pair of carets (`^`), while subscripts require a pair of tildes (`~`), e.g. superscript^2^ vs subscript~2~.
+Superscripts are produced using a pair of carets (`^`), while subscripts require a pair of tildes (`~`), e.g. `superscript^2^` = superscript^2^ vs `subscript~2~` = subscript~2~.
 
 ### Headers
 
@@ -120,17 +120,17 @@ The output:
   * one unordered item
   * one unordered item
 
-### Figures and Tables
+### Figures
 
 Figures that are directly related to your data can be created and added using a code chunk. For example we can recreate the scatterplot example from Chapter \@ref(ggplot).
 
-` ```{r}
+```{r, eval = F}
 library(ggplot2)
 ShrubData <- read.csv(file = "shrub-volume-data.csv")
 
 ggplot(data = ShrubData, aes(x = length, y = height)) + 
   geom_point()
-``` `
+``` 
 
 ```{r, echo = F}
 library(ggplot2)
@@ -140,16 +140,35 @@ ggplot(data = ShrubData, aes(x = length, y = height)) +
   geom_point()
 ``` 
 
+If you want to include a figure or image from outside RStudio, you can use the `knitr::include_graphics()` function (make sure you have installed the `knitr` package first). You simply need to specify the file directory for that figure. To include a figure caption, you can add this to the curly brackets at the start of the code chunk between ` ```{r` and `}`.
 
-If you want to include a figure or photo from outside RStudio, 
+```{r, fig.cap='R Studio Logo'}
+knitr::include_graphics('./figures/RStudio.png')
+```
 
+### Tables
 
-Tables can be included using the following notation
+Simple tables can be included using the following notation:
 
-A  | B | C
---- | --- | ---
-1  | Male | Blue
-2  | Female | Pink
+```
+Column 1 Name | Column 2 Name
+------------- | -------------
+Cell 1        | Cell 2
+Cell 3        | Cell 4
+```
+
+The output appears as follows:
+
+Column 1 Name | Column 2 Name
+------------- | -------------
+Cell 1        | Cell 2
+Cell 3        | Cell 4
+
+Alternatively, if you want to include a larger table of data you can again use the knitr package, this time using the function `knitr::kable()`. This function allows you to directly specify the caption within `kable()`. For example, we can again use the `ShrubData` dataframe.
+
+```{r}
+knitr::kable(ShrubData, caption = 'Shrub Volume Data')
+```
 
 ## Further Reading
 
