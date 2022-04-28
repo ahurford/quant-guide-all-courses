@@ -505,15 +505,37 @@ Figure 18.2: R Markdown output preview
 </div>
 <div id="figures-and-tables" class="section level3 hasAnchor" number="18.4.4">
 <h3><span class="header-section-number">18.4.4</span> Figures and Tables<a href="rmarkdown.html#figures-and-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Figures that are directly related to your data can be created and added using a code chunk. For example if we want to recreate the scatterplot example from the <a href="ggplot.html#ggplot">15</a> section, we would set it up in an R Markdown file as follows:</p>
-<pre><code>
-```r
-ShrubData &lt;- read.csv(file = &quot;shrub-volume-data.csv&quot;)
-
-ggplot(data = ShrubData, aes(x = length, y = height)) + 
-  geom_point()</code></pre>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-143-1.png" width="672" />
-```</p>
+<p>Figures that are directly related to your data can be created and added using a code chunk. For example we can recreate the scatterplot example from Chapter <a href="ggplot.html#ggplot">15</a>.</p>
+<p>` ```{r}
+library(ggplot2)
+ShrubData &lt;- read.csv(file = “shrub-volume-data.csv”)</p>
+<p>ggplot(data = ShrubData, aes(x = length, y = height)) +
+geom_point()
+``<code></code></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-143-1.png" width="672" /></p>
+<p>If you want to include a figure or photo from outside RStudio,</p>
+<p>Tables can be included using the following notation</p>
+<table>
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Male</td>
+<td>Blue</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Female</td>
+<td>Pink</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="further-reading-2" class="section level2 hasAnchor" number="18.5">
