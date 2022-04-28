@@ -122,16 +122,34 @@ The output:
 
 ### Figures and Tables
 
-Figures that are directly related to your data can be created and added using a code chunk. For example if we want to recreate the scatterplot example from the \@ref(ggplot) section, we would set it up in an R Markdown file as follows:
+Figures that are directly related to your data can be created and added using a code chunk. For example we can recreate the scatterplot example from Chapter \@ref(ggplot).
 
-```
-```{r}
+` ```{r}
+library(ggplot2)
 ShrubData <- read.csv(file = "shrub-volume-data.csv")
 
 ggplot(data = ShrubData, aes(x = length, y = height)) + 
   geom_point()
-```
-```
+``` `
+
+```{r, echo = F}
+library(ggplot2)
+ShrubData <- read.csv(file = "shrub-volume-data.csv")
+
+ggplot(data = ShrubData, aes(x = length, y = height)) + 
+  geom_point()
+``` 
+
+
+If you want to include a figure or photo from outside RStudio, 
+
+
+Tables can be included using the following notation
+
+A  | B | C
+--- | --- | ---
+1  | Male | Blue
+2  | Female | Pink
 
 ## Further Reading
 
