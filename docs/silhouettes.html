@@ -354,7 +354,8 @@ div.csl-indent {
 <li class="chapter" data-level="18.4.1" data-path="rmarkdown.html"><a href="rmarkdown.html#syntax"><i class="fa fa-check"></i><b>18.4.1</b> Syntax<span></span></a></li>
 <li class="chapter" data-level="18.4.2" data-path="rmarkdown.html"><a href="rmarkdown.html#headers"><i class="fa fa-check"></i><b>18.4.2</b> Headers<span></span></a></li>
 <li class="chapter" data-level="18.4.3" data-path="rmarkdown.html"><a href="rmarkdown.html#lists-1"><i class="fa fa-check"></i><b>18.4.3</b> Lists<span></span></a></li>
-<li class="chapter" data-level="18.4.4" data-path="rmarkdown.html"><a href="rmarkdown.html#figures-and-tables"><i class="fa fa-check"></i><b>18.4.4</b> Figures and Tables<span></span></a></li>
+<li class="chapter" data-level="18.4.4" data-path="rmarkdown.html"><a href="rmarkdown.html#figures"><i class="fa fa-check"></i><b>18.4.4</b> Figures<span></span></a></li>
+<li class="chapter" data-level="18.4.5" data-path="rmarkdown.html"><a href="rmarkdown.html#tables"><i class="fa fa-check"></i><b>18.4.5</b> Tables<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="18.5" data-path="rmarkdown.html"><a href="rmarkdown.html#further-reading-2"><i class="fa fa-check"></i><b>18.5</b> Further Reading<span></span></a></li>
 </ul></li>
@@ -400,35 +401,56 @@ div.csl-indent {
 <h1><span class="header-section-number">16</span> Advanced graphing - silhouettes<a href="silhouettes.html#silhouettes" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="introduction-3" class="section level2 hasAnchor" number="16.1">
 <h2><span class="header-section-number">16.1</span> Introduction<a href="silhouettes.html#introduction-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Read about the <a href="https://cran.r-project.org/web/packages/rphylopic/readme/README.html">rphylopic</a> package.</p>
-<p>Read about the function <a href="https://www.rdocumentation.org/packages/rphylopic/versions/0.3.0/topics/add_phylopic">add_phylopic()</a></p>
+<p>You can add silhouettes to both base and ggplot2 plots using the <a href="https://cran.r-project.org/web/packages/rphylopic/readme/README.html">rphylopic</a> package.</p>
+<p>You can get free png silhouettes of various animals from <a href="http://phylopic.org">phylopic.org</a>.You can use the function <code>image_data()</code> to call the image’s universally unique identifier (UUID) and specify the size of the image.</p>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="silhouettes.html#cb206-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rphylopic)</span>
+<span id="cb206-2"><a href="silhouettes.html#cb206-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb206-3"><a href="silhouettes.html#cb206-3" aria-hidden="true" tabindex="-1"></a>squid.img <span class="ot">&lt;-</span> <span class="fu">image_data</span>(<span class="st">&quot;938a7ea7-5262-4bbb-85ba-cb39181002f0&quot;</span>, <span class="at">size =</span> <span class="st">&quot;512&quot;</span>)[[<span class="dv">1</span>]]</span></code></pre></div>
 </div>
 <div id="adding-silhouettes-in-ggplot" class="section level2 hasAnchor" number="16.2">
 <h2><span class="header-section-number">16.2</span> Adding silhouettes in ggplot<a href="silhouettes.html#adding-silhouettes-in-ggplot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The following code from <a href="https://scrogster.wordpress.com/2014/06/02/adding-phylopic-org-silhouettes-to-r-plots/">here</a>, will work if the rphylopic package isn’t working well:</p>
-<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="silhouettes.html#cb206-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You need to install these packages first</span></span>
-<span id="cb206-2"><a href="silhouettes.html#cb206-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
-<span id="cb206-3"><a href="silhouettes.html#cb206-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RCurl)</span>
-<span id="cb206-4"><a href="silhouettes.html#cb206-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb206-5"><a href="silhouettes.html#cb206-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rphylopic)</span>
-<span id="cb206-6"><a href="silhouettes.html#cb206-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb206-7"><a href="silhouettes.html#cb206-7" aria-hidden="true" tabindex="-1"></a><span class="co"># go to phylopic.org and search for your image. Click on the image you want (twice) # and the url should be similar to as below:</span></span>
-<span id="cb206-8"><a href="silhouettes.html#cb206-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb206-9"><a href="silhouettes.html#cb206-9" aria-hidden="true" tabindex="-1"></a>squidurl<span class="ot">&lt;-</span><span class="st">&quot;http://phylopic.org/assets/images/submissions/938a7ea7-5262-4bbb-85ba-cb39181002f0.512.png&quot;</span></span>
-<span id="cb206-10"><a href="silhouettes.html#cb206-10" aria-hidden="true" tabindex="-1"></a>kiwiurl<span class="ot">&lt;-</span><span class="st">&quot;http://phylopic.org/assets/images/submissions/ad7d0f80-889e-4dba-a89d-c864f2f48184.512.png&quot;</span></span>
-<span id="cb206-11"><a href="silhouettes.html#cb206-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the PNG file:</span></span>
-<span id="cb206-12"><a href="silhouettes.html#cb206-12" aria-hidden="true" tabindex="-1"></a>squid <span class="ot">&lt;-</span>  <span class="fu">readPNG</span>(<span class="fu">getURLContent</span>(squidurl))</span>
-<span id="cb206-13"><a href="silhouettes.html#cb206-13" aria-hidden="true" tabindex="-1"></a>kiwi <span class="ot">&lt;-</span>  <span class="fu">readPNG</span>(<span class="fu">getURLContent</span>(kiwiurl))</span>
-<span id="cb206-14"><a href="silhouettes.html#cb206-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb206-15"><a href="silhouettes.html#cb206-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Some fake data to make a graph with</span></span>
-<span id="cb206-16"><a href="silhouettes.html#cb206-16" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>), <span class="at">y =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>))</span>
-<span id="cb206-17"><a href="silhouettes.html#cb206-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb206-18"><a href="silhouettes.html#cb206-18" aria-hidden="true" tabindex="-1"></a>g<span class="ot">=</span><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y))<span class="sc">+</span></span>
-<span id="cb206-19"><a href="silhouettes.html#cb206-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
-<span id="cb206-20"><a href="silhouettes.html#cb206-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb206-21"><a href="silhouettes.html#cb206-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that add_phylopic is added as a layer to the ggplot()</span></span>
-<span id="cb206-22"><a href="silhouettes.html#cb206-22" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">add_phylopic</span>(squid,<span class="at">alpha=</span>.<span class="dv">5</span>,<span class="at">x=</span><span class="dv">5</span>,<span class="at">y=</span><span class="dv">7</span>,<span class="at">ysize=</span><span class="dv">7</span>) <span class="sc">+</span> <span class="fu">add_phylopic</span>(kiwi,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">2</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
+<p>Before beginning, ensure you have installed both <code>ggplot2</code> and <code>rphyolopic</code>. Silhouettes can be added to a ggplot graphic by using the function <a href="https://www.rdocumentation.org/packages/rphylopic/versions/0.3.0/topics/add_phylopic">add_phylopic()</a> as another layer.</p>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="silhouettes.html#cb207-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb207-2"><a href="silhouettes.html#cb207-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rphylopic)</span>
+<span id="cb207-3"><a href="silhouettes.html#cb207-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb207-4"><a href="silhouettes.html#cb207-4" aria-hidden="true" tabindex="-1"></a>squid.img <span class="ot">&lt;-</span> <span class="fu">image_data</span>(<span class="st">&quot;938a7ea7-5262-4bbb-85ba-cb39181002f0&quot;</span>, <span class="at">size =</span> <span class="st">&quot;512&quot;</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb207-5"><a href="silhouettes.html#cb207-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb207-6"><a href="silhouettes.html#cb207-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">9</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">1</span>))</span>
+<span id="cb207-7"><a href="silhouettes.html#cb207-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb207-8"><a href="silhouettes.html#cb207-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb207-9"><a href="silhouettes.html#cb207-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
+<span id="cb207-10"><a href="silhouettes.html#cb207-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_phylopic</span>(squid.img)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-120-1.png" width="672" /></p>
+<p>The <code>add_phylopic()</code> function will automatically centre your image in the background of the plot. You can customize the location, size, colour and transparency (using alpha) of the image within the function.</p>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="silhouettes.html#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb208-2"><a href="silhouettes.html#cb208-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> data, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
+<span id="cb208-3"><a href="silhouettes.html#cb208-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_phylopic</span>(squid.img, <span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">x =</span> <span class="dv">7</span>, <span class="at">y =</span> <span class="dv">4</span>, <span class="at">ysize =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
+<p>Troubleshooting tip: The following code from <a href="https://scrogster.wordpress.com/2014/06/02/adding-phylopic-org-silhouettes-to-r-plots/">here</a>, will work if the rphylopic package isn’t working well:</p>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="silhouettes.html#cb209-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You need to install these packages first</span></span>
+<span id="cb209-2"><a href="silhouettes.html#cb209-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(png)</span>
+<span id="cb209-3"><a href="silhouettes.html#cb209-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RCurl)</span>
+<span id="cb209-4"><a href="silhouettes.html#cb209-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb209-5"><a href="silhouettes.html#cb209-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rphylopic)</span>
+<span id="cb209-6"><a href="silhouettes.html#cb209-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb209-7"><a href="silhouettes.html#cb209-7" aria-hidden="true" tabindex="-1"></a><span class="co"># go to phylopic.org and search for your image. Click on the image you want (twice) # and the url should be similar to as below:</span></span>
+<span id="cb209-8"><a href="silhouettes.html#cb209-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb209-9"><a href="silhouettes.html#cb209-9" aria-hidden="true" tabindex="-1"></a>squidurl<span class="ot">&lt;-</span><span class="st">&quot;http://phylopic.org/assets/images/submissions/938a7ea7-5262-4bbb-85ba-cb39181002f0.512.png&quot;</span></span>
+<span id="cb209-10"><a href="silhouettes.html#cb209-10" aria-hidden="true" tabindex="-1"></a>kiwiurl<span class="ot">&lt;-</span><span class="st">&quot;http://phylopic.org/assets/images/submissions/ad7d0f80-889e-4dba-a89d-c864f2f48184.512.png&quot;</span></span>
+<span id="cb209-11"><a href="silhouettes.html#cb209-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb209-12"><a href="silhouettes.html#cb209-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the PNG file:</span></span>
+<span id="cb209-13"><a href="silhouettes.html#cb209-13" aria-hidden="true" tabindex="-1"></a>squid <span class="ot">&lt;-</span>  <span class="fu">readPNG</span>(<span class="fu">getURLContent</span>(squidurl))</span>
+<span id="cb209-14"><a href="silhouettes.html#cb209-14" aria-hidden="true" tabindex="-1"></a>kiwi <span class="ot">&lt;-</span>  <span class="fu">readPNG</span>(<span class="fu">getURLContent</span>(kiwiurl))</span>
+<span id="cb209-15"><a href="silhouettes.html#cb209-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb209-16"><a href="silhouettes.html#cb209-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Some fake data to make a graph with</span></span>
+<span id="cb209-17"><a href="silhouettes.html#cb209-17" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>), <span class="at">y =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>))</span>
+<span id="cb209-18"><a href="silhouettes.html#cb209-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb209-19"><a href="silhouettes.html#cb209-19" aria-hidden="true" tabindex="-1"></a>g<span class="ot">=</span><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>x,<span class="at">y=</span>y))<span class="sc">+</span></span>
+<span id="cb209-20"><a href="silhouettes.html#cb209-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb209-21"><a href="silhouettes.html#cb209-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb209-22"><a href="silhouettes.html#cb209-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that add_phylopic is added as a layer to the ggplot()</span></span>
+<span id="cb209-23"><a href="silhouettes.html#cb209-23" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">add_phylopic</span>(squid,<span class="at">alpha=</span>.<span class="dv">5</span>,<span class="at">x=</span><span class="dv">5</span>,<span class="at">y=</span><span class="dv">7</span>,<span class="at">ysize=</span><span class="dv">7</span>) <span class="sc">+</span> <span class="fu">add_phylopic</span>(kiwi,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">2</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-122-1.png" width="672" /></p>
 <p>Optional. View visualizations that can be produced with some advanced geometries: <a href="https://cran.r-project.org/web/packages/ggridges/vignettes/gallery.html">ggridges</a>, <a href="https://rpkgs.datanovia.com/ggpubr/reference/ggviolin.html">ggviolin</a>, <a href="https://r-graph-gallery.com/277-marginal-histogram-for-ggplot2.html">ggmarginal</a>. The key to getting any of these advanced visualizations to work is to have the right information formatted correctly in a dataframe. Of course you should also consider that visualization best communicates the important information.</p>
 
 </div>
