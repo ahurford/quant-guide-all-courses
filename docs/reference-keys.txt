@@ -123,9 +123,12 @@ rmarkdown
 introduction-5
 installation
 setup
+rendering-to-a-document
+formatting
 syntax
 headers
 lists-1
+figures-and-tables
 further-reading-2
 coding-club-at-mun
 contributions

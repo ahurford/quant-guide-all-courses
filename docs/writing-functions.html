@@ -348,12 +348,15 @@ div.csl-indent {
 <li class="chapter" data-level="18.1.1" data-path="rmarkdown.html"><a href="rmarkdown.html#installation"><i class="fa fa-check"></i><b>18.1.1</b> Installation<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="18.2" data-path="rmarkdown.html"><a href="rmarkdown.html#setup"><i class="fa fa-check"></i><b>18.2</b> Setup<span></span></a></li>
-<li class="chapter" data-level="18.3" data-path="rmarkdown.html"><a href="rmarkdown.html#syntax"><i class="fa fa-check"></i><b>18.3</b> Syntax<span></span></a>
+<li class="chapter" data-level="18.3" data-path="rmarkdown.html"><a href="rmarkdown.html#rendering-to-a-document"><i class="fa fa-check"></i><b>18.3</b> Rendering to a document<span></span></a></li>
+<li class="chapter" data-level="18.4" data-path="rmarkdown.html"><a href="rmarkdown.html#formatting"><i class="fa fa-check"></i><b>18.4</b> Formatting<span></span></a>
 <ul>
-<li class="chapter" data-level="18.3.1" data-path="rmarkdown.html"><a href="rmarkdown.html#headers"><i class="fa fa-check"></i><b>18.3.1</b> Headers<span></span></a></li>
-<li class="chapter" data-level="18.3.2" data-path="rmarkdown.html"><a href="rmarkdown.html#lists-1"><i class="fa fa-check"></i><b>18.3.2</b> Lists<span></span></a></li>
+<li class="chapter" data-level="18.4.1" data-path="rmarkdown.html"><a href="rmarkdown.html#syntax"><i class="fa fa-check"></i><b>18.4.1</b> Syntax<span></span></a></li>
+<li class="chapter" data-level="18.4.2" data-path="rmarkdown.html"><a href="rmarkdown.html#headers"><i class="fa fa-check"></i><b>18.4.2</b> Headers<span></span></a></li>
+<li class="chapter" data-level="18.4.3" data-path="rmarkdown.html"><a href="rmarkdown.html#lists-1"><i class="fa fa-check"></i><b>18.4.3</b> Lists<span></span></a></li>
+<li class="chapter" data-level="18.4.4" data-path="rmarkdown.html"><a href="rmarkdown.html#figures-and-tables"><i class="fa fa-check"></i><b>18.4.4</b> Figures and Tables<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="18.4" data-path="rmarkdown.html"><a href="rmarkdown.html#further-reading-2"><i class="fa fa-check"></i><b>18.4</b> Further Reading<span></span></a></li>
+<li class="chapter" data-level="18.5" data-path="rmarkdown.html"><a href="rmarkdown.html#further-reading-2"><i class="fa fa-check"></i><b>18.5</b> Further Reading<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>19</b> Coding club at MUN<span></span></a></li>
 <li class="chapter" data-level="20" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>20</b> Contributions<span></span></a></li>
@@ -447,7 +450,7 @@ div.csl-indent {
 <span id="cb172-4"><a href="writing-functions.html#cb172-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Choosing to “roll” the dice 10 times gives us the following output.</p>
 <div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="writing-functions.html#cb173-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dice</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] 5 5 1 1 5 1 3 3 6 6</code></pre>
+<pre><code>##  [1] 4 1 6 3 2 6 4 2 1 3</code></pre>
 <p>Now instead of the dice function returning the result of each individual roll, we now want a) a table with the total number of times each result occurred, and b) to plot the results. We can add a new line to the function for each argument. First we construct a table called ‘total’ that provides the summed results, then we plot these totals.</p>
 <div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="writing-functions.html#cb175-1" aria-hidden="true" tabindex="-1"></a>dice <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
 <span id="cb175-2"><a href="writing-functions.html#cb175-2" aria-hidden="true" tabindex="-1"></a>    toss <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, n, <span class="at">rep =</span> T)</span>
@@ -459,8 +462,8 @@ div.csl-indent {
 <span id="cb175-8"><a href="writing-functions.html#cb175-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dice</span>(<span class="dv">10</span>)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-96-1.png" width="672" /></p>
 <pre><code>## toss
-## 1 3 4 5 6 
-## 2 2 2 3 1</code></pre>
+## 1 2 3 4 5 
+## 4 1 2 1 2</code></pre>
 </div>
 </div>
             </section>

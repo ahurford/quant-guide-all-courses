@@ -348,12 +348,15 @@ div.csl-indent {
 <li class="chapter" data-level="18.1.1" data-path="rmarkdown.html"><a href="rmarkdown.html#installation"><i class="fa fa-check"></i><b>18.1.1</b> Installation<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="18.2" data-path="rmarkdown.html"><a href="rmarkdown.html#setup"><i class="fa fa-check"></i><b>18.2</b> Setup<span></span></a></li>
-<li class="chapter" data-level="18.3" data-path="rmarkdown.html"><a href="rmarkdown.html#syntax"><i class="fa fa-check"></i><b>18.3</b> Syntax<span></span></a>
+<li class="chapter" data-level="18.3" data-path="rmarkdown.html"><a href="rmarkdown.html#rendering-to-a-document"><i class="fa fa-check"></i><b>18.3</b> Rendering to a document<span></span></a></li>
+<li class="chapter" data-level="18.4" data-path="rmarkdown.html"><a href="rmarkdown.html#formatting"><i class="fa fa-check"></i><b>18.4</b> Formatting<span></span></a>
 <ul>
-<li class="chapter" data-level="18.3.1" data-path="rmarkdown.html"><a href="rmarkdown.html#headers"><i class="fa fa-check"></i><b>18.3.1</b> Headers<span></span></a></li>
-<li class="chapter" data-level="18.3.2" data-path="rmarkdown.html"><a href="rmarkdown.html#lists-1"><i class="fa fa-check"></i><b>18.3.2</b> Lists<span></span></a></li>
+<li class="chapter" data-level="18.4.1" data-path="rmarkdown.html"><a href="rmarkdown.html#syntax"><i class="fa fa-check"></i><b>18.4.1</b> Syntax<span></span></a></li>
+<li class="chapter" data-level="18.4.2" data-path="rmarkdown.html"><a href="rmarkdown.html#headers"><i class="fa fa-check"></i><b>18.4.2</b> Headers<span></span></a></li>
+<li class="chapter" data-level="18.4.3" data-path="rmarkdown.html"><a href="rmarkdown.html#lists-1"><i class="fa fa-check"></i><b>18.4.3</b> Lists<span></span></a></li>
+<li class="chapter" data-level="18.4.4" data-path="rmarkdown.html"><a href="rmarkdown.html#figures-and-tables"><i class="fa fa-check"></i><b>18.4.4</b> Figures and Tables<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="18.4" data-path="rmarkdown.html"><a href="rmarkdown.html#further-reading-2"><i class="fa fa-check"></i><b>18.4</b> Further Reading<span></span></a></li>
+<li class="chapter" data-level="18.5" data-path="rmarkdown.html"><a href="rmarkdown.html#further-reading-2"><i class="fa fa-check"></i><b>18.5</b> Further Reading<span></span></a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>19</b> Coding club at MUN<span></span></a></li>
 <li class="chapter" data-level="20" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>20</b> Contributions<span></span></a></li>
@@ -426,22 +429,31 @@ Figure 18.1: R Markdown general setup
 </p>
 </div>
 <p>The header is written using <a href="https://yaml.org">YAML</a> programming language. R Markdown files are often set as html documents and can be changed to a PDF or word document at any time. Alternatively, they can immediately be specified as <code>word_document</code>, etc.</p>
-<p>You can run each code chunk by clicking the Run icon or small green triangle at the start of each chunk. RStudio executes the code and displays the results inline with the code. If you only want to prevent the source code from being displayed, you can set <code>{r, echo = FALSE}</code> at the start of the code chunk.</p>
-<p>Note that text is written as you would in any word processing program, unlike <code>.R</code> files where you need to comment text using the pound symbol (#).</p>
+<p>You can run each code chunk by clicking the Run icon or small green triangle at the start of each chunk. RStudio executes the code and displays the results inline with the code. If you want to prevent the source code from being displayed, you can set <code>{r, echo = FALSE}</code> at the start of the code chunk.</p>
+<p>Note that text is written as you would in any word processing program, unlike <code>.R</code> files where you need to comment text using the pound symbol (<code>#</code>).</p>
+<p>Tip: Try to leave at least one empty line between adjacent elements, e.g., between a header and a paragraph or between text and code, to ensure everything renders properly.</p>
+</div>
+<div id="rendering-to-a-document" class="section level2 hasAnchor" number="18.3">
+<h2><span class="header-section-number">18.3</span> Rendering to a document<a href="rmarkdown.html#rendering-to-a-document" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To render your R markdown file into an HTML, PDF, or Word document, click the “Knit” icon that appears above in the bar above the source pane. This will automatically render your document to the output format specified in your header, however, the drop down menu will allow you to select an alternative type of output.</p>
+<p>Once the file is rendered, RStudio will show you a preview of the new output and save the output file in your working directory.</p>
+<p>Here is an example of how the markdown script above would look un a HTML output format.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-142"></span>
 <img src="figures/RMarkdown2.png" alt="R Markdown output preview" width="70%" />
 <p class="caption">
 Figure 18.2: R Markdown output preview
 </p>
 </div>
-<p>Tip: Try to leave at least one empty line between adjacent elements, e.g., between a header and a paragraph or between text and code, to ensure everything renders properly.</p>
 </div>
-<div id="syntax" class="section level2 hasAnchor" number="18.3">
-<h2><span class="header-section-number">18.3</span> Syntax<a href="rmarkdown.html#syntax" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="formatting" class="section level2 hasAnchor" number="18.4">
+<h2><span class="header-section-number">18.4</span> Formatting<a href="rmarkdown.html#formatting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="syntax" class="section level3 hasAnchor" number="18.4.1">
+<h3><span class="header-section-number">18.4.1</span> Syntax<a href="rmarkdown.html#syntax" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>It is very easy to modify your inline text. <em>Italic</em> text is produced by surrounding words with underscores or asterisks, e.g., <code>_italic_</code> or <code>*italic*</code>. <strong>Bold</strong> text is produced with a pair of double underscores or asterisks, e.g., <code>**bold**</code> or <code>__bold__</code>.</p>
 <p>Superscripts are produced using a pair of carets (<code>^</code>), while subscripts require a pair of tildes (<code>~</code>), e.g. superscript<sup>2</sup> vs subscript<sub>2</sub>.</p>
-<div id="headers" class="section level3 hasAnchor" number="18.3.1">
-<h3><span class="header-section-number">18.3.1</span> Headers<a href="rmarkdown.html#headers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="headers" class="section level3 hasAnchor" number="18.4.2">
+<h3><span class="header-section-number">18.4.2</span> Headers<a href="rmarkdown.html#headers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Section headers can be written after one or more pound signs (<code>#</code>), where increasing the number of pound signs increases the heading level.</p>
 <pre><code># Primary header
 
@@ -450,23 +462,23 @@ Figure 18.2: R Markdown output preview
 ### Tertiary header
 </code></pre>
 </div>
-<div id="lists-1" class="section level3 hasAnchor" number="18.3.2">
-<h3><span class="header-section-number">18.3.2</span> Lists<a href="rmarkdown.html#lists-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="lists-1" class="section level3 hasAnchor" number="18.4.3">
+<h3><span class="header-section-number">18.4.3</span> Lists<a href="rmarkdown.html#lists-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You can create an list of <strong>unordered items</strong> by starting them with *, -, or +. Lists can be nested within another list by indenting the sub-list. Make sure to leave the line before the first bullet point blank.</p>
 <pre><code>List
 
-- item
-- item
-- item
-    - additional item
-    - additional item
+* unordered item
+* unordered item
+* unordered item
+    * additional item
+    * additional item
 </code></pre>
 <p>The output becomes:</p>
 <p>List</p>
 <ul>
-<li>item</li>
-<li>item</li>
-<li>item
+<li>unordered item</li>
+<li>unordered item</li>
+<li>unordered item
 <ul>
 <li>additional item</li>
 <li>additional item</li>
@@ -478,8 +490,8 @@ Figure 18.2: R Markdown output preview
 1. first item
 2. second item
 3. third item
-    - one unordered item
-    - one unordered item</code></pre>
+    * one unordered item
+    * one unordered item</code></pre>
 <p>The output:</p>
 <ol style="list-style-type: decimal">
 <li>first item</li>
@@ -491,9 +503,21 @@ Figure 18.2: R Markdown output preview
 <li>one unordered item</li>
 </ul>
 </div>
+<div id="figures-and-tables" class="section level3 hasAnchor" number="18.4.4">
+<h3><span class="header-section-number">18.4.4</span> Figures and Tables<a href="rmarkdown.html#figures-and-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Figures that are directly related to your data can be created and added using a code chunk. For example if we want to recreate the scatterplot example from the <a href="ggplot.html#ggplot">15</a> section, we would set it up in an R Markdown file as follows:</p>
+<pre><code>
+```r
+ShrubData &lt;- read.csv(file = &quot;shrub-volume-data.csv&quot;)
+
+ggplot(data = ShrubData, aes(x = length, y = height)) + 
+  geom_point()</code></pre>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-143-1.png" width="672" />
+```</p>
 </div>
-<div id="further-reading-2" class="section level2 hasAnchor" number="18.4">
-<h2><span class="header-section-number">18.4</span> Further Reading<a href="rmarkdown.html#further-reading-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="further-reading-2" class="section level2 hasAnchor" number="18.5">
+<h2><span class="header-section-number">18.5</span> Further Reading<a href="rmarkdown.html#further-reading-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><p>Reference guide: <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.39431847.562324105.1650909679-1492771989.1650909679" class="uri">https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf?_ga=2.39431847.562324105.1650909679-1492771989.1650909679</a></p></li>
 <li><p>R Markdown: The Definitive Guide by Xie et al.: <a href="https://bookdown.org/yihui/rmarkdown/" class="uri">https://bookdown.org/yihui/rmarkdown/</a></p></li>
