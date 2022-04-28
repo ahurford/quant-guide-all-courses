@@ -37,17 +37,27 @@ knitr::include_graphics('./figures/RMarkdown1.png')
 
 The header is written using [YAML](https://yaml.org) programming language. R Markdown files are often set as html documents and can be changed to a PDF or word document at any time. Alternatively, they can immediately be specified as `word_document`, etc.
 
-You can run each code chunk by clicking the Run icon or small green triangle at the start of each chunk. RStudio executes the code and displays the results inline with the code. If you only want to prevent the source code from being displayed, you can set `{r, echo = FALSE}` at the start of the code chunk.
+You can run each code chunk by clicking the Run icon or small green triangle at the start of each chunk. RStudio executes the code and displays the results inline with the code. If you want to prevent the source code from being displayed, you can set `{r, echo = FALSE}` at the start of the code chunk.
 
-Note that text is written as you would in any word processing program, unlike `.R` files where you need to comment text using the pound symbol (#).
+Note that text is written as you would in any word processing program, unlike `.R` files where you need to comment text using the pound symbol (`#`).
+
+Tip: Try to leave at least one empty line between adjacent elements, e.g., between a header and a paragraph or between text and code, to ensure everything renders properly.
+
+## Rendering to a document
+
+To render your R markdown file into an HTML, PDF, or Word document, click the “Knit” icon that appears above in the bar above the source pane. This will automatically render your document to the output format specified in your header, however, the drop down menu will allow you to select an alternative type of output. 
+
+Once the file is rendered, RStudio will show you a preview of the new output and save the output file in your working directory.
+
+Here is an example of how the markdown script above would look un a HTML output format.
 
 ```{r, fig.cap="R Markdown output preview", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
 knitr::include_graphics('./figures/RMarkdown2.png')
 ```
 
-Tip: Try to leave at least one empty line between adjacent elements, e.g., between a header and a paragraph or between text and code, to ensure everything renders properly.
+## Formatting
 
-## Syntax
+### Syntax
 
 It is very easy to modify your inline text. *Italic* text is produced by surrounding words with underscores or asterisks, e.g., `_italic_` or `*italic*`. **Bold** text is produced with a pair of double underscores or asterisks, e.g., `**bold**` or `__bold__`.
 
@@ -73,11 +83,11 @@ You can create an list of **unordered items** by starting them with *, -, or +. 
 ```
 List
 
-- item
-- item
-- item
-    - additional item
-    - additional item
+* unordered item
+* unordered item
+* unordered item
+    * additional item
+    * additional item
 
 ```
 
@@ -85,11 +95,11 @@ The output becomes:
 
 List
 
-- item
-- item
-- item
-  - additional item
-  - additional item
+* unordered item
+* unordered item
+* unordered item
+  * additional item
+  * additional item
 
 **Ordered list** items start with numbers. You can also nest unordered lists within ordered lists.
 ```
@@ -98,8 +108,8 @@ List
 1. first item
 2. second item
 3. third item
-    - one unordered item
-    - one unordered item
+    * one unordered item
+    * one unordered item
 ```
 
 The output:
@@ -107,9 +117,21 @@ The output:
 1. first item
 2. second item
 3. third item
-  - one unordered item
-  - one unordered item
+  * one unordered item
+  * one unordered item
 
+### Figures and Tables
+
+Figures that are directly related to your data can be created and added using a code chunk. For example if we want to recreate the scatterplot example from the \@ref(ggplot) section, we would set it up in an R Markdown file as follows:
+
+```
+```{r}
+ShrubData <- read.csv(file = "shrub-volume-data.csv")
+
+ggplot(data = ShrubData, aes(x = length, y = height)) + 
+  geom_point()
+```
+```
 
 ## Further Reading
 
