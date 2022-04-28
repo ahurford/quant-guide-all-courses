@@ -35,7 +35,7 @@ In general, your R Markdown file will look like this when using RStudio.
 knitr::include_graphics('./figures/RMarkdown1.png')
 ```
 
-The optional header is written using [YAML](https://yaml.org) programming language. R Markdown files are often set as html documents and can be changed to a PDF or word document at any time.
+The header is written using [YAML](https://yaml.org) programming language. R Markdown files are often set as html documents and can be changed to a PDF or word document at any time. Alternatively, they can immediately be specified as `word_document`, etc.
 
 You can run each code chunk by clicking the Run icon or small green triangle at the start of each chunk. RStudio executes the code and displays the results inline with the code. If you only want to prevent the source code from being displayed, you can set `{r, echo = FALSE}` at the start of the code chunk.
 
@@ -49,56 +49,64 @@ Tip: Try to leave at least one empty line between adjacent elements, e.g., betwe
 
 ## Syntax
 
+It is very easy to modify your inline text. *Italic* text is produced by surrounding words with underscores or asterisks, e.g., `_italic_` or `*italic*`. **Bold** text is produced with a pair of double underscores or asterisks, e.g., `**bold**` or `__bold__`.
+
+Superscripts are produced using a pair of carets (`^`), while subscripts require a pair of tildes (`~`), e.g. superscript^2^ vs subscript~2~.
+
 ### Headers
 
-Section headers can be written after a number of pound signs, e.g.,
+Section headers can be written after one or more pound signs (`#`), where increasing the number of pound signs increases the heading level.
 
-```{r}
-# First-level header
+```
+# Primary header
 
-## Second-level header
+## Secondary header
 
-### Third-level header
+### Tertiary header
 
 ```
 
 ### Lists
 
-Unordered list items start with *, -, or +, and you can nest one list within another list by indenting the sub-list, e.g.,
+You can create an list of **unordered items** by starting them with *, -, or +. Lists can be nested within another list by indenting the sub-list. Make sure to leave the line before the first bullet point blank.
 
 ```
-- one item
-- one item
-- one item
-    - one more item
-    - one more item
-    - one more item
+List
+
+- item
+- item
+- item
+    - additional item
+    - additional item
 
 ```
 
-The output is:
+The output becomes:
 
-- one item
-- one item
-- one item
-  - one more item
-  - one more item
-  - one more item
+List
 
-Ordered list items start with numbers. You can also nest unordered lists within ordered lists.
+- item
+- item
+- item
+  - additional item
+  - additional item
+
+**Ordered list** items start with numbers. You can also nest unordered lists within ordered lists.
 ```
-1. the first item
-2. the second item
-3. the third item
+List 
+
+1. first item
+2. second item
+3. third item
     - one unordered item
     - one unordered item
 ```
 
 The output:
 
-1. the first item
-2. the second item
-3. the third item
+1. first item
+2. second item
+3. third item
   - one unordered item
   - one unordered item
 
