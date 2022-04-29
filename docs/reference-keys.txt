@@ -5,10 +5,10 @@ fig:import-feature
 fig:import-dialog
 fig:panes2
 fig:panes3
-fig:unnamed-chunk-144
-fig:unnamed-chunk-145
+fig:unnamed-chunk-147
 fig:unnamed-chunk-148
-tab:unnamed-chunk-149
+fig:unnamed-chunk-151
+tab:unnamed-chunk-152
 intro
 course-links
 instructor-guide
@@ -112,6 +112,7 @@ introduction-3
 adding-silhouettes-in-ggplot
 making-maps
 introduction-4
+required-packages
 creating-maps-using-ggplot2-and-sf
 changing-map-colours
 projections
