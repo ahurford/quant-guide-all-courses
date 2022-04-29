@@ -426,7 +426,7 @@ div.csl-indent {
 <li><p>Text that is easily formatted</p></li>
 </ol>
 <p>In general, your R Markdown file will look like this when using RStudio.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-147"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-148"></span>
 <img src="figures/RMarkdown1.png" alt="R Markdown general setup" width="70%" />
 <p class="caption">
 Figure 18.1: R Markdown general setup
@@ -442,7 +442,7 @@ Figure 18.1: R Markdown general setup
 <p>To render your R markdown file into an HTML, PDF, or Word document, click the “Knit” icon that appears above in the bar above the source pane. This will automatically render your document to the output format specified in your header, however, the drop down menu will allow you to select an alternative type of output.</p>
 <p>Once the file is rendered, RStudio will show you a preview of the new output and save the output file in your working directory.</p>
 <p>Here is an example of how the markdown script above would look un a HTML output format.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-148"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-149"></span>
 <img src="figures/RMarkdown2.png" alt="R Markdown output preview" width="70%" />
 <p class="caption">
 Figure 18.2: R Markdown output preview
@@ -510,22 +510,14 @@ Figure 18.2: R Markdown output preview
 <div id="figures" class="section level3 hasAnchor" number="18.4.4">
 <h3><span class="header-section-number">18.4.4</span> Figures<a href="rmarkdown.html#figures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Figures that are directly related to your data can be created and added using a code chunk. For example we can recreate the scatterplot example from Chapter <a href="ggplot.html#ggplot">15</a>.</p>
-<pre><code>
-```r
-library(ggplot2)
-ShrubData &lt;- read.csv(file = &quot;shrub-volume-data.csv&quot;)
-
-ggplot(data = ShrubData, aes(x = length, y = height)) + 
-  geom_point()</code></pre>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-149-1.png" width="672" /></p>
-<pre><code>
-&lt;img src=&quot;quant-guide_files/figure-html/unnamed-chunk-150-1.png&quot; width=&quot;672&quot; /&gt;
-
-If you want to include a figure or image from outside RStudio, you can use the `knitr::include_graphics()` function (make sure you have installed the `knitr` package first). You simply need to specify the file directory for that figure. To include a figure caption, you can add this to the curly brackets at the start of the code chunk between ` ```{r` and `}`.
-
-
-```r
-knitr::include_graphics(&#39;./figures/RStudio.png&#39;)</code></pre>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="rmarkdown.html#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb236-2"><a href="rmarkdown.html#cb236-2" aria-hidden="true" tabindex="-1"></a>ShrubData <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;shrub-volume-data.csv&quot;</span>)</span>
+<span id="cb236-3"><a href="rmarkdown.html#cb236-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-4"><a href="rmarkdown.html#cb236-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ShrubData, <span class="fu">aes</span>(<span class="at">x =</span> length, <span class="at">y =</span> height)) <span class="sc">+</span> </span>
+<span id="cb236-5"><a href="rmarkdown.html#cb236-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-150-1.png" width="672" /></p>
+<p>If you want to include a figure or image from outside RStudio, you can use the <code>knitr::include_graphics()</code> function (make sure you have installed the <code>knitr</code> package first). You simply need to specify the file directory for that figure. To include a figure caption, you can add this to the curly brackets at the start of the code chunk between <code>```{r</code> and <code>}</code>.</p>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="rmarkdown.html#cb237-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;./figures/RStudio.png&#39;</span>)</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-151"></span>
 <img src="figures/RStudio.png" alt="R Studio Logo" width="112" />
 <p class="caption">

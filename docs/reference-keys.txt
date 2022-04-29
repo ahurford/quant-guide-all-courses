@@ -5,8 +5,8 @@ fig:import-feature
 fig:import-dialog
 fig:panes2
 fig:panes3
-fig:unnamed-chunk-147
 fig:unnamed-chunk-148
+fig:unnamed-chunk-149
 fig:unnamed-chunk-151
 tab:unnamed-chunk-152
 intro

@@ -445,29 +445,29 @@ div.csl-indent {
 <p>We can now plot our base map using <code>ggplot()</code> and adding a layer called <code>geom_sf()</code> where we specify the data we will be using.</p>
 <div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="making-maps.html#cb215-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb215-2"><a href="making-maps.html#cb215-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-128-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-129-1.png" width="672" /></p>
 </div>
 <div id="changing-map-colours" class="section level2 hasAnchor" number="17.3">
 <h2><span class="header-section-number">17.3</span> Changing map colours<a href="making-maps.html#changing-map-colours" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can now start to customize our map, first by changing the colours. To change the colour of the borders we specify this using <code>colour =</code>, and to change the colour of the interior, we can specify this using <code>fill -</code>. Note: we set these values outside of the aesthetic (<code>aes()</code>) because we want to apply them to the entire object of <code>canada_map</code>.</p>
 <div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="making-maps.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb216-2"><a href="making-maps.html#cb216-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-129-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-130-1.png" width="672" /></p>
 <p>We can also set the fill inside of <code>aes()</code> if we want it to be based on values found within the dataframe. For example, we can set the fill by the name of each Canadian province or territory.</p>
 <div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="making-maps.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb217-2"><a href="making-maps.html#cb217-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="fu">aes</span>(<span class="at">fill =</span> name))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-130-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-131-1.png" width="672" /></p>
 <p>If we instead wanted to highlight one province, for example Newfoundland and Labrador, we again set this outside of <code>aes()</code>. We also will use an <code>ifelse()</code> statement. In the code below, this statement can be interpreted as “<em>if</em> the name from our dataframe matches Newfoundland and Labrador return the colour blue, <em>else</em> return the colour white.</p>
 <div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="making-maps.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb218-2"><a href="making-maps.html#cb218-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>,</span>
 <span id="cb218-3"><a href="making-maps.html#cb218-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill =</span> <span class="fu">ifelse</span>(canada_map<span class="sc">$</span>name <span class="sc">==</span> <span class="st">&quot;Newfoundland and Labrador&quot;</span>, <span class="st">&#39;blue&#39;</span>, <span class="st">&#39;white&#39;</span>))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-131-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-132-1.png" width="672" /></p>
 <p>Lastly, we can change the background fill to the map using <code>theme</code> elements. The layer <code>theme_bw()</code> will first set a black and white theme for the map, and can then alter the fill by setting <code>panel.background</code>.</p>
 <div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="making-maps.html#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb219-2"><a href="making-maps.html#cb219-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
 <span id="cb219-3"><a href="making-maps.html#cb219-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="cb219-4"><a href="making-maps.html#cb219-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;aliceblue&quot;</span>))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-132-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-133-1.png" width="672" /></p>
 </div>
 <div id="projections" class="section level2 hasAnchor" number="17.4">
 <h2><span class="header-section-number">17.4</span> Projections<a href="making-maps.html#projections" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -480,7 +480,7 @@ div.csl-indent {
 <span id="cb220-3"><a href="making-maps.html#cb220-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb220-4"><a href="making-maps.html#cb220-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
 <span id="cb220-5"><a href="making-maps.html#cb220-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> can.lcc)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-133-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-134-1.png" width="672" /></p>
 <p>Compared to any of the maps prior to this, you will notice that the latitude and longitude grid have become conical and that the shape and size of the provinces and territories have been altered.</p>
 </div>
 <div id="map-extent" class="section level2 hasAnchor" number="17.5">
@@ -489,18 +489,18 @@ div.csl-indent {
 <div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="making-maps.html#cb221-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb221-2"><a href="making-maps.html#cb221-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
 <span id="cb221-3"><a href="making-maps.html#cb221-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">67.5</span>, <span class="sc">-</span><span class="dv">53</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">47</span>, <span class="fl">60.5</span>))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-134-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-135-1.png" width="672" /></p>
 <p>Alternatively, we can subset the Canada map by selecting that row of data from our data.frame and saving it as a new object. We can then map just the province without any additional borders.</p>
 <div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="making-maps.html#cb222-1" aria-hidden="true" tabindex="-1"></a>map_nl <span class="ot">&lt;-</span> canada_map[canada_map<span class="sc">$</span>name <span class="sc">==</span> <span class="st">&quot;Newfoundland and Labrador&quot;</span>,]</span>
 <span id="cb222-2"><a href="making-maps.html#cb222-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb222-3"><a href="making-maps.html#cb222-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb222-4"><a href="making-maps.html#cb222-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-135-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-136-1.png" width="672" /></p>
 <p>Lastly, we can specify the values we want in our x or y axes by setting breaks in the data. For example, we can reduce the number of longitude values included by setting <code>scale_x_continuous</code>.</p>
 <div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="making-maps.html#cb223-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb223-2"><a href="making-maps.html#cb223-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
 <span id="cb223-3"><a href="making-maps.html#cb223-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-136-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-137-1.png" width="672" /></p>
 </div>
 <div id="mapping-points" class="section level2 hasAnchor" number="17.6">
 <h2><span class="header-section-number">17.6</span> Mapping points<a href="making-maps.html#mapping-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -510,7 +510,7 @@ div.csl-indent {
 <span id="cb224-2"><a href="making-maps.html#cb224-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
 <span id="cb224-3"><a href="making-maps.html#cb224-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> nl.cities, <span class="fu">aes</span>(<span class="at">x =</span> Longitude, <span class="at">y =</span> Latitude, <span class="at">colour =</span> Population_2021)) <span class="sc">+</span></span>
 <span id="cb224-4"><a href="making-maps.html#cb224-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-138-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
 <p>This map doesn’t provide a lot of information about the population sizes in NL since most towns have fewer than 25 000 people. To create a more meaningful representation of our data, we can change the scale and colour.</p>
 <p>One option is to add a layer using the function <code>scale_color_viridis_c()</code>, which provides a range of colour blind friendly palettes. We will just use the default option in this example.</p>
 <p>We can also scale the data by specifying the transformation we would like to use; in the example below, we will use the <code>log10</code> transformation, which returns the base 10 logarithm of a number. Note that this transformation is for the colour scale only and it will not alter the values of our data. The legend will now provide a wider range of colours for values between 10 and 10 000.
@@ -521,7 +521,7 @@ Lastly, we will change the name of the legend within the <code>labs()</code> fun
 <span id="cb225-4"><a href="making-maps.html#cb225-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
 <span id="cb225-5"><a href="making-maps.html#cb225-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">trans =</span> <span class="st">&quot;log10&quot;</span>) <span class="sc">+</span></span>
 <span id="cb225-6"><a href="making-maps.html#cb225-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">colour =</span> <span class="st">&quot;Population 2021&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-140-1.png" width="672" /></p>
 <p>Other spatial elements such as lines or polygons can be added in the same way using the <code>geom_line()</code> or <code>geom_polygon()</code> functions.</p>
 </div>
 <div id="scale-bar-and-north-arrow" class="section level2 hasAnchor" number="17.7">
@@ -533,7 +533,7 @@ We use <code>annotation_scale()</code> to add a scale bar to the map. The locati
 <span id="cb226-2"><a href="making-maps.html#cb226-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
 <span id="cb226-3"><a href="making-maps.html#cb226-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
 <span id="cb226-4"><a href="making-maps.html#cb226-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">&quot;tr&quot;</span>, <span class="at">width_hint =</span> <span class="fl">0.5</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-140-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-141-1.png" width="672" /></p>
 <p>A north arrow indicates the orientation of the map inside the frame. Using the argument <code>annotation_north_arrow()</code>, we can specify the orientation using <code>which_north</code>. Options include “grid,” where the north arrow always pointing up and “true,” which always points to the north pole. We can also define the size of the north arrow using <code>height</code> and <code>width</code>, as well as the style and location.</p>
 <div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="making-maps.html#cb227-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb227-2"><a href="making-maps.html#cb227-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
@@ -542,7 +542,7 @@ We use <code>annotation_scale()</code> to add a scale bar to the map. The locati
 <span id="cb227-5"><a href="making-maps.html#cb227-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_north_arrow</span>(<span class="at">location =</span> <span class="st">&quot;tl&quot;</span>, <span class="at">which_north =</span> <span class="st">&quot;true&quot;</span>,</span>
 <span id="cb227-6"><a href="making-maps.html#cb227-6" aria-hidden="true" tabindex="-1"></a>                         <span class="at">height =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">&quot;cm&quot;</span>), <span class="at">width =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">&quot;cm&quot;</span>),</span>
 <span id="cb227-7"><a href="making-maps.html#cb227-7" aria-hidden="true" tabindex="-1"></a>                         <span class="at">style =</span> north_arrow_fancy_orienteering)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-141-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-142-1.png" width="672" /></p>
 </div>
 <div id="finalizing-the-map" class="section level2 hasAnchor" number="17.8">
 <h2><span class="header-section-number">17.8</span> Finalizing the map<a href="making-maps.html#finalizing-the-map" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -570,7 +570,7 @@ We use <code>annotation_scale()</code> to add a scale bar to the map. The locati
 <span id="cb228-14"><a href="making-maps.html#cb228-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.85</span>, <span class="fl">0.75</span>), <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;transparent&quot;</span>),</span>
 <span id="cb228-15"><a href="making-maps.html#cb228-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span>
 <span id="cb228-16"><a href="making-maps.html#cb228-16" aria-hidden="true" tabindex="-1"></a>final</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-142-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-143-1.png" width="672" /></p>
 <p>We may also want to create an inset map, which shows the location of the main map in the context of a larger area. For example, we can use the larger Canadian map we made previously, with Newfoundland and Labrador highlighted. We will assign this map as the object <code>inset</code>. Reminder, the previous steps included:</p>
 <ul>
 <li>Using an <code>ifelse</code> statement to colour Newfoundland and Labrador blue and the remainder of Canada white</li>
@@ -588,13 +588,13 @@ We use <code>annotation_scale()</code> to add a scale bar to the map. The locati
 <span id="cb229-8"><a href="making-maps.html#cb229-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.background =</span> <span class="fu">element_blank</span>())</span>
 <span id="cb229-9"><a href="making-maps.html#cb229-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb229-10"><a href="making-maps.html#cb229-10" aria-hidden="true" tabindex="-1"></a>inset</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-143-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-144-1.png" width="672" /></p>
 <p>Lastly, we will add inset the inset to the main map using the <code>cowplot</code> package. We specify which is the main map using <code>ggdraw</code> and add the inset with a second function called <code>draw_plot</code>. Within <code>draw_plot</code> we define the size of the inset with <code>width</code> and <code>height</code>, as well as the location within the main map margins using <code>x</code> and <code>y</code>.</p>
 <div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="making-maps.html#cb230-1" aria-hidden="true" tabindex="-1"></a>NL.full <span class="ot">&lt;-</span> <span class="fu">ggdraw</span>(final) <span class="sc">+</span></span>
 <span id="cb230-2"><a href="making-maps.html#cb230-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">draw_plot</span>(inset, <span class="at">width =</span> <span class="fl">0.3</span>, <span class="at">height =</span> <span class="fl">0.3</span>, <span class="at">x =</span> <span class="fl">0.25</span>, <span class="at">y =</span> <span class="fl">0.05</span>)</span>
 <span id="cb230-3"><a href="making-maps.html#cb230-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb230-4"><a href="making-maps.html#cb230-4" aria-hidden="true" tabindex="-1"></a>NL.full</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-144-1.png" width="672" /></p>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-145-1.png" width="672" /></p>
 <div id="exporting-your-map" class="section level3 hasAnchor" number="17.8.1">
 <h3><span class="header-section-number">17.8.1</span> Exporting your map<a href="making-maps.html#exporting-your-map" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You can now export your map to use for a report, presentation, etc. One option is to use the method outlined in Chapter <a href="graph.html#export">10.6</a>. However, we can also use the function <code>ggsave()</code>. This will allow us to name our map as well as set the file format (.PNG, .JPEG, .TIFF), size (width and height in inches), and image resolution (dpi) when exporting the map.</p>

@@ -454,7 +454,7 @@ div.csl-indent {
 <span id="cb172-4"><a href="writing-functions.html#cb172-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Choosing to “roll” the dice 10 times gives us the following output.</p>
 <div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="writing-functions.html#cb173-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dice</span>(<span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##  [1] 2 2 5 4 3 5 1 5 6 5</code></pre>
+<pre><code>##  [1] 3 3 2 6 1 1 4 1 1 1</code></pre>
 <p>Now instead of the dice function returning the result of each individual roll, we now want a) a table with the total number of times each result occurred, and b) to plot the results. We can add a new line to the function for each argument. First we construct a table called ‘total’ that provides the summed results, then we plot these totals.</p>
 <div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="writing-functions.html#cb175-1" aria-hidden="true" tabindex="-1"></a>dice <span class="ot">&lt;-</span> <span class="cf">function</span>(n){</span>
 <span id="cb175-2"><a href="writing-functions.html#cb175-2" aria-hidden="true" tabindex="-1"></a>    toss <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, n, <span class="at">rep =</span> T)</span>
@@ -466,8 +466,8 @@ div.csl-indent {
 <span id="cb175-8"><a href="writing-functions.html#cb175-8" aria-hidden="true" tabindex="-1"></a><span class="fu">dice</span>(<span class="dv">10</span>)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-96-1.png" width="672" /></p>
 <pre><code>## toss
-## 1 2 3 4 5 
-## 1 2 5 1 1</code></pre>
+## 1 2 3 4 5 6 
+## 1 1 1 2 4 1</code></pre>
 </div>
 </div>
             </section>
