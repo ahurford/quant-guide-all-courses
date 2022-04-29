@@ -9,6 +9,11 @@ if (!require(rnaturalearth)) install.packages("rnaturalearth", repos = "http://p
 if (!require(rnaturalearthdata)) install.packages("rnaturalearthdata", repos = "http://packages.ropensci.org", type = "source")
 if (!require(rnaturalearthhires)) install.packages("rnaturalearthhires", repos = "http://packages.ropensci.org", type = "source")
 
+## Additional spatial packages required
+if (!require(ggspatial)) install.packages("ggspatial")
+
+if(!require(cowplot)) install.packages("cowplot")
+
 ## Load Library
 libs <- c('ggplot2', "sf", "rnaturalearth", "rnaturalearthdata", "rnaturalearthhires", "ggspatial", "raster", "dplyr", "cowplot")
 lapply(libs, require, character.only = TRUE)
