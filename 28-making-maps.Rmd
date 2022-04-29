@@ -3,11 +3,11 @@
 ```{r, include = FALSE}
 ### Install Packages ----
 ## An R package to hold and facilitate interaction with Natural Earth map data.
-if (!require(rnaturalearth)) install.packages("rnaturalearth")
+if (!require(rnaturalearth)) install.packages("rnaturalearth", repos = "http://packages.ropensci.org", type = "source")
 
 ## Data to support much of the package functionality are stored in two additional data packages
-if (!require(rnaturalearthdata)) devtools::install_github("ropensci/rnaturalearthdata")
-if (!require(rnaturalearthhires)) devtools::install_github("ropensci/rnaturalearthhires")
+if (!require(rnaturalearthdata)) install.packages("rnaturalearthdata", repos = "http://packages.ropensci.org", type = "source")
+if (!require(rnaturalearthhires)) install.packages("rnaturalearthhires", repos = "http://packages.ropensci.org", type = "source")
 
 ## Load Library
 libs <- c('ggplot2', "sf", "rnaturalearth", "rnaturalearthdata", "rnaturalearthhires", "ggspatial", "raster", "dplyr", "cowplot")
