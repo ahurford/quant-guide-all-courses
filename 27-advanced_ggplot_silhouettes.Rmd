@@ -1,25 +1,25 @@
 # Advanced graphing - silhouettes {#silhouettes}
 
+```{r, echo = F}
+library(rphylopic)
+library(ggplot2)
+```
+
 ## Introduction
 
 You can add silhouettes to both base and ggplot2 plots using the [rphylopic](https://cran.r-project.org/web/packages/rphylopic/readme/README.html) package.
 
-You can get free png silhouettes of various animals from [phylopic.org](http://phylopic.org).You can use the function `image_data()` to call the image's universally unique identifier (UUID) and specify the size of the image.
+You can get free png silhouettes of various animals from [phylopic.org](http://phylopic.org). Once you install and load the `rphylopic` package, you can use the function `image_data()` to call the image's universally unique identifier (UUID) and specify the size of the image.
 
 ```{r}
-library(rphylopic)
-
 squid.img <- image_data("938a7ea7-5262-4bbb-85ba-cb39181002f0", size = "512")[[1]]
 ```
 
 ## Adding silhouettes in ggplot
 
-Before beginning, ensure you have installed both `ggplot2` and `rphyolopic`. Silhouettes can be added to a ggplot graphic by using the function [add_phylopic()](https://www.rdocumentation.org/packages/rphylopic/versions/0.3.0/topics/add_phylopic) as another layer.
+Before beginning, ensure you have installed and loaded both `ggplot2` and `rphyolopic`. Silhouettes can be added to a ggplot graphic by using the function [add_phylopic()](https://www.rdocumentation.org/packages/rphylopic/versions/0.3.0/topics/add_phylopic) as another layer.
 
 ```{r}
-library(ggplot2)
-library(rphylopic)
-
 squid.img <- image_data("938a7ea7-5262-4bbb-85ba-cb39181002f0", size = "512")[[1]]
 
 data = data.frame(x = 1:10, y = c(2, 9, 4, 6, 5, 8, 2, 3, 7, 1))
@@ -34,7 +34,7 @@ The `add_phylopic()` function will automatically centre your image in the backgr
 ```{r}
 ggplot() + 
   geom_point(data = data, aes(x = x, y = y)) + 
-  add_phylopic(squid.img, alpha = 0.2, x = 7, y = 4, ysize = 1, color = "blue")
+  add_phylopic(squid.img, alpha = 0.2, x = 8, y = 8, ysize = 3, color = "blue")
 ```
 
 Troubleshooting tip: The following code from [here](https://scrogster.wordpress.com/2014/06/02/adding-phylopic-org-silhouettes-to-r-plots/), will work if the rphylopic package isn’t working well:
