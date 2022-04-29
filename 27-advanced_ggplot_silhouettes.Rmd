@@ -29,7 +29,7 @@ ggplot() +
   add_phylopic(squid.img)
 ```
 
-The `add_phylopic()` function will automatically centre your image in the background of the plot. You can customize the location, size, colour and transparency (using alpha) of the image within the function. 
+The `add_phylopic()` function will automatically centre your image in the background of the plot. You can customize the location (`x` and `y`), size, colour and transparency (`alpha`) of the image within the function. 
 
 ```{r}
 ggplot() + 
