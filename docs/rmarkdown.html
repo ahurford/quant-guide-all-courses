@@ -328,7 +328,10 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="17" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>17</b> Making maps<span></span></a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="making-maps.html"><a href="making-maps.html#introduction-4"><i class="fa fa-check"></i><b>17.1</b> Introduction<span></span></a></li>
+<li class="chapter" data-level="17.1" data-path="making-maps.html"><a href="making-maps.html#introduction-4"><i class="fa fa-check"></i><b>17.1</b> Introduction<span></span></a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="making-maps.html"><a href="making-maps.html#required-packages"><i class="fa fa-check"></i><b>17.1.1</b> Required packages<span></span></a></li>
+</ul></li>
 <li class="chapter" data-level="17.2" data-path="making-maps.html"><a href="making-maps.html#creating-maps-using-ggplot2-and-sf"><i class="fa fa-check"></i><b>17.2</b> Creating maps using <code>ggplot2</code> and <code>sf</code><span></span></a></li>
 <li class="chapter" data-level="17.3" data-path="making-maps.html"><a href="making-maps.html#changing-map-colours"><i class="fa fa-check"></i><b>17.3</b> Changing map colours<span></span></a></li>
 <li class="chapter" data-level="17.4" data-path="making-maps.html"><a href="making-maps.html#projections"><i class="fa fa-check"></i><b>17.4</b> Projections<span></span></a></li>
@@ -410,7 +413,7 @@ div.csl-indent {
 <div id="installation" class="section level3 hasAnchor" number="18.1.1">
 <h3><span class="header-section-number">18.1.1</span> Installation<a href="rmarkdown.html#installation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>You can install the <a href="https://rmarkdown.rstudio.com">R Markdown</a> package from CRAN:</p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="rmarkdown.html#cb229-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="rmarkdown.html#cb232-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span></code></pre></div>
 </div>
 </div>
 <div id="setup" class="section level2 hasAnchor" number="18.2">
@@ -423,7 +426,7 @@ div.csl-indent {
 <li><p>Text that is easily formatted</p></li>
 </ol>
 <p>In general, your R Markdown file will look like this when using RStudio.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-144"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-148"></span>
 <img src="figures/RMarkdown1.png" alt="R Markdown general setup" width="70%" />
 <p class="caption">
 Figure 18.1: R Markdown general setup
@@ -439,7 +442,7 @@ Figure 18.1: R Markdown general setup
 <p>To render your R markdown file into an HTML, PDF, or Word document, click the “Knit” icon that appears above in the bar above the source pane. This will automatically render your document to the output format specified in your header, however, the drop down menu will allow you to select an alternative type of output.</p>
 <p>Once the file is rendered, RStudio will show you a preview of the new output and save the output file in your working directory.</p>
 <p>Here is an example of how the markdown script above would look un a HTML output format.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-145"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-149"></span>
 <img src="figures/RMarkdown2.png" alt="R Markdown output preview" width="70%" />
 <p class="caption">
 Figure 18.2: R Markdown output preview
@@ -507,15 +510,15 @@ Figure 18.2: R Markdown output preview
 <div id="figures" class="section level3 hasAnchor" number="18.4.4">
 <h3><span class="header-section-number">18.4.4</span> Figures<a href="rmarkdown.html#figures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Figures that are directly related to your data can be created and added using a code chunk. For example we can recreate the scatterplot example from Chapter <a href="ggplot.html#ggplot">15</a>.</p>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="rmarkdown.html#cb233-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb233-2"><a href="rmarkdown.html#cb233-2" aria-hidden="true" tabindex="-1"></a>ShrubData <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;shrub-volume-data.csv&quot;</span>)</span>
-<span id="cb233-3"><a href="rmarkdown.html#cb233-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb233-4"><a href="rmarkdown.html#cb233-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ShrubData, <span class="fu">aes</span>(<span class="at">x =</span> length, <span class="at">y =</span> height)) <span class="sc">+</span> </span>
-<span id="cb233-5"><a href="rmarkdown.html#cb233-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-147-1.png" width="672" /></p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="rmarkdown.html#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb236-2"><a href="rmarkdown.html#cb236-2" aria-hidden="true" tabindex="-1"></a>ShrubData <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;shrub-volume-data.csv&quot;</span>)</span>
+<span id="cb236-3"><a href="rmarkdown.html#cb236-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb236-4"><a href="rmarkdown.html#cb236-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> ShrubData, <span class="fu">aes</span>(<span class="at">x =</span> length, <span class="at">y =</span> height)) <span class="sc">+</span> </span>
+<span id="cb236-5"><a href="rmarkdown.html#cb236-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-150-1.png" width="672" /></p>
 <p>If you want to include a figure or image from outside RStudio, you can use the <code>knitr::include_graphics()</code> function (make sure you have installed the <code>knitr</code> package first). You simply need to specify the file directory for that figure. To include a figure caption, you can add this to the curly brackets at the start of the code chunk between <code>```{r</code> and <code>}</code>.</p>
-<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="rmarkdown.html#cb234-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;./figures/RStudio.png&#39;</span>)</span></code></pre></div>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-148"></span>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="rmarkdown.html#cb237-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&#39;./figures/RStudio.png&#39;</span>)</span></code></pre></div>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-151"></span>
 <img src="figures/RStudio.png" alt="R Studio Logo" width="112" />
 <p class="caption">
 Figure 18.3: R Studio Logo
@@ -549,9 +552,9 @@ Cell 3        | Cell 4</code></pre>
 </tbody>
 </table>
 <p>Alternatively, if you want to include a larger table of data you can again use the knitr package, this time using the function <code>knitr::kable()</code>. This function allows you to directly specify the caption within <code>kable()</code>. For example, we can again use the <code>ShrubData</code> dataframe.</p>
-<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="rmarkdown.html#cb236-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(ShrubData, <span class="at">caption =</span> <span class="st">&#39;Shrub Volume Data&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="rmarkdown.html#cb239-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(ShrubData, <span class="at">caption =</span> <span class="st">&#39;Shrub Volume Data&#39;</span>)</span></code></pre></div>
 <table>
-<caption><span id="tab:unnamed-chunk-149">Table 18.1: </span>Shrub Volume Data</caption>
+<caption><span id="tab:unnamed-chunk-152">Table 18.1: </span>Shrub Volume Data</caption>
 <thead>
 <tr class="header">
 <th align="right">site</th>

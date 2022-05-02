@@ -9,8 +9,15 @@ if (!require(rnaturalearth)) install.packages("rnaturalearth", repos = "http://p
 if (!require(rnaturalearthdata)) install.packages("rnaturalearthdata", repos = "http://packages.ropensci.org", type = "source")
 if (!require(rnaturalearthhires)) install.packages("rnaturalearthhires", repos = "http://packages.ropensci.org", type = "source")
 
+## Additional spatial packages required
+if (!require(sf)) install.packages("sf", repos = "https://CRAN.R-project.org")
+
+if (!require(ggspatial)) install.packages("ggspatial", repos = "https://CRAN.R-project.org")
+
+if(!require(cowplot)) install.packages("cowplot", repos = "https://CRAN.R-project.org")
+
 ## Load Library
-libs <- c('ggplot2', "sf", "rnaturalearth", "rnaturalearthdata", "rnaturalearthhires", "ggspatial", "raster", "dplyr", "cowplot")
+libs <- c('ggplot2', "sf", "rnaturalearth", "rnaturalearthdata", "rnaturalearthhires", "ggspatial", "cowplot")
 lapply(libs, require, character.only = TRUE)
 
 ```
@@ -25,6 +32,34 @@ In GIS, there are a few key spatial elements that we must understand to build a 
 * Polygons: Closed shapes made of connected lines such as country or provincial/territorial borders. Polygons also have an ordered set of coordinates but the start and end point should have the same coordinates.
 
 Each of these elements can be added as their own layer when building map.
+
+### Required packages
+
+This tutorial requires several different packages, make sure you have the following ones installed before continuing. You will only need to do this once.
+
+**Plotting Packages**
+```{r eval = F}
+install.packages("ggplot2")
+install.packages("cowplot")
+```
+
+**Spatial Packages**
+```{r eval = F}
+install.packages("sf")
+install.packages("ggspatial")
+```
+
+**Base Map Packages**
+```{r eval = F}
+install.packages("rnaturalearth")
+install.packages("rnaturalearthdata")
+install.packages("rnaturalearthhires")
+
+## If you have trouble installing the above packages, you can try this instead
+install.packages("devtools")
+devtools::install_github("ropensci/rnaturalearthdata")
+devtools::install_github("ropensci/rnaturalearthhires")
+```
 
 ## Creating maps using `ggplot2` and `sf`
 

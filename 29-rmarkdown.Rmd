@@ -124,15 +124,7 @@ The output:
 
 Figures that are directly related to your data can be created and added using a code chunk. For example we can recreate the scatterplot example from Chapter \@ref(ggplot).
 
-```{r, eval = F}
-library(ggplot2)
-ShrubData <- read.csv(file = "shrub-volume-data.csv")
-
-ggplot(data = ShrubData, aes(x = length, y = height)) + 
-  geom_point()
-``` 
-
-```{r, echo = F}
+```{r}
 library(ggplot2)
 ShrubData <- read.csv(file = "shrub-volume-data.csv")
 
