@@ -64,4 +64,4 @@ If you are a biology instructor who is interested in furthering quantitative tra
 
 
 ## R help center
-If you need help with R and Rstudio you can talk to a Quant TA in the biology computer Lab (CSF2218) or the help center. You can assess the help center schedule [here] 
+If you need help with R and Rstudio you can talk to a Quant TA in the biology computer Lab (CSF2218) or the help center. You can assess the help center schedule [here](https://github.com/ahurford/quant-guide-all-courses/blob/master/R-help/R%20help%20schedule.pdf).
