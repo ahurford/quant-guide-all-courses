@@ -186,6 +186,72 @@ plot(temp, fishA, pch = 17, type = "l", xlab = "temperature (degrees C)", ylab =
 Re-create the graph above on your own, but this time, also add a line for `fishB` which
 joins the points as is shown above for `fishA`. Just as in section \@ref(axes), where we used the `points()` function to an existing plot, we can use the `lines()` function to add a line to an existing plot. To select the line type, use `lty = 2` (or another value), just as you would use `pch` in the `points()` function. Export this plot and hand it in with your assignment (by pasting the .pdf file into an MS Word document or other text editor, see section \@ref(export)).
 
+## Boxplot
+
+At some point in your data exploration and analysis you might want to explore the relationships between a continuous variable and various categorical groups. Boxplots are a common type of graph that allow you to do this. You are likely to meet this in your ecology class because we often need to compare values between different categories.
+
+
+To demonstrate how boxplot is done in `R`, we will use a built-in `R` dataset called `PlantGrowth`.
+
+The `PlantGrowth` dataset has 30 rows and two columns namely, `weight` and `group`. The `weight` column represents the dry biomass of each plant in grams, while the `group` column describes the experimental treatment that was given to each plant.
+
+We will first load the data using the code:
+
+```{r}
+data(PlantGrowth)
+```
+
+We would like to view the first 10 rows of the data. We can do this using the `head()` function. We specify the number of rows as a second argument to the `head()` function. If you do not specify the number of rows, `R` will display the first six rows. 
+```{r}
+head(PlantGrowth, 10)
+```
+
+We can also view the last six rows of the data. We can do this using the `tail()` function. Here, we do not specify the number of rows. 
+```{r}
+tail(PlantGrowth)
+```
+
+Now we want to compare the weight of plants among the different treatments. The graph that is most appropriate to use is the boxplot hence, we will do this comparison by creating a boxplot. To create a boxplot, we need a continuous variable and a categorical variable. By inspecting the `PlantGrowth` dataset, we see that `weight` is the continuous variable and `group` is a categorical variable. Note that we can use `levels()` function to look at the levels of the `group` column. Try this in the `console`
+
+```{r}
+levels(PlantGrowth$group)
+```
+
+We will plot `weight` as a function of `group` (y as a function of x) using the `boxplot()` function
+```{r}
+boxplot(weight ~ group, data = PlantGrowth)
+```
+
+We can modify the axes labels just like we did in [section 10.3](https://ahurford.github.io/quant-guide-all-courses/graph.html#axes) by using the `xlab` and `ylab` arguments in the `boxplot()` function
+
+```{r}
+boxplot(weight ~ group, data = PlantGrowth, xlab = "Treatment Group", ylab = "Dried Biomass Weight (g)")
+```
+
+We have already learnt about how the `plot()` function is used to graph a scatterplot in [section 10.2](https://ahurford.github.io/quant-guide-all-courses/graph.html#scatter-plots-with-plotxy). One other thing that you need to know about the `plot()` function is that if the `x` axis is a categorical variable, the function will recognize that and will graph a `boxplot`  instead of a scatterplot. Let us demonstrate this concept with the code that follows:
+
+```{r}
+plot(PlantGrowth$group, PlantGrowth$weight)
+```
+
+We can also graph the boxplot by using the code `plot(x2)` rather than `plot(x,y)` provided `x2` is a data frame with two columns where the first column is the categorical variable and the second column is the continuous variable. Let us demonstrate this with the `PlantGrowth` dataset. 
+ 
+ 
+The `PlantGrowth` dataset has only two columns but we will have to rearrange the positions of the columns such that the `group` column which is the treatments (or categorical variable) becomes the first column and the `weight` column which is continuous becomes the second column.
+
+```{r}
+PlantGrowth <- data.frame(group=PlantGrowth$group, weight=PlantGrowth$weight)
+head(PlantGrowth)
+```
+Now we can graph a boxplot using `plot()` function with only one argument. For example `plot(x2)` where `x2` is the name of the dataframe.
+
+```{r}
+plot(PlantGrowth)
+```
+
+In handling a dataframe which has more than two columns, you would basically have to extract the columns of interest and put it into another dataframe and apply the concept that has been studied in this section. 
+
+
 ## Other useful plot functions
 
 The generic `plot()` function makes a scatter plot, with variations.
@@ -195,7 +261,7 @@ For other types of plots, R has different functions, but all have similar argume
 See the following:
 
 -   `barplot` to make bar graphs,
--   `boxplot` to make boxplots,
+-   `boxplot` to make boxplots (refer to the previous section),
 -   `hist` to make a histogram.
 
 ## Exporting your graphs {#export}

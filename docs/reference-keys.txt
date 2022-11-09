@@ -61,6 +61,7 @@ scatter-plots-with-plotxy
 axes
 getting-a-bit-more-sophisticated
 line-graphs
+boxplot
 other-useful-plot-functions
 export
 pch
