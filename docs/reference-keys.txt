@@ -134,3 +134,5 @@ hypothesis-testing
 null-hypotheses
 further-reading-3
 status
+fig:panes2
+fig:panes3

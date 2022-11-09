@@ -222,13 +222,13 @@ We will plot `weight` as a function of `group` (y as a function of x) using the 
 boxplot(weight ~ group, data = PlantGrowth)
 ```
 
-We can modify the axes labels just like we did in [section 10.3](https://ahurford.github.io/quant-guide-all-courses/graph.html#axes) by using the `xlab` and `ylab` arguments in the `boxplot()` function
+We can modify the axes labels just like we did in this [section](https://ahurford.github.io/quant-guide-all-courses/graph.html#axes) by using the `xlab` and `ylab` arguments in the `boxplot()` function
 
 ```{r}
 boxplot(weight ~ group, data = PlantGrowth, xlab = "Treatment Group", ylab = "Dried Biomass Weight (g)")
 ```
 
-We have already learnt about how the `plot()` function is used to graph a scatterplot in [section 10.2](https://ahurford.github.io/quant-guide-all-courses/graph.html#scatter-plots-with-plotxy). One other thing that you need to know about the `plot()` function is that if the `x` axis is a categorical variable, the function will recognize that and will graph a `boxplot`  instead of a scatterplot. Let us demonstrate this concept with the code that follows:
+We have already learnt about how the `plot()` function is used to graph a scatterplot in this [section](https://ahurford.github.io/quant-guide-all-courses/graph.html#scatter-plots-with-plotxy). One other thing that you need to know about the `plot()` function is that if the `x` axis is a categorical variable, the function will recognize that and will graph a `boxplot`  instead of a scatterplot. Let us demonstrate this concept with the code that follows:
 
 ```{r}
 plot(PlantGrowth$group, PlantGrowth$weight)
@@ -249,7 +249,7 @@ Now we can graph a boxplot using `plot()` function with only one argument. For e
 plot(PlantGrowth)
 ```
 
-In handling a dataframe which has more than two columns, you would basically have to extract the columns of interest and put it into another dataframe and apply the concept that has been studied in this section. 
+Note that in handling a dataframe which has more than two columns, you would basically have to extract the columns of interest and put it into another dataframe and apply the concept that has been studied in this section. 
 
 
 ## Other useful plot functions
