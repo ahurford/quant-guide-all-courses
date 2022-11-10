@@ -234,7 +234,7 @@ We have already learnt about how the `plot()` function is used to graph a scatte
 plot(PlantGrowth$group, PlantGrowth$weight)
 ```
 
-We can also graph the boxplot by using the code `plot(x2)` rather than `plot(x,y)` provided `x2` is a data frame with two columns where the first column is the categorical variable and the second column is the continuous variable. Let us demonstrate this with the `PlantGrowth` dataset. 
+We can also graph the boxplot by using the code `plot(x2)` rather than `plot(x,y)` provided `x2` is a data frame with two columns where the first column is a categorical variable and the second column is a continuous variable. Let us demonstrate this with the `PlantGrowth` dataset. 
  
 The `PlantGrowth` dataset has only two columns but we will have to rearrange the positions of the columns such that the `group` column which is the treatments (or categorical variable) becomes the first column and the `weight` column which is continuous becomes the second column.
 
@@ -242,13 +242,13 @@ The `PlantGrowth` dataset has only two columns but we will have to rearrange the
 PlantGrowth <- data.frame(group=PlantGrowth$group, weight=PlantGrowth$weight)
 head(PlantGrowth)
 ```
-Now we can graph a boxplot using `plot()` function with only one argument. For example `plot(x2)` where `x2` is the name of the dataframe.
+Now we can graph a boxplot using the `plot()` function with only one argument. For example `plot(x2)` where `x2` is the name of the dataframe. In this case `x2` is `PlantGrowth`.
 
 ```{r}
 plot(PlantGrowth)
 ```
 
-Note that in handling a dataframe which has more than two columns, you would basically have to extract the columns of interest and put it into another dataframe and apply the concept that has been studied in this section. 
+Note that in handling a dataframe which has more than two columns, you would basically have to extract the columns of interest and put them into a dataframe and apply the concept that has been studied in this section. 
 
 
 ## Other useful plot functions

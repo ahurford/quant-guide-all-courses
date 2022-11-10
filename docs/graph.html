@@ -562,7 +562,7 @@ joins the points as is shown above for <code>fishA</code>. Just as in section <a
 <p>We have already learnt about how the <code>plot()</code> function is used to graph a scatterplot in this <a href="https://ahurford.github.io/quant-guide-all-courses/graph.html#scatter-plots-with-plotxy">section</a>. One other thing that you need to know about the <code>plot()</code> function is that if the <code>x</code> axis is a categorical variable, the function will recognize that and will graph a <code>boxplot</code> instead of a scatterplot. Let us demonstrate this concept with the code that follows:</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="graph.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(PlantGrowth<span class="sc">$</span>group, PlantGrowth<span class="sc">$</span>weight)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
-<p>We can also graph the boxplot by using the code <code>plot(x2)</code> rather than <code>plot(x,y)</code> provided <code>x2</code> is a data frame with two columns where the first column is the categorical variable and the second column is the continuous variable. Let us demonstrate this with the <code>PlantGrowth</code> dataset.</p>
+<p>We can also graph the boxplot by using the code <code>plot(x2)</code> rather than <code>plot(x,y)</code> provided <code>x2</code> is a data frame with two columns where the first column is a categorical variable and the second column is a continuous variable. Let us demonstrate this with the <code>PlantGrowth</code> dataset.</p>
 <p>The <code>PlantGrowth</code> dataset has only two columns but we will have to rearrange the positions of the columns such that the <code>group</code> column which is the treatments (or categorical variable) becomes the first column and the <code>weight</code> column which is continuous becomes the second column.</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="graph.html#cb36-1" aria-hidden="true" tabindex="-1"></a>PlantGrowth <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">group=</span>PlantGrowth<span class="sc">$</span>group, <span class="at">weight=</span>PlantGrowth<span class="sc">$</span>weight)</span>
 <span id="cb36-2"><a href="graph.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(PlantGrowth)</span></code></pre></div>
@@ -573,10 +573,10 @@ joins the points as is shown above for <code>fishA</code>. Just as in section <a
 ## 4  ctrl   6.11
 ## 5  ctrl   4.50
 ## 6  ctrl   4.61</code></pre>
-<p>Now we can graph a boxplot using <code>plot()</code> function with only one argument. For example <code>plot(x2)</code> where <code>x2</code> is the name of the dataframe.</p>
+<p>Now we can graph a boxplot using the <code>plot()</code> function with only one argument. For example <code>plot(x2)</code> where <code>x2</code> is the name of the dataframe. In this case <code>x2</code> is <code>PlantGrowth</code>.</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="graph.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(PlantGrowth)</span></code></pre></div>
 <p><img src="quant-guide_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
-<p>Note that in handling a dataframe which has more than two columns, you would basically have to extract the columns of interest and put it into another dataframe and apply the concept that has been studied in this section.</p>
+<p>Note that in handling a dataframe which has more than two columns, you would basically have to extract the columns of interest and put them into a dataframe and apply the concept that has been studied in this section.</p>
 </div>
 <div id="other-useful-plot-functions" class="section level2 hasAnchor" number="9.6">
 <h2><span class="header-section-number">9.6</span> Other useful plot functions<a href="graph.html#other-useful-plot-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
