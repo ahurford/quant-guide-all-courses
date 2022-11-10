@@ -211,13 +211,13 @@ We can also view the last six rows of the data. We can do this using the `tail()
 tail(PlantGrowth)
 ```
 
-Now we want to compare the weight of plants among the different treatments. The graph that is most appropriate to use is the boxplot hence, we will do this comparison by creating a boxplot. To create a boxplot, we need a continuous variable and a categorical variable. By inspecting the `PlantGrowth` dataset, we see that `weight` is the continuous variable and `group` is a categorical variable. Note that we can use `levels()` function to look at the levels of the `group` column. Try this in the `console`
+Now we want to compare the weight of plants among the different treatments. The graph that is most appropriate to use is the boxplot hence, we will do this comparison by creating a boxplot. To create a boxplot, we need a continuous variable and a categorical variable. By inspecting the `PlantGrowth` dataset, we see that `weight` is a continuous variable and `group` is a categorical variable. Note that we can use `levels()` function to look at the levels of the `group` column. Try this in the `console`
 
 ```{r}
 levels(PlantGrowth$group)
 ```
 
-We will plot `weight` as a function of `group` (y as a function of x) using the `boxplot()` function
+We will plot `weight` as a function of `group` (y as a function of x) using the `boxplot()` function. Notice how we write `weight` as a function of `group` (`weight ~ group`).
 ```{r}
 boxplot(weight ~ group, data = PlantGrowth)
 ```
@@ -235,7 +235,6 @@ plot(PlantGrowth$group, PlantGrowth$weight)
 ```
 
 We can also graph the boxplot by using the code `plot(x2)` rather than `plot(x,y)` provided `x2` is a data frame with two columns where the first column is the categorical variable and the second column is the continuous variable. Let us demonstrate this with the `PlantGrowth` dataset. 
- 
  
 The `PlantGrowth` dataset has only two columns but we will have to rearrange the positions of the columns such that the `group` column which is the treatments (or categorical variable) becomes the first column and the `weight` column which is continuous becomes the second column.
 
