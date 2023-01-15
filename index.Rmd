@@ -63,4 +63,4 @@ BIOL 4630 - Mammalogy
 If you are a biology instructor who is interested in furthering quantitative training in your course you can download a guide [here](https://github.com/ahurford/quant-guide-all-courses/blob/master/files/Instructor_Guide.pdf) (please download the file as viewing it does not display all the information).
 
 ## R help center
-If you need help with R and Rstudio you can talk to a Quant TA in the biology computer Lab (CSF2218) or the help center (CSF2342). You can assess the help center schedule [here](https://github.com/ahurford/quant-guide-all-courses/blob/master/R-help/R_help_center.pdf).
+If you need help with R and Rstudio you can talk to a Quant TA in the biology computer Lab (CSF2218) or the help center (CSF2342). You can assess the help center schedule [here](https://github.com/ahurford/quant-guide-all-courses/blob/master/R-help/R_help_schedule_winter_2023.pdf).
