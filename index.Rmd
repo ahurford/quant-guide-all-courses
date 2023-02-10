@@ -43,6 +43,8 @@ The quantitative training program at MUNL was launched in BIOL 1001 in [Spring 2
 
 [BIOL 2600 - Ecology (in progress)](https://ahurford.github.io/biol_2600_bookdown/)
 
+BIOL 2900 - Principles of Evolution & Systematics (in progress)
+
 [BIOL 3295 - Population and Evolutionary Ecology](https://ahurford.github.io/BIOL-3295-Fall-2020/)
 
 [BIOL 4505 - Systematics and Biogeography](https://ahurford.github.io/Ecogeographic-variation/)
