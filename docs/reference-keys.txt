@@ -134,3 +134,7 @@ hypothesis-testing
 null-hypotheses
 further-reading-3
 status
+reshaping-data
+reshaping-a-data-from-wide-to-long-format
+reshaping-data-from-wide-to-long-format
+base-r-1

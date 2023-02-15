@@ -248,3 +248,14 @@ head(data4)
 ```
 
 Without using pipes, we create variables `data2` and `data3` that only serve as intermediaries, that we may never use again in our subsequent lines of code. Creating many variables can bog down both the computer memory and your own memory, when you are trying to remember the variable name you gave to a particular output when writing subsequent commands.
+
+
+## Reshaping Data
+
+Data frequently come in formats that are unsuitable for analysis. You would be required to do modifications on the data in some way. The process of cleaning or modifying the data to make it ready for analysis is known as `tidying`, or `munging`. The goal is generally to get the data into a `tidy` format. You often get data where items that should be in the rows are in the columns or vice versa yet it's not in a transpose form. Some plotting functions in R have a special way the data should be formatted before it can produce the required plot. In these circumstances, you would have to reshape the data into a format that is easier to work with. The common formats that data is usually formatted into are a wide or long format. Depending on your goal, you may want the data frame to be in one of these specific formats. We hereby going to learn how to reshape data into one of these formats. 
+
+### Reshaping data from wide to long format
+
+#### Base R
+
+
