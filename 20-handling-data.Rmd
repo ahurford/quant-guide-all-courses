@@ -315,8 +315,9 @@ Reshape `data2` from the wide format to a long format by staking the third and f
 
 ```{r}
 #melt columns of data frame
-melt(data2, id.var = c('person', 'trial'), variable.name = 'outcomes')
+data2_long <- melt(data2, id.var = c('person', 'trial'), variable.name = 'outcome')
 
+data2_long
 ```
 
 3. Using the **tidyr package**. The `tidyr` package make use of the following functions:
@@ -375,6 +376,13 @@ df_wide
 df_wide2 <- df_long %>% spread(quiz, marks)
 
 df_wide2
+```
+
+We show another example of using the `spread()` function to transform back `data2` from long to wide. 
+
+```{r}
+data2_long %>% spread(outcome, value)
+
 ```
 
 There are many other functions to reshape data in R but these are the few handy ones that you can always stick to in your data analysis and plotting. 

@@ -762,8 +762,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 6      C     2        4        2</code></pre>
 <p>Reshape <code>data2</code> from the wide format to a long format by staking the third and fourth columns.</p>
 <div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="handling-data.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="co">#melt columns of data frame</span></span>
-<span id="cb71-2"><a href="handling-data.html#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="fu">melt</span>(data2, <span class="at">id.var =</span> <span class="fu">c</span>(<span class="st">&#39;person&#39;</span>, <span class="st">&#39;trial&#39;</span>), <span class="at">variable.name =</span> <span class="st">&#39;outcomes&#39;</span>)</span></code></pre></div>
-<pre><code>##    person trial outcomes value
+<span id="cb71-2"><a href="handling-data.html#cb71-2" aria-hidden="true" tabindex="-1"></a>data2_long <span class="ot">&lt;-</span> <span class="fu">melt</span>(data2, <span class="at">id.var =</span> <span class="fu">c</span>(<span class="st">&#39;person&#39;</span>, <span class="st">&#39;trial&#39;</span>), <span class="at">variable.name =</span> <span class="st">&#39;outcome&#39;</span>)</span>
+<span id="cb71-3"><a href="handling-data.html#cb71-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb71-4"><a href="handling-data.html#cb71-4" aria-hidden="true" tabindex="-1"></a>data2_long</span></code></pre></div>
+<pre><code>##    person trial  outcome value
 ## 1       A     1 outcome1     7
 ## 2       A     2 outcome1     6
 ## 3       B     1 outcome1     6
@@ -883,6 +885,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4  Jake        B             8             2
 ## 5  Josh        A             1             2
 ## 6  Josh        B             3             4</code></pre>
+<p>We show another example of using the <code>spread()</code> function to transform back <code>data2</code> from long to wide.</p>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="handling-data.html#cb86-1" aria-hidden="true" tabindex="-1"></a>data2_long <span class="sc">%&gt;%</span> <span class="fu">spread</span>(outcome, value)</span></code></pre></div>
+<pre><code>##   person trial outcome1 outcome2
+## 1      A     1        7        4
+## 2      A     2        6        4
+## 3      B     1        6        5
+## 4      B     2        5        5
+## 5      C     1        4        3
+## 6      C     2        4        2</code></pre>
 <p>There are many other functions to reshape data in R but these are the few handy ones that you can always stick to in your data analysis and plotting.</p>
 
 </div>
