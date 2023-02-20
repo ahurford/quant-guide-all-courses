@@ -374,7 +374,6 @@ df_wide
 
 ```{r}
 df_wide2 <- df_long %>% spread(quiz, marks)
-
 df_wide2
 ```
 
@@ -382,7 +381,6 @@ We show another example of using the `spread()` function to transform back `data
 
 ```{r}
 data2_long %>% spread(outcome, value)
-
 ```
 
 There are many other functions to reshape data in R but these are the few handy ones that you can always stick to in your data analysis and plotting. 
