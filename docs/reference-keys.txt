@@ -55,6 +55,9 @@ removing-na-entries-in-data
 grouping
 joining
 pipes
+reshaping-data
+reshaping-data-from-wide-to-long-format
+reshaping-data-from-long-to-wide-format
 graph
 making-graphs-in-r
 scatter-plots-with-plotxy
@@ -134,7 +137,3 @@ hypothesis-testing
 null-hypotheses
 further-reading-3
 status
-reshaping-data
-reshaping-a-data-from-wide-to-long-format
-reshaping-data-from-wide-to-long-format
-base-r-1

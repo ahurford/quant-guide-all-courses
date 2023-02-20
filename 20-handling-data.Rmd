@@ -252,10 +252,102 @@ Without using pipes, we create variables `data2` and `data3` that only serve as 
 
 ## Reshaping Data
 
-Data frequently come in formats that are unsuitable for analysis. You would be required to do modifications on the data in some way. The process of cleaning or modifying the data to make it ready for analysis is known as `tidying`, or `munging`. The goal is generally to get the data into a `tidy` format. You often get data where items that should be in the rows are in the columns or vice versa yet it's not in a transpose form. Some plotting functions in R have a special way the data should be formatted before it can produce the required plot. In these circumstances, you would have to reshape the data into a format that is easier to work with. The common formats that data is usually formatted into are a wide or long format. Depending on your goal, you may want the data frame to be in one of these specific formats. We hereby going to learn how to reshape data into one of these formats. 
+Data frequently come in formats that are unsuitable for analysis. You would be required to do modifications on the data in some way. The process of cleaning or modifying the data to make it ready for analysis is known as `tidying`, or `munging`. The goal is generally to get the data into a `tidy` format. You often get data where items that should be in the rows are in the columns or vice versa yet it's not in a transpose form. Some plotting functions in R have a special way the data should be formatted before it can produce the required plot. In these circumstances, you would have to reshape the data into a format that is easier to work with. This section considers the various ways we can format data into a wide or long format. Depending on your goal, you may want the data frame to be in one of these specific formats. We hereby going to learn how to reshape data into one of these formats. 
 
 ### Reshaping data from wide to long format
 
-#### Base R
+1. We use the stack method in base R to transform data available in the form of separate columns within a data frame or a list into a single column. The stack method uses the two functions `cbind()` and `stack()` produces a result in the form of a data frame with two columns. We will demonstrate how this method is done by creating a sample data frame as follows and following through the lines of code below.
 
+```{r}
+# creating a data frame
+data <- data.frame(name=c('Josh', 'Josh', 'Jake',
+                          'Jake', 'Gorge', 'Gorge'),
+                   semester=c(rep(LETTERS[1:2],3)),
+                   quiz_BIOL1001=c(1, 3, 4, 8, 9, 1),
+                   quiz_BIOL1002=c(2, 4, 6, 2, 7, 3))
+
+data
+```
+
+We would now bind the first two columns of the data frame named `data` and stake the third and fourth columns and save it in a new name called `data_long`. 
+
+```{r}
+data_long <- cbind(data[1:2], stack(data[3:4]))
+```
+
+You can query the the new data created in the console to see the content.
+
+```{r}
+data_long
+```
+
+2. Using melt method in `reshape2` package in R. As we already know, we will have to install and load the `reshape2` package before it can be used in R if not already done. 
+
+```{r}
+#install.packages("reshape2")
+library(reshape2)
+```
+
+
+Now we will see how the melt method in this package can be used to stack data frame columns together by going through an example. You can read more about the syntax for the `melt()` function by typing *?melt* in the console. We would use the data frame named `data` for this ecample.
+
+```{r}
+# binding the first two columns as it is and stacking the third and fourth columns
+data_melt <- reshape2::melt(data, id.var = c('name', 'semester'),
+                           variable.name = 'course_name')
+
+print(data_melt)
+```
+
+Here is another example on how to use the `melt()` function in the `reshape2` package to reshape data.
+
+```{r}
+#create data frame
+data2 <- data.frame(person=c('A', 'A', 'B', 'B', 'C', 'C'),
+                   trial=c(1, 2, 1, 2, 1, 2),
+                   outcome1=c(7, 6, 6, 5, 4, 4),
+                   outcome2=c(4, 4, 5, 5, 3, 2))
+
+data2
+```
+
+Reshape `data2` from the wide format to a long format by staking the third and fourth columns.
+
+```{r}
+#melt columns of data frame
+melt(data2, id.var = c('person', 'trial'), variable.name = 'outcomes')
+
+```
+
+3. Another way to reshape data between these formats is to use the following two functions from the `tidyr` package in R:
+
+`pivot_longer()`: Reshapes a data frame from wide to long format.
+
+`pivot_wider()`: Reshapes a data frame from long to wide format.
+
+We will study how to use `pivot_longer()` function in the next example and study how to use `pivot_wider()` function in the section that follows. 
+
+Again, to use the functions, we would be required to run `install.packages("tidyr")` to get the package installed if you have not done that previously. Also remember to load the package. 
+
+```{r}
+# load package
+library(tidyr)
+
+#pivot the data frame into a long format. Here we use the pipe function. 
+data %>% pivot_longer(cols=c('quiz_BIOL1001', 'quiz_BIOL1002'),
+                    names_to='quiz',
+                    values_to='marks')
+```
+
+Another example with `data2` data frame using the `pivot_longer()` function in the `tidyr` package. 
+
+```{r}
+#pivot the data frame into a long format.
+data2 %>% pivot_longer(cols=c('outcome1', 'outcome2'),
+                    names_to='outcomes',
+                    values_to='values')
+```
+
+
+### Reshaping data from long to wide format
 
