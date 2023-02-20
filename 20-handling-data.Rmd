@@ -256,7 +256,7 @@ Data frequently come in formats that are unsuitable for analysis. You would be r
 
 ### Reshaping data from wide to long format
 
-1. We use the stack method in base R to transform data available in the form of separate columns within a data frame or a list into a single column. The stack method uses the two functions `cbind()` and `stack()` produces a result in the form of a data frame with two columns. We will demonstrate how this method is done by creating a sample data frame as follows and following through the lines of code below.
+1. We use the **stack method** in base R to transform data available in the form of separate columns within a data frame or a list into a single column. The stack method uses the two functions `cbind()` and `stack()` produces a result in the form of a data frame with two columns. We will demonstrate how this method is done by creating a sample data frame as follows and following through the lines of code below.
 
 ```{r}
 # creating a data frame
@@ -281,7 +281,7 @@ You can query the the new data created in the console to see the content.
 data_long
 ```
 
-2. Using melt method in `reshape2` package in R. As we already know, we will have to install and load the `reshape2` package before it can be used in R if not already done. 
+2. Using **melt method** in `reshape2` package in R. As we already know, we will have to install and load the `reshape2` package before it can be used in R if not already done. 
 
 ```{r}
 #install.packages("reshape2")
@@ -319,7 +319,7 @@ melt(data2, id.var = c('person', 'trial'), variable.name = 'outcomes')
 
 ```
 
-3. Another way to reshape data between these formats is to use the following two functions from the `tidyr` package in R:
+3. Using the **tidyr package**. The `tidyr` package make use of the following functions:
 
 `pivot_longer()`: Reshapes a data frame from wide to long format.
 
@@ -327,11 +327,15 @@ melt(data2, id.var = c('person', 'trial'), variable.name = 'outcomes')
 
 We will study how to use `pivot_longer()` function in the next example and study how to use `pivot_wider()` function in the section that follows. 
 
-Again, to use the functions, we would be required to run `install.packages("tidyr")` to get the package installed if you have not done that previously. Also remember to load the package. 
+To use these functions, we would be required to run `install.packages("tidyr")` to get the package installed if you have not done that previously. Also remember to load the package. I would also use  the pipe operator, `%>%` in the code. `%>%` is not required to use `tidyr`, but it does make things easier. To use the pipe operator, you must also install `dplyr` package.
 
 ```{r}
-# load package
+# I have "commented out" these two lines of code with the # sign. Just take away the # and run the lines. 
+#install.packages("tidyr") 
+#install.packages("dplyr")
+
 library(tidyr)
+library(dplyr)
 
 #pivot the data frame into a long format. Here we use the pipe function. 
 data %>% pivot_longer(cols=c('quiz_BIOL1001', 'quiz_BIOL1002'),
@@ -348,6 +352,32 @@ data2 %>% pivot_longer(cols=c('outcome1', 'outcome2'),
                     values_to='values')
 ```
 
+4. Another function of `tidyr` that can be used to transform the data from wide to long is the `gather()` function. We again show how to use this function.
+
+```{r}
+df_long <- data %>% gather(quiz, marks, quiz_BIOL1001:quiz_BIOL1002)
+df_long
+```
 
 ### Reshaping data from long to wide format
+
+1. We will be using the **tidyr package** to reshape data from long to wide. Let us study how to use `pivot_wider()` function in the next example to pivot data frame into a wide format. We will be using the example data frame created in the previous examples. 
+
+```{r}
+#pivot the data frame into a wide format
+df_wide <- df_long %>% pivot_wider(names_from = quiz, values_from = marks)
+df_wide
+```
+
+2. Another function of `tidyr` that can be used to transform the data from long back to wide is the `spread()` function. We show how to use this function.
+
+```{r}
+df_wide2 <- df_long %>% spread(quiz, marks)
+
+df_wide2
+```
+
+There are many other functions to reshape data in R but these are the few handy ones that you can always stick to in your data analysis and plotting. 
+
+
 
