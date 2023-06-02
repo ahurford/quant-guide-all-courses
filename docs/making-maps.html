@@ -4,20 +4,20 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>17 Making maps | Quantitative skills for biology</title>
-  <meta name="description" content="17 Making maps | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.25 and GitBook 2.6.7" />
+  <title>16 Making maps | Quantitative skills for biology</title>
+  <meta name="description" content="16 Making maps | Quantitative skills for biology" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="17 Making maps | Quantitative skills for biology" />
+  <meta property="og:title" content="16 Making maps | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="17 Making maps | Quantitative skills for biology" />
+  <meta property="og:description" content="16 Making maps | Quantitative skills for biology" />
   <meta name="github-repo" content="ahurford/quantitative-training-guide" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="17 Making maps | Quantitative skills for biology" />
+  <meta name="twitter:title" content="16 Making maps | Quantitative skills for biology" />
   
-  <meta name="twitter:description" content="17 Making maps | Quantitative skills for biology" />
+  <meta name="twitter:description" content="16 Making maps | Quantitative skills for biology" />
   
 
 
@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="silhouettes.html"/>
+<link rel="prev" href="ggplot.html"/>
 <link rel="next" href="rmarkdown.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -90,7 +90,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -103,7 +103,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -156,232 +156,234 @@ div.csl-indent {
 <li><a href="./">Quantitative skills for biology</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview<span></span></a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Overview</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-links"><i class="fa fa-check"></i><b>1.1</b> Course links<span></span></a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#instructor-guide"><i class="fa fa-check"></i><b>1.2</b> Instructor guide<span></span></a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#course-links"><i class="fa fa-check"></i><b>1.1</b> Course links</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#instructor-guide"><i class="fa fa-check"></i><b>1.2</b> Instructor guide</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#r-help-center"><i class="fa fa-check"></i><b>1.3</b> R help center</a></li>
 </ul></li>
-<li><a href="part-i-introduction.html#part-i-introduction"><strong>PART I: INTRODUCTION</strong><span></span></a></li>
-<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio<span></span></a>
+<li class="chapter" data-level="" data-path="part-i-introduction.html"><a href="part-i-introduction.html"><i class="fa fa-check"></i><strong>PART I: INTRODUCTION</strong></a></li>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> R and R Studio</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio<span></span></a>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#installing"><i class="fa fa-check"></i><b>2.1</b> Installing R and RStudio</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rcloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud<span></span></a></li>
+<li class="chapter" data-level="2.1.1" data-path="install.html"><a href="install.html#rcloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio<span></span></a></li>
+<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#using-r-via-rstudio"><i class="fa fa-check"></i><b>2.2</b> Using R via RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio<span></span></a>
+<li class="chapter" data-level="3" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>3</b> Finding your way around RStudio</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane<span></span></a></li>
-<li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane<span></span></a></li>
-<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane<span></span></a>
+<li class="chapter" data-level="3.1" data-path="rstudio.html"><a href="rstudio.html#console-pane"><i class="fa fa-check"></i><b>3.1</b> Console pane</a></li>
+<li class="chapter" data-level="3.2" data-path="rstudio.html"><a href="rstudio.html#source-pane"><i class="fa fa-check"></i><b>3.2</b> Source pane</a></li>
+<li class="chapter" data-level="3.3" data-path="rstudio.html"><a href="rstudio.html#environmenthistory-pane"><i class="fa fa-check"></i><b>3.3</b> Environment/History pane</a>
 <ul>
-<li><a href="rstudio.html#environment-tab">Environment tab<span></span></a></li>
-<li><a href="rstudio.html#history-tab">History tab<span></span></a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#environment-tab"><i class="fa fa-check"></i>Environment tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#history-tab"><i class="fa fa-check"></i>History tab</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane<span></span></a>
+<li class="chapter" data-level="3.4" data-path="rstudio.html"><a href="rstudio.html#filesplotspackageshelpviewer-pane"><i class="fa fa-check"></i><b>3.4</b> Files/Plots/Packages/Help/Viewer pane</a>
 <ul>
-<li><a href="rstudio.html#files-tab">Files tab<span></span></a></li>
-<li><a href="rstudio.html#plots-tab">Plots tab<span></span></a></li>
-<li><a href="rstudio.html#packages-tab">Packages tab<span></span></a></li>
-<li><a href="rstudio.html#help-tab">Help tab<span></span></a></li>
-<li><a href="rstudio.html#viewer-tab">Viewer tab<span></span></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R<span></span></a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="rintro.html"><a href="rintro.html#workflow"><i class="fa fa-check"></i><b>4.1</b> Workflow<span></span></a></li>
-<li class="chapter" data-level="4.2" data-path="rintro.html"><a href="rintro.html#working-directory"><i class="fa fa-check"></i><b>4.2</b> Working directory<span></span></a></li>
-<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment<span></span></a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="rintro.html"><a href="rintro.html#shortcuts"><i class="fa fa-check"></i><b>4.3.1</b> Shortcuts<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="rintro.html"><a href="rintro.html#using-variables"><i class="fa fa-check"></i><b>4.4</b> Using variables<span></span></a></li>
-<li class="chapter" data-level="4.5" data-path="rintro.html"><a href="rintro.html#comments"><i class="fa fa-check"></i><b>4.5</b> Comments<span></span></a></li>
-<li class="chapter" data-level="4.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>4.6</b> Precedence<span></span></a></li>
-<li class="chapter" data-level="4.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>4.7</b> Mathematical functions<span></span></a></li>
-<li class="chapter" data-level="4.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>4.8</b> Data types<span></span></a></li>
-<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures<span></span></a>
-<ul>
-<li><a href="rintro.html#vectors">Vectors<span></span></a></li>
-<li><a href="rintro.html#matrices">Matrices<span></span></a></li>
-<li><a href="rintro.html#lists">Lists<span></span></a></li>
-<li><a href="rintro.html#data-frames">Data frames<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="4.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>4.10</b> R Packages<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help<span></span></a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>5.1</b> Using R help<span></span></a></li>
-<li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R “Cheatsheets”<span></span></a></li>
-<li class="chapter" data-level="5.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>5.3</b> R books<span></span></a></li>
-<li class="chapter" data-level="5.4" data-path="help.html"><a href="help.html#how-to-interpret-r-help-files"><i class="fa fa-check"></i><b>5.4</b> How to interpret R help files<span></span></a></li>
-<li class="chapter" data-level="5.5" data-path="help.html"><a href="help.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="howtoask.html"><a href="howtoask.html"><i class="fa fa-check"></i><b>6</b> How to ask for help<span></span></a></li>
-<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices<span></span></a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="style.html"><a href="style.html#file-organization"><i class="fa fa-check"></i><b>7.1</b> File organization<span></span></a></li>
-<li class="chapter" data-level="7.2" data-path="style.html"><a href="style.html#comments-1"><i class="fa fa-check"></i><b>7.2</b> Comments<span></span></a></li>
-<li class="chapter" data-level="7.3" data-path="style.html"><a href="style.html#spacing"><i class="fa fa-check"></i><b>7.3</b> Spacing<span></span></a></li>
-<li class="chapter" data-level="7.4" data-path="style.html"><a href="style.html#names"><i class="fa fa-check"></i><b>7.4</b> Names<span></span></a></li>
-<li class="chapter" data-level="7.5" data-path="style.html"><a href="style.html#template"><i class="fa fa-check"></i><b>7.5</b> Template<span></span></a></li>
-<li class="chapter" data-level="7.6" data-path="style.html"><a href="style.html#checklist"><i class="fa fa-check"></i><b>7.6</b> Checklist<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data<span></span></a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>8.1</b> Entering data<span></span></a></li>
-<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data<span></span></a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)<span></span></a></li>
-<li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data<span></span></a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#base-r"><i class="fa fa-check"></i><b>9.1</b> Base R<span></span></a>
-<ul>
-<li class="chapter" data-level="9.1.1" data-path="handling-data.html"><a href="handling-data.html#useful-functions"><i class="fa fa-check"></i><b>9.1.1</b> Useful functions<span></span></a></li>
-<li class="chapter" data-level="9.1.2" data-path="handling-data.html"><a href="handling-data.html#extracting-rows-and-columns"><i class="fa fa-check"></i><b>9.1.2</b> Extracting rows and columns<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr<span></span></a>
-<ul>
-<li class="chapter" data-level="9.2.1" data-path="handling-data.html"><a href="handling-data.html#selecting-a-column"><i class="fa fa-check"></i><b>9.2.1</b> Selecting a column<span></span></a></li>
-<li class="chapter" data-level="9.2.2" data-path="handling-data.html"><a href="handling-data.html#adding-a-new-column"><i class="fa fa-check"></i><b>9.2.2</b> Adding a new column<span></span></a></li>
-<li class="chapter" data-level="9.2.3" data-path="handling-data.html"><a href="handling-data.html#sorting-the-data"><i class="fa fa-check"></i><b>9.2.3</b> Sorting the data<span></span></a></li>
-<li class="chapter" data-level="9.2.4" data-path="handling-data.html"><a href="handling-data.html#filtering-data"><i class="fa fa-check"></i><b>9.2.4</b> Filtering data<span></span></a></li>
-<li class="chapter" data-level="9.2.5" data-path="handling-data.html"><a href="handling-data.html#removing-na-entries-in-data"><i class="fa fa-check"></i><b>9.2.5</b> Removing NA entries in data<span></span></a></li>
-<li class="chapter" data-level="9.2.6" data-path="handling-data.html"><a href="handling-data.html#grouping"><i class="fa fa-check"></i><b>9.2.6</b> Grouping<span></span></a></li>
-<li class="chapter" data-level="9.2.7" data-path="handling-data.html"><a href="handling-data.html#joining"><i class="fa fa-check"></i><b>9.2.7</b> Joining<span></span></a></li>
-<li class="chapter" data-level="9.2.8" data-path="handling-data.html"><a href="handling-data.html#pipes"><i class="fa fa-check"></i><b>9.2.8</b> Pipes<span></span></a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#files-tab"><i class="fa fa-check"></i>Files tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#plots-tab"><i class="fa fa-check"></i>Plots tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#packages-tab"><i class="fa fa-check"></i>Packages tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#help-tab"><i class="fa fa-check"></i>Help tab</a></li>
+<li class="chapter" data-level="" data-path="rstudio.html"><a href="rstudio.html#viewer-tab"><i class="fa fa-check"></i>Viewer tab</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R<span></span></a>
+<li class="chapter" data-level="4" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>4</b> Introduction to R</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="graph.html"><a href="graph.html#making-graphs-in-r"><i class="fa fa-check"></i><b>10.1</b> Making graphs in R<span></span></a></li>
-<li class="chapter" data-level="10.2" data-path="graph.html"><a href="graph.html#scatter-plots-with-plotxy"><i class="fa fa-check"></i><b>10.2</b> Scatter plots with <code>plot(x,y)</code><span></span></a></li>
-<li class="chapter" data-level="10.3" data-path="graph.html"><a href="graph.html#axes"><i class="fa fa-check"></i><b>10.3</b> Adding axes labels and changing symbols<span></span></a>
+<li class="chapter" data-level="4.1" data-path="rintro.html"><a href="rintro.html#workflow"><i class="fa fa-check"></i><b>4.1</b> Workflow</a></li>
+<li class="chapter" data-level="4.2" data-path="rintro.html"><a href="rintro.html#working-directory"><i class="fa fa-check"></i><b>4.2</b> Working directory</a></li>
+<li class="chapter" data-level="4.3" data-path="rintro.html"><a href="rintro.html#variables-and-assignment"><i class="fa fa-check"></i><b>4.3</b> Variables and assignment</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>10.3.1</b> Getting a bit more sophisticated<span></span></a></li>
+<li class="chapter" data-level="4.3.1" data-path="rintro.html"><a href="rintro.html#shortcuts"><i class="fa fa-check"></i><b>4.3.1</b> Shortcuts</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>10.4</b> Line graphs<span></span></a></li>
-<li class="chapter" data-level="10.5" data-path="graph.html"><a href="graph.html#other-useful-plot-functions"><i class="fa fa-check"></i><b>10.5</b> Other useful plot functions<span></span></a></li>
-<li class="chapter" data-level="10.6" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>10.6</b> Exporting your graphs<span></span></a></li>
-<li class="chapter" data-level="10.7" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>10.7</b> pch cheatsheet<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>11</b> Statistics in R<span></span></a>
+<li class="chapter" data-level="4.4" data-path="rintro.html"><a href="rintro.html#using-variables"><i class="fa fa-check"></i><b>4.4</b> Using variables</a></li>
+<li class="chapter" data-level="4.5" data-path="rintro.html"><a href="rintro.html#comments"><i class="fa fa-check"></i><b>4.5</b> Comments</a></li>
+<li class="chapter" data-level="4.6" data-path="rintro.html"><a href="rintro.html#precedence"><i class="fa fa-check"></i><b>4.6</b> Precedence</a></li>
+<li class="chapter" data-level="4.7" data-path="rintro.html"><a href="rintro.html#mathematical-functions"><i class="fa fa-check"></i><b>4.7</b> Mathematical functions</a></li>
+<li class="chapter" data-level="4.8" data-path="rintro.html"><a href="rintro.html#data-types"><i class="fa fa-check"></i><b>4.8</b> Data types</a></li>
+<li class="chapter" data-level="4.9" data-path="rintro.html"><a href="rintro.html#data-structures"><i class="fa fa-check"></i><b>4.9</b> Data structures</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="statistics.html"><a href="statistics.html#comparing-two-means-of-a-population-or-samples-using-a-t-test"><i class="fa fa-check"></i><b>11.1</b> Comparing two means of a population or sample(s) using a t-test<span></span></a></li>
-<li class="chapter" data-level="11.2" data-path="statistics.html"><a href="statistics.html#types-of-tests"><i class="fa fa-check"></i><b>11.2</b> Types of tests<span></span></a></li>
-<li class="chapter" data-level="11.3" data-path="statistics.html"><a href="statistics.html#p-values-and-statistical-significance"><i class="fa fa-check"></i><b>11.3</b> p-values and statistical significance<span></span></a></li>
-<li class="chapter" data-level="11.4" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>11.4</b> t.test<span></span></a></li>
-<li class="chapter" data-level="11.5" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>11.5</b> Correlation<span></span></a>
-<ul>
-<li class="chapter" data-level="11.5.1" data-path="statistics.html"><a href="statistics.html#corxy"><i class="fa fa-check"></i><b>11.5.1</b> cor(x,y)<span></span></a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#vectors"><i class="fa fa-check"></i>Vectors</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#matrices"><i class="fa fa-check"></i>Matrices</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#lists"><i class="fa fa-check"></i>Lists</a></li>
+<li class="chapter" data-level="" data-path="rintro.html"><a href="rintro.html#data-frames"><i class="fa fa-check"></i>Data frames</a></li>
 </ul></li>
-<li class="chapter" data-level="11.6" data-path="statistics.html"><a href="statistics.html#simple-linear-regression"><i class="fa fa-check"></i><b>11.6</b> Simple linear regression<span></span></a>
+<li class="chapter" data-level="4.10" data-path="rintro.html"><a href="rintro.html#r-packages"><i class="fa fa-check"></i><b>4.10</b> R Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="help.html"><a href="help.html"><i class="fa fa-check"></i><b>5</b> Getting R help</a>
 <ul>
-<li class="chapter" data-level="11.6.1" data-path="statistics.html"><a href="statistics.html#adding-lines-of-best-fit-with-ggplot"><i class="fa fa-check"></i><b>11.6.1</b> Adding lines of best fit with ggplot<span></span></a></li>
+<li class="chapter" data-level="5.1" data-path="help.html"><a href="help.html#using-r-help"><i class="fa fa-check"></i><b>5.1</b> Using R help</a></li>
+<li class="chapter" data-level="5.2" data-path="help.html"><a href="help.html#r-cheatsheets"><i class="fa fa-check"></i><b>5.2</b> R “Cheatsheets”</a></li>
+<li class="chapter" data-level="5.3" data-path="help.html"><a href="help.html#r-books"><i class="fa fa-check"></i><b>5.3</b> R books</a></li>
+<li class="chapter" data-level="5.4" data-path="help.html"><a href="help.html#how-to-interpret-r-help-files"><i class="fa fa-check"></i><b>5.4</b> How to interpret R help files</a></li>
+<li class="chapter" data-level="5.5" data-path="help.html"><a href="help.html#debugging"><i class="fa fa-check"></i><b>5.5</b> Debugging</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="howtoask.html"><a href="howtoask.html"><i class="fa fa-check"></i><b>6</b> How to ask for help</a></li>
+<li class="chapter" data-level="7" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>7</b> Best practices</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="style.html"><a href="style.html#file-organization"><i class="fa fa-check"></i><b>7.1</b> File organization</a></li>
+<li class="chapter" data-level="7.2" data-path="style.html"><a href="style.html#comments-1"><i class="fa fa-check"></i><b>7.2</b> Comments</a></li>
+<li class="chapter" data-level="7.3" data-path="style.html"><a href="style.html#spacing"><i class="fa fa-check"></i><b>7.3</b> Spacing</a></li>
+<li class="chapter" data-level="7.4" data-path="style.html"><a href="style.html#names"><i class="fa fa-check"></i><b>7.4</b> Names</a></li>
+<li class="chapter" data-level="7.5" data-path="style.html"><a href="style.html#template"><i class="fa fa-check"></i><b>7.5</b> Template</a></li>
+<li class="chapter" data-level="7.6" data-path="style.html"><a href="style.html#checklist"><i class="fa fa-check"></i><b>7.6</b> Checklist</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="data-entry.html"><a href="data-entry.html"><i class="fa fa-check"></i><b>8</b> Entering and loading data</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="data-entry.html"><a href="data-entry.html#entering-data"><i class="fa fa-check"></i><b>8.1</b> Entering data</a></li>
+<li class="chapter" data-level="8.2" data-path="data-entry.html"><a href="data-entry.html#loading-or-importing-data"><i class="fa fa-check"></i><b>8.2</b> Loading or importing data</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
+<li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="handling-data.html"><a href="handling-data.html"><i class="fa fa-check"></i><b>9</b> Handling data</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="handling-data.html"><a href="handling-data.html#base-r"><i class="fa fa-check"></i><b>9.1</b> Base R</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="handling-data.html"><a href="handling-data.html#useful-functions"><i class="fa fa-check"></i><b>9.1.1</b> Useful functions</a></li>
+<li class="chapter" data-level="9.1.2" data-path="handling-data.html"><a href="handling-data.html#extracting-rows-and-columns"><i class="fa fa-check"></i><b>9.1.2</b> Extracting rows and columns</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="handling-data.html"><a href="handling-data.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="handling-data.html"><a href="handling-data.html#selecting-a-column"><i class="fa fa-check"></i><b>9.2.1</b> Selecting a column</a></li>
+<li class="chapter" data-level="9.2.2" data-path="handling-data.html"><a href="handling-data.html#adding-a-new-column"><i class="fa fa-check"></i><b>9.2.2</b> Adding a new column</a></li>
+<li class="chapter" data-level="9.2.3" data-path="handling-data.html"><a href="handling-data.html#sorting-the-data"><i class="fa fa-check"></i><b>9.2.3</b> Sorting the data</a></li>
+<li class="chapter" data-level="9.2.4" data-path="handling-data.html"><a href="handling-data.html#filtering-data"><i class="fa fa-check"></i><b>9.2.4</b> Filtering data</a></li>
+<li class="chapter" data-level="9.2.5" data-path="handling-data.html"><a href="handling-data.html#removing-na-entries-in-data"><i class="fa fa-check"></i><b>9.2.5</b> Removing NA entries in data</a></li>
+<li class="chapter" data-level="9.2.6" data-path="handling-data.html"><a href="handling-data.html#grouping"><i class="fa fa-check"></i><b>9.2.6</b> Grouping</a></li>
+<li class="chapter" data-level="9.2.7" data-path="handling-data.html"><a href="handling-data.html#joining"><i class="fa fa-check"></i><b>9.2.7</b> Joining</a></li>
+<li class="chapter" data-level="9.2.8" data-path="handling-data.html"><a href="handling-data.html#pipes"><i class="fa fa-check"></i><b>9.2.8</b> Pipes</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="handling-data.html"><a href="handling-data.html#reshaping-data"><i class="fa fa-check"></i><b>9.3</b> Reshaping Data</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="handling-data.html"><a href="handling-data.html#reshaping-data-from-wide-to-long-format"><i class="fa fa-check"></i><b>9.3.1</b> Reshaping data from wide to long format</a></li>
+<li class="chapter" data-level="9.3.2" data-path="handling-data.html"><a href="handling-data.html#reshaping-data-from-long-to-wide-format"><i class="fa fa-check"></i><b>9.3.2</b> Reshaping data from long to wide format</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>12</b> Data and metadata<span></span></a>
+<li class="chapter" data-level="10" data-path="graph.html"><a href="graph.html"><i class="fa fa-check"></i><b>10</b> Making graphs in R</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>12.1</b> Data<span></span></a>
+<li class="chapter" data-level="10.1" data-path="graph.html"><a href="graph.html#making-graphs-in-r"><i class="fa fa-check"></i><b>10.1</b> Making graphs in R</a></li>
+<li class="chapter" data-level="10.2" data-path="graph.html"><a href="graph.html#scatter-plots-with-plotxy"><i class="fa fa-check"></i><b>10.2</b> Scatter plots with <code>plot(x,y)</code></a></li>
+<li class="chapter" data-level="10.3" data-path="graph.html"><a href="graph.html#axes"><i class="fa fa-check"></i><b>10.3</b> Adding axes labels and changing symbols</a>
 <ul>
-<li class="chapter" data-level="12.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>12.1.1</b> Data guidelines<span></span></a></li>
-<li class="chapter" data-level="12.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>12.1.2</b> Database structure guidelines<span></span></a></li>
+<li class="chapter" data-level="10.3.1" data-path="graph.html"><a href="graph.html#getting-a-bit-more-sophisticated"><i class="fa fa-check"></i><b>10.3.1</b> Getting a bit more sophisticated</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>12.2</b> Metadata<span></span></a>
-<ul>
-<li class="chapter" data-level="12.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>12.2.1</b> Metadata guidelines<span></span></a></li>
+<li class="chapter" data-level="10.4" data-path="graph.html"><a href="graph.html#line-graphs"><i class="fa fa-check"></i><b>10.4</b> Line graphs</a></li>
+<li class="chapter" data-level="10.5" data-path="graph.html"><a href="graph.html#boxplot"><i class="fa fa-check"></i><b>10.5</b> Boxplot</a></li>
+<li class="chapter" data-level="10.6" data-path="graph.html"><a href="graph.html#other-useful-plot-functions"><i class="fa fa-check"></i><b>10.6</b> Other useful plot functions</a></li>
+<li class="chapter" data-level="10.7" data-path="graph.html"><a href="graph.html#export"><i class="fa fa-check"></i><b>10.7</b> Exporting your graphs</a></li>
+<li class="chapter" data-level="10.8" data-path="graph.html"><a href="graph.html#pch"><i class="fa fa-check"></i><b>10.8</b> pch cheatsheet</a></li>
 </ul></li>
-<li class="chapter" data-level="12.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>12.3</b> Further reading<span></span></a></li>
-</ul></li>
-<li><a href="part-ii-advanced.html#part-ii-advanced"><strong>PART II: ADVANCED</strong><span></span></a></li>
-<li class="chapter" data-level="13" data-path="writing-functions.html"><a href="writing-functions.html"><i class="fa fa-check"></i><b>13</b> Writing functions<span></span></a>
+<li class="chapter" data-level="11" data-path="statistics.html"><a href="statistics.html"><i class="fa fa-check"></i><b>11</b> Statistics in R</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="writing-functions.html"><a href="writing-functions.html#introduction"><i class="fa fa-check"></i><b>13.1</b> Introduction<span></span></a></li>
-<li class="chapter" data-level="13.2" data-path="writing-functions.html"><a href="writing-functions.html#writing-your-own-functions"><i class="fa fa-check"></i><b>13.2</b> Writing your own functions<span></span></a></li>
-<li class="chapter" data-level="13.3" data-path="writing-functions.html"><a href="writing-functions.html#returning-multiple-outputs"><i class="fa fa-check"></i><b>13.3</b> Returning Multiple Outputs<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html"><i class="fa fa-check"></i><b>14</b> Loops and repeating commands<span></span></a>
+<li class="chapter" data-level="11.1" data-path="statistics.html"><a href="statistics.html#comparing-two-means-of-a-population-or-samples-using-a-t-test"><i class="fa fa-check"></i><b>11.1</b> Comparing two means of a population or sample(s) using a t-test</a></li>
+<li class="chapter" data-level="11.2" data-path="statistics.html"><a href="statistics.html#types-of-tests"><i class="fa fa-check"></i><b>11.2</b> Types of tests</a></li>
+<li class="chapter" data-level="11.3" data-path="statistics.html"><a href="statistics.html#p-values-and-statistical-significance"><i class="fa fa-check"></i><b>11.3</b> p-values and statistical significance</a></li>
+<li class="chapter" data-level="11.4" data-path="statistics.html"><a href="statistics.html#t.test"><i class="fa fa-check"></i><b>11.4</b> t.test</a></li>
+<li class="chapter" data-level="11.5" data-path="statistics.html"><a href="statistics.html#correlation"><i class="fa fa-check"></i><b>11.5</b> Correlation</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#introduction-1"><i class="fa fa-check"></i><b>14.1</b> Introduction<span></span></a></li>
-<li class="chapter" data-level="14.2" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#for-loops"><i class="fa fa-check"></i><b>14.2</b> for loops<span></span></a></li>
-<li class="chapter" data-level="14.3" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#loop-alternatives"><i class="fa fa-check"></i><b>14.3</b> Loop alternatives<span></span></a></li>
+<li class="chapter" data-level="11.5.1" data-path="statistics.html"><a href="statistics.html#corxy"><i class="fa fa-check"></i><b>11.5.1</b> cor(x,y)</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>15</b> ggplot<span></span></a>
+<li class="chapter" data-level="11.6" data-path="statistics.html"><a href="statistics.html#simple-linear-regression"><i class="fa fa-check"></i><b>11.6</b> Simple linear regression</a>
 <ul>
-<li class="chapter" data-level="15.1" data-path="ggplot.html"><a href="ggplot.html#introduction-2"><i class="fa fa-check"></i><b>15.1</b> Introduction<span></span></a></li>
-<li class="chapter" data-level="15.2" data-path="ggplot.html"><a href="ggplot.html#making-scatter-plots-with-ggplot2"><i class="fa fa-check"></i><b>15.2</b> Making scatter plots with ggplot2<span></span></a></li>
-<li class="chapter" data-level="15.3" data-path="ggplot.html"><a href="ggplot.html#customising-graphs"><i class="fa fa-check"></i><b>15.3</b> Customising graphs<span></span></a></li>
-<li class="chapter" data-level="15.4" data-path="ggplot.html"><a href="ggplot.html#bar-plots"><i class="fa fa-check"></i><b>15.4</b> Bar plots<span></span></a></li>
-<li class="chapter" data-level="15.5" data-path="ggplot.html"><a href="ggplot.html#facet-wrapping"><i class="fa fa-check"></i><b>15.5</b> Facet wrapping<span></span></a></li>
-<li class="chapter" data-level="15.6" data-path="ggplot.html"><a href="ggplot.html#other-types-of-plots"><i class="fa fa-check"></i><b>15.6</b> Other types of plots<span></span></a></li>
-<li class="chapter" data-level="15.7" data-path="ggplot.html"><a href="ggplot.html#further-reading-1"><i class="fa fa-check"></i><b>15.7</b> Further reading<span></span></a></li>
+<li class="chapter" data-level="11.6.1" data-path="statistics.html"><a href="statistics.html#adding-lines-of-best-fit-with-ggplot"><i class="fa fa-check"></i><b>11.6.1</b> Adding lines of best fit with ggplot</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="silhouettes.html"><a href="silhouettes.html"><i class="fa fa-check"></i><b>16</b> Advanced graphing - silhouettes<span></span></a>
-<ul>
-<li class="chapter" data-level="16.1" data-path="silhouettes.html"><a href="silhouettes.html#introduction-3"><i class="fa fa-check"></i><b>16.1</b> Introduction<span></span></a></li>
-<li class="chapter" data-level="16.2" data-path="silhouettes.html"><a href="silhouettes.html#adding-silhouettes-in-ggplot"><i class="fa fa-check"></i><b>16.2</b> Adding silhouettes in ggplot<span></span></a></li>
 </ul></li>
-<li class="chapter" data-level="17" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>17</b> Making maps<span></span></a>
+<li class="chapter" data-level="12" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>12</b> Data and metadata</a>
 <ul>
-<li class="chapter" data-level="17.1" data-path="making-maps.html"><a href="making-maps.html#introduction-4"><i class="fa fa-check"></i><b>17.1</b> Introduction<span></span></a>
+<li class="chapter" data-level="12.1" data-path="data.html"><a href="data.html#data-1"><i class="fa fa-check"></i><b>12.1</b> Data</a>
 <ul>
-<li class="chapter" data-level="17.1.1" data-path="making-maps.html"><a href="making-maps.html#required-packages"><i class="fa fa-check"></i><b>17.1.1</b> Required packages<span></span></a></li>
+<li class="chapter" data-level="12.1.1" data-path="data.html"><a href="data.html#data-guidelines"><i class="fa fa-check"></i><b>12.1.1</b> Data guidelines</a></li>
+<li class="chapter" data-level="12.1.2" data-path="data.html"><a href="data.html#database-structure-guidelines"><i class="fa fa-check"></i><b>12.1.2</b> Database structure guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="17.2" data-path="making-maps.html"><a href="making-maps.html#creating-maps-using-ggplot2-and-sf"><i class="fa fa-check"></i><b>17.2</b> Creating maps using <code>ggplot2</code> and <code>sf</code><span></span></a></li>
-<li class="chapter" data-level="17.3" data-path="making-maps.html"><a href="making-maps.html#changing-map-colours"><i class="fa fa-check"></i><b>17.3</b> Changing map colours<span></span></a></li>
-<li class="chapter" data-level="17.4" data-path="making-maps.html"><a href="making-maps.html#projections"><i class="fa fa-check"></i><b>17.4</b> Projections<span></span></a></li>
-<li class="chapter" data-level="17.5" data-path="making-maps.html"><a href="making-maps.html#map-extent"><i class="fa fa-check"></i><b>17.5</b> Map Extent<span></span></a></li>
-<li class="chapter" data-level="17.6" data-path="making-maps.html"><a href="making-maps.html#mapping-points"><i class="fa fa-check"></i><b>17.6</b> Mapping points<span></span></a></li>
-<li class="chapter" data-level="17.7" data-path="making-maps.html"><a href="making-maps.html#scale-bar-and-north-arrow"><i class="fa fa-check"></i><b>17.7</b> Scale bar and north arrow<span></span></a></li>
-<li class="chapter" data-level="17.8" data-path="making-maps.html"><a href="making-maps.html#finalizing-the-map"><i class="fa fa-check"></i><b>17.8</b> Finalizing the map<span></span></a>
+<li class="chapter" data-level="12.2" data-path="data.html"><a href="data.html#metadata"><i class="fa fa-check"></i><b>12.2</b> Metadata</a>
 <ul>
-<li class="chapter" data-level="17.8.1" data-path="making-maps.html"><a href="making-maps.html#exporting-your-map"><i class="fa fa-check"></i><b>17.8.1</b> Exporting your map<span></span></a></li>
+<li class="chapter" data-level="12.2.1" data-path="data.html"><a href="data.html#metadata-guidelines"><i class="fa fa-check"></i><b>12.2.1</b> Metadata guidelines</a></li>
 </ul></li>
-<li class="chapter" data-level="17.9" data-path="making-maps.html"><a href="making-maps.html#additional-reading"><i class="fa fa-check"></i><b>17.9</b> Additional Reading<span></span></a></li>
+<li class="chapter" data-level="12.3" data-path="data.html"><a href="data.html#further-reading"><i class="fa fa-check"></i><b>12.3</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="18" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>18</b> R markdown<span></span></a>
+<li class="chapter" data-level="" data-path="part-ii-advanced.html"><a href="part-ii-advanced.html"><i class="fa fa-check"></i><strong>PART II: ADVANCED</strong></a></li>
+<li class="chapter" data-level="13" data-path="writing-functions.html"><a href="writing-functions.html"><i class="fa fa-check"></i><b>13</b> Writing functions</a>
 <ul>
-<li class="chapter" data-level="18.1" data-path="rmarkdown.html"><a href="rmarkdown.html#introduction-5"><i class="fa fa-check"></i><b>18.1</b> Introduction<span></span></a>
-<ul>
-<li class="chapter" data-level="18.1.1" data-path="rmarkdown.html"><a href="rmarkdown.html#installation"><i class="fa fa-check"></i><b>18.1.1</b> Installation<span></span></a></li>
+<li class="chapter" data-level="13.1" data-path="writing-functions.html"><a href="writing-functions.html#introduction"><i class="fa fa-check"></i><b>13.1</b> Introduction</a></li>
+<li class="chapter" data-level="13.2" data-path="writing-functions.html"><a href="writing-functions.html#writing-your-own-functions"><i class="fa fa-check"></i><b>13.2</b> Writing your own functions</a></li>
+<li class="chapter" data-level="13.3" data-path="writing-functions.html"><a href="writing-functions.html#returning-multiple-outputs"><i class="fa fa-check"></i><b>13.3</b> Returning Multiple Outputs</a></li>
 </ul></li>
-<li class="chapter" data-level="18.2" data-path="rmarkdown.html"><a href="rmarkdown.html#setup"><i class="fa fa-check"></i><b>18.2</b> Setup<span></span></a></li>
-<li class="chapter" data-level="18.3" data-path="rmarkdown.html"><a href="rmarkdown.html#rendering-to-a-document"><i class="fa fa-check"></i><b>18.3</b> Rendering to a document<span></span></a></li>
-<li class="chapter" data-level="18.4" data-path="rmarkdown.html"><a href="rmarkdown.html#formatting"><i class="fa fa-check"></i><b>18.4</b> Formatting<span></span></a>
+<li class="chapter" data-level="14" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html"><i class="fa fa-check"></i><b>14</b> Loops and repeating commands</a>
 <ul>
-<li class="chapter" data-level="18.4.1" data-path="rmarkdown.html"><a href="rmarkdown.html#syntax"><i class="fa fa-check"></i><b>18.4.1</b> Syntax<span></span></a></li>
-<li class="chapter" data-level="18.4.2" data-path="rmarkdown.html"><a href="rmarkdown.html#headers"><i class="fa fa-check"></i><b>18.4.2</b> Headers<span></span></a></li>
-<li class="chapter" data-level="18.4.3" data-path="rmarkdown.html"><a href="rmarkdown.html#lists-1"><i class="fa fa-check"></i><b>18.4.3</b> Lists<span></span></a></li>
-<li class="chapter" data-level="18.4.4" data-path="rmarkdown.html"><a href="rmarkdown.html#figures"><i class="fa fa-check"></i><b>18.4.4</b> Figures<span></span></a></li>
-<li class="chapter" data-level="18.4.5" data-path="rmarkdown.html"><a href="rmarkdown.html#tables"><i class="fa fa-check"></i><b>18.4.5</b> Tables<span></span></a></li>
+<li class="chapter" data-level="14.1" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#introduction-1"><i class="fa fa-check"></i><b>14.1</b> Introduction</a></li>
+<li class="chapter" data-level="14.2" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#for-loops"><i class="fa fa-check"></i><b>14.2</b> for loops</a></li>
+<li class="chapter" data-level="14.3" data-path="loops-and-repeating-commands.html"><a href="loops-and-repeating-commands.html#loop-alternatives"><i class="fa fa-check"></i><b>14.3</b> Loop alternatives</a></li>
 </ul></li>
-<li class="chapter" data-level="18.5" data-path="rmarkdown.html"><a href="rmarkdown.html#further-reading-2"><i class="fa fa-check"></i><b>18.5</b> Further Reading<span></span></a></li>
-</ul></li>
-<li class="chapter" data-level="19" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>19</b> Coding club at MUN<span></span></a></li>
-<li class="chapter" data-level="20" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>20</b> Contributions<span></span></a></li>
-<li class="appendix"><span><b>Appendix<span></span></b></span></li>
-<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ<span></span></a>
+<li class="chapter" data-level="15" data-path="ggplot.html"><a href="ggplot.html"><i class="fa fa-check"></i><b>15</b> ggplot</a>
 <ul>
-<li class="chapter" data-level="A.1" data-path="faq.html"><a href="faq.html#download-and-installation-issues"><i class="fa fa-check"></i><b>A.1</b> Download and Installation Issues<span></span></a></li>
-<li class="chapter" data-level="A.2" data-path="faq.html"><a href="faq.html#computer-issues"><i class="fa fa-check"></i><b>A.2</b> Computer Issues<span></span></a></li>
-<li class="chapter" data-level="A.3" data-path="faq.html"><a href="faq.html#rstudio-error-messages"><i class="fa fa-check"></i><b>A.3</b> RStudio Error Messages<span></span></a></li>
+<li class="chapter" data-level="15.1" data-path="ggplot.html"><a href="ggplot.html#introduction-2"><i class="fa fa-check"></i><b>15.1</b> Introduction</a></li>
+<li class="chapter" data-level="15.2" data-path="ggplot.html"><a href="ggplot.html#making-scatter-plots-with-ggplot2"><i class="fa fa-check"></i><b>15.2</b> Making scatter plots with ggplot2</a></li>
+<li class="chapter" data-level="15.3" data-path="ggplot.html"><a href="ggplot.html#customising-graphs"><i class="fa fa-check"></i><b>15.3</b> Customising graphs</a></li>
+<li class="chapter" data-level="15.4" data-path="ggplot.html"><a href="ggplot.html#bar-plots"><i class="fa fa-check"></i><b>15.4</b> Bar plots</a></li>
+<li class="chapter" data-level="15.5" data-path="ggplot.html"><a href="ggplot.html#facet-wrapping"><i class="fa fa-check"></i><b>15.5</b> Facet wrapping</a></li>
+<li class="chapter" data-level="15.6" data-path="ggplot.html"><a href="ggplot.html#other-types-of-plots"><i class="fa fa-check"></i><b>15.6</b> Other types of plots</a></li>
+<li class="chapter" data-level="15.7" data-path="ggplot.html"><a href="ggplot.html#further-reading-1"><i class="fa fa-check"></i><b>15.7</b> Further reading</a></li>
 </ul></li>
-<li class="chapter" data-level="B" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>B</b> Glossary<span></span></a></li>
-<li><a href="references.html#references">References<span></span></a></li>
-<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations<span></span></a>
+<li class="chapter" data-level="16" data-path="making-maps.html"><a href="making-maps.html"><i class="fa fa-check"></i><b>16</b> Making maps</a>
 <ul>
-<li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables<span></span></a></li>
-<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing<span></span></a>
+<li class="chapter" data-level="16.1" data-path="making-maps.html"><a href="making-maps.html#introduction-3"><i class="fa fa-check"></i><b>16.1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses<span></span></a></li>
+<li class="chapter" data-level="16.1.1" data-path="making-maps.html"><a href="making-maps.html#required-packages"><i class="fa fa-check"></i><b>16.1.1</b> Required packages</a></li>
 </ul></li>
-<li class="chapter" data-level="C.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-3"><i class="fa fa-check"></i><b>C.3</b> Further reading<span></span></a></li>
-<li class="chapter" data-level="C.4" data-path="hypothesis.html"><a href="hypothesis.html#status"><i class="fa fa-check"></i><b>C.4</b> Status<span></span></a></li>
+<li class="chapter" data-level="16.2" data-path="making-maps.html"><a href="making-maps.html#creating-maps-using-ggplot2-and-sf"><i class="fa fa-check"></i><b>16.2</b> Creating maps using <code>ggplot2</code> and <code>sf</code></a></li>
+<li class="chapter" data-level="16.3" data-path="making-maps.html"><a href="making-maps.html#changing-map-colours"><i class="fa fa-check"></i><b>16.3</b> Changing map colours</a></li>
+<li class="chapter" data-level="16.4" data-path="making-maps.html"><a href="making-maps.html#projections"><i class="fa fa-check"></i><b>16.4</b> Projections</a></li>
+<li class="chapter" data-level="16.5" data-path="making-maps.html"><a href="making-maps.html#map-extent"><i class="fa fa-check"></i><b>16.5</b> Map Extent</a></li>
+<li class="chapter" data-level="16.6" data-path="making-maps.html"><a href="making-maps.html#mapping-points"><i class="fa fa-check"></i><b>16.6</b> Mapping points</a></li>
+<li class="chapter" data-level="16.7" data-path="making-maps.html"><a href="making-maps.html#scale-bar-and-north-arrow"><i class="fa fa-check"></i><b>16.7</b> Scale bar and north arrow</a></li>
+<li class="chapter" data-level="16.8" data-path="making-maps.html"><a href="making-maps.html#finalizing-the-map"><i class="fa fa-check"></i><b>16.8</b> Finalizing the map</a>
+<ul>
+<li class="chapter" data-level="16.8.1" data-path="making-maps.html"><a href="making-maps.html#exporting-your-map"><i class="fa fa-check"></i><b>16.8.1</b> Exporting your map</a></li>
+</ul></li>
+<li class="chapter" data-level="16.9" data-path="making-maps.html"><a href="making-maps.html#additional-reading"><i class="fa fa-check"></i><b>16.9</b> Additional Reading</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>17</b> R markdown</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="rmarkdown.html"><a href="rmarkdown.html#introduction-4"><i class="fa fa-check"></i><b>17.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="17.1.1" data-path="rmarkdown.html"><a href="rmarkdown.html#installation"><i class="fa fa-check"></i><b>17.1.1</b> Installation</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="rmarkdown.html"><a href="rmarkdown.html#setup"><i class="fa fa-check"></i><b>17.2</b> Setup</a></li>
+<li class="chapter" data-level="17.3" data-path="rmarkdown.html"><a href="rmarkdown.html#rendering-to-a-document"><i class="fa fa-check"></i><b>17.3</b> Rendering to a document</a></li>
+<li class="chapter" data-level="17.4" data-path="rmarkdown.html"><a href="rmarkdown.html#formatting"><i class="fa fa-check"></i><b>17.4</b> Formatting</a>
+<ul>
+<li class="chapter" data-level="17.4.1" data-path="rmarkdown.html"><a href="rmarkdown.html#syntax"><i class="fa fa-check"></i><b>17.4.1</b> Syntax</a></li>
+<li class="chapter" data-level="17.4.2" data-path="rmarkdown.html"><a href="rmarkdown.html#headers"><i class="fa fa-check"></i><b>17.4.2</b> Headers</a></li>
+<li class="chapter" data-level="17.4.3" data-path="rmarkdown.html"><a href="rmarkdown.html#lists-1"><i class="fa fa-check"></i><b>17.4.3</b> Lists</a></li>
+<li class="chapter" data-level="17.4.4" data-path="rmarkdown.html"><a href="rmarkdown.html#figures"><i class="fa fa-check"></i><b>17.4.4</b> Figures</a></li>
+<li class="chapter" data-level="17.4.5" data-path="rmarkdown.html"><a href="rmarkdown.html#tables"><i class="fa fa-check"></i><b>17.4.5</b> Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="17.5" data-path="rmarkdown.html"><a href="rmarkdown.html#further-reading-2"><i class="fa fa-check"></i><b>17.5</b> Further Reading</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="coding-club-at-mun.html"><a href="coding-club-at-mun.html"><i class="fa fa-check"></i><b>18</b> Coding club at MUN</a></li>
+<li class="chapter" data-level="19" data-path="contributions.html"><a href="contributions.html"><i class="fa fa-check"></i><b>19</b> Contributions</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="faq.html"><a href="faq.html"><i class="fa fa-check"></i><b>A</b> FAQ</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="faq.html"><a href="faq.html#download-and-installation-issues"><i class="fa fa-check"></i><b>A.1</b> Download and Installation Issues</a></li>
+<li class="chapter" data-level="A.2" data-path="faq.html"><a href="faq.html#computer-issues"><i class="fa fa-check"></i><b>A.2</b> Computer Issues</a></li>
+<li class="chapter" data-level="A.3" data-path="faq.html"><a href="faq.html#rstudio-error-messages"><i class="fa fa-check"></i><b>A.3</b> RStudio Error Messages</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>B</b> Glossary</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="C" data-path="hypothesis.html"><a href="hypothesis.html"><i class="fa fa-check"></i><b>C</b> Hypothesis, predictions and equations</a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="hypothesis.html"><a href="hypothesis.html#discrete-and-continuous-variables"><i class="fa fa-check"></i><b>C.1</b> Discrete and continuous variables</a></li>
+<li class="chapter" data-level="C.2" data-path="hypothesis.html"><a href="hypothesis.html#hypothesis-testing"><i class="fa fa-check"></i><b>C.2</b> Hypothesis testing</a>
+<ul>
+<li class="chapter" data-level="C.2.1" data-path="hypothesis.html"><a href="hypothesis.html#null-hypotheses"><i class="fa fa-check"></i><b>C.2.1</b> Null hypotheses</a></li>
+</ul></li>
+<li class="chapter" data-level="C.3" data-path="hypothesis.html"><a href="hypothesis.html#further-reading-3"><i class="fa fa-check"></i><b>C.3</b> Further reading</a></li>
+<li class="chapter" data-level="C.4" data-path="hypothesis.html"><a href="hypothesis.html#status"><i class="fa fa-check"></i><b>C.4</b> Status</a></li>
 </ul></li>
 </ul>
 
@@ -400,10 +402,10 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="making-maps" class="section level1 hasAnchor" number="17">
-<h1><span class="header-section-number">17</span> Making maps<a href="making-maps.html#making-maps" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="introduction-4" class="section level2 hasAnchor" number="17.1">
-<h2><span class="header-section-number">17.1</span> Introduction<a href="making-maps.html#introduction-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="making-maps" class="section level1 hasAnchor" number="16">
+<h1><span class="header-section-number">16</span> Making maps<a href="making-maps.html#making-maps" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-3" class="section level2 hasAnchor" number="16.1">
+<h2><span class="header-section-number">16.1</span> Introduction<a href="making-maps.html#introduction-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Maps are a great tool for presenting data in a simplified and visually appealing way. Typically, maps are created using GIS (Geographical Information System) software such as ArcGIS or QGIS, however in recent years R has developed many packages that can process and present spatial data. Drawing maps in R provides reproducible and flexible code that allows us to customize each map for a specific audience or purpose.</p>
 <p>In GIS, there are a few key spatial elements that we must understand to build a map:</p>
 <ul>
@@ -412,140 +414,140 @@ div.csl-indent {
 <li>Polygons: Closed shapes made of connected lines such as country or provincial/territorial borders. Polygons also have an ordered set of coordinates but the start and end point should have the same coordinates.</li>
 </ul>
 <p>Each of these elements can be added as their own layer when building map.</p>
-<div id="required-packages" class="section level3 hasAnchor" number="17.1.1">
-<h3><span class="header-section-number">17.1.1</span> Required packages<a href="making-maps.html#required-packages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="required-packages" class="section level3 hasAnchor" number="16.1.1">
+<h3><span class="header-section-number">16.1.1</span> Required packages<a href="making-maps.html#required-packages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This tutorial requires several different packages, make sure you have the following ones installed before continuing. You will only need to do this once.</p>
 <p><strong>Plotting Packages</strong></p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="making-maps.html#cb210-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
-<span id="cb210-2"><a href="making-maps.html#cb210-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;cowplot&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="making-maps.html#cb244-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb244-2"><a href="making-maps.html#cb244-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;cowplot&quot;</span>)</span></code></pre></div>
 <p><strong>Spatial Packages</strong></p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="making-maps.html#cb211-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;sf&quot;</span>)</span>
-<span id="cb211-2"><a href="making-maps.html#cb211-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggspatial&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="making-maps.html#cb245-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb245-2"><a href="making-maps.html#cb245-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggspatial&quot;</span>)</span></code></pre></div>
 <p><strong>Base Map Packages</strong></p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="making-maps.html#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rnaturalearth&quot;</span>)</span>
-<span id="cb212-2"><a href="making-maps.html#cb212-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rnaturalearthdata&quot;</span>)</span>
-<span id="cb212-3"><a href="making-maps.html#cb212-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rnaturalearthhires&quot;</span>)</span>
-<span id="cb212-4"><a href="making-maps.html#cb212-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb212-5"><a href="making-maps.html#cb212-5" aria-hidden="true" tabindex="-1"></a><span class="do">## If you have trouble installing the above packages, you can try this instead</span></span>
-<span id="cb212-6"><a href="making-maps.html#cb212-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
-<span id="cb212-7"><a href="making-maps.html#cb212-7" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;ropensci/rnaturalearthdata&quot;</span>)</span>
-<span id="cb212-8"><a href="making-maps.html#cb212-8" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;ropensci/rnaturalearthhires&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="making-maps.html#cb246-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rnaturalearth&quot;</span>)</span>
+<span id="cb246-2"><a href="making-maps.html#cb246-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rnaturalearthdata&quot;</span>)</span>
+<span id="cb246-3"><a href="making-maps.html#cb246-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rnaturalearthhires&quot;</span>)</span>
+<span id="cb246-4"><a href="making-maps.html#cb246-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb246-5"><a href="making-maps.html#cb246-5" aria-hidden="true" tabindex="-1"></a><span class="do">## If you have trouble installing the above packages, you can try this instead</span></span>
+<span id="cb246-6"><a href="making-maps.html#cb246-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)</span>
+<span id="cb246-7"><a href="making-maps.html#cb246-7" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;ropensci/rnaturalearthdata&quot;</span>)</span>
+<span id="cb246-8"><a href="making-maps.html#cb246-8" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">&quot;ropensci/rnaturalearthhires&quot;</span>)</span></code></pre></div>
 </div>
 </div>
-<div id="creating-maps-using-ggplot2-and-sf" class="section level2 hasAnchor" number="17.2">
-<h2><span class="header-section-number">17.2</span> Creating maps using <code>ggplot2</code> and <code>sf</code><a href="making-maps.html#creating-maps-using-ggplot2-and-sf" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We can now build off of our ggplot knowledge to build maps in R. We will also need to install the package <code>sf</code>. <code>sf</code> provides a standardized way to work spatial vector data (i.e., points, lines, and polygons) by encoding the data as “simple features.” Simple features also keep any associated data as a data.frame, which allows us to change the aesthetic of each feature when working with ggplot.</p>
+<div id="creating-maps-using-ggplot2-and-sf" class="section level2 hasAnchor" number="16.2">
+<h2><span class="header-section-number">16.2</span> Creating maps using <code>ggplot2</code> and <code>sf</code><a href="making-maps.html#creating-maps-using-ggplot2-and-sf" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can now build off of our ggplot knowledge to build maps in R. We will also need to install the package <code>sf</code>. <code>sf</code> provides a standardized way to work spatial vector data (i.e., points, lines, and polygons) by encoding the data as “simple features”. Simple features also keep any associated data as a data.frame, which allows us to change the aesthetic of each feature when working with ggplot.</p>
 <p>To build our example map, we will be using data from the <code>rnaturalearth</code> package as well as the associated data packages <code>rnaturalearthdata</code> and <code>rnaturalearthhires</code>.</p>
-<p>Once we have loaded these packages we can use the function <code>ne_states()</code> to select a map of Canada, as well as all of the provincial and territorial boundaries. Note: we must set <code>returnclass = "sf"</code> to make sure the output is a “simple feature.”</p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="making-maps.html#cb213-1" aria-hidden="true" tabindex="-1"></a>canada_map <span class="ot">&lt;-</span> <span class="fu">ne_states</span>(<span class="at">country =</span> <span class="st">&quot;canada&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
-<span id="cb213-2"><a href="making-maps.html#cb213-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb213-3"><a href="making-maps.html#cb213-3" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(canada_map)</span></code></pre></div>
+<p>Once we have loaded these packages we can use the function <code>ne_states()</code> to select a map of Canada, as well as all of the provincial and territorial boundaries. Note: we must set <code>returnclass = "sf"</code> to make sure the output is a “simple feature”.</p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="making-maps.html#cb247-1" aria-hidden="true" tabindex="-1"></a>canada_map <span class="ot">&lt;-</span> <span class="fu">ne_states</span>(<span class="at">country =</span> <span class="st">&quot;canada&quot;</span>, <span class="at">returnclass =</span> <span class="st">&quot;sf&quot;</span>)</span>
+<span id="cb247-2"><a href="making-maps.html#cb247-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb247-3"><a href="making-maps.html#cb247-3" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(canada_map)</span></code></pre></div>
 <pre><code>## [1] &quot;sf&quot;         &quot;data.frame&quot;</code></pre>
 <p>Using the function <code>class</code> tells us that the object <code>canada_map</code> is both a <code>sf</code> and a <code>data.frame</code>.</p>
 <p>We can now plot our base map using <code>ggplot()</code> and adding a layer called <code>geom_sf()</code> where we specify the data we will be using.</p>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="making-maps.html#cb215-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb215-2"><a href="making-maps.html#cb215-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-129-1.png" width="672" /></p>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="making-maps.html#cb249-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb249-2"><a href="making-maps.html#cb249-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-147-1.png" width="672" /></p>
 </div>
-<div id="changing-map-colours" class="section level2 hasAnchor" number="17.3">
-<h2><span class="header-section-number">17.3</span> Changing map colours<a href="making-maps.html#changing-map-colours" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="changing-map-colours" class="section level2 hasAnchor" number="16.3">
+<h2><span class="header-section-number">16.3</span> Changing map colours<a href="making-maps.html#changing-map-colours" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can now start to customize our map, first by changing the colours. To change the colour of the borders we specify this using <code>colour =</code>, and to change the colour of the interior, we can specify this using <code>fill -</code>. Note: we set these values outside of the aesthetic (<code>aes()</code>) because we want to apply them to the entire object of <code>canada_map</code>.</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="making-maps.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb216-2"><a href="making-maps.html#cb216-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-130-1.png" width="672" /></p>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="making-maps.html#cb250-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb250-2"><a href="making-maps.html#cb250-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-148-1.png" width="672" /></p>
 <p>We can also set the fill inside of <code>aes()</code> if we want it to be based on values found within the dataframe. For example, we can set the fill by the name of each Canadian province or territory.</p>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="making-maps.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb217-2"><a href="making-maps.html#cb217-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="fu">aes</span>(<span class="at">fill =</span> name))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-131-1.png" width="672" /></p>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="making-maps.html#cb251-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb251-2"><a href="making-maps.html#cb251-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="fu">aes</span>(<span class="at">fill =</span> name))</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-149-1.png" width="672" /></p>
 <p>If we instead wanted to highlight one province, for example Newfoundland and Labrador, we again set this outside of <code>aes()</code>. We also will use an <code>ifelse()</code> statement. In the code below, this statement can be interpreted as “<em>if</em> the name from our dataframe matches Newfoundland and Labrador return the colour blue, <em>else</em> return the colour white.</p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="making-maps.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb218-2"><a href="making-maps.html#cb218-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>,</span>
-<span id="cb218-3"><a href="making-maps.html#cb218-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill =</span> <span class="fu">ifelse</span>(canada_map<span class="sc">$</span>name <span class="sc">==</span> <span class="st">&quot;Newfoundland and Labrador&quot;</span>, <span class="st">&#39;blue&#39;</span>, <span class="st">&#39;white&#39;</span>))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-132-1.png" width="672" /></p>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="making-maps.html#cb252-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb252-2"><a href="making-maps.html#cb252-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb252-3"><a href="making-maps.html#cb252-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill =</span> <span class="fu">ifelse</span>(canada_map<span class="sc">$</span>name <span class="sc">==</span> <span class="st">&quot;Newfoundland and Labrador&quot;</span>, <span class="st">&#39;blue&#39;</span>, <span class="st">&#39;white&#39;</span>))</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-150-1.png" width="672" /></p>
 <p>Lastly, we can change the background fill to the map using <code>theme</code> elements. The layer <code>theme_bw()</code> will first set a black and white theme for the map, and can then alter the fill by setting <code>panel.background</code>.</p>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="making-maps.html#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb219-2"><a href="making-maps.html#cb219-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb219-3"><a href="making-maps.html#cb219-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb219-4"><a href="making-maps.html#cb219-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;aliceblue&quot;</span>))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-133-1.png" width="672" /></p>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="making-maps.html#cb253-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb253-2"><a href="making-maps.html#cb253-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb253-3"><a href="making-maps.html#cb253-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb253-4"><a href="making-maps.html#cb253-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;aliceblue&quot;</span>))</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-151-1.png" width="672" /></p>
 </div>
-<div id="projections" class="section level2 hasAnchor" number="17.4">
-<h2><span class="header-section-number">17.4</span> Projections<a href="making-maps.html#projections" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="projections" class="section level2 hasAnchor" number="16.4">
+<h2><span class="header-section-number">16.4</span> Projections<a href="making-maps.html#projections" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Earth exists in three-dimensions but, other than globes, most representations of the earth, such as maps, are two dimensional. A map projection is the process of representing Earth’s surface in two dimensions using a set of mathematical transformations. However, the Earth’s surface cannot be flattened without distorting at least one geometrical property, such as area, shape, and distance. You cannot accurately represent all of these properties simultaneously therefore, it is important to select a projection that has the most suitable properties for that the mapping situation.</p>
 <p>Projections in R can be specified using Well Known Identifier (WKID) codes or PROJ.4 strings. WKID codes are numeric identifiers of projections and are defined using either the ESPG or ESRI system. More information can be found following the links in the Additional Reading section.</p>
 <p>We will use instead use a PROJ.4 string, which specifies the complete set of projection parameters including the ellipse, datum, and units that define a particular coordinate reference system (CRS). The PROJ.4 string for any given CRS can be found here: <a href="https://spatialreference.org" class="uri">https://spatialreference.org</a>.</p>
 <p>For example, maps of Canada often use the Lambert Conformal Conic projection, which helps preserve both relative shape and direction. We will first copy the entire string from the website and save it as an object in R, which we will call <code>can.lcc</code>. We can then specify that we want to use this projection in for our map by adding a layer called <code>coord_sf()</code> and setting our CRS as <code>can.lcc</code>.</p>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="making-maps.html#cb220-1" aria-hidden="true" tabindex="-1"></a>can.lcc <span class="ot">&lt;-</span> <span class="st">&quot;+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs&quot;</span></span>
-<span id="cb220-2"><a href="making-maps.html#cb220-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb220-3"><a href="making-maps.html#cb220-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb220-4"><a href="making-maps.html#cb220-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb220-5"><a href="making-maps.html#cb220-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> can.lcc)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-134-1.png" width="672" /></p>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="making-maps.html#cb254-1" aria-hidden="true" tabindex="-1"></a>can.lcc <span class="ot">&lt;-</span> <span class="st">&quot;+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs&quot;</span></span>
+<span id="cb254-2"><a href="making-maps.html#cb254-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb254-3"><a href="making-maps.html#cb254-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb254-4"><a href="making-maps.html#cb254-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb254-5"><a href="making-maps.html#cb254-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> can.lcc)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-152-1.png" width="672" /></p>
 <p>Compared to any of the maps prior to this, you will notice that the latitude and longitude grid have become conical and that the shape and size of the provinces and territories have been altered.</p>
 </div>
-<div id="map-extent" class="section level2 hasAnchor" number="17.5">
-<h2><span class="header-section-number">17.5</span> Map Extent<a href="making-maps.html#map-extent" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We may want to map a specific area, such as the province of Newfoundland and Labrador rather than the entirety of Canada. We can accomplish this by defining by a set of bounding coordinates that specify the area of the map, also called the “extent.” We can specify the coordinate extent by setting the <code>xlim()</code> and <code>ylim()</code> values within the <code>geom_sf()</code> layer.</p>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="making-maps.html#cb221-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb221-2"><a href="making-maps.html#cb221-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb221-3"><a href="making-maps.html#cb221-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">67.5</span>, <span class="sc">-</span><span class="dv">53</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">47</span>, <span class="fl">60.5</span>))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-135-1.png" width="672" /></p>
+<div id="map-extent" class="section level2 hasAnchor" number="16.5">
+<h2><span class="header-section-number">16.5</span> Map Extent<a href="making-maps.html#map-extent" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We may want to map a specific area, such as the province of Newfoundland and Labrador rather than the entirety of Canada. We can accomplish this by defining by a set of bounding coordinates that specify the area of the map, also called the “extent”. We can specify the coordinate extent by setting the <code>xlim()</code> and <code>ylim()</code> values within the <code>geom_sf()</code> layer.</p>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="making-maps.html#cb255-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb255-2"><a href="making-maps.html#cb255-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb255-3"><a href="making-maps.html#cb255-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">67.5</span>, <span class="sc">-</span><span class="dv">53</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">47</span>, <span class="fl">60.5</span>))</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-153-1.png" width="672" /></p>
 <p>Alternatively, we can subset the Canada map by selecting that row of data from our data.frame and saving it as a new object. We can then map just the province without any additional borders.</p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="making-maps.html#cb222-1" aria-hidden="true" tabindex="-1"></a>map_nl <span class="ot">&lt;-</span> canada_map[canada_map<span class="sc">$</span>name <span class="sc">==</span> <span class="st">&quot;Newfoundland and Labrador&quot;</span>,]</span>
-<span id="cb222-2"><a href="making-maps.html#cb222-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb222-3"><a href="making-maps.html#cb222-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb222-4"><a href="making-maps.html#cb222-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-136-1.png" width="672" /></p>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="making-maps.html#cb256-1" aria-hidden="true" tabindex="-1"></a>map_nl <span class="ot">&lt;-</span> canada_map[canada_map<span class="sc">$</span>name <span class="sc">==</span> <span class="st">&quot;Newfoundland and Labrador&quot;</span>,]</span>
+<span id="cb256-2"><a href="making-maps.html#cb256-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb256-3"><a href="making-maps.html#cb256-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb256-4"><a href="making-maps.html#cb256-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-154-1.png" width="672" /></p>
 <p>Lastly, we can specify the values we want in our x or y axes by setting breaks in the data. For example, we can reduce the number of longitude values included by setting <code>scale_x_continuous</code>.</p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="making-maps.html#cb223-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb223-2"><a href="making-maps.html#cb223-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb223-3"><a href="making-maps.html#cb223-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-137-1.png" width="672" /></p>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="making-maps.html#cb257-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb257-2"><a href="making-maps.html#cb257-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb257-3"><a href="making-maps.html#cb257-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>))</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-155-1.png" width="672" /></p>
 </div>
-<div id="mapping-points" class="section level2 hasAnchor" number="17.6">
-<h2><span class="header-section-number">17.6</span> Mapping points<a href="making-maps.html#mapping-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="mapping-points" class="section level2 hasAnchor" number="16.6">
+<h2><span class="header-section-number">16.6</span> Mapping points<a href="making-maps.html#mapping-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can add layers to our base map using additional <code>geom</code> functions in the same way that we would for any ggplot item. For points, we would use the function <code>geom_point()</code> and specify the coordinates as the x and y values within <code>aes()</code>. For this example, we will be mapping the populations of towns across Newfoundland and Labrador using the 2021 census report (Statistics Canada. Table 98-10-0002-01  Population and dwelling counts: Canada and census subdivisions (municipalities)).</p>
 <p>Once we have our data, we will use the same base map that we used prior, and add the <code>geom_point()</code> layer. Note that we have also specified the colour of the points to be based on the 2021 population of the town/city and that we have done so within the <code>aes()</code>.</p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="making-maps.html#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb224-2"><a href="making-maps.html#cb224-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb224-3"><a href="making-maps.html#cb224-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> nl.cities, <span class="fu">aes</span>(<span class="at">x =</span> Longitude, <span class="at">y =</span> Latitude, <span class="at">colour =</span> Population_2021)) <span class="sc">+</span></span>
-<span id="cb224-4"><a href="making-maps.html#cb224-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="making-maps.html#cb258-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb258-2"><a href="making-maps.html#cb258-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb258-3"><a href="making-maps.html#cb258-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> nl.cities, <span class="fu">aes</span>(<span class="at">x =</span> Longitude, <span class="at">y =</span> Latitude, <span class="at">colour =</span> Population_2021)) <span class="sc">+</span></span>
+<span id="cb258-4"><a href="making-maps.html#cb258-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>))</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-157-1.png" width="672" /></p>
 <p>This map doesn’t provide a lot of information about the population sizes in NL since most towns have fewer than 25 000 people. To create a more meaningful representation of our data, we can change the scale and colour.</p>
 <p>One option is to add a layer using the function <code>scale_color_viridis_c()</code>, which provides a range of colour blind friendly palettes. We will just use the default option in this example.</p>
 <p>We can also scale the data by specifying the transformation we would like to use; in the example below, we will use the <code>log10</code> transformation, which returns the base 10 logarithm of a number. Note that this transformation is for the colour scale only and it will not alter the values of our data. The legend will now provide a wider range of colours for values between 10 and 10 000.
 Lastly, we will change the name of the legend within the <code>labs()</code> function.</p>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="making-maps.html#cb225-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb225-2"><a href="making-maps.html#cb225-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb225-3"><a href="making-maps.html#cb225-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> nl.cities, <span class="fu">aes</span>(<span class="at">x =</span> Longitude, <span class="at">y =</span> Latitude, <span class="at">colour =</span> Population_2021)) <span class="sc">+</span></span>
-<span id="cb225-4"><a href="making-maps.html#cb225-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
-<span id="cb225-5"><a href="making-maps.html#cb225-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">trans =</span> <span class="st">&quot;log10&quot;</span>) <span class="sc">+</span></span>
-<span id="cb225-6"><a href="making-maps.html#cb225-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">colour =</span> <span class="st">&quot;Population 2021&quot;</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-140-1.png" width="672" /></p>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="making-maps.html#cb259-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb259-2"><a href="making-maps.html#cb259-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb259-3"><a href="making-maps.html#cb259-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> nl.cities, <span class="fu">aes</span>(<span class="at">x =</span> Longitude, <span class="at">y =</span> Latitude, <span class="at">colour =</span> Population_2021)) <span class="sc">+</span></span>
+<span id="cb259-4"><a href="making-maps.html#cb259-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb259-5"><a href="making-maps.html#cb259-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">trans =</span> <span class="st">&quot;log10&quot;</span>) <span class="sc">+</span></span>
+<span id="cb259-6"><a href="making-maps.html#cb259-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">colour =</span> <span class="st">&quot;Population 2021&quot;</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-158-1.png" width="672" /></p>
 <p>Other spatial elements such as lines or polygons can be added in the same way using the <code>geom_line()</code> or <code>geom_polygon()</code> functions.</p>
 </div>
-<div id="scale-bar-and-north-arrow" class="section level2 hasAnchor" number="17.7">
-<h2><span class="header-section-number">17.7</span> Scale bar and north arrow<a href="making-maps.html#scale-bar-and-north-arrow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="scale-bar-and-north-arrow" class="section level2 hasAnchor" number="16.7">
+<h2><span class="header-section-number">16.7</span> Scale bar and north arrow<a href="making-maps.html#scale-bar-and-north-arrow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Scale bars provide a visual representation of distance and feature size on the map. A scale bar is a line or bar divided into parts.</p>
 <p>To add a scale bar or north arrow, we will need to load the R package <code>ggspatial</code>.
 We use <code>annotation_scale()</code> to add a scale bar to the map. The location can be stated as <code>"tr"</code> for the top right corner, <code>"bl"</code> for bottom left corner, etc. The argument <code>width_hint</code> sets the size of the scale bar as a proportion of the map width. For example <code>width_hint = 0.5</code> will return a scale bar that is half the width of the map.</p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="making-maps.html#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb226-2"><a href="making-maps.html#cb226-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb226-3"><a href="making-maps.html#cb226-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
-<span id="cb226-4"><a href="making-maps.html#cb226-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">&quot;tr&quot;</span>, <span class="at">width_hint =</span> <span class="fl">0.5</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-141-1.png" width="672" /></p>
-<p>A north arrow indicates the orientation of the map inside the frame. Using the argument <code>annotation_north_arrow()</code>, we can specify the orientation using <code>which_north</code>. Options include “grid,” where the north arrow always pointing up and “true,” which always points to the north pole. We can also define the size of the north arrow using <code>height</code> and <code>width</code>, as well as the style and location.</p>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="making-maps.html#cb227-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb227-2"><a href="making-maps.html#cb227-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb227-3"><a href="making-maps.html#cb227-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
-<span id="cb227-4"><a href="making-maps.html#cb227-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">&quot;tr&quot;</span>, <span class="at">width_hint =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb227-5"><a href="making-maps.html#cb227-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_north_arrow</span>(<span class="at">location =</span> <span class="st">&quot;tl&quot;</span>, <span class="at">which_north =</span> <span class="st">&quot;true&quot;</span>,</span>
-<span id="cb227-6"><a href="making-maps.html#cb227-6" aria-hidden="true" tabindex="-1"></a>                         <span class="at">height =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">&quot;cm&quot;</span>), <span class="at">width =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">&quot;cm&quot;</span>),</span>
-<span id="cb227-7"><a href="making-maps.html#cb227-7" aria-hidden="true" tabindex="-1"></a>                         <span class="at">style =</span> north_arrow_fancy_orienteering)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-142-1.png" width="672" /></p>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="making-maps.html#cb260-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb260-2"><a href="making-maps.html#cb260-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb260-3"><a href="making-maps.html#cb260-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb260-4"><a href="making-maps.html#cb260-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">&quot;tr&quot;</span>, <span class="at">width_hint =</span> <span class="fl">0.5</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-159-1.png" width="672" /></p>
+<p>A north arrow indicates the orientation of the map inside the frame. Using the argument <code>annotation_north_arrow()</code>, we can specify the orientation using <code>which_north</code>. Options include “grid”, where the north arrow always pointing up and “true”, which always points to the north pole. We can also define the size of the north arrow using <code>height</code> and <code>width</code>, as well as the style and location.</p>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="making-maps.html#cb261-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb261-2"><a href="making-maps.html#cb261-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb261-3"><a href="making-maps.html#cb261-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb261-4"><a href="making-maps.html#cb261-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">&quot;tr&quot;</span>, <span class="at">width_hint =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb261-5"><a href="making-maps.html#cb261-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_north_arrow</span>(<span class="at">location =</span> <span class="st">&quot;tl&quot;</span>, <span class="at">which_north =</span> <span class="st">&quot;true&quot;</span>,</span>
+<span id="cb261-6"><a href="making-maps.html#cb261-6" aria-hidden="true" tabindex="-1"></a>                         <span class="at">height =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">&quot;cm&quot;</span>), <span class="at">width =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">&quot;cm&quot;</span>),</span>
+<span id="cb261-7"><a href="making-maps.html#cb261-7" aria-hidden="true" tabindex="-1"></a>                         <span class="at">style =</span> north_arrow_fancy_orienteering)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-160-1.png" width="672" /></p>
 </div>
-<div id="finalizing-the-map" class="section level2 hasAnchor" number="17.8">
-<h2><span class="header-section-number">17.8</span> Finalizing the map<a href="making-maps.html#finalizing-the-map" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="finalizing-the-map" class="section level2 hasAnchor" number="16.8">
+<h2><span class="header-section-number">16.8</span> Finalizing the map<a href="making-maps.html#finalizing-the-map" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>You may need to save the map for a report, presentation, or thesis. We will combine each of the previous steps into one map below, which we will assign as the object named <code>final</code>. These previous steps include:</p>
 <ul>
 <li>Plot a base map of Newfoundland and Labrador</li>
@@ -554,23 +556,23 @@ We use <code>annotation_scale()</code> to add a scale bar to the map. The locati
 <li>Set the background colour to blue</li>
 </ul>
 <p>In addition, we will move the legend inside the map margins by defining <code>legend.position</code> within the <code>theme</code> layer.</p>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="making-maps.html#cb228-1" aria-hidden="true" tabindex="-1"></a>final <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb228-2"><a href="making-maps.html#cb228-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
-<span id="cb228-3"><a href="making-maps.html#cb228-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> nl.cities, <span class="fu">aes</span>(<span class="at">x =</span> Longitude, <span class="at">y =</span> Latitude, <span class="at">colour =</span> Population_2021)) <span class="sc">+</span></span>
-<span id="cb228-4"><a href="making-maps.html#cb228-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
-<span id="cb228-5"><a href="making-maps.html#cb228-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">trans =</span> <span class="st">&quot;log10&quot;</span>) <span class="sc">+</span></span>
-<span id="cb228-6"><a href="making-maps.html#cb228-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">colour =</span> <span class="st">&quot;Population 2021&quot;</span>) <span class="sc">+</span></span>
-<span id="cb228-7"><a href="making-maps.html#cb228-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">&quot;tr&quot;</span>, <span class="at">width_hint =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb228-8"><a href="making-maps.html#cb228-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_north_arrow</span>(<span class="at">location =</span> <span class="st">&quot;tl&quot;</span>, <span class="at">which_north =</span> <span class="st">&quot;true&quot;</span>,</span>
-<span id="cb228-9"><a href="making-maps.html#cb228-9" aria-hidden="true" tabindex="-1"></a>                         <span class="at">height =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">&quot;cm&quot;</span>), <span class="at">width =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">&quot;cm&quot;</span>),</span>
-<span id="cb228-10"><a href="making-maps.html#cb228-10" aria-hidden="true" tabindex="-1"></a>                         <span class="at">pad_x =</span> <span class="fu">unit</span>(<span class="fl">0.25</span>, <span class="st">&quot;cm&quot;</span>), <span class="at">pad_y =</span> <span class="fu">unit</span>(<span class="fl">0.25</span>, <span class="st">&quot;cm&quot;</span>),</span>
-<span id="cb228-11"><a href="making-maps.html#cb228-11" aria-hidden="true" tabindex="-1"></a>                         <span class="at">style =</span> north_arrow_fancy_orienteering) <span class="sc">+</span></span>
-<span id="cb228-12"><a href="making-maps.html#cb228-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb228-13"><a href="making-maps.html#cb228-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;aliceblue&quot;</span>),</span>
-<span id="cb228-14"><a href="making-maps.html#cb228-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.85</span>, <span class="fl">0.75</span>), <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;transparent&quot;</span>),</span>
-<span id="cb228-15"><a href="making-maps.html#cb228-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span>
-<span id="cb228-16"><a href="making-maps.html#cb228-16" aria-hidden="true" tabindex="-1"></a>final</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-143-1.png" width="672" /></p>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="making-maps.html#cb262-1" aria-hidden="true" tabindex="-1"></a>final <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb262-2"><a href="making-maps.html#cb262-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> map_nl, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>, <span class="at">fill =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb262-3"><a href="making-maps.html#cb262-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> nl.cities, <span class="fu">aes</span>(<span class="at">x =</span> Longitude, <span class="at">y =</span> Latitude, <span class="at">colour =</span> Population_2021)) <span class="sc">+</span></span>
+<span id="cb262-4"><a href="making-maps.html#cb262-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks=</span><span class="fu">seq</span>(<span class="sc">-</span><span class="dv">68</span>, <span class="sc">-</span><span class="dv">52</span>, <span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb262-5"><a href="making-maps.html#cb262-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">trans =</span> <span class="st">&quot;log10&quot;</span>) <span class="sc">+</span></span>
+<span id="cb262-6"><a href="making-maps.html#cb262-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">colour =</span> <span class="st">&quot;Population 2021&quot;</span>) <span class="sc">+</span></span>
+<span id="cb262-7"><a href="making-maps.html#cb262-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">&quot;tr&quot;</span>, <span class="at">width_hint =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb262-8"><a href="making-maps.html#cb262-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_north_arrow</span>(<span class="at">location =</span> <span class="st">&quot;tl&quot;</span>, <span class="at">which_north =</span> <span class="st">&quot;true&quot;</span>,</span>
+<span id="cb262-9"><a href="making-maps.html#cb262-9" aria-hidden="true" tabindex="-1"></a>                         <span class="at">height =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">&quot;cm&quot;</span>), <span class="at">width =</span> <span class="fu">unit</span>(<span class="dv">1</span>, <span class="st">&quot;cm&quot;</span>),</span>
+<span id="cb262-10"><a href="making-maps.html#cb262-10" aria-hidden="true" tabindex="-1"></a>                         <span class="at">pad_x =</span> <span class="fu">unit</span>(<span class="fl">0.25</span>, <span class="st">&quot;cm&quot;</span>), <span class="at">pad_y =</span> <span class="fu">unit</span>(<span class="fl">0.25</span>, <span class="st">&quot;cm&quot;</span>),</span>
+<span id="cb262-11"><a href="making-maps.html#cb262-11" aria-hidden="true" tabindex="-1"></a>                         <span class="at">style =</span> north_arrow_fancy_orienteering) <span class="sc">+</span></span>
+<span id="cb262-12"><a href="making-maps.html#cb262-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb262-13"><a href="making-maps.html#cb262-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;aliceblue&quot;</span>),</span>
+<span id="cb262-14"><a href="making-maps.html#cb262-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.85</span>, <span class="fl">0.75</span>), <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;transparent&quot;</span>),</span>
+<span id="cb262-15"><a href="making-maps.html#cb262-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>))</span>
+<span id="cb262-16"><a href="making-maps.html#cb262-16" aria-hidden="true" tabindex="-1"></a>final</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-161-1.png" width="672" /></p>
 <p>We may also want to create an inset map, which shows the location of the main map in the context of a larger area. For example, we can use the larger Canadian map we made previously, with Newfoundland and Labrador highlighted. We will assign this map as the object <code>inset</code>. Reminder, the previous steps included:</p>
 <ul>
 <li>Using an <code>ifelse</code> statement to colour Newfoundland and Labrador blue and the remainder of Canada white</li>
@@ -578,31 +580,32 @@ We use <code>annotation_scale()</code> to add a scale bar to the map. The locati
 <li>Set the map theme and changed the background colour</li>
 </ul>
 <p>Now we will also add a scale bar to our inset map using <code>annotation_scale()</code> and remove the white background by setting <code>plot.background = element_blank()</code>. We will also change the map theme to <code>theme_void()</code> to remove the latitude and longitude and help simplify the map inset.</p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="making-maps.html#cb229-1" aria-hidden="true" tabindex="-1"></a>inset <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb229-2"><a href="making-maps.html#cb229-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>,</span>
-<span id="cb229-3"><a href="making-maps.html#cb229-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill =</span> <span class="fu">ifelse</span>(canada_map<span class="sc">$</span>name <span class="sc">==</span> <span class="st">&quot;Newfoundland and Labrador&quot;</span>, <span class="st">&#39;blue&#39;</span>, <span class="st">&#39;white&#39;</span>)) <span class="sc">+</span></span>
-<span id="cb229-4"><a href="making-maps.html#cb229-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs&quot;</span>) <span class="sc">+</span></span>
-<span id="cb229-5"><a href="making-maps.html#cb229-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">&quot;bl&quot;</span>, <span class="at">width_hint =</span> <span class="fl">0.25</span>) <span class="sc">+</span></span>
-<span id="cb229-6"><a href="making-maps.html#cb229-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb229-7"><a href="making-maps.html#cb229-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;aliceblue&quot;</span>, <span class="at">size =</span> <span class="dv">1</span>),</span>
-<span id="cb229-8"><a href="making-maps.html#cb229-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.background =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb229-9"><a href="making-maps.html#cb229-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb229-10"><a href="making-maps.html#cb229-10" aria-hidden="true" tabindex="-1"></a>inset</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-144-1.png" width="672" /></p>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="making-maps.html#cb263-1" aria-hidden="true" tabindex="-1"></a>inset <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb263-2"><a href="making-maps.html#cb263-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> canada_map, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb263-3"><a href="making-maps.html#cb263-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill =</span> <span class="fu">ifelse</span>(canada_map<span class="sc">$</span>name <span class="sc">==</span> <span class="st">&quot;Newfoundland and Labrador&quot;</span>, <span class="st">&#39;blue&#39;</span>, <span class="st">&#39;white&#39;</span>)) <span class="sc">+</span></span>
+<span id="cb263-4"><a href="making-maps.html#cb263-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">&quot;+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs&quot;</span>) <span class="sc">+</span></span>
+<span id="cb263-5"><a href="making-maps.html#cb263-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotation_scale</span>(<span class="at">location =</span> <span class="st">&quot;bl&quot;</span>, <span class="at">width_hint =</span> <span class="fl">0.25</span>) <span class="sc">+</span></span>
+<span id="cb263-6"><a href="making-maps.html#cb263-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb263-7"><a href="making-maps.html#cb263-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;aliceblue&quot;</span>, <span class="at">size =</span> <span class="dv">1</span>),</span>
+<span id="cb263-8"><a href="making-maps.html#cb263-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.background =</span> <span class="fu">element_blank</span>())</span></code></pre></div>
+<pre><code>## Warning: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+## ℹ Please use the `linewidth` argument instead.</code></pre>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="making-maps.html#cb265-1" aria-hidden="true" tabindex="-1"></a>inset</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-162-1.png" width="672" /></p>
 <p>Lastly, we will add inset the inset to the main map using the <code>cowplot</code> package. We specify which is the main map using <code>ggdraw</code> and add the inset with a second function called <code>draw_plot</code>. Within <code>draw_plot</code> we define the size of the inset with <code>width</code> and <code>height</code>, as well as the location within the main map margins using <code>x</code> and <code>y</code>.</p>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="making-maps.html#cb230-1" aria-hidden="true" tabindex="-1"></a>NL.full <span class="ot">&lt;-</span> <span class="fu">ggdraw</span>(final) <span class="sc">+</span></span>
-<span id="cb230-2"><a href="making-maps.html#cb230-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">draw_plot</span>(inset, <span class="at">width =</span> <span class="fl">0.3</span>, <span class="at">height =</span> <span class="fl">0.3</span>, <span class="at">x =</span> <span class="fl">0.25</span>, <span class="at">y =</span> <span class="fl">0.05</span>)</span>
-<span id="cb230-3"><a href="making-maps.html#cb230-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb230-4"><a href="making-maps.html#cb230-4" aria-hidden="true" tabindex="-1"></a>NL.full</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-145-1.png" width="672" /></p>
-<div id="exporting-your-map" class="section level3 hasAnchor" number="17.8.1">
-<h3><span class="header-section-number">17.8.1</span> Exporting your map<a href="making-maps.html#exporting-your-map" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>You can now export your map to use for a report, presentation, etc. One option is to use the method outlined in Chapter <a href="graph.html#export">10.6</a>. However, we can also use the function <code>ggsave()</code>. This will allow us to name our map as well as set the file format (.PNG, .JPEG, .TIFF), size (width and height in inches), and image resolution (dpi) when exporting the map.</p>
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="making-maps.html#cb231-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;map_final.png&quot;</span>, <span class="at">plot =</span> NL.full, <span class="at">width =</span> <span class="dv">7</span>, <span class="at">height =</span> <span class="dv">7</span>, <span class="at">dpi =</span> <span class="st">&quot;screen&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="making-maps.html#cb266-1" aria-hidden="true" tabindex="-1"></a>NL.full <span class="ot">&lt;-</span> <span class="fu">ggdraw</span>(final) <span class="sc">+</span></span>
+<span id="cb266-2"><a href="making-maps.html#cb266-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">draw_plot</span>(inset, <span class="at">width =</span> <span class="fl">0.3</span>, <span class="at">height =</span> <span class="fl">0.3</span>, <span class="at">x =</span> <span class="fl">0.25</span>, <span class="at">y =</span> <span class="fl">0.05</span>)</span>
+<span id="cb266-3"><a href="making-maps.html#cb266-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb266-4"><a href="making-maps.html#cb266-4" aria-hidden="true" tabindex="-1"></a>NL.full</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-163-1.png" width="672" /></p>
+<div id="exporting-your-map" class="section level3 hasAnchor" number="16.8.1">
+<h3><span class="header-section-number">16.8.1</span> Exporting your map<a href="making-maps.html#exporting-your-map" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You can now export your map to use for a report, presentation, etc. One option is to use the method outlined in Chapter <a href="graph.html#export">10.7</a>. However, we can also use the function <code>ggsave()</code>. This will allow us to name our map as well as set the file format (.PNG, .JPEG, .TIFF), size (width and height in inches), and image resolution (dpi) when exporting the map.</p>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="making-maps.html#cb267-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;map_final.png&quot;</span>, <span class="at">plot =</span> NL.full, <span class="at">width =</span> <span class="dv">7</span>, <span class="at">height =</span> <span class="dv">7</span>, <span class="at">dpi =</span> <span class="st">&quot;screen&quot;</span>)</span></code></pre></div>
 </div>
 </div>
-<div id="additional-reading" class="section level2 hasAnchor" number="17.9">
-<h2><span class="header-section-number">17.9</span> Additional Reading<a href="making-maps.html#additional-reading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="additional-reading" class="section level2 hasAnchor" number="16.9">
+<h2><span class="header-section-number">16.9</span> Additional Reading<a href="making-maps.html#additional-reading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li><a href="https://bookdown.org/ededeban/ConsBioMap/" class="uri">https://bookdown.org/ededeban/ConsBioMap/</a></li>
 <li><a href="https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/understand-epsg-wkt-and-other-crs-definition-file-types/" class="uri">https://www.earthdatascience.org/courses/earth-analytics/spatial-data-r/understand-epsg-wkt-and-other-crs-definition-file-types/</a></li>
@@ -617,7 +620,7 @@ We use <code>annotation_scale()</code> to add a scale bar to the map. The locati
           </div>
         </div>
       </div>
-<a href="silhouettes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ggplot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="rmarkdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -678,7 +681,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

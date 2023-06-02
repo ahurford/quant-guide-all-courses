@@ -1,5 +1,7 @@
 # Advanced graphing - silhouettes {#silhouettes}
 
+# IT SEEMS THAT `image_data()` is deprecated - we need to re-write this section of the manual.
+
 ```{r, echo = F}
 library(rphylopic)
 library(ggplot2)
