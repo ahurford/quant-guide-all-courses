@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11 Statistics in R | Quantitative skills for biology</title>
   <meta name="description" content="11 Statistics in R | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11 Statistics in R | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -240,6 +240,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
+<li class="chapter" data-level="8.2.3" data-path="data-entry.html"><a href="data-entry.html#loading-data-hosted-on-a-url"><i class="fa fa-check"></i><b>8.2.3</b> Loading data hosted on a url</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
@@ -440,23 +441,23 @@ div.csl-indent {
 <p><span class="math inline">\(H_0: \mu = 0\)</span></p>
 <p><span class="math inline">\(H_1: \mu \neq 0\)</span></p>
 <p>Below, we generate some example data, <code>x</code>, to illustrate how to perform a <code>t.test</code> (when performing your analysis, this step is replaced with the step of loading or entering your data, i.e., see Chapter <a href="data-entry.html#data-entry">8</a>).</p>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="statistics.html#cb185-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb185-2"><a href="statistics.html#cb185-2" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
-<pre><code>##  [1] -0.09379508 -1.91475528  0.08916456 -0.29356725 -0.72598883 -1.43215379
-##  [7] -0.62253244  1.66207451 -1.64978994 -1.12819262</code></pre>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="statistics.html#cb186-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
+<span id="cb186-2"><a href="statistics.html#cb186-2" tabindex="-1"></a>x</span></code></pre></div>
+<pre><code>##  [1] -0.4296418 -0.4476683  1.0993464  0.7467308  0.4197083  0.4570000
+##  [7] -0.2396803  0.1601489  1.0172255 -0.3356855</code></pre>
 <p>Before running the analysis, we decide to set <span class="math inline">\(\alpha = 0.05\)</span>. Perform the test:</p>
-<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="statistics.html#cb187-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="statistics.html#cb188-1" tabindex="-1"></a><span class="fu">t.test</span>(x)</span></code></pre></div>
 <pre><code>## 
 ##  One Sample t-test
 ## 
 ## data:  x
-## t = -1.8553, df = 9, p-value = 0.09653
+## t = 1.3046, df = 9, p-value = 0.2244
 ## alternative hypothesis: true mean is not equal to 0
 ## 95 percent confidence interval:
-##  -1.3558781  0.1339708
+##  -0.1796486  0.6691454
 ## sample estimates:
-##  mean of x 
-## -0.6109536</code></pre>
+## mean of x 
+## 0.2447484</code></pre>
 <p>Running this code, gives p-values greater than <span class="math inline">\(\alpha = 0.05\)</span>. Therefore, we fail to reject the <em>null hypothesis</em> that the weight change in the population of domestic cats is 0. As such, our data suggest that the cats have not changed weight.</p>
 <p>The <code>t.test</code> function can be expanded by using additional arguments or changing arguments as required. For example, we can performed a one-sided test.</p>
 <pre><code>t.test(x, y = NULL,
@@ -480,10 +481,10 @@ div.csl-indent {
 <div id="exercise-11.1" class="section level4 unnumbered hasAnchor">
 <h4>EXERCISE 11.1<a href="statistics.html#exercise-11.1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Suppose the <code>10</code> measures of change in cat weight were instead:</p>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="statistics.html#cb190-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)<span class="sc">+</span><span class="dv">1</span></span>
-<span id="cb190-2"><a href="statistics.html#cb190-2" aria-hidden="true" tabindex="-1"></a>x2</span></code></pre></div>
-<pre><code>##  [1] 0.1242055 1.1087655 1.2294481 0.3944117 0.4000079 1.2962614 1.2894279
-##  [8] 1.2823011 1.8524004 1.0099932</code></pre>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="statistics.html#cb191-1" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb191-2"><a href="statistics.html#cb191-2" tabindex="-1"></a>x2</span></code></pre></div>
+<pre><code>##  [1]  0.71215338  1.07444562 -0.22316248  1.35122213 -0.41579385  0.31419823
+##  [7]  1.46777153 -0.06944413  0.78848306 -0.51138145</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>Using the code above to generate the example data, <code>x2</code>, perform a t-test with the <em>null hypothesis</em> that the change in weight of the cat population was 0.</p></li>
 <li><p>Perform a t-test with the <em>null hypothesis</em> that the cats in the sample, <code>x2</code> have lost weight.</p></li>
@@ -498,29 +499,29 @@ div.csl-indent {
 <ul>
 <li>For positively-associated variables, an <strong>increase</strong> in one variable accompanies an <strong>increase</strong> in the other variable, and <span class="math inline">\(r &gt; 0\)</span>:</li>
 </ul>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-103-1.png" width="672" /></p>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="statistics.html#cb192-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-104-1.png" width="672" /></p>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="statistics.html#cb193-1" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y)</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>For the output above, the value <code>1</code> means <span class="math inline">\(r=1\)</span>, indicating a perfect positive correlation between two variables.</p>
 <ul>
 <li>For negatively-associated variables, an <strong>increase</strong> in one variable accompanies a <strong>decrease</strong> in the other variable, and <span class="math inline">\(r &lt; 0\)</span>:</li>
 </ul>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-105-1.png" width="672" /></p>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="statistics.html#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y<span class="fl">.1</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-106-1.png" width="672" /></p>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="statistics.html#cb195-1" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x,data<span class="sc">$</span>y<span class="fl">.1</span>)</span></code></pre></div>
 <pre><code>## [1] -1</code></pre>
 <p>For the output above, the value <code>-1</code> means <span class="math inline">\(r=-1\)</span>, indicating a perfect negative correlation between two variables.</p>
 <ul>
 <li>When two variables are not correlated, <span class="math inline">\(r\)</span> is near 0:</li>
 </ul>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-107-1.png" width="672" /></p>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="statistics.html#cb196-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y<span class="fl">.3</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-108-1.png" width="672" /></p>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="statistics.html#cb197-1" tabindex="-1"></a><span class="fu">cor</span>(data<span class="sc">$</span>x, data<span class="sc">$</span>y<span class="fl">.3</span>)</span></code></pre></div>
 <pre><code>## [1] 0.1684607</code></pre>
 <div id="corxy" class="section level3 hasAnchor" number="11.5.1">
 <h3><span class="header-section-number">11.5.1</span> cor(x,y)<a href="statistics.html#corxy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The correlation coefficient, <span class="math inline">\(r\)</span>, is calculated with the <code>corr(x,y)</code> function. The function has two mandatory arguments, <code>x</code> and <code>y</code>, which are lists of values of equal length:</p>
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="statistics.html#cb198-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb198-2"><a href="statistics.html#cb198-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
-<span id="cb198-3"><a href="statistics.html#cb198-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(x, y)</span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="statistics.html#cb199-1" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb199-2"><a href="statistics.html#cb199-2" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
+<span id="cb199-3"><a href="statistics.html#cb199-3" tabindex="-1"></a><span class="fu">cor</span>(x, y)</span></code></pre></div>
 <pre><code>## [1] 0.9939441</code></pre>
 <div id="exercise-11.2" class="section level4 unnumbered hasAnchor">
 <h4>EXERCISE 11.2<a href="statistics.html#exercise-11.2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -536,27 +537,27 @@ div.csl-indent {
 <p>Similar to correlation, simple linear regression analysis can determine if two numeric variables are linearly related. Linear regression estimates parameters in a linear equation that can be used to predict values of one variable based on the other. The simple linear regression equation is often represented in the form <code>y = mx + b</code>. Here, m represents the slope of the line and b represents the y-intercept.</p>
 <p>A line of best fit represents a trendline that approximates the relationship between points of a scatter plot. Most often, we will use a linear equation to estimate this relationship.</p>
 <p>We can calculate this equation by hand but R will do this for us using the function <code>abline()</code>, specifying <code>lm()</code> for linear model. The syntax we use for the equation is <code>lm(y-variable ~ x-variable)</code>.</p>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="statistics.html#cb200-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">9</span>)</span>
-<span id="cb200-2"><a href="statistics.html#cb200-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb200-3"><a href="statistics.html#cb200-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">29</span>, <span class="dv">33</span>)</span>
-<span id="cb200-4"><a href="statistics.html#cb200-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb200-5"><a href="statistics.html#cb200-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span>
-<span id="cb200-6"><a href="statistics.html#cb200-6" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(y <span class="sc">~</span> x))</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="statistics.html#cb201-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">9</span>)</span>
+<span id="cb201-2"><a href="statistics.html#cb201-2" tabindex="-1"></a></span>
+<span id="cb201-3"><a href="statistics.html#cb201-3" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">29</span>, <span class="dv">33</span>)</span>
+<span id="cb201-4"><a href="statistics.html#cb201-4" tabindex="-1"></a></span>
+<span id="cb201-5"><a href="statistics.html#cb201-5" tabindex="-1"></a><span class="fu">plot</span>(x, y)</span>
+<span id="cb201-6"><a href="statistics.html#cb201-6" tabindex="-1"></a><span class="fu">abline</span>(<span class="fu">lm</span>(y <span class="sc">~</span> x))</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-111-1.png" width="672" /></p>
 <p>Note that we use the <code>abline()</code> function after <code>plot()</code>. This will add the line of best fit to the existing plot, but it will not plot a line on its own.</p>
 <div id="adding-lines-of-best-fit-with-ggplot" class="section level3 hasAnchor" number="11.6.1">
 <h3><span class="header-section-number">11.6.1</span> Adding lines of best fit with ggplot<a href="statistics.html#adding-lines-of-best-fit-with-ggplot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When creating figures with <a href="ggplot.html#ggplot">15</a>, we build layers of our graphic by adding additional geoms. This is also the case if we want to add a line of best fit. We build our scatterplot by specifying <code>geom_point</code>, then use <code>geom_smooth</code> for the regression line, specifying <code>method = "lm"</code> for a linear model.</p>
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="statistics.html#cb201-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">9</span>)</span>
-<span id="cb201-2"><a href="statistics.html#cb201-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb201-3"><a href="statistics.html#cb201-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">29</span>, <span class="dv">33</span>)</span>
-<span id="cb201-4"><a href="statistics.html#cb201-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb201-5"><a href="statistics.html#cb201-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(x, y)</span>
-<span id="cb201-6"><a href="statistics.html#cb201-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb201-7"><a href="statistics.html#cb201-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
-<span id="cb201-8"><a href="statistics.html#cb201-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb201-9"><a href="statistics.html#cb201-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span> <span class="st">&quot;lm&quot;</span>, <span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<p><img src="quant-guide_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="statistics.html#cb202-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">6</span>, <span class="dv">9</span>)</span>
+<span id="cb202-2"><a href="statistics.html#cb202-2" tabindex="-1"></a></span>
+<span id="cb202-3"><a href="statistics.html#cb202-3" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">16</span>, <span class="dv">25</span>, <span class="dv">29</span>, <span class="dv">33</span>)</span>
+<span id="cb202-4"><a href="statistics.html#cb202-4" tabindex="-1"></a></span>
+<span id="cb202-5"><a href="statistics.html#cb202-5" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(x, y)</span>
+<span id="cb202-6"><a href="statistics.html#cb202-6" tabindex="-1"></a></span>
+<span id="cb202-7"><a href="statistics.html#cb202-7" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> df, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span> </span>
+<span id="cb202-8"><a href="statistics.html#cb202-8" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb202-9"><a href="statistics.html#cb202-9" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span> <span class="st">&quot;lm&quot;</span>, <span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<p><img src="quant-guide_files/figure-html/unnamed-chunk-113-1.png" width="672" /></p>
 
 </div>
 </div>

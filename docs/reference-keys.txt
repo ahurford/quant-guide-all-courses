@@ -3,12 +3,13 @@ fig:R-vs-RStudio-2
 fig:panes
 fig:import-feature
 fig:import-dialog
+fig:raw
 fig:panes2
 fig:panes3
-fig:unnamed-chunk-166
 fig:unnamed-chunk-167
-fig:unnamed-chunk-169
-tab:unnamed-chunk-170
+fig:unnamed-chunk-168
+fig:unnamed-chunk-170
+tab:unnamed-chunk-171
 intro
 course-links
 instructor-guide
@@ -53,6 +54,7 @@ entering-data
 loading-or-importing-data
 programmatic
 the-rstudio-way-the-import-feature
+loading-data-hosted-on-a-url
 inspecting-the-data
 handling-data
 base-r

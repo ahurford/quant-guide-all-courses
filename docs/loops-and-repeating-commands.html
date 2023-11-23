@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>14 Loops and repeating commands | Quantitative skills for biology</title>
   <meta name="description" content="14 Loops and repeating commands | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="14 Loops and repeating commands | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -240,6 +240,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
+<li class="chapter" data-level="8.2.3" data-path="data-entry.html"><a href="data-entry.html#loading-data-hosted-on-a-url"><i class="fa fa-check"></i><b>8.2.3</b> Loading data hosted on a url</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
@@ -421,19 +422,19 @@ div.csl-indent {
 statement
 }</code></pre>
 <p>In the for loop below, we have specified a vector containing the numbers 1 to 5. The statement within the <code>{}</code> will use the <code>print</code> function to return the value of <code>i</code> with each loop or iteration. In this example, the loop iterates 5 times as the vector within <code>for()</code> contains 5 elements.</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="loops-and-repeating-commands.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) {</span>
-<span id="cb216-2"><a href="loops-and-repeating-commands.html#cb216-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
-<span id="cb216-3"><a href="loops-and-repeating-commands.html#cb216-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="loops-and-repeating-commands.html#cb217-1" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) {</span>
+<span id="cb217-2"><a href="loops-and-repeating-commands.html#cb217-2" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb217-3"><a href="loops-and-repeating-commands.html#cb217-3" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] 1
 ## [1] 2
 ## [1] 3
 ## [1] 4
 ## [1] 5</code></pre>
 <p>Instead of creating the vectors within <code>for()</code>, we can also use existing vectors. We first assign the vector we are looping over before calling the loop. In the example below, the loop will return the squared value for each term within x.</p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="loops-and-repeating-commands.html#cb218-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb218-2"><a href="loops-and-repeating-commands.html#cb218-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> x) {</span>
-<span id="cb218-3"><a href="loops-and-repeating-commands.html#cb218-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb218-4"><a href="loops-and-repeating-commands.html#cb218-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="loops-and-repeating-commands.html#cb219-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb219-2"><a href="loops-and-repeating-commands.html#cb219-2" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> x) {</span>
+<span id="cb219-3"><a href="loops-and-repeating-commands.html#cb219-3" tabindex="-1"></a>  <span class="fu">print</span>(i<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb219-4"><a href="loops-and-repeating-commands.html#cb219-4" tabindex="-1"></a>}</span></code></pre></div>
 <pre><code>## [1] 1
 ## [1] 4
 ## [1] 9
@@ -441,27 +442,27 @@ statement
 ## [1] 25</code></pre>
 <p>Often we will want to save the output from our loop. The first option is to make a blank vector or data frame and save the results to it.</p>
 <p>In the example below, we first create an empty vector <code>x</code>. The for loop first calculates the square of the numbers 1 to 10 and then saves them to vector <code>x</code>.</p>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="loops-and-repeating-commands.html#cb220-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">vector</span>() </span>
-<span id="cb220-2"><a href="loops-and-repeating-commands.html#cb220-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb220-3"><a href="loops-and-repeating-commands.html#cb220-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
-<span id="cb220-4"><a href="loops-and-repeating-commands.html#cb220-4" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> i<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb220-5"><a href="loops-and-repeating-commands.html#cb220-5" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">c</span>(x, y)</span>
-<span id="cb220-6"><a href="loops-and-repeating-commands.html#cb220-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb220-7"><a href="loops-and-repeating-commands.html#cb220-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb220-8"><a href="loops-and-repeating-commands.html#cb220-8" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="loops-and-repeating-commands.html#cb221-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">vector</span>() </span>
+<span id="cb221-2"><a href="loops-and-repeating-commands.html#cb221-2" tabindex="-1"></a></span>
+<span id="cb221-3"><a href="loops-and-repeating-commands.html#cb221-3" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb221-4"><a href="loops-and-repeating-commands.html#cb221-4" tabindex="-1"></a>  y <span class="ot">&lt;-</span> i<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb221-5"><a href="loops-and-repeating-commands.html#cb221-5" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">c</span>(x, y)</span>
+<span id="cb221-6"><a href="loops-and-repeating-commands.html#cb221-6" tabindex="-1"></a>}</span>
+<span id="cb221-7"><a href="loops-and-repeating-commands.html#cb221-7" tabindex="-1"></a></span>
+<span id="cb221-8"><a href="loops-and-repeating-commands.html#cb221-8" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>##  [1]   1   4   9  16  25  36  49  64  81 100</code></pre>
 <p>If you know the dimensions of your data, you can also make a blank vector or dataframe of a specified size. This can help increase processing speeds for more complicated loops. For example, if we had a loop with 10 elements, we could store the results of each operation in a vector with a length of 10</p>
 <p>Here is code that will store both the square and the square root of the numbers 1 to 10 in two columns of a new dataframe called x2</p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="loops-and-repeating-commands.html#cb222-1" aria-hidden="true" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">col1 =</span> <span class="fu">vector</span>(<span class="at">length =</span> <span class="dv">10</span>), <span class="at">col2 =</span> <span class="fu">vector</span>(<span class="at">length =</span> <span class="dv">10</span>)) </span>
-<span id="cb222-2"><a href="loops-and-repeating-commands.html#cb222-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb222-3"><a href="loops-and-repeating-commands.html#cb222-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
-<span id="cb222-4"><a href="loops-and-repeating-commands.html#cb222-4" aria-hidden="true" tabindex="-1"></a>  col1 <span class="ot">&lt;-</span> i<span class="sc">^</span><span class="dv">2</span> </span>
-<span id="cb222-5"><a href="loops-and-repeating-commands.html#cb222-5" aria-hidden="true" tabindex="-1"></a>  col2 <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(i) </span>
-<span id="cb222-6"><a href="loops-and-repeating-commands.html#cb222-6" aria-hidden="true" tabindex="-1"></a>  x2[i, <span class="dv">1</span>] <span class="ot">&lt;-</span> col1 </span>
-<span id="cb222-7"><a href="loops-and-repeating-commands.html#cb222-7" aria-hidden="true" tabindex="-1"></a>  x2[i, <span class="dv">2</span>] <span class="ot">&lt;-</span> col2 </span>
-<span id="cb222-8"><a href="loops-and-repeating-commands.html#cb222-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb222-9"><a href="loops-and-repeating-commands.html#cb222-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb222-10"><a href="loops-and-repeating-commands.html#cb222-10" aria-hidden="true" tabindex="-1"></a>x2</span></code></pre></div>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="loops-and-repeating-commands.html#cb223-1" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">col1 =</span> <span class="fu">vector</span>(<span class="at">length =</span> <span class="dv">10</span>), <span class="at">col2 =</span> <span class="fu">vector</span>(<span class="at">length =</span> <span class="dv">10</span>)) </span>
+<span id="cb223-2"><a href="loops-and-repeating-commands.html#cb223-2" tabindex="-1"></a></span>
+<span id="cb223-3"><a href="loops-and-repeating-commands.html#cb223-3" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) {</span>
+<span id="cb223-4"><a href="loops-and-repeating-commands.html#cb223-4" tabindex="-1"></a>  col1 <span class="ot">&lt;-</span> i<span class="sc">^</span><span class="dv">2</span> </span>
+<span id="cb223-5"><a href="loops-and-repeating-commands.html#cb223-5" tabindex="-1"></a>  col2 <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(i) </span>
+<span id="cb223-6"><a href="loops-and-repeating-commands.html#cb223-6" tabindex="-1"></a>  x2[i, <span class="dv">1</span>] <span class="ot">&lt;-</span> col1 </span>
+<span id="cb223-7"><a href="loops-and-repeating-commands.html#cb223-7" tabindex="-1"></a>  x2[i, <span class="dv">2</span>] <span class="ot">&lt;-</span> col2 </span>
+<span id="cb223-8"><a href="loops-and-repeating-commands.html#cb223-8" tabindex="-1"></a>}</span>
+<span id="cb223-9"><a href="loops-and-repeating-commands.html#cb223-9" tabindex="-1"></a></span>
+<span id="cb223-10"><a href="loops-and-repeating-commands.html#cb223-10" tabindex="-1"></a>x2</span></code></pre></div>
 <pre><code>##    col1     col2
 ## 1     1 1.000000
 ## 2     4 1.414214
@@ -474,7 +475,7 @@ statement
 ## 9    81 3.000000
 ## 10  100 3.162278</code></pre>
 <p>Now let’s say we are given a dataset that includes three experiments across four different sites.</p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="loops-and-repeating-commands.html#cb224-1" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="loops-and-repeating-commands.html#cb225-1" tabindex="-1"></a>data</span></code></pre></div>
 <pre><code>##    site experiment length width height
 ## 1     1          1    2.2   1.3    9.6
 ## 2     1          2    2.1   2.2    7.6
@@ -489,18 +490,18 @@ statement
 ## 11    4          2    4.5   4.8    6.5
 ## 12    4          3    1.2    NA    2.7</code></pre>
 <p>We are then asked to calculate the correlation between shrub length and height for experiment 1 and 2. We first create a vector that specifies these experiment numbers and then create an empty vector that will be used to store the correlation results.</p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="loops-and-repeating-commands.html#cb226-1" aria-hidden="true" tabindex="-1"></a>exp_num <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb226-2"><a href="loops-and-repeating-commands.html#cb226-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb226-3"><a href="loops-and-repeating-commands.html#cb226-3" aria-hidden="true" tabindex="-1"></a>cor_output <span class="ot">&lt;-</span> <span class="fu">c</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="loops-and-repeating-commands.html#cb227-1" tabindex="-1"></a>exp_num <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb227-2"><a href="loops-and-repeating-commands.html#cb227-2" tabindex="-1"></a></span>
+<span id="cb227-3"><a href="loops-and-repeating-commands.html#cb227-3" tabindex="-1"></a>cor_output <span class="ot">&lt;-</span> <span class="fu">c</span>()</span></code></pre></div>
 <p>Within our <code>for()</code> loop we will need to include several steps. First we subset our data using the values previously defined in <code>exp_num</code> above and store as a variable, which we call <code>exp_subset</code>. We then calculate the correlation between length and height from <code>exp_subet</code>. Next we create a dataframe that will include both the experiment number as well as the correlation results and finally, we use the function <code>rbind</code> to bind the rows from <code>df_cor</code> with our empty vector.</p>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="loops-and-repeating-commands.html#cb227-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> exp_num){</span>
-<span id="cb227-2"><a href="loops-and-repeating-commands.html#cb227-2" aria-hidden="true" tabindex="-1"></a>  exp_subset <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, experiment <span class="sc">==</span> exp_num[i])</span>
-<span id="cb227-3"><a href="loops-and-repeating-commands.html#cb227-3" aria-hidden="true" tabindex="-1"></a>  cor_val <span class="ot">&lt;-</span> <span class="fu">cor</span>(exp_subset<span class="sc">$</span>length, exp_subset<span class="sc">$</span>height) </span>
-<span id="cb227-4"><a href="loops-and-repeating-commands.html#cb227-4" aria-hidden="true" tabindex="-1"></a>  df_cor <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">experiment =</span> i,</span>
-<span id="cb227-5"><a href="loops-and-repeating-commands.html#cb227-5" aria-hidden="true" tabindex="-1"></a>                       <span class="at">correlation =</span> cor_val)</span>
-<span id="cb227-6"><a href="loops-and-repeating-commands.html#cb227-6" aria-hidden="true" tabindex="-1"></a>  cor_output <span class="ot">&lt;-</span> <span class="fu">rbind</span>(cor_output, df_cor) </span>
-<span id="cb227-7"><a href="loops-and-repeating-commands.html#cb227-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb227-8"><a href="loops-and-repeating-commands.html#cb227-8" aria-hidden="true" tabindex="-1"></a>cor_output</span></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="loops-and-repeating-commands.html#cb228-1" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> exp_num){</span>
+<span id="cb228-2"><a href="loops-and-repeating-commands.html#cb228-2" tabindex="-1"></a>  exp_subset <span class="ot">&lt;-</span> <span class="fu">subset</span>(data, experiment <span class="sc">==</span> exp_num[i])</span>
+<span id="cb228-3"><a href="loops-and-repeating-commands.html#cb228-3" tabindex="-1"></a>  cor_val <span class="ot">&lt;-</span> <span class="fu">cor</span>(exp_subset<span class="sc">$</span>length, exp_subset<span class="sc">$</span>height) </span>
+<span id="cb228-4"><a href="loops-and-repeating-commands.html#cb228-4" tabindex="-1"></a>  df_cor <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">experiment =</span> i,</span>
+<span id="cb228-5"><a href="loops-and-repeating-commands.html#cb228-5" tabindex="-1"></a>                       <span class="at">correlation =</span> cor_val)</span>
+<span id="cb228-6"><a href="loops-and-repeating-commands.html#cb228-6" tabindex="-1"></a>  cor_output <span class="ot">&lt;-</span> <span class="fu">rbind</span>(cor_output, df_cor) </span>
+<span id="cb228-7"><a href="loops-and-repeating-commands.html#cb228-7" tabindex="-1"></a>}</span>
+<span id="cb228-8"><a href="loops-and-repeating-commands.html#cb228-8" tabindex="-1"></a>cor_output</span></code></pre></div>
 <pre><code>##   experiment correlation
 ## 1          1  -0.6332787
 ## 2          2   0.4844752</code></pre>

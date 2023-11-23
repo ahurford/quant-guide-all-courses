@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Best practices | Quantitative skills for biology</title>
   <meta name="description" content="7 Best practices | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Best practices | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -240,6 +240,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
+<li class="chapter" data-level="8.2.3" data-path="data-entry.html"><a href="data-entry.html#loading-data-hosted-on-a-url"><i class="fa fa-check"></i><b>8.2.3</b> Loading data hosted on a url</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
@@ -430,31 +431,31 @@ div.csl-indent {
 <div id="template" class="section level2 hasAnchor" number="7.5">
 <h2><span class="header-section-number">7.5</span> Template<a href="style.html#template" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Here is an example of a short script that follows good programming and style practices. Try to make your scripts look like this!</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="style.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Title: My R script for lab 1</span></span>
-<span id="cb53-2"><a href="style.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Author: Maria Skłodowska</span></span>
-<span id="cb53-3"><a href="style.html#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Date: 26-04-2020</span></span>
-<span id="cb53-4"><a href="style.html#cb53-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-5"><a href="style.html#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries needed ---------------------------</span></span>
-<span id="cb53-6"><a href="style.html#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vegan)</span>
-<span id="cb53-7"><a href="style.html#cb53-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-8"><a href="style.html#cb53-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Set working directory ---------------------------</span></span>
-<span id="cb53-9"><a href="style.html#cb53-9" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;/Users/me/Desktop/R-intro/&quot;</span>)</span>
-<span id="cb53-10"><a href="style.html#cb53-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-11"><a href="style.html#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data ---------------------------</span></span>
-<span id="cb53-12"><a href="style.html#cb53-12" aria-hidden="true" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;example_dataset1.csv&quot;</span>)</span>
-<span id="cb53-13"><a href="style.html#cb53-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-14"><a href="style.html#cb53-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Analyze data ---------------------------</span></span>
-<span id="cb53-15"><a href="style.html#cb53-15" aria-hidden="true" tabindex="-1"></a>temp <span class="ot">&lt;-</span> dataset<span class="sc">$</span>temp</span>
-<span id="cb53-16"><a href="style.html#cb53-16" aria-hidden="true" tabindex="-1"></a>fish_1 <span class="ot">&lt;-</span> dataset<span class="sc">$</span>fishA</span>
-<span id="cb53-17"><a href="style.html#cb53-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-18"><a href="style.html#cb53-18" aria-hidden="true" tabindex="-1"></a>fish_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(fish_1, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb53-19"><a href="style.html#cb53-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-20"><a href="style.html#cb53-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot data ---------------------------</span></span>
-<span id="cb53-21"><a href="style.html#cb53-21" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> temp, <span class="at">y =</span> fish_1, </span>
-<span id="cb53-22"><a href="style.html#cb53-22" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, </span>
-<span id="cb53-23"><a href="style.html#cb53-23" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, </span>
-<span id="cb53-24"><a href="style.html#cb53-24" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span></span>
-<span id="cb53-25"><a href="style.html#cb53-25" aria-hidden="true" tabindex="-1"></a>     )</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="style.html#cb53-1" tabindex="-1"></a><span class="co"># Title: My R script for lab 1</span></span>
+<span id="cb53-2"><a href="style.html#cb53-2" tabindex="-1"></a><span class="co"># Author: Maria Skłodowska</span></span>
+<span id="cb53-3"><a href="style.html#cb53-3" tabindex="-1"></a><span class="co"># Date: 26-04-2020</span></span>
+<span id="cb53-4"><a href="style.html#cb53-4" tabindex="-1"></a></span>
+<span id="cb53-5"><a href="style.html#cb53-5" tabindex="-1"></a><span class="co"># Load libraries needed ---------------------------</span></span>
+<span id="cb53-6"><a href="style.html#cb53-6" tabindex="-1"></a><span class="fu">library</span>(vegan)</span>
+<span id="cb53-7"><a href="style.html#cb53-7" tabindex="-1"></a></span>
+<span id="cb53-8"><a href="style.html#cb53-8" tabindex="-1"></a><span class="co"># Set working directory ---------------------------</span></span>
+<span id="cb53-9"><a href="style.html#cb53-9" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;/Users/me/Desktop/R-intro/&quot;</span>)</span>
+<span id="cb53-10"><a href="style.html#cb53-10" tabindex="-1"></a></span>
+<span id="cb53-11"><a href="style.html#cb53-11" tabindex="-1"></a><span class="co"># Load data ---------------------------</span></span>
+<span id="cb53-12"><a href="style.html#cb53-12" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;example_dataset1.csv&quot;</span>)</span>
+<span id="cb53-13"><a href="style.html#cb53-13" tabindex="-1"></a></span>
+<span id="cb53-14"><a href="style.html#cb53-14" tabindex="-1"></a><span class="co"># Analyze data ---------------------------</span></span>
+<span id="cb53-15"><a href="style.html#cb53-15" tabindex="-1"></a>temp <span class="ot">&lt;-</span> dataset<span class="sc">$</span>temp</span>
+<span id="cb53-16"><a href="style.html#cb53-16" tabindex="-1"></a>fish_1 <span class="ot">&lt;-</span> dataset<span class="sc">$</span>fishA</span>
+<span id="cb53-17"><a href="style.html#cb53-17" tabindex="-1"></a></span>
+<span id="cb53-18"><a href="style.html#cb53-18" tabindex="-1"></a>fish_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(fish_1, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb53-19"><a href="style.html#cb53-19" tabindex="-1"></a></span>
+<span id="cb53-20"><a href="style.html#cb53-20" tabindex="-1"></a><span class="co"># Plot data ---------------------------</span></span>
+<span id="cb53-21"><a href="style.html#cb53-21" tabindex="-1"></a><span class="fu">plot</span>(<span class="at">x =</span> temp, <span class="at">y =</span> fish_1, </span>
+<span id="cb53-22"><a href="style.html#cb53-22" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">17</span>, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, </span>
+<span id="cb53-23"><a href="style.html#cb53-23" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;temperature (degrees C)&quot;</span>, </span>
+<span id="cb53-24"><a href="style.html#cb53-24" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&quot;opercular beats (bpm)&quot;</span></span>
+<span id="cb53-25"><a href="style.html#cb53-25" tabindex="-1"></a>     )</span></code></pre></div>
 </div>
 <div id="checklist" class="section level2 hasAnchor" number="7.6">
 <h2><span class="header-section-number">7.6</span> Checklist<a href="style.html#checklist" class="anchor-section" aria-label="Anchor link to header"></a></h2>

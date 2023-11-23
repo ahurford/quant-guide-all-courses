@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6 How to ask for help | Quantitative skills for biology</title>
   <meta name="description" content="6 How to ask for help | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6 How to ask for help | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -240,6 +240,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
+<li class="chapter" data-level="8.2.3" data-path="data-entry.html"><a href="data-entry.html#loading-data-hosted-on-a-url"><i class="fa fa-check"></i><b>8.2.3</b> Loading data hosted on a url</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
@@ -424,20 +425,20 @@ div.csl-indent {
 <li><p>Example of a good question:</p></li>
 </ol>
 <p>Subject: transform matrix to dataframe of specific dimensions.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="howtoask.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If I have a matrix x as follows:</span></span>
-<span id="cb51-2"><a href="howtoask.html#cb51-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">nrow=</span><span class="dv">4</span>, <span class="at">ncol=</span><span class="dv">2</span>,</span>
-<span id="cb51-3"><a href="howtoask.html#cb51-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">dimnames=</span><span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;x&quot;</span>,<span class="st">&quot;y&quot;</span>)))</span>
-<span id="cb51-4"><a href="howtoask.html#cb51-4" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="howtoask.html#cb51-1" tabindex="-1"></a><span class="co"># If I have a matrix x as follows:</span></span>
+<span id="cb51-2"><a href="howtoask.html#cb51-2" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">nrow=</span><span class="dv">4</span>, <span class="at">ncol=</span><span class="dv">2</span>,</span>
+<span id="cb51-3"><a href="howtoask.html#cb51-3" tabindex="-1"></a>       <span class="at">dimnames=</span><span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>,<span class="st">&quot;D&quot;</span>), <span class="fu">c</span>(<span class="st">&quot;x&quot;</span>,<span class="st">&quot;y&quot;</span>)))</span>
+<span id="cb51-4"><a href="howtoask.html#cb51-4" tabindex="-1"></a>x</span></code></pre></div>
 <p>How can I turn it into a dataframe with eight rows, and three
 columns named ‘row’, ‘col’, and ‘value’, which have the
 dimension names as the values of ‘row’ and ‘col’?</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="howtoask.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># example of desired output</span></span>
-<span id="cb52-2"><a href="howtoask.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="co"># x_transformed</span></span>
-<span id="cb52-3"><a href="howtoask.html#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="co">#     row col value </span></span>
-<span id="cb52-4"><a href="howtoask.html#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="co">#       A   x     1</span></span>
-<span id="cb52-5"><a href="howtoask.html#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="co">#       B   x     2</span></span>
-<span id="cb52-6"><a href="howtoask.html#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="co">#       C   x     3</span></span>
-<span id="cb52-7"><a href="howtoask.html#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="co">#       ...</span></span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="howtoask.html#cb52-1" tabindex="-1"></a><span class="co"># example of desired output</span></span>
+<span id="cb52-2"><a href="howtoask.html#cb52-2" tabindex="-1"></a><span class="co"># x_transformed</span></span>
+<span id="cb52-3"><a href="howtoask.html#cb52-3" tabindex="-1"></a><span class="co">#     row col value </span></span>
+<span id="cb52-4"><a href="howtoask.html#cb52-4" tabindex="-1"></a><span class="co">#       A   x     1</span></span>
+<span id="cb52-5"><a href="howtoask.html#cb52-5" tabindex="-1"></a><span class="co">#       B   x     2</span></span>
+<span id="cb52-6"><a href="howtoask.html#cb52-6" tabindex="-1"></a><span class="co">#       C   x     3</span></span>
+<span id="cb52-7"><a href="howtoask.html#cb52-7" tabindex="-1"></a><span class="co">#       ...</span></span></code></pre></div>
 
 </div>
             </section>

@@ -69,8 +69,8 @@ Here are two articles that do a nice job discussing the differences and pros/con
 
 ## Loading or importing data
 
-We will look at two ways of importing data into R, via a command or using the import feature.
-Both options are equivalent; and when they are sucsesfull you will see your data as
+We will look at three ways of importing data into R: 1) via a command, 2) using the import feature, or 3) directly from the internet.
+The first two options are equivalent. The third option is easier but requires an internet connection. When they are successful you will see your data as
 a new object in the Environment tab (in the Environment/History pane).
 
 ### The programmatic way (i.e., command line) {#programmatic}
@@ -84,6 +84,8 @@ data2 <- read.csv(file = "solution-concentration-effect-on-potato-averages.csv")
 
 Here, the argument `file =` of `read.csv` is the name of the file we want to read.
 Notice that the filename needs to be a character string, so we put it in quotes.
+
+This method is the best way to import your data, however depending on your familiarity with your computer's file structure you may spend quite some time determining how to the call the path to where you have saved your `.csv` file.
 
 
 ### The RStudio way (the "import" feature)
@@ -116,6 +118,29 @@ knitr::include_graphics('./figures/import-dialog.png')
 
 RStudio will now run the R code that imports your dataset. 
 It will be similar to the command used in Section \@ref(programmatic).
+
+### Loading data hosted on a url
+For Memorial University biology courses we try to host data on the internet so that it is easy to import data when there is an internet connection.
+
+For example, the Falik et al. data that is used in BIOL 1001 can be loaded using this command:
+
+```{r}
+Falik.Data = read.csv("https://raw.githubusercontent.com/ahurford/quant-guide-data/main/BIOL1001-data/FalikDataset.csv")
+```
+
+You can copy and paste this code into your Console or Script and if you have an internet connection the data will load.
+
+Data that we know is used in Biology courses at Memorial are hosted [here](https://github.com/ahurford/quant-guide-data/tree/main). If you are a Memorial University instructor and would like to add your data, please email ahurford-at-mun.ca.
+
+To find the correct url, you should navigate through the folders to the data source that you are interested in, then click the `Raw` button.
+
+```{r raw, fig.cap="The raw button for data hosted on Github.", fig.align='center', out.width="70%", fig.show='hold', echo=FALSE}
+knitr::include_graphics('./figures/raw.png')
+```
+
+This will navigate to the url that you can copy and paste into your R script. For the example above, this is: [https://raw.githubusercontent.com/ahurford/quant-guide-data/main/BIOL1001-data/FalikDataset.csv](https://raw.githubusercontent.com/ahurford/quant-guide-data/main/BIOL1001-data/FalikDataset.csv)
+
+This approach to loading data can be vastly easier for beginners, however, it requires that the data is appropriately hosted on the internet (which may not always be the case) and so eventually learning the one of the other two methods is recommended.
 
 ## Inspecting the data
 

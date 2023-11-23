@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Finding your way around RStudio | Quantitative skills for biology</title>
   <meta name="description" content="3 Finding your way around RStudio | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Finding your way around RStudio | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -240,6 +240,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
+<li class="chapter" data-level="8.2.3" data-path="data-entry.html"><a href="data-entry.html#loading-data-hosted-on-a-url"><i class="fa fa-check"></i><b>8.2.3</b> Loading data hosted on a url</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
@@ -419,25 +420,25 @@ Figure 3.1: Panes in RStudio. 1. Console pane, where code is executed by R. 2. S
 <h2><span class="header-section-number">3.1</span> Console pane<a href="rstudio.html#console-pane" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Console pane (labeled 1 in Figure <a href="rstudio.html#fig:panes">3.1</a>) is where code is evaluated (also referred to as executed). The Console pane has a prompt (the <code>&gt;</code> symbol), which tell you that R is ready to receive input. You can type code here to evaluate it and get an output.</p>
 <p><strong>TRY IT!</strong> Type 5 + 5 in the console at the prompt and press <code>enter</code> or <code>return</code>. You’ll see that R gives the correct output (Don’t worry about the [1] for now, we’ll discuss what this means later.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rstudio.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="rstudio.html#cb1-1" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>## [1] 10</code></pre>
 <p>Use the console to test and query code, or do a quick analysis that you do not want to save. Press the up arrow to scroll through past commands, from most to least recent.</p>
 <p>To do more interesting things, we need to assign values to objects. For this, we create an object by specifying a name followed by the assignment operator <code>&lt;-</code> and the value we want to give it. For example:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="rstudio.html#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="rstudio.html#cb3-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">5</span></span></code></pre></div>
 <p>When you run this code by pressing <code>enter/return</code> you will not see an output as you did before. But, you can ask R for the value by typing the object name and pressing <code>enter/return</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rstudio.html#cb4-1" aria-hidden="true" tabindex="-1"></a>x </span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="rstudio.html#cb4-1" tabindex="-1"></a>x </span></code></pre></div>
 <pre><code>## [1] 5</code></pre>
 <p>Now that we have saved the value of <code>x</code>, we can do arithmetic operations with it. For example, instead of adding two numbers, we can assign those values to objects and then add them.</p>
 <p><strong>TRY IT!</strong> Add 3 and 8 by assigning the values to objects. First assign 3 to <code>x</code> and 8 to <code>y</code>. Then add <code>x+y</code>.</p>
 <p>You can overwrite the value of objects The current value of your object is the last value you gave it. In the console type:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="rstudio.html#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="rstudio.html#cb6-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">2</span></span></code></pre></div>
 <p>Press <code>enter/return</code>. Now type:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="rstudio.html#cb7-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="rstudio.html#cb7-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span></span></code></pre></div>
 <p>Press <code>enter/return</code>. What is the value of</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rstudio.html#cb8-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="rstudio.html#cb8-1" tabindex="-1"></a>x <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div>
 <pre><code>## [1] 2</code></pre>
 <p>Type:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rstudio.html#cb10-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="rstudio.html#cb10-1" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>to query the current value of <code>x</code>.</p>
 <hr />
@@ -451,7 +452,7 @@ Figure 3.1: Panes in RStudio. 1. Console pane, where code is executed by R. 2. S
 <pre><code>x &lt;- 4
 x &lt;- 6</code></pre>
 <p>Now, you have saved this code, but has it been evaluated? To answer this question type <code>x</code> in your <code>Console</code> and press ENTER:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="rstudio.html#cb13-1" aria-hidden="true" tabindex="-1"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="rstudio.html#cb13-1" tabindex="-1"></a>x</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>It is important to note that saving commands in a script in your <code>Source</code> window does not evaluate the commands in your <code>Console</code>. To execute the commands, with your script displayed in the <code>Source</code> pane, you need to click the <code>Source</code> button (righthand side of the source pane, equivalently select <code>Code &gt; Source</code> from the top menu bar; note, if you have a small <code>Source</code> pane the <code>Source</code> button may not appear and you may need to make it bigger or use the menu bar).</p>
 <p><code>Source</code> your script and then evaluate <code>x</code> in your <code>Console</code>. If you have done this task correctly the value of <code>x</code> should be <code>6</code> and it will appear as <code>[1] 6</code> in your <code>Console</code>.</p>

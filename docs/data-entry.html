@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8 Entering and loading data | Quantitative skills for biology</title>
   <meta name="description" content="8 Entering and loading data | Quantitative skills for biology" />
-  <meta name="generator" content="bookdown 0.36 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8 Entering and loading data | Quantitative skills for biology" />
   <meta property="og:type" content="book" />
@@ -240,6 +240,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="8.2.1" data-path="data-entry.html"><a href="data-entry.html#programmatic"><i class="fa fa-check"></i><b>8.2.1</b> The programmatic way (i.e., command line)</a></li>
 <li class="chapter" data-level="8.2.2" data-path="data-entry.html"><a href="data-entry.html#the-rstudio-way-the-import-feature"><i class="fa fa-check"></i><b>8.2.2</b> The RStudio way (the “import” feature)</a></li>
+<li class="chapter" data-level="8.2.3" data-path="data-entry.html"><a href="data-entry.html#loading-data-hosted-on-a-url"><i class="fa fa-check"></i><b>8.2.3</b> Loading data hosted on a url</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="data-entry.html"><a href="data-entry.html#inspecting-the-data"><i class="fa fa-check"></i><b>8.3</b> Inspecting the data</a></li>
 </ul></li>
@@ -425,14 +426,14 @@ and save them using R.</p>
 <p>Let’s start by
 making Table 1 for your report, which we will call
 <code>solution-concentration-effect-on-potato.csv</code>:</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="data-entry.html#cb54-1" aria-hidden="true" tabindex="-1"></a>table1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">weight =</span> <span class="fu">c</span>(<span class="st">&quot;initial&quot;</span>, <span class="st">&quot;final&quot;</span>, </span>
-<span id="cb54-2"><a href="data-entry.html#cb54-2" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;difference&quot;</span>, <span class="st">&quot;percent-change&quot;</span>), </span>
-<span id="cb54-3"><a href="data-entry.html#cb54-3" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb54-4"><a href="data-entry.html#cb54-4" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb54-5"><a href="data-entry.html#cb54-5" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-2-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb54-6"><a href="data-entry.html#cb54-6" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-5-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>))</span>
-<span id="cb54-7"><a href="data-entry.html#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x =</span> table1, <span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>, </span>
-<span id="cb54-8"><a href="data-entry.html#cb54-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="data-entry.html#cb54-1" tabindex="-1"></a>table1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">weight =</span> <span class="fu">c</span>(<span class="st">&quot;initial&quot;</span>, <span class="st">&quot;final&quot;</span>, </span>
+<span id="cb54-2"><a href="data-entry.html#cb54-2" tabindex="-1"></a>                                <span class="st">&quot;difference&quot;</span>, <span class="st">&quot;percent-change&quot;</span>), </span>
+<span id="cb54-3"><a href="data-entry.html#cb54-3" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
+<span id="cb54-4"><a href="data-entry.html#cb54-4" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
+<span id="cb54-5"><a href="data-entry.html#cb54-5" tabindex="-1"></a>                     <span class="st">&quot;NaCl-2-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
+<span id="cb54-6"><a href="data-entry.html#cb54-6" tabindex="-1"></a>                     <span class="st">&quot;NaCl-5-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>))</span>
+<span id="cb54-7"><a href="data-entry.html#cb54-7" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x =</span> table1, <span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>, </span>
+<span id="cb54-8"><a href="data-entry.html#cb54-8" tabindex="-1"></a>          <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p>In the above code, make sure to replace the <code>NA</code>’s with the values from your experiment.
 Keep in mind that the values entered into the tables should be
 decimals greater than or equal to zero, and likely less than
@@ -444,14 +445,14 @@ tabular data stored in a text file where a comma separates the columns of the da
 That is why a comma separates each of the values in the rows for the different solutions.</p>
 <p>Now, we will make Table 2, which includes the class averages and we will call
 <code>solution-concentration-effect-on-potato-averages.csv</code>:</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="data-entry.html#cb55-1" aria-hidden="true" tabindex="-1"></a>table2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">weight =</span> <span class="fu">c</span>(<span class="st">&quot;percent-change&quot;</span>, <span class="st">&quot;minimum-value&quot;</span>, </span>
-<span id="cb55-2"><a href="data-entry.html#cb55-2" aria-hidden="true" tabindex="-1"></a>                                <span class="st">&quot;maximum-value&quot;</span>, <span class="st">&quot;difference&quot;</span>), </span>
-<span id="cb55-3"><a href="data-entry.html#cb55-3" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb55-4"><a href="data-entry.html#cb55-4" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb55-5"><a href="data-entry.html#cb55-5" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-2-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
-<span id="cb55-6"><a href="data-entry.html#cb55-6" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;NaCl-5-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>))</span>
-<span id="cb55-7"><a href="data-entry.html#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x =</span> table1, <span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>, </span>
-<span id="cb55-8"><a href="data-entry.html#cb55-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="data-entry.html#cb55-1" tabindex="-1"></a>table2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">weight =</span> <span class="fu">c</span>(<span class="st">&quot;percent-change&quot;</span>, <span class="st">&quot;minimum-value&quot;</span>, </span>
+<span id="cb55-2"><a href="data-entry.html#cb55-2" tabindex="-1"></a>                                <span class="st">&quot;maximum-value&quot;</span>, <span class="st">&quot;difference&quot;</span>), </span>
+<span id="cb55-3"><a href="data-entry.html#cb55-3" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
+<span id="cb55-4"><a href="data-entry.html#cb55-4" tabindex="-1"></a>                     <span class="st">&quot;NaCl-0.9-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
+<span id="cb55-5"><a href="data-entry.html#cb55-5" tabindex="-1"></a>                     <span class="st">&quot;NaCl-2-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>), </span>
+<span id="cb55-6"><a href="data-entry.html#cb55-6" tabindex="-1"></a>                     <span class="st">&quot;NaCl-5-percent&quot;</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>, <span class="cn">NA</span>))</span>
+<span id="cb55-7"><a href="data-entry.html#cb55-7" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x =</span> table1, <span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>, </span>
+<span id="cb55-8"><a href="data-entry.html#cb55-8" tabindex="-1"></a>          <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <p>You might have just done this in Excel. We did not teach this method because Excel is not recommended for data entry. There are compatability issues between <code>Excel</code> and <code>R</code> that create problems. Spreadsheet software like Excel can be handy for data entry, but you should think carefully about how to organize your rows and columns first (see Chapter <a href="data.html#data">12</a> for details). If you do have data in Excel, you should convert it to a .csv (comma delimited format) first, before you import to <code>R</code>.</p>
 <p>Here are two articles that do a nice job discussing the differences and pros/cons of Excel vs. <code>R</code></p>
 <p><a href="https://www.jessesadler.com/post/excel-vs-r/">Excel v R</a>: read the first section only</p>
@@ -459,16 +460,17 @@ That is why a comma separates each of the values in the rows for the different s
 </div>
 <div id="loading-or-importing-data" class="section level2 hasAnchor" number="8.2">
 <h2><span class="header-section-number">8.2</span> Loading or importing data<a href="data-entry.html#loading-or-importing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We will look at two ways of importing data into R, via a command or using the import feature.
-Both options are equivalent; and when they are sucsesfull you will see your data as
+<p>We will look at three ways of importing data into R: 1) via a command, 2) using the import feature, or 3) directly from the internet.
+The first two options are equivalent. The third option is easier but requires an internet connection. When they are successful you will see your data as
 a new object in the Environment tab (in the Environment/History pane).</p>
 <div id="programmatic" class="section level3 hasAnchor" number="8.2.1">
 <h3><span class="header-section-number">8.2.1</span> The programmatic way (i.e., command line)<a href="data-entry.html#programmatic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We can load our our data files in CSV format into R using the function <code>read.csv</code> in the following way:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="data-entry.html#cb56-1" aria-hidden="true" tabindex="-1"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>)</span>
-<span id="cb56-2"><a href="data-entry.html#cb56-2" aria-hidden="true" tabindex="-1"></a>data2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="data-entry.html#cb56-1" tabindex="-1"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato.csv&quot;</span>)</span>
+<span id="cb56-2"><a href="data-entry.html#cb56-2" tabindex="-1"></a>data2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">&quot;solution-concentration-effect-on-potato-averages.csv&quot;</span>)</span></code></pre></div>
 <p>Here, the argument <code>file =</code> of <code>read.csv</code> is the name of the file we want to read.
 Notice that the filename needs to be a character string, so we put it in quotes.</p>
+<p>This method is the best way to import your data, however depending on your familiarity with your computer’s file structure you may spend quite some time determining how to the call the path to where you have saved your <code>.csv</code> file.</p>
 </div>
 <div id="the-rstudio-way-the-import-feature" class="section level3 hasAnchor" number="8.2.2">
 <h3><span class="header-section-number">8.2.2</span> The RStudio way (the “import” feature)<a href="data-entry.html#the-rstudio-way-the-import-feature" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -503,17 +505,34 @@ Figure 8.2: Dataset import options.
 <p>RStudio will now run the R code that imports your dataset.
 It will be similar to the command used in Section <a href="data-entry.html#programmatic">8.2.1</a>.</p>
 </div>
+<div id="loading-data-hosted-on-a-url" class="section level3 hasAnchor" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> Loading data hosted on a url<a href="data-entry.html#loading-data-hosted-on-a-url" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For Memorial University biology courses we try to host data on the internet so that it is easy to import data when there is an internet connection.</p>
+<p>For example, the Falik et al. data that is used in BIOL 1001 can be loaded using this command:</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="data-entry.html#cb57-1" tabindex="-1"></a>Falik.Data <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/ahurford/quant-guide-data/main/BIOL1001-data/FalikDataset.csv&quot;</span>)</span></code></pre></div>
+<p>You can copy and paste this code into your Console or Script and if you have an internet connection the data will load.</p>
+<p>Data that we know is used in Biology courses at Memorial are hosted <a href="https://github.com/ahurford/quant-guide-data/tree/main">here</a>. If you are a Memorial University instructor and would like to add your data, please email ahurford-at-mun.ca.</p>
+<p>To find the correct url, you should navigate through the folders to the data source that you are interested in, then click the <code>Raw</code> button.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:raw"></span>
+<img src="figures/raw.png" alt="The raw button for data hosted on Github." width="70%" />
+<p class="caption">
+Figure 8.3: The raw button for data hosted on Github.
+</p>
+</div>
+<p>This will navigate to the url that you can copy and paste into your R script. For the example above, this is: <a href="https://raw.githubusercontent.com/ahurford/quant-guide-data/main/BIOL1001-data/FalikDataset.csv">https://raw.githubusercontent.com/ahurford/quant-guide-data/main/BIOL1001-data/FalikDataset.csv</a></p>
+<p>This approach to loading data can be vastly easier for beginners, however, it requires that the data is appropriately hosted on the internet (which may not always be the case) and so eventually learning the one of the other two methods is recommended.</p>
+</div>
 </div>
 <div id="inspecting-the-data" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> Inspecting the data<a href="data-entry.html#inspecting-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To take a look at our dataset, we can print it by typing the name in the Console and hitting <code>Enter</code> (or <code>Return</code>).</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="data-entry.html#cb57-1" aria-hidden="true" tabindex="-1"></a>data1</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="data-entry.html#cb58-1" tabindex="-1"></a>data1</span></code></pre></div>
 <pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
 ## 1        initial             NA               NA             NA             NA
 ## 2          final             NA               NA             NA             NA
 ## 3     difference             NA               NA             NA             NA
 ## 4 percent-change             NA               NA             NA             NA</code></pre>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="data-entry.html#cb59-1" aria-hidden="true" tabindex="-1"></a>data2</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="data-entry.html#cb60-1" tabindex="-1"></a>data2</span></code></pre></div>
 <pre><code>##           weight NaCl.0.percent NaCl.0.9.percent NaCl.2.percent NaCl.5.percent
 ## 1        initial             NA               NA             NA             NA
 ## 2          final             NA               NA             NA             NA
