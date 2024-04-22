@@ -1,6 +1,6 @@
 # Handling data
 
-Base R refers to functions that come with an installation of `R`, not those that are in packages that are must be installed. We will learn how to handle data both using the base R functions, and using the package `dplyr`.
+Base R refers to functions that come with an installation of `R`, not those that are in packages that are must be installed. We will learn how to handle data both using the base R functions, and using the package `dplyr`. The `dplyr` package is part of the `tidyverse`, which you can learn more about from watching [this video](https://www.youtube.com/watch?v=8_Q-WwqY_Og) by SHARCNET (High Performance Computing Ontario).
 
 ## Base R
 
