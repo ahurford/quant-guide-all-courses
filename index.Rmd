@@ -37,7 +37,7 @@ The quantitative training program at MUNL was launched in BIOL 1001 in [Spring 2
 
 [BIOL 1001 - Principles of Biology](https://ahurford.github.io/BIOL-1001/index.html)
 
-[BIOL 1002 - Principles of Biology](https://ahurford.github.io/biol-1002/)
+[BIOL 1002 - Principles of Biology](https://nlboreal.github.io/BIOL1002_NewRAssignment/)
 
 [BIOL 2010 - Botany](https://ahurford.github.io/walkThroughWoodsGuide/)
 
