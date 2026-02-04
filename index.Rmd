@@ -49,6 +49,8 @@ The quantitative training program at MUNL was launched in BIOL 1001 in [Spring 2
 
 [BIOL 4505 - Systematics and Biogeography](https://ahurford.github.io/Ecogeographic-variation/)
 
+[BIOL 4405 - Landscape Ecology - Landscape Metrics Exercises](https://nlboreal.github.io/LandscapeMetrics/)
+
 BIOL 4606 - Bioinformatics: Biological Data Analysis 
 
 BIOL 4607 - Models in Biology
